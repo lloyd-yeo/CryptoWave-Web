@@ -61,11 +61,24 @@ class RegisterController extends Controller
      * @return \App\User
      */
     protected function create(array $data)
-    {
+    {   
+        $referred_by = Cookie::get('referral');
+        $tracking_code = str_random(10);
+        
+        while (true) {
+            if (User::where('tracking_code', $tracking_code)->first() === NULL) {
+                break;
+            } else {
+                $tracking_code = str_random(10);
+            }
+        }
+        
         return User::create([
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => bcrypt($data['password']),
+            'tracking_code' => $tracking_code,
+            'referred_by'   => $referred_by,
         ]);
     }
 }
