@@ -15,6 +15,9 @@
                     @endif
 
                     You are logged in!
+                    
+                    Your referral link is:
+                    <a href="{{ $referral_link }}">{{ $referral_link }}</a>
                 </div>
             </div>
         </div>
