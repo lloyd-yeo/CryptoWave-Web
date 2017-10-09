@@ -15,8 +15,6 @@
                     @endif
 
                     You are logged in!
-                    
-                    Your link is {{ $referral_link }}!
                 </div>
             </div>
         </div>

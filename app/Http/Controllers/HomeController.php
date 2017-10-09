@@ -23,7 +23,6 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $referral_link = 'http://174.138.31.231/home?ref=' + Auth::user()->tracking_code;
-        return view('home', $referral_link);
+        return view('home');
     }
 }
