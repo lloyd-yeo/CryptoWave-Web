@@ -18,8 +18,15 @@
                     
                     Your referral link is:
                     <a href="{{ $referral_link }}">{{ $referral_link }}</a>
+                    <br/>
+                    Your cookie referral is {{ $referred_by }}
                 </div>
             </div>
+
+            <passport-clients></passport-clients>
+            <passport-authorized-clients></passport-authorized-clients>
+            <passport-personal-access-tokens></passport-personal-access-tokens>
+
         </div>
     </div>
 </div>

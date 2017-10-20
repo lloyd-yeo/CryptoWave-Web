@@ -3,6 +3,7 @@
 namespace App\Http\Middleware;
 
 use Closure;
+use Cookie;
 
 class CheckReferral {
 
@@ -18,7 +19,8 @@ class CheckReferral {
             return $next($request);
         } else {
             if ($request->query('ref')) {
-                return redirect($request->fullUrl())->withCookie(cookie()->forever('referral', $request->query('ref')));
+                return redirect($request->fullUrl())
+                                ->withCookie(cookie()->forever('referral', $request->query('ref')));
             }
         }
         return $next($request);
