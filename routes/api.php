@@ -19,6 +19,6 @@ Route::get('/user', function (Request $request) {
 	return new UserResource(User::find($request->user()->id));
 })->middleware('auth:api');
 
-//Route::get('/user', function(Request $request) {
-//    return $request->user();
-//})->middleware('client');
+
+Route::post('/wallet/add', 'WalletController@addAmount')
+	->middleware('auth:api');
