@@ -47,7 +47,6 @@ class HomeController extends Controller
 			}
 		}
 
-		//        return view('home', ['referral_link' => $referral_link,]);
 		return view('dashboard', [ 'referral_link'       => $referral_link,
 		                           'referrer'            => $referrer,
 		                           'referrals'           => $referrals,
