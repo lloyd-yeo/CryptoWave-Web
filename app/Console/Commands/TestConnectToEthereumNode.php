@@ -69,6 +69,6 @@ class TestConnectToEthereumNode extends Command
 
 		preg_match_all('/{(.*?)}/', $account_id, $matches);
 
-		dump($matches[1]);
+		$wallet_address = $matches[1][0];
 	}
 }

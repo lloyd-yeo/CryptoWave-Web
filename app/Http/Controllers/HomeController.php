@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Auth;
 use App\User;
+use App\UserWallet;
 
 class HomeController extends Controller
 {
@@ -29,6 +30,11 @@ class HomeController extends Controller
 		$referrer      = NULL;
 		if (Auth::user()->referred_by !== NULL) {
 			$referrer = User::find(Auth::user()->referred_by);
+		}
+
+		if (UserWallet::where('user_id', Auth::user()->id)->first() === NULL) {
+			$job = new \App\Jobs\CreateEthereumWallet(User::find(Auth::user()->id));
+			dispatch($job);
 		}
 
 		$referrals           = Auth::user()->referrals();
