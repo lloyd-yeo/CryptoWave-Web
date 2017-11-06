@@ -3,7 +3,7 @@
 namespace App\Http\Resources;
 
 use Illuminate\Http\Resources\Json\Resource;
-use App\Http\Resources\UserWallet;
+use App\Http\Resources\UserWallet as UserWallet;
 
 class User extends Resource
 {
@@ -19,7 +19,7 @@ class User extends Resource
 		    'id' => $this->id,
 		    'name' => $this->name,
 		    'email' => $this->email,
-		    'wallets' => UserWallet::collection($this->wallets)
+		    'wallets' => UserWallet::collection($this->wallets),
 	    ];
     }
 }
