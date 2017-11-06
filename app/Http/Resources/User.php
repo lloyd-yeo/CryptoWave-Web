@@ -3,7 +3,7 @@
 namespace App\Http\Resources;
 
 use Illuminate\Http\Resources\Json\Resource;
-use App\Http\Resources\UserWallet as UserWallet;
+use Log;
 
 class User extends Resource
 {
@@ -15,6 +15,7 @@ class User extends Resource
      */
     public function toArray($request)
     {
+//    	dump($this->wallets);
 	    return [
 		    'id' => $this->id,
 		    'name' => $this->name,
