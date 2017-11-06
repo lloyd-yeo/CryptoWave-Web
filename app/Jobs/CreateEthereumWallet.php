@@ -44,12 +44,12 @@ class CreateEthereumWallet implements ShouldQueue
 	    preg_match_all('/{(.*?)}/', $account_id, $matches);
 
 	    $wallet_address = $matches[1][0];
-		dump($matches[1]);
 	    $wallet = new UserWallet;
 	    $wallet->id = $wallet_address;
 	    $wallet->password = $wallet_password;
 	    $wallet->coin_type = "Ethereum";
 	    $wallet->amount = 0.0;
+	    $wallet->user_id = $this->user->id;
 	    $wallet->save();
     }
 }
