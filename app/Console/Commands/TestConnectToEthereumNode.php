@@ -51,12 +51,17 @@ class TestConnectToEthereumNode extends Command
 		#dump($result);
 		// $result ==='0x16345785d8a0000'
 
-		$sock = socket_create(AF_UNIX, SOCK_STREAM, 0);
-		socket_connect($sock, "/root/.ethereum/geth.ipc", 1);
-		$myBuf = NULL;
-		$msg   = "{\"jsonrpc\":\"2.0\",\"method\":\"personal_newAccount\",\"params\":[\"password\"],\"id\":1}";
-		socket_send($sock, $msg, strlen($msg), MSG_EOF);
-		socket_recv($sock, $myBuf, 100, MSG_WAITALL);
-		dump($myBuf);
+		#$sock = socket_create(AF_UNIX, SOCK_STREAM, 0);
+		#socket_connect($sock, "/root/.ethereum/geth.ipc", 1);
+		#$myBuf = NULL;
+		#$msg   = "{\"jsonrpc\":\"2.0\",\"method\":\"personal_newAccount\",\"params\":[\"password\"],\"id\":1}";
+		#socket_send($sock, $msg, strlen($msg), MSG_EOF);
+		#socket_recv($sock, $myBuf, 100, MSG_WAITALL);
+		#dump($myBuf);
+		$file = tmpfile();
+		fwrite($file, "password");
+		$path = stream_get_meta_data($file)['uri'];
+		$account_id = shell_exec("geth --password " . $path . " account new");
+		dump($account_id);
 	}
 }
