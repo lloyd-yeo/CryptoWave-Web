@@ -4,8 +4,46 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "120771756aa0fc3369e6d7e1339e7dbc",
+    "content-hash": "a3ed0d6422c11a07cc44ca08376433b8",
     "packages": [
+        {
+            "name": "achse/geth-jsonrpc-php-client",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Achse/geth-jsonrpc-php-client.git",
+                "reference": "1fd72fe153a33e12d4a26de76e1b395f04d0ca82"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Achse/geth-jsonrpc-php-client/zipball/1fd72fe153a33e12d4a26de76e1b395f04d0ca82",
+                "reference": "1fd72fe153a33e12d4a26de76e1b395f04d0ca82",
+                "shasum": ""
+            },
+            "require": {
+                "guzzlehttp/guzzle": "^6.2",
+                "nette/utils": "2.3.*",
+                "php": ">= 5.6.0"
+            },
+            "require-dev": {
+                "mockery/mockery": "@dev",
+                "nette/tester": "@dev"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "LetsAgree\\GethJsonRpcPhpClient\\": "src/"
+                },
+                "classmap": [
+                    "src/JsonRpc/exceptions.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "time": "2016-04-03T18:02:53+00:00"
+        },
         {
             "name": "defuse/php-encryption",
             "version": "v2.1.0",
@@ -1668,6 +1706,63 @@
                 "time"
             ],
             "time": "2017-01-16T07:55:07+00:00"
+        },
+        {
+            "name": "nette/utils",
+            "version": "v2.3.11",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/nette/utils.git",
+                "reference": "f213ad4d9dfb7221322bd2808e2004b61c8ece8e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/nette/utils/zipball/f213ad4d9dfb7221322bd2808e2004b61c8ece8e",
+                "reference": "f213ad4d9dfb7221322bd2808e2004b61c8ece8e",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.1"
+            },
+            "conflict": {
+                "nette/nette": "<2.2"
+            },
+            "require-dev": {
+                "nette/tester": "~1.0"
+            },
+            "suggest": {
+                "ext-gd": "to use Image",
+                "ext-iconv": "to use Strings::webalize() and toAscii()",
+                "ext-intl": "for script transliteration in Strings::webalize() and toAscii()",
+                "ext-json": "to use Nette\\Utils\\Json",
+                "ext-mbstring": "to use Strings::lower() etc...",
+                "ext-xml": "to use Strings::length() etc. when mbstring is not available"
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "src/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause",
+                "GPL-2.0",
+                "GPL-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "David Grudl",
+                    "homepage": "https://davidgrudl.com"
+                },
+                {
+                    "name": "Nette Community",
+                    "homepage": "https://nette.org/contributors"
+                }
+            ],
+            "description": "Nette Utility Classes",
+            "homepage": "https://nette.org",
+            "time": "2016-12-12T12:20:10+00:00"
         },
         {
             "name": "nikic/php-parser",

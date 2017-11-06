@@ -6,9 +6,17 @@
 
 var BaseTableDatatables = function() {
     // Init full DataTable, for more examples you can check out https://www.datatables.net/
+    // var initDataTableFull = function() {
+    //     jQuery('.js-dataTable-full').dataTable({
+    //         columnDefs: [ { orderable: false, targets: [ 4 ] } ],
+    //         pageLength: 10,
+    //         lengthMenu: [[5, 10, 15, 20], [5, 10, 15, 20]]
+    //     });
+    // };
+
     var initDataTableFull = function() {
         jQuery('.js-dataTable-full').dataTable({
-            columnDefs: [ { orderable: false, targets: [ 4 ] } ],
+            columnDefs: [ { orderable: false, targets: [ 3 ] } ],
             pageLength: 10,
             lengthMenu: [[5, 10, 15, 20], [5, 10, 15, 20]]
         });

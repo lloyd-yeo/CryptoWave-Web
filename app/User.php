@@ -27,5 +27,9 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    public function referrals() {
+    	return User::where('referred_by', $this->id)->get();
+    }
     
 }

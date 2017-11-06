@@ -9,7 +9,7 @@ var BasePagesDashboardv2 = function() {
     var initDashv2ChartJS = function(){
         // Get Chart Container
         var $dashChartEarningsCon = jQuery('.js-dash-chartjs-earnings')[0].getContext('2d');
-        var $dashChartSalesCon    = jQuery('.js-dash-chartjs-sales')[0].getContext('2d');
+        // var $dashChartSalesCon    = jQuery('.js-dash-chartjs-sales')[0].getContext('2d');
 
         // Earnings Chart Data
         var $dashChartEarningsData = {
@@ -39,31 +39,31 @@ var BasePagesDashboardv2 = function() {
         };
 
         // Sales Chart Data
-        var $dashChartSalesData = {
-            labels: ['MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT', 'SUN'],
-            datasets: [
-                {
-                    label: 'Last Week',
-                    fillColor: 'rgba(164, 138, 212, .07)',
-                    strokeColor: 'rgba(164, 138, 212, .25)',
-                    pointColor: 'rgba(164, 138, 212, .25)',
-                    pointStrokeColor: '#fff',
-                    pointHighlightFill: '#fff',
-                    pointHighlightStroke: 'rgba(164, 138, 212, 1)',
-                    data: [60, 40, 90, 35, 85, 65, 77]
-                },
-                {
-                    label: 'This Week',
-                    fillColor: 'rgba(164, 138, 212, .25)',
-                    strokeColor: 'rgba(164, 138, 212, .55)',
-                    pointColor: 'rgba(164, 138, 212, .55)',
-                    pointStrokeColor: '#fff',
-                    pointHighlightFill: '#fff',
-                    pointHighlightStroke: 'rgba(164, 138, 212, 1)',
-                    data: [50, 33, 25, 82, 120, 95, 150]
-                }
-            ]
-        };
+        // var $dashChartSalesData = {
+        //     labels: ['MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT', 'SUN'],
+        //     datasets: [
+        //         {
+        //             label: 'Last Week',
+        //             fillColor: 'rgba(164, 138, 212, .07)',
+        //             strokeColor: 'rgba(164, 138, 212, .25)',
+        //             pointColor: 'rgba(164, 138, 212, .25)',
+        //             pointStrokeColor: '#fff',
+        //             pointHighlightFill: '#fff',
+        //             pointHighlightStroke: 'rgba(164, 138, 212, 1)',
+        //             data: [60, 40, 90, 35, 85, 65, 77]
+        //         },
+        //         {
+        //             label: 'This Week',
+        //             fillColor: 'rgba(164, 138, 212, .25)',
+        //             strokeColor: 'rgba(164, 138, 212, .55)',
+        //             pointColor: 'rgba(164, 138, 212, .55)',
+        //             pointStrokeColor: '#fff',
+        //             pointHighlightFill: '#fff',
+        //             pointHighlightStroke: 'rgba(164, 138, 212, 1)',
+        //             data: [50, 33, 25, 82, 120, 95, 150]
+        //         }
+        //     ]
+        // };
 
         // Init Earnings Chart
         var $dashChartEarnings = new Chart($dashChartEarningsCon).Line($dashChartEarningsData, {
@@ -77,15 +77,15 @@ var BasePagesDashboardv2 = function() {
         });
 
         // Init Sales Chart
-        var $dashChartSales = new Chart($dashChartSalesCon).Line($dashChartSalesData, {
-            scaleFontFamily: "'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif",
-            scaleFontColor: '#999',
-            scaleFontStyle: '600',
-            tooltipTitleFontFamily: "'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif",
-            tooltipCornerRadius: 3,
-            maintainAspectRatio: false,
-            responsive: true
-        });
+        // var $dashChartSales = new Chart($dashChartSalesCon).Line($dashChartSalesData, {
+        //     scaleFontFamily: "'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif",
+        //     scaleFontColor: '#999',
+        //     scaleFontStyle: '600',
+        //     tooltipTitleFontFamily: "'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif",
+        //     tooltipCornerRadius: 3,
+        //     maintainAspectRatio: false,
+        //     responsive: true
+        // });
     };
 
     return {
