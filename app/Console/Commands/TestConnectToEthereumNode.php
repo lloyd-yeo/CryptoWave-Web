@@ -5,6 +5,7 @@ namespace App\Console\Commands;
 use Illuminate\Console\Command;
 use LetsAgree\GethJsonRpcPhpClient\JsonRpc\GuzzleClientFactory;
 use LetsAgree\GethJsonRpcPhpClient\JsonRpc\GuzzleClient;
+use LetsAgree\GethJsonRpcPhpClient\JsonRpc\Client;
 
 class TestConnectToEthereumNode extends Command
 {
