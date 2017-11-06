@@ -31,5 +31,9 @@ class User extends Authenticatable
     public function referrals() {
     	return User::where('referred_by', $this->id)->get();
     }
+
+    public function wallets() {
+    	return $this->hasMany('App\Wallet');
+    }
     
 }
