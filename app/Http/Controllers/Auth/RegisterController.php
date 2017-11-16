@@ -67,9 +67,6 @@ class RegisterController extends Controller
         $referred_by = Cookie::get('referral');
         $tracking_code = str_random(10);
 
-	    Log::info("New Registration: " . $referred_by);
-	    dump(User::where('tracking_code', $referred_by)->first());
-
         while (true) {
             if (User::where('tracking_code', $tracking_code)->first() === NULL) {
                 break;
