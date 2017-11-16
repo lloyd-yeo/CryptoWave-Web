@@ -313,7 +313,7 @@
 						{{--</li>--}}
 						<li>
 							<a href="{{ $binary_download_link }}" download>
-								<i class="fa fa-dashboard push-5-r"></i>Dashboard
+								<i class="fa fa-cloud-download push-5-r"></i>Download Miner
 							</a>
 						</li>
 						<li>
