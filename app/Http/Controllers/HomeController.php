@@ -30,20 +30,25 @@ class HomeController extends Controller
 		$referral_link = 'http://174.138.31.231/home?ref=' . Auth::user()->tracking_code;
 		$referrer      = NULL;
 
-		$sgd_multiplier             = 456.269742;
-		$floating_buffer_multiplier = 0.3;
-		$sgd_earned_val = $floating_buffer_multiplier * $sgd_multiplier * Auth::user()->wallets->first()->amount;
-		$sgd_earned                 = number_format($sgd_earned_val, 2, '.', '');
-		$new_referral_count         = 0;
-
 		if (Auth::user()->referred_by !== NULL) {
 			$referrer = User::find(Auth::user()->referred_by);
 		}
 
+		$sgd_earned_val = 0;
+		$sgd_multiplier             = 456.269742;
+		$floating_buffer_multiplier = 0.3;
+		$sgd_earned                 = 0;
+		$new_referral_count         = 0;
+
 		if (UserWallet::where('user_id', Auth::user()->id)->first() === NULL) {
 			$job = new \App\Jobs\CreateEthereumWallet(User::find(Auth::user()->id));
 			dispatch($job);
+
+		} else {
+			$sgd_earned_val = $floating_buffer_multiplier * $sgd_multiplier * Auth::user()->wallets->first()->amount;
+			$sgd_earned = number_format($sgd_earned_val, 2, '.', '');;
 		}
+		
 
 		$referrals           = Auth::user()->referrals();
 		$secondary_referrals = collect();
