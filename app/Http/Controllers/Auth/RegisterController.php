@@ -73,7 +73,7 @@ class RegisterController extends Controller
 			$referrer = User::where('tracking_code', $referred_by)->first();
 			$referred_by = NULL;
 			if ($referrer !== NULL) {
-				$referred_by = $referrer;
+				$referred_by = $referrer->id;
 			}
 		}
 
