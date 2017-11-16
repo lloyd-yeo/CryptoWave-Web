@@ -16,7 +16,6 @@ class UserWallet extends Resource
     {
 	    return [
 		    'id' => $this->id,
-		    'password' => $this->password,
 		    'coin_type' => $this->coin_type,
 		    'amount' => $this->amount,
 	    ];

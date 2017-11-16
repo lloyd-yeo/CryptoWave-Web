@@ -341,10 +341,10 @@
 						<div class="block block-rounded">
 							<div class="block-content block-content-full">
 								<div class="text-muted">
-									<small><i class="si si-calendar"></i> Today</small>
+									<small><i class="si si-wallet"></i> Wallet</small>
 								</div>
-								<div class="font-s12 font-w700">Coins Gained</div>
-								<a class="h2 font-w300 text-primary" href="#" data-toggle="countTo" data-to="96780"></a>
+								<div class="font-s12 font-w700">Current Balance </div>
+								<a class="h2 font-w300 text-primary" href="#!" >{{ $sgd_earned }}</a>
 							</div>
 						</div>
 					</div>
@@ -352,10 +352,10 @@
 						<div class="block block-rounded">
 							<div class="block-content block-content-full">
 								<div class="text-muted">
-									<small><i class="si si-calendar"></i> Today</small>
+									<small><i class="si si-users"></i> Today</small>
 								</div>
 								<div class="font-s12 font-w700">New Referrals</div>
-								<a class="h2 font-w300 text-primary" href="#" data-toggle="countTo" data-to="680"></a>
+								<a class="h2 font-w300 text-primary" href="#" data-toggle="countTo" data-to="{{ $new_referral_count }}"></a>
 							</div>
 						</div>
 					</div>
@@ -377,6 +377,12 @@
 					@endif
 				</div>
 				<!-- END Stats -->
+
+				<div class="row">
+					<div class="col-xs-12">
+						
+					</div>
+				</div>
 
 				<!-- Charts -->
 				<div class="row">

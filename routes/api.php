@@ -20,5 +20,8 @@ Route::get('/user', function (Request $request) {
 })->middleware('auth:api');
 
 
-Route::post('/wallet/add', 'WalletController@addAmount')
-	->middleware('auth:api');
+#Route::post('/wallet/add', 'WalletController@addAmount')
+#	->middleware('auth:api');
+
+Route::post('/wallet/add', 'WalletController@addAmountBatch')
+     ->middleware('auth:api');

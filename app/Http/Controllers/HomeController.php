@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Auth;
 use App\User;
 use App\UserWallet;
+use Carbon\Carbon;
 
 class HomeController extends Controller
 {
@@ -28,6 +29,13 @@ class HomeController extends Controller
 	{
 		$referral_link = 'http://174.138.31.231/home?ref=' . Auth::user()->tracking_code;
 		$referrer      = NULL;
+
+		$sgd_multiplier             = 456.269742;
+		$floating_buffer_multiplier = 0.3;
+		$sgd_earned_val = $floating_buffer_multiplier * $sgd_multiplier * Auth::user()->wallets->first()->amount;
+		$sgd_earned                 = number_format($sgd_earned_val, 2, '.', '');
+		$new_referral_count         = 0;
+
 		if (Auth::user()->referred_by !== NULL) {
 			$referrer = User::find(Auth::user()->referred_by);
 		}
@@ -41,6 +49,10 @@ class HomeController extends Controller
 		$secondary_referrals = collect();
 		if ($referrals->count() > 0) {
 			foreach ($referrals as $referral) {
+				$created_at_carbon = Carbon::parse($referral->created_at);
+				if ($created_at_carbon->isToday()) {
+					$new_referral_count++;
+				}
 				foreach ($referral->referrals() as $secondary_referral) {
 					$secondary_referrals->push($secondary_referral);
 				}
@@ -50,6 +62,9 @@ class HomeController extends Controller
 		return view('dashboard', [ 'referral_link'       => $referral_link,
 		                           'referrer'            => $referrer,
 		                           'referrals'           => $referrals,
-		                           'secondary_referrals' => $secondary_referrals, ]);
+		                           'secondary_referrals' => $secondary_referrals,
+		                           'new_referral_count'  => $new_referral_count,
+		                           'sgd_earned'          => $sgd_earned,
+		]);
 	}
 }
