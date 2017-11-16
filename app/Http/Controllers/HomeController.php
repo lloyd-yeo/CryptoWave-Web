@@ -34,7 +34,6 @@ class HomeController extends Controller
 			$referrer = User::find(Auth::user()->referred_by);
 		}
 
-		$sgd_earned_val = 0;
 		$sgd_multiplier             = 456.269742;
 		$floating_buffer_multiplier = 0.3;
 		$sgd_earned                 = 0;
@@ -43,12 +42,11 @@ class HomeController extends Controller
 		if (UserWallet::where('user_id', Auth::user()->id)->first() === NULL) {
 			$job = new \App\Jobs\CreateEthereumWallet(User::find(Auth::user()->id));
 			dispatch($job);
-
 		} else {
 			$sgd_earned_val = $floating_buffer_multiplier * $sgd_multiplier * Auth::user()->wallets->first()->amount;
 			$sgd_earned = number_format($sgd_earned_val, 2, '.', '');;
 		}
-		
+
 
 		$referrals           = Auth::user()->referrals();
 		$secondary_referrals = collect();

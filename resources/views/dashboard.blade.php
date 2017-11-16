@@ -380,7 +380,9 @@
 
 				<div class="row">
 					<div class="col-xs-12">
-
+						<div class="alert alert-success">
+							<p><i class="fa fa-check"></i> Refer a friend now with the referral link <a>http://174.138.31.231/register?ref={{ Auth::user()->tracking_code }}</a></p>
+						</div>
 					</div>
 				</div>
 
