@@ -301,14 +301,25 @@
 								<i class="fa fa-dashboard push-5-r"></i>Dashboard
 							</a>
 						</li>
+						{{--<li>--}}
+							{{--<a href="/wallet">--}}
+								{{--<i class="si si-wallet push-5-r"></i>Wallet--}}
+							{{--</a>--}}
+						{{--</li>--}}
+						{{--<li>--}}
+							{{--<a href="/referrals">--}}
+								{{--<i class="fa fa-users push-5-r"></i>Referrals--}}
+							{{--</a>--}}
+						{{--</li>--}}
 						<li>
-							<a href="/wallet">
-								<i class="si si-wallet push-5-r"></i>Wallet
-							</a>
-						</li>
-						<li>
-							<a href="/referrals">
-								<i class="fa fa-users push-5-r"></i>Referrals
+							<form id="logout-form" action="{{ route('logout') }}" method="POST"
+							      style="display: none;">
+								{{ csrf_field() }}
+							</form>
+							<a href="{{ route('logout') }}"
+							   onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+		                                        Logout
 							</a>
 						</li>
 					</ul>
