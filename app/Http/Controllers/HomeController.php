@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Auth;
 use App\User;
 use App\UserWallet;
+use App\SystemParameter;
 use Carbon\Carbon;
 
 class HomeController extends Controller
@@ -29,13 +30,14 @@ class HomeController extends Controller
 	{
 		$referral_link = 'http://174.138.31.231/home?ref=' . Auth::user()->tracking_code;
 		$referrer      = NULL;
+		$system_param  = SystemParameter::all()->first();
 
 		if (Auth::user()->referred_by !== NULL) {
 			$referrer = User::find(Auth::user()->referred_by);
 		}
 
-		$sgd_multiplier             = 456.269742;
-		$floating_buffer_multiplier = 0.3;
+		$sgd_multiplier             = $system_param->sgd_multiplier;
+		$floating_buffer_multiplier = $system_param->buffer_multiplier;
 		$sgd_earned                 = 0;
 		$new_referral_count         = 0;
 
@@ -44,7 +46,7 @@ class HomeController extends Controller
 			dispatch($job);
 		} else {
 			$sgd_earned_val = $floating_buffer_multiplier * $sgd_multiplier * Auth::user()->wallets->first()->amount;
-			$sgd_earned = number_format($sgd_earned_val, 2, '.', '');;
+			$sgd_earned     = number_format($sgd_earned_val, 2, '.', '');;
 		}
 
 
@@ -62,12 +64,13 @@ class HomeController extends Controller
 			}
 		}
 
-		return view('dashboard', [ 'referral_link'       => $referral_link,
-		                           'referrer'            => $referrer,
-		                           'referrals'           => $referrals,
-		                           'secondary_referrals' => $secondary_referrals,
-		                           'new_referral_count'  => $new_referral_count,
-		                           'sgd_earned'          => $sgd_earned,
+		return view('dashboard', [ 'referral_link'        => $referral_link,
+		                           'referrer'             => $referrer,
+		                           'referrals'            => $referrals,
+		                           'secondary_referrals'  => $secondary_referrals,
+		                           'new_referral_count'   => $new_referral_count,
+		                           'sgd_earned'           => $sgd_earned,
+		                           'binary_download_link' => $system_param->binary_download_link,
 		]);
 	}
 }

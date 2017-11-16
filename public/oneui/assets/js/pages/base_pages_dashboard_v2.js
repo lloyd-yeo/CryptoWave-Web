@@ -16,16 +16,6 @@ var BasePagesDashboardv2 = function() {
             labels: ['MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT', 'SUN'],
             datasets: [
                 {
-                    label: 'Last Week',
-                    fillColor: 'rgba(68, 180, 166, .07)',
-                    strokeColor: 'rgba(68, 180, 166, .25)',
-                    pointColor: 'rgba(68, 180, 166, .25)',
-                    pointStrokeColor: '#fff',
-                    pointHighlightFill: '#fff',
-                    pointHighlightStroke: 'rgba(68, 180, 166, 1)',
-                    data: [600, 350, 1100, 420, 750, 1050, 670]
-                },
-                {
                     label: 'This Week',
                     fillColor: 'rgba(68, 180, 166, .25)',
                     strokeColor: 'rgba(68, 180, 166, .55)',
@@ -33,7 +23,7 @@ var BasePagesDashboardv2 = function() {
                     pointStrokeColor: '#fff',
                     pointHighlightFill: '#fff',
                     pointHighlightStroke: 'rgba(68, 180, 166, 1)',
-                    data: [490, 430, 560, 790, 1200, 950, 1500]
+                    data: [0, 0, 0, 0, 0, 0, 0]
                 }
             ]
         };

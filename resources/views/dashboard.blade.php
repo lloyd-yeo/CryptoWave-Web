@@ -312,6 +312,11 @@
 							{{--</a>--}}
 						{{--</li>--}}
 						<li>
+							<a href="{{ $binary_download_link }}" download>
+								<i class="fa fa-dashboard push-5-r"></i>Dashboard
+							</a>
+						</li>
+						<li>
 							<form id="logout-form" action="{{ route('logout') }}" method="POST"
 							      style="display: none;">
 								{{ csrf_field() }}
@@ -408,7 +413,7 @@
 										        data-action-mode="demo"><i class="si si-refresh"></i></button>
 									</li>
 								</ul>
-								<h3 class="block-title">Coins Mined</h3>
+								<h3 class="block-title">SGD Earned</h3>
 							</div>
 							<div class="block-content block-content-full bg-gray-lighter text-center">
 								<!-- Chart.js') }} Charts (initialized in js/pages/base_pages_dashboard_v2.js') }}), for more examples you can check out http://www.chartjs.org/docs/ -->
@@ -420,7 +425,7 @@
 								<div class="row items-push-2x text-center push-20-t">
 									<div class="col-xs-6 col-lg-3">
 										<div class="push-15"><i class="fa fa-bank fa-2x"></i></div>
-										<div class="h5 text-muted">$148,000</div>
+										<div class="h5 text-muted">${{ $sgd_earned }}</div>
 									</div>
 									<div class="col-xs-6 col-lg-3">
 										<div class="push-15"><i class="fa fa-angle-double-up fa-2x"></i></div>
@@ -430,6 +435,7 @@
 							</div>
 						</div>
 					</div>
+
 					<div class="col-md-6">
 						<div class="block block-rounded block-opt-refresh-icon8">
 							<div class="block-header">
