@@ -62,7 +62,7 @@
 		<link rel="stylesheet" id="css-main" href="{{ asset('oneui/assets/css/oneui.css') }}">
 
 		<!-- You can include a specific file from css/themes/ folder to alter the default color theme of the template. eg: -->
-	<!-- <link rel="stylesheet" id="css-theme" href="{{ asset('oneui/assets/css/themes/flat.min.css') }}"> -->
+		<link rel="stylesheet" id="css-theme" href="{{ asset('oneui/assets/css/themes/modern.min.css') }}">
 		<!-- END Stylesheets -->
 	</head>
 	<body>
@@ -86,194 +86,16 @@
 		'header-navbar-fixed'        Enables fixed header
 	-->
 	<div id="page-container" class="sidebar-l side-scroll header-navbar-fixed">
-		<!-- Side Overlay-->
-		<aside id="side-overlay">
-			<!-- Side Overlay Scroll Container -->
-			<div id="side-overlay-scroll">
-				<!-- Side Header -->
-				<div class="side-header side-content">
-					<!-- Layout API, functionality initialized in App() -> uiLayoutApi() -->
-					<button class="btn btn-default pull-right" type="button" data-toggle="layout"
-					        data-action="side_overlay_close">
-						<i class="fa fa-times"></i>
-					</button>
-					<span class="font-w600">John Parker</span>
-				</div>
-				<!-- END Side Header -->
-
-				<!-- Side Content -->
-				<div class="side-content remove-padding-t">
-					<!-- Account -->
-					<div class="block pull-r-l">
-						<div class="block-header bg-gray-lighter">
-							<ul class="block-options">
-								<li>
-									<button type="button" data-toggle="block-option"
-									        data-action="content_toggle"></button>
-								</li>
-							</ul>
-							<h3 class="block-title">Account</h3>
-						</div>
-						<div class="block-content">
-							<form class="form-horizontal" action="bd_dashboard.html" method="post"
-							      onsubmit="return false;">
-								<div class="form-group">
-									<div class="col-xs-12">
-										<label>Username</label>
-										<div class="form-control-static font-w700">johnpar</div>
-									</div>
-								</div>
-								<div class="form-group">
-									<div class="col-xs-12">
-										<label for="bd-qsettings-name">Name</label>
-										<input class="form-control" type="text" id="bd-qsettings-name"
-										       name="bd-qsettings-name" placeholder="Enter your name.."
-										       value="John Parker">
-									</div>
-								</div>
-								<div class="form-group">
-									<div class="col-xs-12">
-										<label for="bd-qsettings-email">Email</label>
-										<input class="form-control" type="email" id="bd-qsettings-email"
-										       name="bd-qsettings-email" placeholder="Enter your email.."
-										       value="john.parker@example.com">
-									</div>
-								</div>
-								<div class="form-group">
-									<div class="col-xs-12">
-										<label for="bd-qsettings-password">New Password</label>
-										<input class="form-control" type="password" id="bd-qsettings-password"
-										       name="bd-qsettings-new-password" placeholder="Enter a new password..">
-									</div>
-								</div>
-								<div class="form-group">
-									<div class="col-xs-12">
-										<label for="bd-qsettings-password2">Confirm New Password</label>
-										<input class="form-control" type="password" id="bd-qsettings-password2"
-										       name="bd-qsettings-new-password2"
-										       placeholder="Confirm your new password..">
-									</div>
-								</div>
-								<div class="form-group">
-									<div class="col-xs-12">
-										<button class="btn btn-sm btn-minw btn-rounded btn-primary" type="submit">
-											<i class="fa fa-check push-5-r"></i>Update
-										</button>
-									</div>
-								</div>
-							</form>
-						</div>
-					</div>
-					<!-- END Account -->
-
-					<!-- Quick Settings -->
-					<div class="block pull-r-l">
-						<div class="block-header bg-gray-lighter">
-							<ul class="block-options">
-								<li>
-									<button type="button" data-toggle="block-option"
-									        data-action="content_toggle"></button>
-								</li>
-							</ul>
-							<h3 class="block-title">Quick Settings</h3>
-						</div>
-						<div class="block-content">
-							<!-- Quick Settings Form -->
-							<form class="form-bordered" action="base_pages_dashboard.html" method="post"
-							      onsubmit="return false;">
-								<div class="form-group">
-									<div class="row">
-										<div class="col-xs-8">
-											<div class="font-s13 font-w600">Online Status</div>
-											<div class="font-s13 font-w400 text-muted">Show your status to all</div>
-										</div>
-										<div class="col-xs-4 text-right">
-											<label class="css-input switch switch-sm switch-primary push-10-t">
-												<input type="checkbox" checked><span></span>
-											</label>
-										</div>
-									</div>
-								</div>
-								<div class="form-group">
-									<div class="row">
-										<div class="col-xs-8">
-											<div class="font-s13 font-w600">Auto Updates</div>
-											<div class="font-s13 font-w400 text-muted">Keep up to date</div>
-										</div>
-										<div class="col-xs-4 text-right">
-											<label class="css-input switch switch-sm switch-primary push-10-t">
-												<input type="checkbox" checked><span></span>
-											</label>
-										</div>
-									</div>
-								</div>
-								<div class="form-group">
-									<div class="row">
-										<div class="col-xs-8">
-											<div class="font-s13 font-w600">Notifications</div>
-											<div class="font-s13 font-w400 text-muted">Do you need them?</div>
-										</div>
-										<div class="col-xs-4 text-right">
-											<label class="css-input switch switch-sm switch-primary push-10-t">
-												<input type="checkbox"><span></span>
-											</label>
-										</div>
-									</div>
-								</div>
-								<div class="form-group">
-									<div class="row">
-										<div class="col-xs-8">
-											<div class="font-s13 font-w600">API Access</div>
-											<div class="font-s13 font-w400 text-muted">Enable/Disable access</div>
-										</div>
-										<div class="col-xs-4 text-right">
-											<label class="css-input switch switch-sm switch-primary push-10-t">
-												<input type="checkbox"><span></span>
-											</label>
-										</div>
-									</div>
-								</div>
-							</form>
-							<!-- END Quick Settings Form -->
-						</div>
-					</div>
-					<!-- END Quick Settings -->
-				</div>
-				<!-- END Side Content -->
-			</div>
-			<!-- END Side Overlay Scroll Container -->
-		</aside>
-		<!-- END Side Overlay -->
 
 		<!-- Header -->
 		<header id="header-navbar">
 			<div class="content-mini content-mini-full content-boxed">
-				<!-- Header Navigation Right -->
-				<ul class="nav-header pull-right">
-					<li class="visible-xs">
-						<!-- Toggle class helper (for .js') }}-header-search below), functionality initialized in App() -> uiToggleClass() -->
-						<button class="btn btn-default" data-toggle="class-toggle" data-target=".js') }}-header-search"
-						        data-class="header-search-xs-visible" type="button">
-							<i class="fa fa-search"></i>
-						</button>
-					</li>
-					<li>
-						<!-- Layout API, functionality initialized in App() -> uiLayoutApi() -->
-						<button class="btn btn-default btn-image" data-toggle="layout" data-action="side_overlay_toggle"
-						        type="button">
-							<img src="{{ asset('oneui/assets/img/avatars/avatar9.jpg') }}" alt="Avatar">
-							<i class="fa fa-ellipsis-v"></i>
-						</button>
-					</li>
-				</ul>
-				<!-- END Header Navigation Right -->
-
 				<!-- Header Navigation Left -->
 				<ul class="nav-header pull-left">
 					<li class="header-content">
 						<a class="h5" href="/">
 							{{--<i class="fa fa-circle-o-notch text-primary"></i> --}}
-							<span class="h4 font-w600 text-primary-dark">CryptoMiner</span>
+							<span class="h4 font-w600 text-primary-dark">CryptoMiner™</span>
 						</a>
 					</li>
 				</ul>
@@ -301,16 +123,6 @@
 								<i class="fa fa-dashboard push-5-r"></i>Dashboard
 							</a>
 						</li>
-						{{--<li>--}}
-							{{--<a href="/wallet">--}}
-								{{--<i class="si si-wallet push-5-r"></i>Wallet--}}
-							{{--</a>--}}
-						{{--</li>--}}
-						{{--<li>--}}
-							{{--<a href="/referrals">--}}
-								{{--<i class="fa fa-users push-5-r"></i>Referrals--}}
-							{{--</a>--}}
-						{{--</li>--}}
 						<li>
 							<a href="{{ $binary_download_link }}" download>
 								<i class="fa fa-cloud-download push-5-r"></i>Download Miner
@@ -336,14 +148,17 @@
 			<div class="content content-boxed">
 				<!-- Section -->
 				<div class="bg-image img-rounded overflow-hidden push"
-				     style="background-image: url('{{ asset('oneui/assets/img/photos/photo29@2x.jpg') }}');">
+				     style="background-image: url('{{ asset('stack/img/promo-1.jpg') }}');">
 					<div class="bg-black-op">
 						<div class="content">
 							<div class="block block-transparent block-themed text-center">
 								<div class="block-content">
 									<h1 class="h1 font-w700 text-white animated fadeInDown push-5">Dashboard</h1>
 									<h2 class="h4 font-w400 text-white-op animated fadeInUp">Welcome
-									                                                         back, {{ Auth::user()->name }}</h2>
+									                                                         @if ($first_login == 1)
+									                                                         back
+									                                                         @endif
+									                                                         , {{ Auth::user()->name }}</h2>
 								</div>
 							</div>
 						</div>
@@ -404,7 +219,7 @@
 
 				<!-- Charts -->
 				<div class="row">
-					<div class="col-md-6">
+					<div class="col-md-12">
 						<div class="block block-rounded block-opt-refresh-icon8">
 							<div class="block-header">
 								<ul class="block-options">
@@ -436,7 +251,7 @@
 						</div>
 					</div>
 
-					<div class="col-md-6">
+					<div class="col-md-12">
 						<div class="block block-rounded block-opt-refresh-icon8">
 							<div class="block-header">
 								<ul class="block-options">
@@ -505,14 +320,18 @@
 		<!-- Footer -->
 		<footer id="page-footer" class="bg-body font-s12">
 			<div class="content-mini content-mini-full content-boxed clearfix push-15">
+				{{--<div class="pull-right">--}}
+					{{--Crafted with <i class="fa fa-heart text-city"></i> by--}}
+					{{--<a class="font-w600" href="http://goo.gl/vNS3I" target="_blank">pixelcave</a>--}}
+				{{--</div>--}}
 				<div class="pull-right">
-					Crafted with <i class="fa fa-heart text-city"></i> by
-					<a class="font-w600" href="http://goo.gl/vNS3I" target="_blank">pixelcave</a>
-				</div>
-				<div class="pull-left">
-					<a class="font-w600" href="http://goo.gl/6LF10W" target="_blank">OneUI 3.1</a> &copy; <span
+					<a class="font-w600" href="http://goo.gl/6LF10W" target="_blank">CryptoMiner</a> &copy; <span
 							class="js-year-copy"></span>
 				</div>
+				{{--<div class="pull-left">--}}
+					{{--<a class="font-w600" href="http://goo.gl/6LF10W" target="_blank">CryptoMiner</a> &copy; <span--}}
+							{{--class="js-year-copy"></span>--}}
+				{{--</div>--}}
 			</div>
 		</footer>
 		<!-- END Footer -->
