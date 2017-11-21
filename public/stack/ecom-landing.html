@@ -1,0 +1,456 @@
+<!doctype html>
+<html lang='en'>
+    <head>
+        <meta charset='utf-8'>
+        <title></title>
+        <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+        <link href='css/stack-interface.css' rel='stylesheet' type='text/css' media='all'>
+        <link href='css/socicon.css' rel='stylesheet' type='text/css' media='all'/>
+        <link href='css/bootstrap.css' rel='stylesheet' type='text/css' media='all'/>
+        <link href='css/flickity.css' rel='stylesheet' type='text/css' media='all'/>
+        <link href='css/stack-interface.css' rel='stylesheet' type='text/css' media='all'/>
+        <link href='css/theme.css' rel='stylesheet' type='text/css' media='all'/>
+        <link href='css/custom.css' rel='stylesheet' type='text/css' media='all'/>
+        <!--<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700|Roboto:300,400,500,700" rel="stylesheet" type="text/css"/>-->
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:200,300,400,400i,500,600,700' rel='stylesheet'>
+    </head>
+    <body data-smooth-scroll-offset='77'>
+    <div class='nav-container'>
+        <div>
+            <div class='bar bar--sm visible-xs'>
+                <div class='container'>
+                    <div class='row'>
+                        <div class='col-xs-3 col-sm-2'>
+                            <a href='index.html'><img class='logo logo-dark' alt='logo' src='/images/logo/logo.png'> <img
+                                    class='logo logo-light' alt='logo' src='/images/logo/logo.png'></a>
+                        </div>
+                        <div class='col-xs-9 col-sm-10 text-right'>
+                            <a href='#' class='hamburger-toggle' data-toggle-class='#menu2;hidden-xs hidden-sm'><i
+                                    class='icon icon--sm stack-interface stack-menu'></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <nav id='menu2' class='bar bar-2 hidden-xs'>
+                <div class='container'>
+                    <div class='row'>
+                        <div class='col-md-2 text-center text-left-sm hidden-xs col-md-push-5'>
+                            <div class='bar__module'>
+                                <a href='index.html'><img class='logo logo-dark' alt='logo' src='/images/logo/logo.png'>
+                                    <img class='logo logo-light' alt='logo' src='/images/logo/logo.png'></a>
+                            </div>
+                        </div>
+                        <div class='col-md-5 col-md-pull-2'>
+                            <div class='bar__module'>
+                                <ul class='menu-horizontal text-left'>
+                                    <li>
+                                        <a href='#'>
+                                            Single
+                                        </a>
+                                    </li>
+                                    <li class='dropdown'> <span class='dropdown__trigger'>
+                                        Dropdown Slim
+                                    </span>
+                                        <div class='dropdown__container'>
+                                            <div class='container'>
+                                                <div class='row'>
+                                                    <div class='dropdown__content col-md-2'>
+                                                        <ul class='menu-vertical'>
+                                                            <li>
+                                                                <a href='#'>Single Link</a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class='col-md-5 text-right text-left-xs text-left-sm'>
+                            <div class='bar__module'>
+                                <a class='btn btn--sm type--uppercase inner-link' href='#' target='_blank'> <span
+                                        class='btn__text'>
+                                    LOGIN
+                                </span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <div class='main-container'>
+        <section class='text-center imagebg parallax space--xs' data-overlay='4'>
+            <div class='background-image-holder'><img alt='background' src='img/hero-2.jpg'></div>
+            <div class='container'>
+                <div class='row'>
+                    <div class='col-sm-12 col-md-10'>
+
+                        <h1>
+                            <strong>EcomPick</strong> is a curation of the newest, hottest products out there!
+                            <br/>
+                            Never run out of ideas again!
+                        </h1>
+
+                        <div class='video-cover border--round'>
+                            <div class='background-image-holder'><img alt='image' src='img/cowork-5.jpg'></div>
+                            <div class='video-play-icon'></div>
+                            <iframe data-src='https://www.youtube.com/embed/6p45ooZOOPo?autoplay=1'
+                                    allowfullscreen='allowfullscreen'></iframe>
+                        </div>
+                        <!--<span>Stack includes Variant Page Builder — used by over <strong>17,000</strong> customers <a-->
+                                <!--target='_blank' href='#customise-template'>Try Now ↗</a></span>-->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="text-center space-bottom--sm">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-10 col-md-8">
+                        <h2>New Ideas, Daily!</h2>
+                        <p class="lead">
+                            We provide you with the newest & most popular
+                            products every single day, all so you can focus on the selling!
+                        </p>
+                    </div>
+                </div>
+                <!--end of row-->
+            </div>
+            <!--end of container-->
+        </section>
+
+        <section class="space--sm">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="masonry masonry--tiles">
+                            <div class="masonry-filter-container">
+                                <span>Category:</span>
+                                <div class="masonry-filter-holder">
+                                    <div class="masonry__filters" data-filter-all-text="All Categories"></div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="masonry__container">
+                                    <div class="masonry__item col-sm-4"></div>
+                                    <div class="masonry__item col-sm-4" data-masonry-filter="Computing">
+                                        <div class="product product--tile bg--secondary text-center">
+                                            <span class="label">Sale</span>
+                                            <a href="#">
+                                                <img alt="Image" src="img/product-small-1.png" />
+                                            </a>
+                                            <a class="block" href="#">
+                                                <div>
+                                                    <h5>Apple iPad</h5>
+                                                    <span> 128GB Wifi + Celluar</span>
+                                                </div>
+                                                <div>
+                                                    <span class="h4 inline-block type--strikethrough">$899</span>
+                                                    <span class="h4 inline-block">$799</span>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <!--end item-->
+                                    <div class="masonry__item col-sm-4" data-masonry-filter="Creative">
+                                        <div class="product product--tile bg--secondary text-center">
+                                            <a href="#">
+                                                <img alt="Image" src="img/product-small-8.png" />
+                                            </a>
+                                            <a class="block" href="#">
+                                                <div>
+                                                    <h5>Canon 550D</h5>
+                                                    <span> 18MP DSLR Camera</span>
+                                                </div>
+                                                <div>
+                                                    <span class="h4 inline-block">$849</span>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <!--end item-->
+                                    <div class="masonry__item col-sm-4" data-masonry-filter="Accessories">
+                                        <div class="product product--tile bg--secondary text-center">
+                                            <a href="#">
+                                                <img alt="Image" src="img/product-small-2.png" />
+                                            </a>
+                                            <a class="block" href="#">
+                                                <div>
+                                                    <h5>Apple Keyboard</h5>
+                                                    <span> Wireless Bluetooth</span>
+                                                </div>
+                                                <div>
+                                                    <span class="h4 inline-block">$99</span>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <!--end item-->
+                                    <div class="masonry__item col-sm-4" data-masonry-filter="Accessories">
+                                        <div class="product product--tile bg--secondary text-center">
+                                            <a href="#">
+                                                <img alt="Image" src="img/product-small-12.png" />
+                                            </a>
+                                            <a class="block" href="#">
+                                                <div>
+                                                    <h5>Magic Mouse</h5>
+                                                    <span> Wireless Bluetooth</span>
+                                                </div>
+                                                <div>
+                                                    <span class="h4 inline-block">$69</span>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <!--end item-->
+                                    <div class="masonry__item col-sm-4" data-masonry-filter="Audio">
+                                        <div class="product product--tile bg--secondary text-center">
+                                            <a href="#">
+                                                <img alt="Image" src="img/product-small-10.png" />
+                                            </a>
+                                            <a class="block" href="#">
+                                                <div>
+                                                    <h5>DALI Xensor 2</h5>
+                                                    <span> Desktop Speaker</span>
+                                                </div>
+                                                <div>
+                                                    <span class="h4 inline-block">$269</span>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <!--end item-->
+                                    <div class="masonry__item col-sm-4" data-masonry-filter="Audio">
+                                        <div class="product product--tile bg--secondary text-center">
+                                            <a href="#">
+                                                <img alt="Image" src="img/product-small-5.png" />
+                                            </a>
+                                            <a class="block" href="#">
+                                                <div>
+                                                    <h5>Tivoli M1</h5>
+                                                    <span> Digital Radio</span>
+                                                </div>
+                                                <div>
+                                                    <span class="h4 inline-block type--strikethrough">$479</span>
+                                                    <span class="h4 inline-block">$399</span>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <!--end item-->
+                                    <div class="masonry__item col-sm-4" data-masonry-filter="Computing">
+                                        <div class="product product--tile bg--secondary text-center">
+                                            <a href="#">
+                                                <img alt="Image" src="img/product-small-4.png" />
+                                            </a>
+                                            <a class="block" href="#">
+                                                <div>
+                                                    <h5>Microsoft Surface</h5>
+                                                    <span> 256GB Core i7</span>
+                                                </div>
+                                                <div>
+                                                    <span class="h4 inline-block">$1399</span>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <!--end item-->
+                                    <div class="masonry__item col-sm-4" data-masonry-filter="Computing">
+                                        <div class="product product--tile bg--secondary text-center">
+                                            <a href="#">
+                                                <img alt="Image" src="img/product-small-3.png" />
+                                            </a>
+                                            <a class="block" href="#">
+                                                <div>
+                                                    <h5>Samsung Ativ</h5>
+                                                    <span> 256GB Core i5</span>
+                                                </div>
+                                                <div>
+                                                    <span class="h4 inline-block">$1099</span>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <!--end item-->
+                                    <div class="masonry__item col-sm-4" data-masonry-filter="Computing">
+                                        <div class="product product--tile bg--secondary text-center">
+                                            <a href="#">
+                                                <img alt="Image" src="img/product-small-11.png" />
+                                            </a>
+                                            <a class="block" href="#">
+                                                <div>
+                                                    <h5>Apple Macbook</h5>
+                                                    <span> 128GB Core i5</span>
+                                                </div>
+                                                <div>
+                                                    <span class="h4 inline-block">$1399</span>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <!--end item-->
+                                    <div class="masonry__item col-sm-4" data-masonry-filter="Creative">
+                                        <div class="product product--tile bg--secondary text-center">
+                                            <span class="label">Sale</span>
+                                            <a href="#">
+                                                <img alt="Image" src="img/product-small-7.png" />
+                                            </a>
+                                            <a class="block" href="#">
+                                                <div>
+                                                    <h5>Wacom Intuos 5</h5>
+                                                    <span> Drawing Tablet</span>
+                                                </div>
+                                                <div>
+                                                    <span class="h4 inline-block type--strikethrough">$699</span>
+                                                    <span class="h4 inline-block">$559</span>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <!--end item-->
+                                    <div class="masonry__item col-sm-4" data-masonry-filter="Audio">
+                                        <div class="product product--tile bg--secondary text-center">
+                                            <a href="#">
+                                                <img alt="Image" src="img/product-small-9.png" />
+                                            </a>
+                                            <a class="block" href="#">
+                                                <div>
+                                                    <h5>Audison TMA-4</h5>
+                                                    <span> Bluetooth Headphones</span>
+                                                </div>
+                                                <div>
+                                                    <span class="h4 inline-block">$279</span>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <!--end item-->
+                                    <div class="masonry__item col-sm-4" data-masonry-filter="Creative">
+                                        <div class="product product--tile bg--secondary text-center">
+                                            <a href="#">
+                                                <img alt="Image" src="img/product-small-6.png" />
+                                            </a>
+                                            <a class="block" href="#">
+                                                <div>
+                                                    <h5>Wacom Intuos Pen</h5>
+                                                    <span> Digital Stylus</span>
+                                                </div>
+                                                <div>
+                                                    <span class="h4 inline-block">$89</span>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <!--end item-->
+                                </div>
+                                <!--end masonry container-->
+                            </div>
+                            <!--end of row-->
+                        </div>
+                        <!--end masonry-->
+                    </div>
+                </div>
+                <!--end of row-->
+            </div>
+            <!--end of container-->
+        </section>
+        <section class='switchable feature-large bg--secondary'>
+            <div class='container'>
+                <div class='row'>
+                    <div class='col-sm-6'><img alt='Image' class='border--round box-shadow-wide'
+                                               src='img/landing-11.jpg'></div>
+                    <div class='col-sm-6 col-md-5'>
+                        <div class='switchable__text'>
+                            <h2>Perfect for bootstrapped startups</h2>
+                            <p class='lead'> Launching an attractive and scalable website quickly and affordably is
+                                important for modern startups — Stack offers massive value without looking
+                                'bargain-bin'. </p>
+                            <a href='#'>Learn More »</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class='feature-large-14 switchable switchable--switch'>
+            <div class='container'>
+                <div class='row'>
+                    <div class='col-sm-6'>
+                        <div class='boxed boxed--border boxed--lg'>
+                            <div class='row'>
+                                <div class='col-sm-10 col-sm-offset-1'>
+                                    <div class='slider text-center' data-paging='true'>
+                                        <ul class='slides'>
+                                            <li><img alt='Image' src='img/cowork-8.jpg'>
+                                                <h5>A Different Experience</h5>
+                                                <p> Each purchase of Stack includes six months of free support and
+                                                    lifetime free content and bug-fix updates. </p>
+                                            </li>
+                                            <li><img alt='Image' src='img/cowork-10.jpg'>
+                                                <h5>A Different Experience</h5>
+                                                <p> Each purchase of Stack includes six months of free support and
+                                                    lifetime free content and bug-fix updates. </p>
+                                            </li>
+                                            <li><img alt='Image' src='img/cowork-11.jpg'>
+                                                <h5>A Different Experience</h5>
+                                                <p> Each purchase of Stack includes six months of free support and
+                                                    lifetime free content and bug-fix updates. </p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='col-sm-6 col-md-5'>
+                        <div class='switchable__text'>
+                            <h3>Experience quality</h3>
+                            <p class='lead'> Stack is built with customization and ease-of-use at its core — whether
+                                you're a seasoned developer or just starting out, you'll be making attractive sites
+                                faster than any traditional HTML template. </p>
+                            <hr class='short'>
+                            <p> Each purchase of Stack includes six months of free support and lifetime free content and
+                                bug-fix updates. </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer class='footer-7 text-center-xs'>
+            <div class='container'>
+                <div class='row'>
+                    <div class='col-sm-6'><span class='type--fine-print'>© <span class='update-year'>2017</span> Medium Rare — All Rights Reserved</span>
+                    </div>
+                    <div class='col-sm-6 text-right text-center-xs'>
+                        <ul class='social-list list-inline'>
+                            <li>
+                                <a href='#'><i class='socicon socicon-google icon icon--xs'></i></a>
+                            </li>
+                            <li>
+                                <a href='#'><i class='socicon socicon-twitter icon icon--xs'></i></a>
+                            </li>
+                            <li>
+                                <a href='#'><i class='socicon socicon-facebook icon icon--xs'></i></a>
+                            </li>
+                            <li>
+                                <a href='#'><i class='socicon socicon-instagram icon icon--xs'></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src='js/jquery-3.1.1.min.js'></script>
+    <script src='js/flickity.min.js'></script>
+    <script src='js/parallax.js'></script>
+    <script src='js/isotope.min.js'></script>
+    <script src='js/smooth-scroll.min.js'></script>
+    <script src='js/scripts.js'></script>
+
+    </body>
+
+</html>

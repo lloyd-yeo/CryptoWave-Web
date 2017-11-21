@@ -1,0 +1,72 @@
+/*! Place your custom styles here */
+
+body {
+    font-size: 1em;
+    line-height: 1.85714286em;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: 'Lato', sans-serif;
+    color: #666666;
+    font-weight: 400;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+    font-family: 'Lato', sans-serif;
+    color: #252525;
+    font-weight: 900;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.info-icon-profit {
+    background-color: #83BC14
+}
+
+.info-icon-analytics {
+    background-color: orange
+}
+
+.info-icon-engagement {
+    background-color: #329BC2
+}
+
+.info-icon-links {
+    background-color: #006bb3
+}
+
+.info-icon-facebook_ads {
+    background-color: #4A84EE
+}
+
+.info-icon-video {
+    background-color: #e00
+}
+
+.info-icon-targeting {
+    background-color: #000
+}
+
+.info-icon-retailprice {
+    background-color: #FDEE50
+}
+
+.list-inline li:not(:last-child) {
+    margin-right: 2px;
+}
+.list-inline:not(:last-child) {
+    margin-right: 2px;
+}
+.added-before {
+    display: block;
+    margin-bottom: 1.8em;
+}
