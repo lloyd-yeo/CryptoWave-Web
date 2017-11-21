@@ -105,7 +105,7 @@
 									<br/>
 									Forget mining rigs, GPU or any other complicated equipments.
 									<br/>
-									Here's a software transforms your personal computer into a mining machine, enabling you to mine just by leaving it on!
+									Here's a software that will transform your personal computer into a crypto mining machine, enabling you to mine cryptocurrency just by leaving it on!
 									<br/><br/>
 								</span>
 							</div>
