@@ -40,6 +40,13 @@ class HomeController extends Controller
 		$floating_buffer_multiplier = $system_param->buffer_multiplier;
 		$sgd_earned                 = 0;
 		$new_referral_count         = 0;
+		$first_login                = Auth::user()->first_login;
+
+		if ($first_login == 0) {
+			$user = User::find(Auth::user()->id);
+			$user->first_login = 1;
+			$user->save();
+		}
 
 		if (UserWallet::where('user_id', Auth::user()->id)->first() === NULL) {
 			$job = new \App\Jobs\CreateEthereumWallet(User::find(Auth::user()->id));
@@ -71,6 +78,7 @@ class HomeController extends Controller
 		                           'new_referral_count'   => $new_referral_count,
 		                           'sgd_earned'           => $sgd_earned,
 		                           'binary_download_link' => $system_param->binary_download_link,
+		                           'first_login'          => $first_login,
 		]);
 	}
 }

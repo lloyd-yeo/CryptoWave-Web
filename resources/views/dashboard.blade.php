@@ -302,14 +302,14 @@
 							</a>
 						</li>
 						{{--<li>--}}
-							{{--<a href="/wallet">--}}
-								{{--<i class="si si-wallet push-5-r"></i>Wallet--}}
-							{{--</a>--}}
+						{{--<a href="/wallet">--}}
+						{{--<i class="si si-wallet push-5-r"></i>Wallet--}}
+						{{--</a>--}}
 						{{--</li>--}}
 						{{--<li>--}}
-							{{--<a href="/referrals">--}}
-								{{--<i class="fa fa-users push-5-r"></i>Referrals--}}
-							{{--</a>--}}
+						{{--<a href="/referrals">--}}
+						{{--<i class="fa fa-users push-5-r"></i>Referrals--}}
+						{{--</a>--}}
 						{{--</li>--}}
 						<li>
 							<a href="{{ $binary_download_link }}" download>
@@ -324,7 +324,7 @@
 							<a href="{{ route('logout') }}"
 							   onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
-		                                        Logout
+								Logout
 							</a>
 						</li>
 					</ul>
@@ -359,8 +359,8 @@
 								<div class="text-muted">
 									<small><i class="si si-wallet"></i> Wallet</small>
 								</div>
-								<div class="font-s12 font-w700">Current Balance </div>
-								<a class="h2 font-w300 text-primary" href="#!" >{{ $sgd_earned }}</a>
+								<div class="font-s12 font-w700">Current Balance</div>
+								<a class="h2 font-w300 text-primary" href="#!">{{ $sgd_earned }}</a>
 							</div>
 						</div>
 					</div>
@@ -371,7 +371,8 @@
 									<small><i class="si si-users"></i> Today</small>
 								</div>
 								<div class="font-s12 font-w700">New Referrals</div>
-								<a class="h2 font-w300 text-primary" href="#" data-toggle="countTo" data-to="{{ $new_referral_count }}"></a>
+								<a class="h2 font-w300 text-primary" href="#" data-toggle="countTo"
+								   data-to="{{ $new_referral_count }}"></a>
 							</div>
 						</div>
 					</div>
@@ -397,7 +398,9 @@
 				<div class="row">
 					<div class="col-xs-12">
 						<div class="alert alert-success">
-							<p><i class="fa fa-check"></i> Refer a friend now with the referral link <a>http://174.138.31.231/register?ref={{ Auth::user()->tracking_code }}</a></p>
+							<p><i class="fa fa-check"></i> Refer a friend now with the referral link
+								<a href="#!">http://174.138.31.231/register?ref={{ Auth::user()->tracking_code }}</a>
+							</p>
 						</div>
 					</div>
 				</div>
@@ -497,6 +500,35 @@
 					</div>
 				</div>
 				<!-- END Charts -->
+
+				<!-- Fade In Modal -->
+				<div class="modal fade" id="modal-welcome" tabindex="-1" role="dialog" aria-hidden="true">
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<div class="block block-themed block-transparent remove-margin-b">
+								<div class="block-header bg-modern">
+									<ul class="block-options">
+										<li>
+											<button data-dismiss="modal" type="button"><i class="si si-close"></i></button>
+										</li>
+									</ul>
+									<h3 class="block-title">Welcome</h3>
+								</div>
+								<div class="block-content">
+									<p>Welcome to CryptoMiner!</p>
+									<p>To get started mining, you will need to download the CryptoMiner! Download it below.</p>
+									<a class="btn btn-primary push-5-r push-10" href="{{ $binary_download_link }}" download><i class="fa fa-download"></i> Download CryptoMiner</a>
+								</div>
+							</div>
+							<div class="modal-footer">
+								{{--<button class="btn btn-sm btn-default" type="button" data-dismiss="modal">Close</button>--}}
+								<button id="modal-welcome-btn" class="btn btn-sm btn-success" type="button" data-dismiss="modal"><i class="fa fa-check"></i> Ok</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- END Fade In Modal -->
+
 			</div>
 			<!-- END Page Content -->
 		</main>
@@ -546,6 +578,9 @@
         jQuery(function () {
             // Init page helpers (CountTo plugin)
             App.initHelpers('appear-countTo');
+			@if ($first_login == 0)
+                jQuery('#modal-welcome').modal('show');
+	        @endif
         });
 	</script>
 	</body>
