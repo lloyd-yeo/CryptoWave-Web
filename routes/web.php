@@ -11,10 +11,11 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'HomeController@landingPage');
 
 Auth::routes();
 
+Route::post('/validate/referral', 'SignUpController@validateReferral')->name('validate_referral');
+
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/signup', 'SignUpController@signup')->name('signup');
