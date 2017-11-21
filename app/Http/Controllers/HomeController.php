@@ -18,7 +18,14 @@ class HomeController extends Controller
 	 */
 	public function __construct()
 	{
-		$this->middleware('auth');
+		$this->middleware('auth', ['except' => ['landingPage']]);
+	}
+
+	public function landingPage(Request $request)
+	{
+		$sys_param = SystemParameter::all()->first();
+
+		return view('index', [ 'registration_qty' => $sys_param->registration_slots_qty ]);
 	}
 
 	/**
@@ -64,6 +71,13 @@ class HomeController extends Controller
 			}
 		}
 
+		$user = User::find(Auth::user()->id);
+		$first_login = $user->first_login;
+		if ($user->first_login == 0) {
+			$user->first_login = 1;
+			$user->save();
+		}
+
 		return view('dashboard', [ 'referral_link'        => $referral_link,
 		                           'referrer'             => $referrer,
 		                           'referrals'            => $referrals,
@@ -71,6 +85,7 @@ class HomeController extends Controller
 		                           'new_referral_count'   => $new_referral_count,
 		                           'sgd_earned'           => $sgd_earned,
 		                           'binary_download_link' => $system_param->binary_download_link,
+		                           'first_login' => $first_login,
 		]);
 	}
 }
