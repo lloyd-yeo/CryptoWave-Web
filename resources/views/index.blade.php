@@ -2,7 +2,7 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
-		<title>Stack Multipurpose HTML Template</title>
+		<title>UniWave</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="description" content="Site Description Here">
 		<link href="stack/css/bootstrap.css" rel="stylesheet" type="text/css" media="all"/>
@@ -47,8 +47,8 @@
 					<div class="col-md-2 text-center text-left-sm hidden-xs col-md-push-5">
 						<div class="bar__module">
 							<a href="/">
-								<img class="logo logo-dark" alt="logo here" src="img/logo-dark.png"/>
-								<img class="logo logo-light" alt="logo here" src="img/logo-light.png"/>
+								<img class="logo logo-dark" alt="logo here" src="stack/img/logo.png"/>
+								<img class="logo logo-light" alt="logo here" src="stack/img/logo.png"/>
 							</a>
 						</div>
 						<!--end module-->
@@ -92,7 +92,7 @@
 					<div class="col-md-5 col-sm-7">
 						<div class="switchable__text">
 							<h1>
-								CryptoMiner
+								UniWave
 							</h1>
 							<p class="lead">
 
