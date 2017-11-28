@@ -124,7 +124,8 @@
 							</a>
 						</li>
 						<li>
-							<a href="{{ $binary_download_link }}" download>
+							{{--<a href="/download" download>--}}
+							<a href="/download" target="_blank">
 								<i class="fa fa-cloud-download push-5-r"></i>Download Miner
 							</a>
 						</li>
