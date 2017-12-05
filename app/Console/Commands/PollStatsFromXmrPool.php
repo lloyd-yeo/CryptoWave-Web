@@ -1,14 +1,44 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Console\Commands;
 
+use Illuminate\Console\Command;
 use Illuminate\Http\Request;
 use App\UserHashpowerRecord;
 use App\User;
 
-class StatsController extends Controller
+class PollStatsFromXmrPool extends Command
 {
-    public function getStats(Request $request)
+    /**
+     * The name and signature of the console command.
+     *
+     * @var string
+     */
+    protected $signature = 'poll:stats';
+
+    /**
+     * The console command description.
+     *
+     * @var string
+     */
+    protected $description = 'Poll Stats from XmrPool';
+
+    /**
+     * Create a new command instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        parent::__construct();
+    }
+
+    /**
+     * Execute the console command.
+     *
+     * @return mixed
+     */
+    public function handle()
     {
         $client = new \GuzzleHttp\Client();
         $response = $client->get("https://api.xmrpool.net/miner/48WCGXaoL7gUY8fwSxUPgR4VYx4iVTJYEF4jP7Uq4jG26Hz9Gc6QjgU1m7Hht5pBPJbccCyR4khkZD88wSwErkRt2FkmpNH/stats/allWorkers", []);
