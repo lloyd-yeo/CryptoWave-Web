@@ -242,12 +242,12 @@
 							<div class="block-content text-center">
 								<div class="row items-push-2x text-center push-20-t">
 									<div class="col-xs-6 col-lg-3">
-										<div class="push-15"><i class="fa fa-bank fa-2x"></i></div>
-										<div class="h5 text-muted">${{ $sgd_earned }}</div>
+										{{--<div class="push-15"><i class="fa fa-bank fa-2x"></i></div>--}}
+										{{--<div class="h5 text-muted">${{ $sgd_earned }}</div>--}}
 									</div>
 									<div class="col-xs-6 col-lg-3">
-										<div class="push-15"><i class="fa fa-angle-double-up fa-2x"></i></div>
-										<div class="h5 text-muted">+9% Earnings</div>
+										{{--<div class="push-15"><i class="fa fa-angle-double-up fa-2x"></i></div>--}}
+										{{--<div class="h5 text-muted">+9% Earnings</div>--}}
 									</div>
 								</div>
 							</div>
