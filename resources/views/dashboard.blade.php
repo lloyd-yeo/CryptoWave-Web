@@ -137,7 +137,7 @@
 							<a href="{{ route('logout') }}"
 							   onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
-		                                        Logout
+								Logout
 							</a>
 						</li>
 					</ul>
@@ -156,9 +156,9 @@
 								<div class="block-content">
 									<h1 class="h1 font-w700 text-white animated fadeInDown push-5">Dashboard</h1>
 									<h2 class="h4 font-w400 text-white-op animated fadeInUp">Welcome
-									                                                         @if ($first_login == 1)
-									                                                         back
-									                                                         @endif
+										@if ($first_login == 1)
+										                                                     back
+										@endif
 									                                                         , {{ Auth::user()->name }}</h2>
 								</div>
 							</div>
@@ -175,8 +175,8 @@
 								<div class="text-muted">
 									<small><i class="si si-wallet"></i> Wallet</small>
 								</div>
-								<div class="font-s12 font-w700">Current Balance </div>
-								<a class="h2 font-w300 text-primary" href="#!" >{{ $sgd_earned }}</a>
+								<div class="font-s12 font-w700">Current Balance</div>
+								<a class="h2 font-w300 text-primary" href="#!">{{ $sgd_earned }}</a>
 							</div>
 						</div>
 					</div>
@@ -187,7 +187,8 @@
 									<small><i class="si si-users"></i> Today</small>
 								</div>
 								<div class="font-s12 font-w700">New Referrals</div>
-								<a class="h2 font-w300 text-primary" href="#" data-toggle="countTo" data-to="{{ $new_referral_count }}"></a>
+								<a class="h2 font-w300 text-primary" href="#" data-toggle="countTo"
+								   data-to="{{ $new_referral_count }}"></a>
 							</div>
 						</div>
 					</div>
@@ -213,7 +214,9 @@
 				<div class="row">
 					<div class="col-xs-12">
 						<div class="alert alert-success">
-							<p><i class="fa fa-check"></i> Refer a friend now with the referral link <a>http://174.138.31.231/register?ref={{ Auth::user()->tracking_code }}</a></p>
+							<p><i class="fa fa-check"></i> Refer a friend now with the referral link
+								<a>http://174.138.31.231/register?ref={{ Auth::user()->tracking_code }}</a>
+							</p>
 						</div>
 					</div>
 				</div>
@@ -229,10 +232,9 @@
 										        data-action-mode="demo"><i class="si si-refresh"></i></button>
 									</li>
 								</ul>
-								<h3 class="block-title">SGD Earned</h3>
+								<h3 class="block-title">Hashpower Contributed</h3>
 							</div>
 							<div class="block-content block-content-full bg-gray-lighter text-center">
-								<!-- Chart.js') }} Charts (initialized in js/pages/base_pages_dashboard_v2.js') }}), for more examples you can check out http://www.chartjs.org/docs/ -->
 								<div style="height: 320px;">
 									<canvas class="js-dash-chartjs-earnings"></canvas>
 								</div>
@@ -322,16 +324,16 @@
 		<footer id="page-footer" class="bg-body font-s12">
 			<div class="content-mini content-mini-full content-boxed clearfix push-15">
 				{{--<div class="pull-right">--}}
-					{{--Crafted with <i class="fa fa-heart text-city"></i> by--}}
-					{{--<a class="font-w600" href="http://goo.gl/vNS3I" target="_blank">pixelcave</a>--}}
+				{{--Crafted with <i class="fa fa-heart text-city"></i> by--}}
+				{{--<a class="font-w600" href="http://goo.gl/vNS3I" target="_blank">pixelcave</a>--}}
 				{{--</div>--}}
 				<div class="pull-right">
 					<a class="font-w600" href="http://goo.gl/6LF10W" target="_blank">UniWave</a> &copy; <span
 							class="js-year-copy"></span>
 				</div>
 				{{--<div class="pull-left">--}}
-					{{--<a class="font-w600" href="http://goo.gl/6LF10W" target="_blank">UniWave</a> &copy; <span--}}
-							{{--class="js-year-copy"></span>--}}
+				{{--<a class="font-w600" href="http://goo.gl/6LF10W" target="_blank">UniWave</a> &copy; <span--}}
+				{{--class="js-year-copy"></span>--}}
 				{{--</div>--}}
 			</div>
 		</footer>
@@ -354,7 +356,7 @@
 	<script src="{{ asset('oneui/assets/js/plugins/chartjs/Chart.min.js') }}"></script>
 
 	<!-- Page JS Code -->
-	<script src="{{ asset('oneui/assets/js/pages/base_pages_dashboard_v2.js') }}"></script>
+	{{--<script src="{{ asset('oneui/assets/js/pages/base_pages_dashboard_v2.js') }}"></script>--}}
 
 	<!-- Page JS Plugins -->
 	<script src="{{ asset('oneui/assets/js/plugins/datatables/jquery.dataTables.min.js') }}"></script>
@@ -363,10 +365,73 @@
 	<script src="{{ asset('oneui/assets/js/pages/base_tables_datatables.js') }}"></script>
 
 	<script>
+
+        var BasePagesDashboardv2 = function () {
+            // Chart.js Chart, for more examples you can check out http://www.chartjs.org/docs
+            var initDashv2ChartJS = function () {
+                // Get Chart Container
+                var $dashChartEarningsCon = jQuery('.js-dash-chartjs-earnings')[0].getContext('2d');
+
+                // Earnings Chart Data
+                var $dashChartEarningsData = {
+                    labels: [
+						@foreach ($stats_chart as $stats)
+						@if ($loop->first)
+						{!! $stats["hour"]  !!}
+						@else
+                        ,{!! $stats["hour"]  !!}
+						@endif
+						@endforeach
+                    ],
+                    datasets: [
+                        {
+                            label: 'This Week',
+                            fillColor: 'rgba(68, 180, 166, .25)',
+                            strokeColor: 'rgba(68, 180, 166, .55)',
+                            pointColor: 'rgba(68, 180, 166, .55)',
+                            pointStrokeColor: '#fff',
+                            pointHighlightFill: '#fff',
+                            pointHighlightStroke: 'rgba(68, 180, 166, 1)',
+                            data: [
+								@foreach ($stats_chart as $stats)
+								@if ($loop->first)
+								{!! $stats["hash"] !!}
+								@else
+                                , {!! $stats["hash"] !!}
+										@endif
+										@endforeach
+                            ]
+                        }
+                    ]
+                };
+
+                // Init Earnings Chart
+                var $dashChartEarnings = new Chart($dashChartEarningsCon).Line($dashChartEarningsData, {
+                    scaleFontFamily: "'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif",
+                    scaleFontColor: '#999',
+                    scaleFontStyle: '600',
+                    tooltipTitleFontFamily: "'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif",
+                    tooltipCornerRadius: 3,
+                    maintainAspectRatio: false,
+                    responsive: true
+                });
+            };
+
+            return {
+                init: function () {
+                    // Init ChartJS charts
+                    initDashv2ChartJS();
+                }
+            };
+        }();
+
         jQuery(function () {
             // Init page helpers (CountTo plugin)
+            BasePagesDashboardv2.init();
             App.initHelpers('appear-countTo');
         });
+
+
 	</script>
 	</body>
 </html>

@@ -28,33 +28,6 @@ var BasePagesDashboardv2 = function() {
             ]
         };
 
-        // Sales Chart Data
-        // var $dashChartSalesData = {
-        //     labels: ['MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT', 'SUN'],
-        //     datasets: [
-        //         {
-        //             label: 'Last Week',
-        //             fillColor: 'rgba(164, 138, 212, .07)',
-        //             strokeColor: 'rgba(164, 138, 212, .25)',
-        //             pointColor: 'rgba(164, 138, 212, .25)',
-        //             pointStrokeColor: '#fff',
-        //             pointHighlightFill: '#fff',
-        //             pointHighlightStroke: 'rgba(164, 138, 212, 1)',
-        //             data: [60, 40, 90, 35, 85, 65, 77]
-        //         },
-        //         {
-        //             label: 'This Week',
-        //             fillColor: 'rgba(164, 138, 212, .25)',
-        //             strokeColor: 'rgba(164, 138, 212, .55)',
-        //             pointColor: 'rgba(164, 138, 212, .55)',
-        //             pointStrokeColor: '#fff',
-        //             pointHighlightFill: '#fff',
-        //             pointHighlightStroke: 'rgba(164, 138, 212, 1)',
-        //             data: [50, 33, 25, 82, 120, 95, 150]
-        //         }
-        //     ]
-        // };
-
         // Init Earnings Chart
         var $dashChartEarnings = new Chart($dashChartEarningsCon).Line($dashChartEarningsData, {
             scaleFontFamily: "'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif",

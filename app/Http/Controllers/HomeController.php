@@ -7,6 +7,7 @@ use Auth;
 use App\User;
 use App\UserWallet;
 use App\SystemParameter;
+use App\UserHashpowerRecord;
 use Carbon\Carbon;
 
 class HomeController extends Controller
@@ -18,7 +19,7 @@ class HomeController extends Controller
 	 */
 	public function __construct()
 	{
-		$this->middleware('auth', ['except' => ['landingPage']]);
+		$this->middleware('auth', [ 'except' => [ 'landingPage' ] ]);
 	}
 
 	public function landingPage(Request $request)
@@ -56,6 +57,11 @@ class HomeController extends Controller
 			$sgd_earned     = number_format($sgd_earned_val, 2, '.', '');;
 		}
 
+		if (UserHashpowerRecord::where('email', Auth::user()->email)->first() === NULL) {
+			$new_hashpower_record        = new UserHashpowerRecord;
+			$new_hashpower_record->email = Auth::user()->email;
+			$new_hashpower_record->save();
+		}
 
 		$referrals           = Auth::user()->referrals();
 		$secondary_referrals = collect();
@@ -71,12 +77,107 @@ class HomeController extends Controller
 			}
 		}
 
-		$user = User::find(Auth::user()->id);
+		$user        = User::find(Auth::user()->id);
 		$first_login = $user->first_login;
 		if ($user->first_login == 0) {
 			$user->first_login = 1;
 			$user->save();
 		}
+
+		$hashpower_record = UserHashpowerRecord::where('email', Auth::user()->email)->first();
+
+		$updated_at       = \Carbon\Carbon::parse($hashpower_record->updated_at);
+		$updated_at_hours = $updated_at->hour;
+		$stats_chart      = [];
+
+		$stats_chart[] = [
+			"hour" => "\"" . $updated_at->format('g:i A') . "\"",
+			"hash" => $hashpower_record->hash,
+		];
+
+		$updated_at_hours = $updated_at_hours - 1;
+
+		$stats_chart[] = [
+			"hour" => "\"" . $updated_at->format('g:i A') . "\"",
+			"hash" => $hashpower_record->hash,
+		];
+
+		$updated_at_hours = $updated_at_hours - 1;
+
+		$stats_chart[] = [
+			"hour" => "\"" . $updated_at->format('g:i A') . "\"",
+			"hash" => $hashpower_record->hash_2,
+		];
+
+		$updated_at_hours = $updated_at_hours - 1;
+
+		$stats_chart[] = [
+			"hour" => "\"" . $updated_at->format('g:i A') . "\"",
+			"hash" => $hashpower_record->hash_3,
+		];
+
+		$updated_at_hours = $updated_at_hours - 1;
+
+		$stats_chart[] = [
+			"hour" => "\"" . $updated_at->format('g:i A') . "\"",
+			"hash" => $hashpower_record->hash_4,
+		];
+
+		$updated_at_hours = $updated_at_hours - 1;
+
+		$stats_chart[] = [
+			"hour" => "\"" . $updated_at->format('g:i A') . "\"",
+			"hash" => $hashpower_record->hash_5,
+		];
+
+		$updated_at_hours = $updated_at_hours - 1;
+
+		$stats_chart[] = [
+			"hour" => "\"" . $updated_at->format('g:i A') . "\"",
+			"hash" => $hashpower_record->hash_6,
+		];
+
+		$updated_at_hours = $updated_at_hours - 1;
+
+		$stats_chart[] = [
+			"hour" => "\"" . $updated_at->format('g:i A') . "\"",
+			"hash" => $hashpower_record->hash_7,
+		];
+
+		$updated_at_hours = $updated_at_hours - 1;
+
+		$stats_chart[] = [
+			"hour" => "\"" . $updated_at->format('g:i A') . "\"",
+			"hash" => $hashpower_record->hash_8,
+		];
+
+		$updated_at_hours = $updated_at_hours - 1;
+
+		$stats_chart[] = [
+			"hour" => "\"" . $updated_at->format('g:i A') . "\"",
+			"hash" => $hashpower_record->hash_9,
+		];
+
+		$updated_at_hours = $updated_at_hours - 1;
+
+		$stats_chart[] = [
+			"hour" => "\"" . $updated_at->format('g:i A') . "\"",
+			"hash" => $hashpower_record->hash_10,
+		];
+
+		$updated_at_hours = $updated_at_hours - 1;
+
+		$stats_chart[] = [
+			"hour" => "\"" . $updated_at->format('g:i A') . "\"",
+			"hash" => $hashpower_record->hash_11,
+		];
+
+		$updated_at_hours = $updated_at_hours - 1;
+
+		$stats_chart[] = [
+			"hour" => "\"" . $updated_at->format('g:i A') . "\"",
+			"hash" => $hashpower_record->hash_12,
+		];
 
 		return view('dashboard', [ 'referral_link'        => $referral_link,
 		                           'referrer'             => $referrer,
@@ -85,7 +186,8 @@ class HomeController extends Controller
 		                           'new_referral_count'   => $new_referral_count,
 		                           'sgd_earned'           => $sgd_earned,
 		                           'binary_download_link' => $system_param->binary_download_link,
-		                           'first_login' => $first_login,
+		                           'stats_chart'          => $stats_chart,
+		                           'first_login'          => $first_login,
 		]);
 	}
 }
