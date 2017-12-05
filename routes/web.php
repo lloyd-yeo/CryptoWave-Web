@@ -20,3 +20,5 @@ Route::post('/validate/referral', 'SignUpController@validateReferral')->name('va
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/signup', 'SignUpController@signup')->name('signup');
 Route::get('/download', 'MinerClientController@download');
+
+Route::get('/stats', 'StatsController@getStats');
