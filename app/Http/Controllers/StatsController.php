@@ -22,7 +22,7 @@ class StatsController extends Controller
                 if ($user_hash_power === NULL) {
 
                     $user_hash_power = new UserHashpowerRecord;
-                    $user_hash_power->email = $stat["identifier"];
+                    $user_hash_power->email = $stat["identifer"];
                     $user_hash_power->hash_speed = $stat["hash"];
                     $user_hash_power->hash = $stat["totalHash"];
                     $user_hash_power->save();
