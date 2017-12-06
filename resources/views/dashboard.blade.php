@@ -119,7 +119,7 @@
             <div class="content-mini content-boxed">
                 <ul class="nav nav-pills nav-sub-header push">
                     <li class="active">
-                        <a href="/">
+                        <a href="/home">
                             <i class="fa fa-dashboard push-5-r"></i>Dashboard
                         </a>
                     </li>
