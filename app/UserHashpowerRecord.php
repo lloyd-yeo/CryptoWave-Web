@@ -3,11 +3,12 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use App\User;
 
 class UserHashpowerRecord extends Model
 {
     public function user()
     {
-      return $this->belongsTo('App\User');
+      return User::where('email',  $this->email)->first();
     }
 }
