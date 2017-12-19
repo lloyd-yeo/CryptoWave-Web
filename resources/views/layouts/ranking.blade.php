@@ -24,7 +24,7 @@
                                 @foreach ($leaderboard_top_users as $user)
                                     <tr>
                                         <td class="font-w600" style="width: 100%">
-                                            <span class='text-primary'>#{{ $loop->iteration }} {{ $user->email }}</span>
+                                            <span class='text-primary'>#{{ $loop->iteration }} {{ $user->name }}</span>
                                         </td>
                                         <td class="font-w600">
                                             <span class='text-primary'>{{ $user->hash_12 }}</span>
