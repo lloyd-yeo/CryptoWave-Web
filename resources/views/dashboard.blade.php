@@ -173,10 +173,10 @@
                     <div class="block block-rounded">
                         <div class="block-content block-content-full">
                             <div class="text-muted">
-                                <small><i class="si si-wallet"></i> Wallet</small>
+                                <small><i class="si si-wallet"></i> Stash</small>
                             </div>
                             <div class="font-s12 font-w700">Current Balance</div>
-                            <a class="h2 font-w300 text-primary" href="#!">{{ $sgd_earned }}</a>
+                            <a class="h2 font-w300 text-primary" href="#!">{{ $monero_wallet->amount }} XMR</a>
                         </div>
                     </div>
                 </div>
@@ -210,6 +210,16 @@
                 @endif
             </div>
             <!-- END Stats -->
+
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="alert alert-warning">
+                        <p><i class="fa fa-warning"></i> Take note that you will need at least a minimum of 0.1 XMR to make any withdrawal.
+                                                         This is due to transaction fees from transferring between wallets.
+                        </p>
+                    </div>
+                </div>
+            </div>
 
             <div class="row">
                 <div class="col-xs-12">

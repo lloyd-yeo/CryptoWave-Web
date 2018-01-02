@@ -6,6 +6,7 @@ use Illuminate\Console\Command;
 use Illuminate\Http\Request;
 use App\UserHashpowerRecord;
 use App\User;
+use App\SystemParameter;
 use Carbon\Carbon;
 
 class PollStatsFromXmrPool extends Command
@@ -44,9 +45,21 @@ class PollStatsFromXmrPool extends Command
         $client = new \GuzzleHttp\Client();
         $response = $client->get("https://api.xmrpool.net/miner/48WCGXaoL7gUY8fwSxUPgR4VYx4iVTJYEF4jP7Uq4jG26Hz9Gc6QjgU1m7Hht5pBPJbccCyR4khkZD88wSwErkRt2FkmpNH/stats/allWorkers", []);
 
-        dump(json_decode($response->getBody(), true));
+
         $stats = json_decode($response->getBody(), true);
-        foreach ($stats as $email => $stat) {
+
+	    dump($stats);
+
+
+	    foreach ($stats as $email => $stat) {
+
+        	if ($email == "global") {
+				$sys_param = SystemParameter::first();
+		        $sys_param->total_hashes = $stat["totalHash"];
+		        $sys_param->save();
+		        continue;
+	        }
+
             $user = User::where('email', $email)->first();
             if ($user !== NULL) {
 

@@ -12,185 +12,187 @@ use Carbon\Carbon;
 
 class HomeController extends Controller
 {
-    /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
-    public function __construct()
-    {
-        $this->middleware('auth', ['except' => ['landingPage']]);
-    }
+	/**
+	 * Create a new controller instance.
+	 *
+	 * @return void
+	 */
+	public function __construct()
+	{
+		$this->middleware('auth', [ 'except' => [ 'landingPage' ] ]);
+	}
 
-    public function landingPage(Request $request)
-    {
-        $sys_param = SystemParameter::all()->first();
+	public function landingPage(Request $request)
+	{
+		$sys_param = SystemParameter::all()->first();
 
-        return view('index', ['registration_qty' => $sys_param->registration_slots_qty]);
-    }
+		return view('index', [ 'registration_qty' => $sys_param->registration_slots_qty ]);
+	}
 
-    /**
-     * Show the application dashboard.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
-    {
-        $referral_link = 'http://174.138.31.231/home?ref=' . Auth::user()->tracking_code;
-        $referrer = NULL;
-        $system_param = SystemParameter::all()->first();
+	/**
+	 * Show the application dashboard.
+	 *
+	 * @return \Illuminate\Http\Response
+	 */
+	public function index()
+	{
+		$referral_link = 'http://174.138.31.231/home?ref=' . Auth::user()->tracking_code;
+		$referrer      = NULL;
+		$system_param  = SystemParameter::all()->first();
 
-        if (Auth::user()->referred_by !== NULL) {
-            $referrer = User::find(Auth::user()->referred_by);
-        }
+		if (Auth::user()->referred_by !== NULL) {
+			$referrer = User::find(Auth::user()->referred_by);
+		}
 
-        $sgd_multiplier = $system_param->sgd_multiplier;
-        $floating_buffer_multiplier = $system_param->buffer_multiplier;
-        $sgd_earned = 0;
-        $new_referral_count = 0;
+		$sgd_multiplier             = $system_param->sgd_multiplier;
+		$floating_buffer_multiplier = $system_param->buffer_multiplier;
+		$sgd_earned                 = 0;
+		$new_referral_count         = 0;
 
-        if (UserWallet::where('user_id', Auth::user()->id)->first() === NULL) {
-            $job = new \App\Jobs\CreateEthereumWallet(User::find(Auth::user()->id));
-            dispatch($job);
-        } else {
-            $sgd_earned_val = $floating_buffer_multiplier * $sgd_multiplier * Auth::user()->wallets->first()->amount;
-            $sgd_earned = number_format($sgd_earned_val, 2, '.', '');;
-        }
+		if (UserWallet::where('user_id', Auth::user()->id)->first() === NULL) {
+			$job = new \App\Jobs\CreateEthereumWallet(User::find(Auth::user()->id));
+			dispatch($job);
+		} else {
+			$sgd_earned_val = $floating_buffer_multiplier * $sgd_multiplier * Auth::user()->wallets->first()->amount;
+			$sgd_earned     = number_format($sgd_earned_val, 2, '.', '');;
+		}
 
-        if (UserHashpowerRecord::where('email', Auth::user()->email)->first() === NULL) {
-            $new_hashpower_record = new UserHashpowerRecord;
-            $new_hashpower_record->email = Auth::user()->email;
-            $new_hashpower_record->save();
-        }
+		if (UserHashpowerRecord::where('email', Auth::user()->email)->first() === NULL) {
+			$new_hashpower_record        = new UserHashpowerRecord;
+			$new_hashpower_record->email = Auth::user()->email;
+			$new_hashpower_record->save();
+		}
 
-        $referrals = Auth::user()->referrals();
-        $secondary_referrals = collect();
-        if ($referrals->count() > 0) {
-            foreach ($referrals as $referral) {
-                $created_at_carbon = Carbon::parse($referral->created_at);
-                if ($created_at_carbon->isToday()) {
-                    $new_referral_count++;
-                }
-                foreach ($referral->referrals() as $secondary_referral) {
-                    $secondary_referrals->push($secondary_referral);
-                }
-            }
-        }
+		$referrals           = Auth::user()->referrals();
+		$secondary_referrals = collect();
+		if ($referrals->count() > 0) {
+			foreach ($referrals as $referral) {
+				$created_at_carbon = Carbon::parse($referral->created_at);
+				if ($created_at_carbon->isToday()) {
+					$new_referral_count++;
+				}
+				foreach ($referral->referrals() as $secondary_referral) {
+					$secondary_referrals->push($secondary_referral);
+				}
+			}
+		}
 
-        $user = User::find(Auth::user()->id);
-        $first_login = $user->first_login;
-        if ($user->first_login == 0) {
-            $user->first_login = 1;
-            $user->save();
-        }
+		$user        = User::find(Auth::user()->id);
+		$first_login = $user->first_login;
+		if ($user->first_login == 0) {
+			$user->first_login = 1;
+			$user->save();
+		}
 
-        $hashpower_record = UserHashpowerRecord::where('email', Auth::user()->email)->first();
+		$hashpower_record = UserHashpowerRecord::where('email', Auth::user()->email)->first();
 
-        $updated_at = \Carbon\Carbon::parse($hashpower_record->updated_at);
-        $updated_at_hours = $updated_at->hour;
-        $stats_chart = [];
+		$updated_at       = \Carbon\Carbon::parse($hashpower_record->updated_at);
+		$updated_at_hours = $updated_at->hour;
+		$stats_chart      = [];
 
-        $stats_chart[] = [
-            "hour" => "\"" . $updated_at->format('g:i A') . "\"",
-            "hash" => $hashpower_record->hash,
-        ];
+		$stats_chart[] = [
+			"hour" => "\"" . $updated_at->format('g:i A') . "\"",
+			"hash" => $hashpower_record->hash,
+		];
 
-        $updated_at_hours = $updated_at_hours - 1;
+		$updated_at_hours = $updated_at_hours - 1;
 
-        $stats_chart[] = [
-            "hour" => "\"" . $updated_at->format('g:i A') . "\"",
-            "hash" => $hashpower_record->hash,
-        ];
+		$stats_chart[] = [
+			"hour" => "\"" . $updated_at->format('g:i A') . "\"",
+			"hash" => $hashpower_record->hash,
+		];
 
-        $updated_at_hours = $updated_at_hours - 1;
+		$updated_at_hours = $updated_at_hours - 1;
 
-        $stats_chart[] = [
-            "hour" => "\"" . $updated_at->format('g:i A') . "\"",
-            "hash" => $hashpower_record->hash_2,
-        ];
+		$stats_chart[] = [
+			"hour" => "\"" . $updated_at->format('g:i A') . "\"",
+			"hash" => $hashpower_record->hash_2,
+		];
 
-        $updated_at_hours = $updated_at_hours - 1;
+		$updated_at_hours = $updated_at_hours - 1;
 
-        $stats_chart[] = [
-            "hour" => "\"" . $updated_at->format('g:i A') . "\"",
-            "hash" => $hashpower_record->hash_3,
-        ];
+		$stats_chart[] = [
+			"hour" => "\"" . $updated_at->format('g:i A') . "\"",
+			"hash" => $hashpower_record->hash_3,
+		];
 
-        $updated_at_hours = $updated_at_hours - 1;
+		$updated_at_hours = $updated_at_hours - 1;
 
-        $stats_chart[] = [
-            "hour" => "\"" . $updated_at->format('g:i A') . "\"",
-            "hash" => $hashpower_record->hash_4,
-        ];
+		$stats_chart[] = [
+			"hour" => "\"" . $updated_at->format('g:i A') . "\"",
+			"hash" => $hashpower_record->hash_4,
+		];
 
-        $updated_at_hours = $updated_at_hours - 1;
+		$updated_at_hours = $updated_at_hours - 1;
 
-        $stats_chart[] = [
-            "hour" => "\"" . $updated_at->format('g:i A') . "\"",
-            "hash" => $hashpower_record->hash_5,
-        ];
+		$stats_chart[] = [
+			"hour" => "\"" . $updated_at->format('g:i A') . "\"",
+			"hash" => $hashpower_record->hash_5,
+		];
 
-        $updated_at_hours = $updated_at_hours - 1;
+		$updated_at_hours = $updated_at_hours - 1;
 
-        $stats_chart[] = [
-            "hour" => "\"" . $updated_at->format('g:i A') . "\"",
-            "hash" => $hashpower_record->hash_6,
-        ];
+		$stats_chart[] = [
+			"hour" => "\"" . $updated_at->format('g:i A') . "\"",
+			"hash" => $hashpower_record->hash_6,
+		];
 
-        $updated_at_hours = $updated_at_hours - 1;
+		$updated_at_hours = $updated_at_hours - 1;
 
-        $stats_chart[] = [
-            "hour" => "\"" . $updated_at->format('g:i A') . "\"",
-            "hash" => $hashpower_record->hash_7,
-        ];
+		$stats_chart[] = [
+			"hour" => "\"" . $updated_at->format('g:i A') . "\"",
+			"hash" => $hashpower_record->hash_7,
+		];
 
-        $updated_at_hours = $updated_at_hours - 1;
+		$updated_at_hours = $updated_at_hours - 1;
 
-        $stats_chart[] = [
-            "hour" => "\"" . $updated_at->format('g:i A') . "\"",
-            "hash" => $hashpower_record->hash_8,
-        ];
+		$stats_chart[] = [
+			"hour" => "\"" . $updated_at->format('g:i A') . "\"",
+			"hash" => $hashpower_record->hash_8,
+		];
 
-        $updated_at_hours = $updated_at_hours - 1;
+		$updated_at_hours = $updated_at_hours - 1;
 
-        $stats_chart[] = [
-            "hour" => "\"" . $updated_at->format('g:i A') . "\"",
-            "hash" => $hashpower_record->hash_9,
-        ];
+		$stats_chart[] = [
+			"hour" => "\"" . $updated_at->format('g:i A') . "\"",
+			"hash" => $hashpower_record->hash_9,
+		];
 
-        $updated_at_hours = $updated_at_hours - 1;
+		$updated_at_hours = $updated_at_hours - 1;
 
-        $stats_chart[] = [
-            "hour" => "\"" . $updated_at->format('g:i A') . "\"",
-            "hash" => $hashpower_record->hash_10,
-        ];
+		$stats_chart[] = [
+			"hour" => "\"" . $updated_at->format('g:i A') . "\"",
+			"hash" => $hashpower_record->hash_10,
+		];
 
-        $updated_at_hours = $updated_at_hours - 1;
+		$updated_at_hours = $updated_at_hours - 1;
 
-        $stats_chart[] = [
-            "hour" => "\"" . $updated_at->format('g:i A') . "\"",
-            "hash" => $hashpower_record->hash_11,
-        ];
+		$stats_chart[] = [
+			"hour" => "\"" . $updated_at->format('g:i A') . "\"",
+			"hash" => $hashpower_record->hash_11,
+		];
 
-        $updated_at_hours = $updated_at_hours - 1;
+		$updated_at_hours = $updated_at_hours - 1;
 
-        $stats_chart[] = [
-            "hour" => "\"" . $updated_at->format('g:i A') . "\"",
-            "hash" => $hashpower_record->hash_12,
-        ];
+		$stats_chart[] = [
+			"hour" => "\"" . $updated_at->format('g:i A') . "\"",
+			"hash" => $hashpower_record->hash_12,
+		];
 
-        $leaderboard_top_users = UserHashpowerRecord::orderBy('hash_12', 'DESC')->take(10)->get();
+		$leaderboard_top_users = UserHashpowerRecord::orderBy('hash_12', 'DESC')->take(10)->get();
+		$monero_wallet         = UserWallet::where('coin_type', 'Monero')->where('user_id', Auth::user()->id)->first();
 
-        return view('dashboard', ['referral_link' => $referral_link,
-            'referrer' => $referrer,
-            'referrals' => $referrals,
-            'secondary_referrals' => $secondary_referrals,
-            'new_referral_count' => $new_referral_count,
-            'sgd_earned' => $sgd_earned,
-            'binary_download_link' => $system_param->binary_download_link,
-            'stats_chart' => $stats_chart,
-            'first_login' => $first_login,
-            'leaderboard_top_users' => $leaderboard_top_users,
-        ]);
-    }
+		return view('dashboard', [ 'referral_link'         => $referral_link,
+		                           'referrer'              => $referrer,
+		                           'referrals'             => $referrals,
+		                           'secondary_referrals'   => $secondary_referrals,
+		                           'new_referral_count'    => $new_referral_count,
+		                           'sgd_earned'            => $sgd_earned,
+		                           'binary_download_link'  => $system_param->binary_download_link,
+		                           'stats_chart'           => $stats_chart,
+		                           'first_login'           => $first_login,
+		                           'leaderboard_top_users' => $leaderboard_top_users,
+		                           'monero_wallet'         => $monero_wallet,
+		]);
+	}
 }
