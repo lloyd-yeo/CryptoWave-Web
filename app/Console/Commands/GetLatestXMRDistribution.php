@@ -53,7 +53,7 @@ class GetLatestXMRDistribution extends Command
 				if ($hashpower_record != NULL) {
 					$latest_hash            = $hashpower_record->hash_11;
 					$distributed_percentage = $latest_hash / $total_hashes;
-					$xmr_wallet->amount              = $distributed_percentage * $xmr_mined;
+					$xmr_wallet->amount              = $distributed_percentage * $xmr_mined * 0.7;
 					$xmr_wallet->save();
 				}
 			}
