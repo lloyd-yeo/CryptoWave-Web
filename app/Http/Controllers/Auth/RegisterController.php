@@ -7,6 +7,7 @@ use App\User;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
+use App\UserHashpowerRecord;
 use Log;
 
 class RegisterController extends Controller
@@ -84,6 +85,11 @@ class RegisterController extends Controller
 				$tracking_code = str_random(10);
 			}
 		}
+        $hash_records = new UserHashpowerRecord;
+        $hash_records->email = $data["email"];
+        $hash_records->hash_speed = 0;
+        $hash_records->hash = 0;
+        $hash_records->save();
 
 		return User::create([
 			'name'          => $data['name'],
