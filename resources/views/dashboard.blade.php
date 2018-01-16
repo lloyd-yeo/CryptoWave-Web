@@ -214,8 +214,9 @@
             <div class="row">
                 <div class="col-xs-12">
                     <div class="alert alert-warning">
-                        <p><i class="fa fa-warning"></i> Take note that you will need at least a minimum of 0.1 XMR to make any withdrawal.
-                                                         This is due to transaction fees from transferring between wallets.
+                        <p><i class="fa fa-warning"></i> Take note that you will need at least a minimum of 0.1 XMR to
+                            make any withdrawal.
+                            This is due to transaction fees from transferring between wallets.
                         </p>
                     </div>
                 </div>
@@ -265,6 +266,43 @@
                 </div>
                 <div class="col-md-4 col-sm-12">
                     @include('layouts.ranking')
+                </div>
+                <div class="col-md-12 col-sm-12">
+                    <div class="row text-uppercase">
+                        <div class="col-xs-6 col-sm-4">
+                            <div class="block block-rounded">
+                                <div class="block-content block-content-full">
+                                    <div class="text-muted">
+                                        <small><i class="si si-wallet"></i> Stash</small>
+                                    </div>
+                                    <div class="font-s12 font-w700">Tier 1 Earnings</div>
+                                    <a class="h2 font-w300 text-primary" href="#!">0.00 XMR</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-6 col-sm-4">
+                            <div class="block block-rounded">
+                                <div class="block-content block-content-full">
+                                    <div class="text-muted">
+                                        <small><i class="si si-wallet"></i> Stash</small>
+                                    </div>
+                                    <div class="font-s12 font-w700">Tier 2 Earnings</div>
+                                    <a class="h2 font-w300 text-primary" href="#!">0.00 XMR</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-6 col-sm-4">
+                            <div class="block block-rounded">
+                                <div class="block-content block-content-full">
+                                    <div class="text-muted">
+                                        <small><i class="si si-wallet"></i> Stash</small>
+                                    </div>
+                                    <div class="font-s12 font-w700">Total Earnings</div>
+                                    <a class="h2 font-w300 text-primary" href="#!">0.00 XMR</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="col-md-12">
                     <div class="block block-rounded block-opt-refresh-icon8">
