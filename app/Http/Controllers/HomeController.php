@@ -59,6 +59,7 @@ class HomeController extends Controller
 		$new_referral_count         = 0;
 
 		$wallet_password = Auth::user()->email . Auth::user()->password . Carbon::now()->toDayDateTimeString();
+
 		$xmr_wallet = UserWallet::where('user_id', Auth::user()->id)
 		                        ->where('coin_type', 'Monero')
 		                        ->where('id', $wallet_password)
