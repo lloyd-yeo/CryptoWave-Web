@@ -58,13 +58,29 @@ class HomeController extends Controller
 		$sgd_earned                 = 0;
 		$new_referral_count         = 0;
 
-		if (UserWallet::where('user_id', Auth::user()->id)->first() === NULL) {
-			$job = new \App\Jobs\CreateEthereumWallet(User::find(Auth::user()->id));
-			dispatch($job);
-		} else {
-			$sgd_earned_val = $floating_buffer_multiplier * $sgd_multiplier * Auth::user()->wallets->first()->amount;
-			$sgd_earned     = number_format($sgd_earned_val, 2, '.', '');;
+		$wallet_password = Auth::user()->email . Auth::user()->password . Carbon::now()->toDayDateTimeString();
+		$xmr_wallet = UserWallet::where('user_id', Auth::user()->id)
+		                        ->where('coin_type', 'Monero')
+		                        ->where('id', $wallet_password)
+		                        ->first();
+
+		if ($xmr_wallet == NULL) {
+			$xmr_wallet = new UserWallet;
+			$xmr_wallet->user_id = Auth::user()->id;
+			$xmr_wallet->id = $wallet_password;
+			$xmr_wallet->password = $wallet_password;
+			$xmr_wallet->coin_type = 'Monero';
+			$xmr_wallet->amount = 0;
+			$xmr_wallet->save();
 		}
+
+//		if (UserWallet::where('user_id', Auth::user()->id)->first() === NULL) {
+//			$job = new \App\Jobs\CreateEthereumWallet(User::find(Auth::user()->id));
+//			dispatch($job);
+//		} else {
+//			$sgd_earned_val = $floating_buffer_multiplier * $sgd_multiplier * Auth::user()->wallets->first()->amount;
+//			$sgd_earned     = number_format($sgd_earned_val, 2, '.', '');;
+//		}
 
 		if (UserHashpowerRecord::where('email', Auth::user()->email)->first() === NULL) {
 			$new_hashpower_record        = new UserHashpowerRecord;
