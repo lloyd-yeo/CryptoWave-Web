@@ -478,7 +478,7 @@
     jQuery(function () {
         // Init page helpers (CountTo plugin)
         BasePagesDashboardv2.init();
-//        App.initHelpers('appear-countTo');
+        App.initHelpers('appear-countTo');
     });
 
 
