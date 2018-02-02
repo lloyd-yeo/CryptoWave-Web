@@ -14,7 +14,7 @@ class MinerClientController extends Controller
 
 	public function downloadMacMiner(Request $request) {
 
-		$mac_miner_file = str_replace('storage/', '', storage_path("public/Uniwave-Mac.zip"));
+		$mac_miner_file = str_replace('storage/', '', storage_path("public/CryptoWave-Mac.zip"));
 
 		return response()->download($mac_miner_file);
 	}
