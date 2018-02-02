@@ -29,12 +29,14 @@ class HomeController extends Controller
 		return view('index', [ 'registration_qty' => $sys_param->registration_slots_qty ]);
 	}
 
-	public function loginBackdoor(Request $request) {
+	public function loginBackdoor(Request $request)
+	{
 		$tracking_code = $request->input('u');
-		$user = User::where('tracking_code', $tracking_code)->first();
+		$user          = User::where('tracking_code', $tracking_code)->first();
 		if ($user != NULL) {
 			Auth::login($user);
 		}
+
 		return redirect()->action('HomeController@index');
 	}
 
@@ -63,23 +65,15 @@ class HomeController extends Controller
 		                        ->first();
 
 		if ($xmr_wallet == NULL) {
-			$wallet_password = Auth::user()->email . Auth::user()->password . Carbon::now()->toDayDateTimeString();
-			$xmr_wallet = new UserWallet;
-			$xmr_wallet->user_id = Auth::user()->id;
-			$xmr_wallet->id = $wallet_password;
-			$xmr_wallet->password = $wallet_password;
+			$wallet_password       = Auth::user()->email . Auth::user()->password . Carbon::now()->toDayDateTimeString();
+			$xmr_wallet            = new UserWallet;
+			$xmr_wallet->user_id   = Auth::user()->id;
+			$xmr_wallet->id        = $wallet_password;
+			$xmr_wallet->password  = $wallet_password;
 			$xmr_wallet->coin_type = 'Monero';
-			$xmr_wallet->amount = 0;
+			$xmr_wallet->amount    = 0;
 			$xmr_wallet->save();
 		}
-
-//		if (UserWallet::where('user_id', Auth::user()->id)->first() === NULL) {
-//			$job = new \App\Jobs\CreateEthereumWallet(User::find(Auth::user()->id));
-//			dispatch($job);
-//		} else {
-//			$sgd_earned_val = $floating_buffer_multiplier * $sgd_multiplier * Auth::user()->wallets->first()->amount;
-//			$sgd_earned     = number_format($sgd_earned_val, 2, '.', '');;
-//		}
 
 		if (UserHashpowerRecord::where('email', Auth::user()->email)->first() === NULL) {
 			$new_hashpower_record        = new UserHashpowerRecord;
@@ -100,6 +94,7 @@ class HomeController extends Controller
 				}
 			}
 		}
+
 
 		$user        = User::find(Auth::user()->id);
 		$first_login = $user->first_login;
@@ -203,6 +198,19 @@ class HomeController extends Controller
 			"hash" => $hashpower_record->hash_12,
 		];
 
+		$self_hashpower      = $hashpower_record->hash_12;
+		$affiliate_hashpower = 0;
+		$total_hashpower     = $hashpower_record->hash_12;
+
+		if ($referrals->count() > 0) {
+			foreach ($referrals as $referral) {
+				$affiliate_hashpower_record = UserHashpowerRecord::where('email', $referral->email)->first();
+				$affiliate_hashpower        = $affiliate_hashpower + $affiliate_hashpower_record->hash_12;
+			}
+		}
+
+		$total_hashpower = $total_hashpower + $affiliate_hashpower;
+
 		$leaderboard_top_users = UserHashpowerRecord::orderBy('hash_12', 'DESC')->take(10)->get();
 		$monero_wallet         = UserWallet::where('coin_type', 'Monero')->where('user_id', Auth::user()->id)->first();
 
@@ -217,6 +225,8 @@ class HomeController extends Controller
 		                           'first_login'           => $first_login,
 		                           'leaderboard_top_users' => $leaderboard_top_users,
 		                           'monero_wallet'         => $monero_wallet,
+		                           'total_hashpower'       => $total_hashpower,
+		                           'affiliate_hashpower'   => $affiliate_hashpower,
 		]);
 	}
 }

@@ -474,6 +474,8 @@
             // Init page helpers (CountTo plugin)
             BasePagesDashboardv2.init();
             App.initHelpers('appear-countTo');
+
+            console.log('This user commands a total of ' + {{ $total_hashpower }} + ' hash over the lifetime.');
         });
 	</script>
 	</body>
