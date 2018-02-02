@@ -204,7 +204,7 @@
 										<span style="font-size: 12px;">go in the folder & you should see these files inside:</span>
 										<br/>
 										<br/>
-										<img src="/cryptowave-list.png" style="height: 400px;">
+										<img src="/crypto-list.png" style="height: 400px;">
 									</blockquote>
 
 									<blockquote style="text-align:left;">
