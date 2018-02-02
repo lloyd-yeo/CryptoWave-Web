@@ -24,3 +24,8 @@ Route::get('/signup', 'SignUpController@signup')->name('signup');
 Route::get('/download', 'MinerClientController@download');
 
 Route::get('/stats', 'StatsController@getStats');
+
+Route::get('/download/mac', 'MinerClientController@downloadMacMiner');
+Route::get('/download/mac/instruction', function(){
+	return view('mac-installation-instruction');
+});

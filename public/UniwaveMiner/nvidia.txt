@@ -1,4 +1,3 @@
-
 /*
  * GPU configuration. You should play around with threads and blocks as the fastest settings will vary.
  * index         - GPU index number usually starts from 0.
@@ -27,9 +26,8 @@
   //      smx: 2
   { "index" : 0,
     "threads" : 28, "blocks" : 9,
-    "bfactor" : 6, "bsleep" :  25,
+    "bfactor" : 10, "bsleep" :  100,
     "affine_to_cpu" : false,
   },
-
 ],
 

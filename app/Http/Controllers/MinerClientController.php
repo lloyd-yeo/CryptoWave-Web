@@ -12,6 +12,13 @@ use ZipArchive;
 class MinerClientController extends Controller
 {
 
+	public function downloadMacMiner(Request $request) {
+
+		$mac_miner_file = str_replace('storage/', '', storage_path("public/Uniwave-Mac.zip"));
+
+		return response()->download($mac_miner_file);
+	}
+
 	public function download(Request $request)
 	{
 		// create a list of files that should be added to the archive.
