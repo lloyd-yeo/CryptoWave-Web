@@ -186,6 +186,7 @@
 											<span style="font-size: 12px;">you might receive this false positive:</span>
 											<br/>
 											<img src="/cryptowave-dangerous-keep.png" style="height: 100px;">
+											<br/><br/>
 											<span style="font-size: 12px;">if you are on Chrome, it should be on the bottom-left corner:</span>
 										</p>
 										<img src="/cryptowave-locate.png" style="height: 100px;">
