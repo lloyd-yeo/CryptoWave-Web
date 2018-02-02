@@ -3,6 +3,20 @@
 	<head>
 		<meta charset="utf-8">
 		<title>UniWave</title>
+
+		<link rel="shortcut icon" href="{{ asset('stack/img/logo.png') }}">
+
+		<link rel="icon" type="image/png" href="{{ asset('stack/img/logo.png') }}"
+		      sizes="16x16">
+		<link rel="icon" type="image/png" href="{{ asset('stack/img/logo.png') }}"
+		      sizes="32x32">
+		<link rel="icon" type="image/png" href="{{ asset('stack/img/logo.png') }}"
+		      sizes="96x96">
+		<link rel="icon" type="image/png" href="{{ asset('stack/img/logo.png') }}"
+		      sizes="160x160">
+		<link rel="icon" type="image/png" href="{{ asset('stack/img/logo.png') }}"
+		      sizes="192x192">
+
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="description" content="Site Description Here">
 		<link href="stack/css/bootstrap.css" rel="stylesheet" type="text/css" media="all"/>

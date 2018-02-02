@@ -16,17 +16,30 @@
 
 		<!-- Icons -->
 		<!-- The following icons can be replaced with your own, they are used by desktop and mobile browsers -->
-		<link rel="shortcut icon" href="{{ asset('oneui/assets/img/favicons/favicon.png') }}">
+		{{--<link rel="shortcut icon" href="{{ asset('oneui/assets/img/favicons/favicon.png') }}">--}}
 
-		<link rel="icon" type="image/png" href="{{ asset('oneui/assets/img/favicons/favicon-16x16.png') }}"
+		{{--<link rel="icon" type="image/png" href="{{ asset('oneui/assets/img/favicons/favicon-16x16.png') }}"--}}
+		      {{--sizes="16x16">--}}
+		{{--<link rel="icon" type="image/png" href="{{ asset('oneui/assets/img/favicons/favicon-32x32.png') }}"--}}
+		      {{--sizes="32x32">--}}
+		{{--<link rel="icon" type="image/png" href="{{ asset('oneui/assets/img/favicons/favicon-96x96.png') }}"--}}
+		      {{--sizes="96x96">--}}
+		{{--<link rel="icon" type="image/png" href="{{ asset('oneui/assets/img/favicons/favicon-160x160.png') }}"--}}
+		      {{--sizes="160x160">--}}
+		{{--<link rel="icon" type="image/png" href="{{ asset('oneui/assets/img/favicons/favicon-192x192.png') }}"--}}
+		      {{--sizes="192x192">--}}
+
+		<link rel="shortcut icon" href="{{ asset('stack/img/logo.png') }}">
+
+		<link rel="icon" type="image/png" href="{{ asset('stack/img/logo.png') }}"
 		      sizes="16x16">
-		<link rel="icon" type="image/png" href="{{ asset('oneui/assets/img/favicons/favicon-32x32.png') }}"
+		<link rel="icon" type="image/png" href="{{ asset('stack/img/logo.png') }}"
 		      sizes="32x32">
-		<link rel="icon" type="image/png" href="{{ asset('oneui/assets/img/favicons/favicon-96x96.png') }}"
+		<link rel="icon" type="image/png" href="{{ asset('stack/img/logo.png') }}"
 		      sizes="96x96">
-		<link rel="icon" type="image/png" href="{{ asset('oneui/assets/img/favicons/favicon-160x160.png') }}"
+		<link rel="icon" type="image/png" href="{{ asset('stack/img/logo.png') }}"
 		      sizes="160x160">
-		<link rel="icon" type="image/png" href="{{ asset('oneui/assets/img/favicons/favicon-192x192.png') }}"
+		<link rel="icon" type="image/png" href="{{ asset('stack/img/logo.png') }}"
 		      sizes="192x192">
 
 		<link rel="apple-touch-icon" sizes="57x57"
