@@ -191,7 +191,7 @@
 									<blockquote style="text-align:left;">
 										<p>3. Double click on the "uniwave-install" file.
 											<br/>
-											<span style="font-size: 12px;">if you are on Chrome, it should be on the bottom-left corner:</span>
+											<span style="font-size: 12px;">a terminal window should pop-up, watch the video below to continue</span>
 										</p>
 										<img src="/uniwave-install-highlight.png" style="height: 400px;">
 									</blockquote>
@@ -199,7 +199,7 @@
 									<blockquote style="text-align:left;">
 										<p>4. Watch & follow the steps in the video below:
 											<br/>
-											<span style="font-size: 12px;">if you are on Chrome, it should be on the bottom-left corner:</span>
+											<span style="font-size: 12px;"><b>NOTE:</b> the password to use is the one used to login your Mac</span>
 										</p>
 										<object width="1000" height="560">
 											<param name="movie" value="http://www.youtube.com/v/xqIiJ8m7noI&hl=en&fs=1"></param>
