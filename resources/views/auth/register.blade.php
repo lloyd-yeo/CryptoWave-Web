@@ -67,7 +67,7 @@
 			<div class="container pos-vertical-center">
 				<div class="row">
 					<div class="col-md-5 col-sm-7">
-						<h1>UniWave™ Registration</h1>
+						<h1>CryptoWave™ Registration</h1>
 						<p class="lead">
 							Almost there!
 							<br/>You are just one step away from using your personal computer to mine!
