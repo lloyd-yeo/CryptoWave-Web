@@ -26,8 +26,8 @@
 				<div class="row">
 					<div class="col-xs-3 col-sm-2">
 						<a href="index.html">
-							<img class="logo logo-dark" alt="logo" src="stack/img/uniwave-logo.png"/>
-							<img class="logo logo-light" alt="logo" src="stack/img/uniwave-logo.png"/>
+							<img class="logo logo-dark" style="max-height: 2.95714286em; top: -5px;" alt="logo" src="stack/img/uniwave-logo.png"/>
+							<img class="logo logo-light" style="max-height: 2.95714286em; top: -5px;" alt="logo" src="stack/img/uniwave-logo.png"/>
 						</a>
 					</div>
 					<div class="col-xs-9 col-sm-10 text-right">
@@ -47,8 +47,8 @@
 					<div class="col-md-2 text-center text-left-sm hidden-xs col-md-push-5">
 						<div class="bar__module">
 							<a href="/">
-								<img class="logo logo-dark" alt="logo here" src="stack/img/uniwave-logo.png"/>
-								<img class="logo logo-light" alt="logo here" src="stack/img/uniwave-logo.png"/>
+								<img class="logo logo-dark" style="max-height: 2.95714286em; top: -5px;" alt="logo here" src="stack/img/uniwave-logo.png"/>
+								<img class="logo logo-light" style="max-height: 2.95714286em; top: -5px;" alt="logo here" src="stack/img/uniwave-logo.png"/>
 							</a>
 						</div>
 						<!--end module-->
