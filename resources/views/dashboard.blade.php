@@ -9,7 +9,7 @@
 		<title>CryptoWave</title>
 
 		<meta name="description"
-		      content="OneUI - Admin Dashboard Template &amp; UI Framework created by pixelcave and published on Themeforest">
+		      content="CryptoWave is the next wave in mining cryptocurrencies for the masses.">
 		<meta name="author" content="pixelcave">
 		<meta name="robots" content="noindex, nofollow">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">

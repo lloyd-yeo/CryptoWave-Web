@@ -2,9 +2,9 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
-		<title>UniWave</title>
+		<title>CryptoWave</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta name="description" content="Site Description Here">
+		<meta name="description" content="CryptoWave is the next wave in mining cryptocurrencies for the masses.">
 		<link href="stack/css/bootstrap.css" rel="stylesheet" type="text/css" media="all"/>
 		<link href="stack/css/stack-interface.css" rel="stylesheet" type="text/css" media="all"/>
 		<link href="stack/css/socicon.css" rel="stylesheet" type="text/css" media="all"/>

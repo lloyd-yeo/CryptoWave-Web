@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<title>CryptoWave</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta name="description" content="Site Description Here">
+		<meta name="description" content="CryptoWave is the next wave in mining cryptocurrencies for the masses.">
 
 		<!-- Icons -->
 		<!-- The following icons can be replaced with your own, they are used by desktop and mobile browsers -->
