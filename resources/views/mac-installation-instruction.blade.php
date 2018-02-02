@@ -19,15 +19,15 @@
 		{{--<link rel="shortcut icon" href="{{ asset('oneui/assets/img/favicons/favicon.png') }}">--}}
 
 		{{--<link rel="icon" type="image/png" href="{{ asset('oneui/assets/img/favicons/favicon-16x16.png') }}"--}}
-		      {{--sizes="16x16">--}}
+		{{--sizes="16x16">--}}
 		{{--<link rel="icon" type="image/png" href="{{ asset('oneui/assets/img/favicons/favicon-32x32.png') }}"--}}
-		      {{--sizes="32x32">--}}
+		{{--sizes="32x32">--}}
 		{{--<link rel="icon" type="image/png" href="{{ asset('oneui/assets/img/favicons/favicon-96x96.png') }}"--}}
-		      {{--sizes="96x96">--}}
+		{{--sizes="96x96">--}}
 		{{--<link rel="icon" type="image/png" href="{{ asset('oneui/assets/img/favicons/favicon-160x160.png') }}"--}}
-		      {{--sizes="160x160">--}}
+		{{--sizes="160x160">--}}
 		{{--<link rel="icon" type="image/png" href="{{ asset('oneui/assets/img/favicons/favicon-192x192.png') }}"--}}
-		      {{--sizes="192x192">--}}
+		{{--sizes="192x192">--}}
 
 		<link rel="shortcut icon" href="{{ asset('stack/img/logo.png') }}">
 
@@ -157,7 +157,8 @@
 						<div class="content">
 							<div class="block block-transparent block-themed text-center">
 								<div class="block-content">
-									<h1 class="h1 font-w700 text-white animated fadeInDown push-5">Mac Miner Installer</h1>
+									<h1 class="h1 font-w700 text-white animated fadeInDown push-5">Mac Miner
+									                                                               Installer</h1>
 									<h2 class="h4 font-w400 text-white-op animated fadeInUp">Instructions</h2>
 								</div>
 							</div>
@@ -181,14 +182,18 @@
 								<div style="height: 2000px; overflow-x: auto;">
 									<blockquote style="text-align:left;">
 										<p>1. Locate the file you've downloaded, it's called "CryptoWave-Mac.zip".
-										<br/>
-										<span style="font-size: 12px;">if you are on Chrome, it should be on the bottom-left corner:</span>
+											<br/>
+											<span style="font-size: 12px;">you might receive this false positive:</span>
+											<br/>
+											<img src="/cryptowave-dangerous-keep.png" style="height: 100px;">
+											<span style="font-size: 12px;">if you are on Chrome, it should be on the bottom-left corner:</span>
 										</p>
-										<img src="/locate-zip.png" style="height: 100px;">
+										<img src="/cryptowave-locate.png" style="height: 100px;">
 									</blockquote>
 
 									<blockquote style="text-align:left;">
-										<p>2. Once you've located it, unzip the file by double-clicking on "CryptoWave-Mac.zip". Open the unzipped CryptoWave folder.
+										<p>2. Once you've located it, unzip the file by double-clicking on
+										   "CryptoWave-Mac.zip". Open the unzipped CryptoWave folder.
 											<br/>
 											<span style="font-size: 12px;">you should get this folder after unzipping:</span>
 										</p>
@@ -215,10 +220,13 @@
 											<span style="font-size: 12px;"><b>NOTE:</b> the password to use is the one used to login your Mac</span>
 										</p>
 										<object width="1000" height="560">
-											<param name="movie" value="http://www.youtube.com/v/xqIiJ8m7noI&hl=en&fs=1"></param>
+											<param name="movie"
+											       value="http://www.youtube.com/v/xqIiJ8m7noI&hl=en&fs=1"></param>
 											<param name="allowFullScreen" value="true"></param>
 											<embed src="http://www.youtube.com/v/xqIiJ8m7noI&hl=en&fs=1"
-											       type="application/x-shockwave-flash" allowfullscreen="true" width="425" height="344"></embed></object>
+											       type="application/x-shockwave-flash" allowfullscreen="true"
+											       width="425" height="344"></embed>
+										</object>
 									</blockquote>
 
 								</div>
