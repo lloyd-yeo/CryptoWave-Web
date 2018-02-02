@@ -50,21 +50,29 @@ class SnapshotHashAndXMR extends Command
 
 		$snapshot_instance_id = $snapshot_instance->id;
 
+		$previous_global_snapshot = GlobalSnapshot::orderBy('id', 'desc')->first();
+
 		//Create Global snapshot
 		$global_snapshot                       = new GlobalSnapshot;
 		$global_snapshot->snapshot_instance_id = $snapshot_instance_id;
 		$global_snapshot->total_hash           = 9253929061;
-		$global_snapshot->total_xmr            = 0.59083966;
+		$global_snapshot->total_xmr            = 0.59083966 * 0.2;
 		$global_snapshot->save();
 
-		$previous_global_snapshot = GlobalSnapshot::orderBy('id', 'desc')->first();
-
+		$monthly_global_hash = 0;
+		$monthly_xmr = 0;
 
 		if ($previous_global_snapshot != NULL) {
-//			$global_snapshot->monthly_hash =
+			$monthly_global_hash = $global_snapshot->total_hash - $previous_global_snapshot->total_hash;
+			$monthly_xmr = $global_snapshot->monthly_xmr - $previous_global_snapshot->monthly_xmr;
 		} else {
 			$monthly_global_hash = $global_snapshot->total_hash;
+			$monthly_xmr = $global_snapshot->total_xmr;
 		}
+
+		$global_snapshot->monthly_hash = $monthly_global_hash;
+		$global_snapshot->monthly_xmr = $monthly_xmr;
+		$global_snapshot->save();
 
 		//Create Individual snapshot
 		foreach (User::all() as $user) {
@@ -74,15 +82,20 @@ class SnapshotHashAndXMR extends Command
 				$previous_individual_snapshot = IndividualSnapshot::where('user_id', $user->id)->orderBy('id', 'desc')->first();
 
 				if ($previous_individual_snapshot != NULL) {
-
 					$monthly_hash = $user_hashpower_record->hash_12 - $previous_individual_snapshot->lifetime_hash;
-
-
-					$individual_snapshot                = new IndividualSnapshot;
-					$individual_snapshot->user_id       = $user->id;
-					$individual_snapshot->lifetime_hash = $user_hashpower_record->hash_12;
-					$individual_snapshot->monthly_hash  = $monthly_hash;
+					$xmr = ($monthly_hash / $monthly_global_hash) * $monthly_xmr;
+				} else {
+					$monthly_hash = $user_hashpower_record->hash_12;
+					$xmr = ($monthly_hash / $monthly_global_hash) * $monthly_xmr;
 				}
+
+				$individual_snapshot                = new IndividualSnapshot;
+				$individual_snapshot->snapshot_instance_id = $snapshot_instance_id;
+				$individual_snapshot->user_id       = $user->id;
+				$individual_snapshot->lifetime_hash = $user_hashpower_record->hash_12;
+				$individual_snapshot->monthly_hash  = $monthly_hash;
+				$individual_snapshot->xmr = $xmr;
+				$individual_snapshot->save();
 			}
 		}
 
