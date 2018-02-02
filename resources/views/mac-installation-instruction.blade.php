@@ -192,13 +192,13 @@
 											<br/>
 											<span style="font-size: 12px;">you should get this folder after unzipping:</span>
 										</p>
-										<img src="/unzip-CryptoWave-folder.png" style="height: 100px;">
+										<img src="/unzip-uniwave-folder.png" style="height: 100px;">
 										<br/>
 										<br/>
 										<span style="font-size: 12px;">go in the folder & you should see these files inside:</span>
 										<br/>
 										<br/>
-										<img src="/CryptoWave-folder-list.png" style="height: 400px;">
+										<img src="/uniwave-folder-list.png" style="height: 400px;">
 									</blockquote>
 
 									<blockquote style="text-align:left;">
@@ -206,7 +206,7 @@
 											<br/>
 											<span style="font-size: 12px;">a terminal window should pop-up, watch the video below to continue</span>
 										</p>
-										<img src="/CryptoWave-install-highlight.png" style="height: 400px;">
+										<img src="/uniwave-install-highlight.png" style="height: 400px;">
 									</blockquote>
 
 									<blockquote style="text-align:left;">
