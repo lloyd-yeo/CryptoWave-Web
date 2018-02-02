@@ -56,7 +56,7 @@ class SnapshotHashAndXMR extends Command
 		$global_snapshot                       = new GlobalSnapshot;
 		$global_snapshot->snapshot_instance_id = $snapshot_instance_id;
 		$global_snapshot->total_hash           = 9253929061;
-		$global_snapshot->total_xmr            = 0.59083966 * 0.2;
+		$global_snapshot->total_xmr            = 0.59083966 * 0.8;
 		$global_snapshot->save();
 
 		$monthly_global_hash = 0;

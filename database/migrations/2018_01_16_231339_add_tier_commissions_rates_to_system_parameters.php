@@ -14,8 +14,8 @@ class AddTierCommissionsRatesToSystemParameters extends Migration
     public function up()
     {
 	    Schema::table('system_parameters', function (Blueprint $table) {
-		    $table->unsignedDecimal('tier_1_comms_rate')->default(0.4);
-		    $table->unsignedDecimal('tier_2_comms_rate')->default(0.15);
+		    $table->unsignedDecimal('tier_1_comms_rate')->default(0.2);
+		    $table->unsignedDecimal('tier_2_comms_rate')->default(0.1);
 	    });
     }
 

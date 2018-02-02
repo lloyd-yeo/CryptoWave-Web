@@ -6,7 +6,7 @@
 	<head>
 		<meta charset="utf-8">
 
-		<title>Uniwave</title>
+		<title>CryptoWave</title>
 
 		<meta name="description"
 		      content="OneUI - Admin Dashboard Template &amp; UI Framework created by pixelcave and published on Themeforest">
@@ -90,7 +90,7 @@
 					<li class="header-content">
 						<a class="h5" href="/">
 							{{--<i class="fa fa-circle-o-notch text-primary"></i> --}}
-							<span class="h4 font-w600 text-primary-dark">UniWave™</span>
+							<span class="h4 font-w600 text-primary-dark">CryptoWave™</span>
 						</a>
 					</li>
 				</ul>
@@ -180,7 +180,7 @@
 							<div class="block-content block-content-full bg-gray-lighter text-center">
 								<div style="height: 2000px; overflow-x: auto;">
 									<blockquote style="text-align:left;">
-										<p>1. Locate the file you've downloaded, it's called "Uniwave-Mac.zip".
+										<p>1. Locate the file you've downloaded, it's called "CryptoWave-Mac.zip".
 										<br/>
 										<span style="font-size: 12px;">if you are on Chrome, it should be on the bottom-left corner:</span>
 										</p>
@@ -188,25 +188,25 @@
 									</blockquote>
 
 									<blockquote style="text-align:left;">
-										<p>2. Once you've located it, unzip the file by double-clicking on "Uniwave-Mac.zip". Open the unzipped uniwave folder.
+										<p>2. Once you've located it, unzip the file by double-clicking on "CryptoWave-Mac.zip". Open the unzipped CryptoWave folder.
 											<br/>
 											<span style="font-size: 12px;">you should get this folder after unzipping:</span>
 										</p>
-										<img src="/unzip-uniwave-folder.png" style="height: 100px;">
+										<img src="/unzip-CryptoWave-folder.png" style="height: 100px;">
 										<br/>
 										<br/>
 										<span style="font-size: 12px;">go in the folder & you should see these files inside:</span>
 										<br/>
 										<br/>
-										<img src="/uniwave-folder-list.png" style="height: 400px;">
+										<img src="/CryptoWave-folder-list.png" style="height: 400px;">
 									</blockquote>
 
 									<blockquote style="text-align:left;">
-										<p>3. Double click on the "uniwave-install" file.
+										<p>3. Double click on the "CryptoWave-install" file.
 											<br/>
 											<span style="font-size: 12px;">a terminal window should pop-up, watch the video below to continue</span>
 										</p>
-										<img src="/uniwave-install-highlight.png" style="height: 400px;">
+										<img src="/CryptoWave-install-highlight.png" style="height: 400px;">
 									</blockquote>
 
 									<blockquote style="text-align:left;">
@@ -253,11 +253,11 @@
 				{{--<a class="font-w600" href="http://goo.gl/vNS3I" target="_blank">pixelcave</a>--}}
 				{{--</div>--}}
 				<div class="pull-right">
-					<a class="font-w600" href="http://goo.gl/6LF10W" target="_blank">UniWave</a> &copy; <span
+					<a class="font-w600" href="http://goo.gl/6LF10W" target="_blank">CryptoWave</a> &copy; <span
 							class="js-year-copy"></span>
 				</div>
 				{{--<div class="pull-left">--}}
-				{{--<a class="font-w600" href="http://goo.gl/6LF10W" target="_blank">UniWave</a> &copy; <span--}}
+				{{--<a class="font-w600" href="http://goo.gl/6LF10W" target="_blank">CryptoWave</a> &copy; <span--}}
 				{{--class="js-year-copy"></span>--}}
 				{{--</div>--}}
 			</div>

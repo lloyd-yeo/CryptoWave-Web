@@ -6,7 +6,7 @@
 	<head>
 		<meta charset="utf-8">
 
-		<title>Uniwave</title>
+		<title>CryptoWave</title>
 
 		<meta name="description"
 		      content="OneUI - Admin Dashboard Template &amp; UI Framework created by pixelcave and published on Themeforest">
@@ -77,7 +77,7 @@
 					<li class="header-content">
 						<a class="h5" href="/">
 							{{--<i class="fa fa-circle-o-notch text-primary"></i> --}}
-							<span class="h4 font-w600 text-primary-dark">UniWave™</span>
+							<span class="h4 font-w600 text-primary-dark">CryptoWave™</span>
 						</a>
 					</li>
 				</ul>
@@ -370,11 +370,11 @@
 				{{--<a class="font-w600" href="http://goo.gl/vNS3I" target="_blank">pixelcave</a>--}}
 				{{--</div>--}}
 				<div class="pull-right">
-					<a class="font-w600" href="http://goo.gl/6LF10W" target="_blank">UniWave</a> &copy; <span
+					<a class="font-w600" href="http://goo.gl/6LF10W" target="_blank">CryptoWave</a> &copy; <span
 							class="js-year-copy"></span>
 				</div>
 				{{--<div class="pull-left">--}}
-				{{--<a class="font-w600" href="http://goo.gl/6LF10W" target="_blank">UniWave</a> &copy; <span--}}
+				{{--<a class="font-w600" href="http://goo.gl/6LF10W" target="_blank">CryptoWave</a> &copy; <span--}}
 				{{--class="js-year-copy"></span>--}}
 				{{--</div>--}}
 			</div>

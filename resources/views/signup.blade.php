@@ -2,7 +2,7 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
-		<title>UniWave</title>
+		<title>CryptoWave</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="description" content="Site Description Here">
 
@@ -90,7 +90,7 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-sm-10 col-md-8">
-						<h1>UniWave Signup</h1>
+						<h1>CryptoWave Signup</h1>
 						<p class="lead">
 							We currently have only <span style="font-weight: 900;">{{ $registration_qty }}</span> slots left!<br/>Sign up now and use our software to start mining cryptocurrencies.
 						</p>
@@ -105,12 +105,12 @@
 				<div class="row">
 					<div class="col-sm-6 col-md-6">
 						<div class="pricing pricing-1 boxed boxed--border boxed--lg text-center">
-							<h4>UniWave™ Software</h4>
+							<h4>CryptoWave™ Software</h4>
 							<span class="h1">
                                     <span class="pricing__dollar">$</span>49<span style="font-size:13px;">/mth</span></span>
 							<img alt="Image" src="stack/img/mining-tmp-logo.png" style="width:25%;" />
 							<p style="margin-bottom: 3.85714286em;">
-								For $49/mth, get the revolutionary UniWave™. Our software enables you to start mining from your personal laptops/desktops simply by leaving it on
+								For $49/mth, get the revolutionary CryptoWave™. Our software enables you to start mining from your personal laptops/desktops simply by leaving it on
 								while you are not using it!
 							</p>
 							<span class="label">Value</span>
@@ -124,12 +124,12 @@
 					</div>
 					<div class="col-sm-6 col-md-6">
 						<div class="pricing pricing-1 boxed boxed--border boxed--lg text-center">
-							<h4>UniWave Referral</h4>
+							<h4>CryptoWave Referral</h4>
 							<span class="h1">
                                     <span class="pricing__dollar">$</span>0<span style="font-size:13px;">/FREE</span></span>
 							<img alt="Image" src="stack/img/mining-tmp-logo.png" style="width:25%;" />
 							<p style="margin-bottom: 1em;">
-								Got referred by a member who is a part of the exclusive UniWave™ beta?
+								Got referred by a member who is a part of the exclusive CryptoWave™ beta?
 								Simply type in their email & referral code below to sign up!
 							</p>
 							<form method="POST" action="/validate/referral" id="referral-form">
