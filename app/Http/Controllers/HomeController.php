@@ -45,7 +45,7 @@ class HomeController extends Controller
 	 */
 	public function index()
 	{
-		$referral_link = 'http://174.138.31.231/home?ref=' . Auth::user()->tracking_code;
+		$referral_link = 'http://uniwave.co/home?ref=' . Auth::user()->tracking_code;
 		$referrer      = NULL;
 		$system_param  = SystemParameter::all()->first();
 
