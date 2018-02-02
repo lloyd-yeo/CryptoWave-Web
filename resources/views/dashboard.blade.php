@@ -316,6 +316,7 @@
 											<th class="text-center"></th>
 											<th class="text-center">Name</th>
 											<th class="hidden-xs text-center">Email</th>
+											<th class="text-center">Lifetime Hashpower Contributed</th>
 											<th class="hidden-xs text-center" style="width: 15%;"></th>
 										</tr>
 										</thead>
@@ -327,10 +328,10 @@
 												<td class="text-center">1</td>
 												<td class="font-w600 text-center">{{ $referral->name }}</td>
 												<td class="hidden-xs">{{ $referral->email }}</td>
+												<td class="hidden-xs">{{ $referral->lifetimeHashpower() }}</td>
 												<td class="hidden-xs">
 													<span class="label label-info">Tier 1 (Direct)</span>
 												</td>
-
 											</tr>
 
 										@endforeach
@@ -341,6 +342,7 @@
 												<td class="text-center">1</td>
 												<td class="font-w600 text-center">{{ $referral->name }}</td>
 												<td class="hidden-xs">{{ $referral->email }}</td>
+												<td class="hidden-xs">{{ $referral->lifetimeHashpower() }}</td>
 												<td class="hidden-xs">
 													<span class="label label-info">Tier 2 (By your Affiliate)</span>
 												</td>

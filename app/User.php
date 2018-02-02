@@ -35,5 +35,9 @@ class User extends Authenticatable
     public function wallets() {
     	return $this->hasMany('App\UserWallet');
     }
+
+    public function lifetimeHashpower(){
+    	return UserHashpowerRecord::where('email', $this->email)->first()->hash_12;
+    }
     
 }
