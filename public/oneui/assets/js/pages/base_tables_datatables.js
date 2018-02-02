@@ -16,7 +16,6 @@ var BaseTableDatatables = function() {
 
     var initDataTableFull = function() {
         jQuery('.js-dataTable-full').dataTable({
-            columnDefs: [ { orderable: false, targets: [ 3 ] } ],
             pageLength: 10,
             lengthMenu: [[5, 10, 15, 20], [5, 10, 15, 20]]
         });
