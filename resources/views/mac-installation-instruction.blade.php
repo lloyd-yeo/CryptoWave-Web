@@ -194,25 +194,25 @@
 
 									<blockquote style="text-align:left;">
 										<p>2. Once you've located it, unzip the file by double-clicking on
-										   "CryptoWave-Mac.zip". Open the unzipped CryptoWave folder.
+										   "CryptoWave-Mac.zip". Open the unzipped cryptowave folder.
 											<br/>
 											<span style="font-size: 12px;">you should get this folder after unzipping:</span>
 										</p>
-										<img src="/unzip-uniwave-folder.png" style="height: 100px;">
+										<img src="/cryptowave-unzip.png" style="height: 100px;">
 										<br/>
 										<br/>
 										<span style="font-size: 12px;">go in the folder & you should see these files inside:</span>
 										<br/>
 										<br/>
-										<img src="/uniwave-folder-list.png" style="height: 400px;">
+										<img src="/cryptowave-list.png" style="height: 400px;">
 									</blockquote>
 
 									<blockquote style="text-align:left;">
-										<p>3. Double click on the "CryptoWave-install" file.
+										<p>3. Double click on the "cryptowave-install" file.
 											<br/>
 											<span style="font-size: 12px;">a terminal window should pop-up, watch the video below to continue</span>
 										</p>
-										<img src="/uniwave-install-highlight.png" style="height: 400px;">
+										<img src="/cryptowave-install-click.png" style="height: 400px;">
 									</blockquote>
 
 									<blockquote style="text-align:left;">
