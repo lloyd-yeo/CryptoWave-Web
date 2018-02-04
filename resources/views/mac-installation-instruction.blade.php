@@ -220,14 +220,7 @@
 											<br/>
 											<span style="font-size: 12px;"><b>NOTE:</b> the password to use is the one used to login your Mac</span>
 										</p>
-										<object width="1000" height="560">
-											<param name="movie"
-											       value="ttp://www.youtube.com/v/llT4iRAd6GI&hl=en&fs=1"></param>
-											<param name="allowFullScreen" value="true"></param>
-											<embed src="ttp://www.youtube.com/v/llT4iRAd6GI&hl=en&fs=1"
-											       type="application/x-shockwave-flash" allowfullscreen="true"
-											       width="425" height="344"></embed>
-										</object>
+										<object width="1000" height="600"><param name="movie" value="http://www.youtube.com/v/llT4iRAd6GI&hl=en&fs=1"></param><param name="allowFullScreen" value="true"></param><embed src="http://www.youtube.com/v/llT4iRAd6GI&hl=en&fs=1" type="application/x-shockwave-flash" allowfullscreen="true" width="425" height="344"></embed></object>
 									</blockquote>
 
 								</div>
