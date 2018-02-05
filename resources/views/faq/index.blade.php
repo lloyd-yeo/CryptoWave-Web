@@ -279,11 +279,11 @@
 									<div class="panel-heading">
 										<h3 class="panel-title">
 											<a class="accordion-toggle" data-toggle="collapse" data-parent="#faq3"
-											   href="#faq3_q1">How-to Refer Users
+											   href="#faq3_q2">How-to Refer Users
 											</a>
 										</h3>
 									</div>
-									<div id="faq3_q1" class="panel-collapse collapse">
+									<div id="faq3_q2" class="panel-collapse collapse">
 										<div class="panel-body">
 											<object width="1000" height="600">
 												<param name="movie" value="http://www.youtube.com/v/PacclWDgwnI&hl=en&fs=1"></param>
