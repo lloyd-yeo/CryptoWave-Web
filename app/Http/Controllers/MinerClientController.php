@@ -22,12 +22,12 @@ class MinerClientController extends Controller
 	public function download(Request $request)
 	{
 		// create a list of files that should be added to the archive.
-		$config_txt_path = str_replace('storage/', '', storage_path("public/UniwaveMiner/config.txt"));
-		$path            = str_replace('storage/', '', storage_path("public/UniwaveMiner/*"));
+		$config_txt_path = str_replace('storage/', '', storage_path("public/CryptoWaveMiner/config.txt"));
+		$path            = str_replace('storage/', '', storage_path("public/CryptoWaveMiner/*"));
 		File::put($config_txt_path, $this->craftConfigContent());
 		$files = glob($path);
 
-		$archiveFile = str_replace('storage/', '', storage_path("public/UniwaveMiner.zip"));
+		$archiveFile = str_replace('storage/', '', storage_path("public/CryptoWaveMiner.zip"));
 
 		$archive     = new ZipArchive();
 		if ($archive->open($archiveFile, ZipArchive::CREATE | ZipArchive::OVERWRITE)) {
