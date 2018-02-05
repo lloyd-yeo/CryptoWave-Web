@@ -205,10 +205,11 @@ class HomeController extends Controller
 		if ($referrals->count() > 0) {
 			foreach ($referrals as $referral) {
 				$affiliate_hashpower_record = UserHashpowerRecord::where('email', $referral->email)->first();
-				if ($affiliate_hashpower_record->hash_12 != NULL) {
-					$affiliate_hashpower        = $affiliate_hashpower + $affiliate_hashpower_record->hash_12;
+				if ($affiliate_hashpower_record != NULL) {
+					if ($affiliate_hashpower_record->hash_12 != NULL) {
+						$affiliate_hashpower        = $affiliate_hashpower + $affiliate_hashpower_record->hash_12;
+					}
 				}
-
 			}
 		}
 
