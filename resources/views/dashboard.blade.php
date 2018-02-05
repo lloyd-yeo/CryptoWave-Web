@@ -107,7 +107,7 @@
 						</li>
 						<li>
 							{{--<a href="/download" download>--}}
-							<a href="/download" target="_blank">
+							<a href="/download" id="download-windows-link" target="_blank">
 								<i class="fa fa-cloud-download push-5-r"></i>Download Windows Miner
 							</a>
 						</li>
@@ -487,6 +487,10 @@
 
         $("#download-mac-link").on("click", function(){
             window.location.href = "/download/mac/instruction";
+        });
+
+        $("#download-windows-link").on("click", function(){
+            window.location.href = "/download/windows/instruction";
         });
 
         jQuery(function () {

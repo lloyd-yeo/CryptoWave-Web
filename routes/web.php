@@ -21,13 +21,17 @@ Route::post('/validate/referral', 'SignUpController@validateReferral')->name('va
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/signup', 'SignUpController@signup')->name('signup');
-Route::get('/download', 'MinerClientController@download');
 
 Route::get('/stats', 'StatsController@getStats');
 
 Route::get('/download/mac', 'MinerClientController@downloadMacMiner');
-Route::get('/download/mac/instruction', function(){
+Route::get('/download/mac/instruction', function () {
 	return view('mac-installation-instruction');
+});
+
+Route::get('/download', 'MinerClientController@download');
+Route::get('/download/windows/instruction', function () {
+	return view('windows-installation-instruction');
 });
 
 Route::get('/faq', 'FaqController@index');
