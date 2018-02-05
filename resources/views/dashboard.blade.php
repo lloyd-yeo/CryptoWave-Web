@@ -112,14 +112,18 @@
 							</a>
 						</li>
 
-						@if (Auth::user()->email = "sophialse@hotmail.com")
 						<li>
 							{{--<a href="/download" download>--}}
 							<a id="download-mac-link" href="/download/mac" target="_blank">
 								<i class="fa fa-cloud-download push-5-r"></i>Download Mac Miner
 							</a>
 						</li>
-						@endif
+
+						<li>
+							<a href="/faq">
+								<i class="fa fa-question-circle push-5-r"></i>CryptoWave FAQ
+							</a>
+						</li>
 
 						<li>
 							<form id="logout-form" action="{{ route('logout') }}" method="POST"

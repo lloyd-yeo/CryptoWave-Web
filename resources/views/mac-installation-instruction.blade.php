@@ -133,6 +133,12 @@
 						</li>
 
 						<li>
+							<a href="/faq">
+								<i class="fa fa-question-circle push-5-r"></i>CryptoWave FAQ
+							</a>
+						</li>
+
+						<li>
 							<form id="logout-form" action="{{ route('logout') }}" method="POST"
 							      style="display: none;">
 								{{ csrf_field() }}
