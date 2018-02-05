@@ -279,7 +279,7 @@
 									<div class="panel-heading">
 										<h3 class="panel-title">
 											<a class="accordion-toggle" data-toggle="collapse" data-parent="#faq3"
-											   href="#faq3_q1">2-Tier Affiliate Program
+											   href="#faq3_q1">How-to Refer Users
 											</a>
 										</h3>
 									</div>
