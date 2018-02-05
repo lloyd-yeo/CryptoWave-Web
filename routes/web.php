@@ -29,3 +29,5 @@ Route::get('/download/mac', 'MinerClientController@downloadMacMiner');
 Route::get('/download/mac/instruction', function(){
 	return view('mac-installation-instruction');
 });
+
+Route::get('/faq', 'FaqController@index');

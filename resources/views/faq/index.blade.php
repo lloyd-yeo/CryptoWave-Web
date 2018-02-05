@@ -125,10 +125,17 @@
 							</a>
 						</li>
 
-						<li class="active">
+						<li>
 							{{--<a href="/download" download>--}}
 							<a id="download-mac-link" href="/download/mac" target="_blank">
 								<i class="fa fa-cloud-download push-5-r"></i>Download Mac Miner
+							</a>
+						</li>
+
+						<li class="active">
+							{{--<a href="/download" download>--}}
+							<a href="/faq">
+								<i class="fa fa-question-circle push-5-r"></i>CryptoWave FAQ
 							</a>
 						</li>
 
@@ -157,9 +164,8 @@
 						<div class="content">
 							<div class="block block-transparent block-themed text-center">
 								<div class="block-content">
-									<h1 class="h1 font-w700 text-white animated fadeInDown push-5">Mac Miner
-									                                                               Installer</h1>
-									<h2 class="h4 font-w400 text-white-op animated fadeInUp">Instructions</h2>
+									<h1 class="h1 font-w700 text-white animated fadeInDown push-5">CryptoWave FAQ</h1>
+									<h2 class="h4 font-w400 text-white-op animated fadeInUp">Answers to common questions!</h2>
 								</div>
 							</div>
 						</div>
