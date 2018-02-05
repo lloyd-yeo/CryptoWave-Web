@@ -78,7 +78,7 @@
 								<input type="hidden" value="{{ Cookie::get('referral') }}" name="referral-cookie"/>
 								{{ csrf_field() }}
 
-								<h6 class="type--uppercase">UniWave™ Account Details</h6>
+								<h6 class="type--uppercase">CryptoWave™ Account Details</h6>
 								<input class="validate-required" type="text" name="name" placeholder="Your Name"/>
 
 								@if ($errors->has('name'))
