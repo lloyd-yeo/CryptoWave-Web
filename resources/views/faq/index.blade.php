@@ -274,22 +274,6 @@
 										</div>
 									</div>
 								</div>
-
-								<div class="panel panel-default">
-									<div class="panel-heading">
-										<h3 class="panel-title">
-											<a class="accordion-toggle" data-toggle="collapse" data-parent="#faq3"
-											   href="#faq3_q2">When will you update our stash?
-											</a>
-										</h3>
-									</div>
-									<div id="faq3_q2" class="panel-collapse collapse">
-										<div class="panel-body">
-											<p>The stash will be updated on the 7th of every month, to ensure accuracy
-											   after the end of the previous month.</p>
-										</div>
-									</div>
-								</div>
 							</div>
 							<!-- END Payments -->
 
