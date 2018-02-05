@@ -185,15 +185,20 @@
 								<div class="panel panel-default">
 									<div class="panel-heading">
 										<h3 class="panel-title">
-											<a class="accordion-toggle" data-toggle="collapse" data-parent="#faq1" href="#faq1_q1">Will the .exe run on Surface Pro laptops?</a>
+											<a class="accordion-toggle" data-toggle="collapse" data-parent="#faq1"
+											   href="#faq1_q1">Will the .exe run on Surface Pro laptops?
+											</a>
 										</h3>
 									</div>
 									<div id="faq1_q1" class="panel-collapse collapse in">
 										<div class="panel-body">
 											<p>You can definitely run CryptoWave (windows version) on the Surface Pro.
-											   However as the specs of a Surface Pro is more structured for a tablet rather than a full fledged Desktop & Laptop,
-											   we do not if this will affect the existing functionalities of the Surface Pro.
-											   And also, the results of mining from a Surface Pro might not be the same as a Desktop/Laptop.</p>
+											   However as the specs of a Surface Pro is more structured for a tablet
+											   rather than a full fledged Desktop & Laptop,
+											   we do not if this will affect the existing functionalities of the Surface
+											   Pro.
+											   And also, the results of mining from a Surface Pro might not be the same
+											   as a Desktop/Laptop.</p>
 										</div>
 									</div>
 								</div>
@@ -201,12 +206,16 @@
 								<div class="panel panel-default">
 									<div class="panel-heading">
 										<h3 class="panel-title">
-											<a class="accordion-toggle" data-toggle="collapse" data-parent="#faq1" href="#faq1_q2">I do not see the miner .exe in the folder!</a>
+											<a class="accordion-toggle" data-toggle="collapse" data-parent="#faq1"
+											   href="#faq1_q2">I do not see the miner .exe in the folder!
+											</a>
 										</h3>
 									</div>
 									<div id="faq1_q2" class="panel-collapse collapse">
 										<div class="panel-body">
-											<p>This is due to the Anti-Virus that you have on your computer & the miner has been flagged as a false positive. To solve that, simply disable it.</p>
+											<p>This is due to the Anti-Virus that you have on your computer & the miner
+											   has been flagged as a false positive. To solve that, simply disable
+											   it.</p>
 										</div>
 									</div>
 								</div>
@@ -214,91 +223,53 @@
 								<div class="panel panel-default">
 									<div class="panel-heading">
 										<h3 class="panel-title">
-											<a class="accordion-toggle" data-toggle="collapse" data-parent="#faq1" href="#faq1_q3">How long will it takes before the stats update on the dashboard?</a>
+											<a class="accordion-toggle" data-toggle="collapse" data-parent="#faq1"
+											   href="#faq1_q3">How long will it take before the stats update on the
+											                   dashboard?
+											</a>
 										</h3>
 									</div>
 									<div id="faq1_q3" class="panel-collapse collapse">
 										<div class="panel-body">
-											<p>We do a update on the stashes 7th of every month. For the Hashpower you've contributed, it is updated every 5 to 10 minutes.</p>
+											<p>We do a update on the stashes 7th of every month. For the Hashpower
+											   you've contributed, it is updated every 5 to 10 minutes.</p>
 										</div>
 									</div>
 								</div>
 							</div>
 							<!-- END Systems Compatibility -->
 
-							{{--<!-- Functionality -->--}}
-							{{--<h2 class="h3 font-w600 push-50-t push">Functionality</h2>--}}
-							{{--<div id="faq2" class="panel-group">--}}
-								{{--<div class="panel panel-default">--}}
-									{{--<div class="panel-heading">--}}
-										{{--<h3 class="panel-title">--}}
-											{{--<a class="accordion-toggle" data-toggle="collapse" data-parent="#faq2" href="#faq2_q1">What are the key features?</a>--}}
-										{{--</h3>--}}
-									{{--</div>--}}
-									{{--<div id="faq2_q1" class="panel-collapse collapse">--}}
-										{{--<div class="panel-body">--}}
-											{{--<p>Potenti elit lectus augue eget iaculis vitae etiam, ullamcorper etiam bibendum ad feugiat magna accumsan dolor, nibh molestie cras hac ac ad massa, fusce ante convallis ante urna molestie vulputate bibendum tempus ante justo arcu erat accumsan adipiscing risus, libero condimentum venenatis sit nisl nisi ultricies sed, fames aliquet consectetur consequat nostra molestie neque nullam scelerisque neque commodo turpis quisque etiam egestas vulputate massa, curabitur tellus massa venenatis congue dolor enim integer luctus, nisi suscipit gravida fames quis vulputate nisi viverra luctus id leo dictum lorem, inceptos nibh orci.</p>--}}
-											{{--<p>Potenti elit lectus augue eget iaculis vitae etiam, ullamcorper etiam bibendum ad feugiat magna accumsan dolor, nibh molestie cras hac ac ad massa, fusce ante convallis ante urna molestie vulputate bibendum tempus ante justo arcu erat accumsan adipiscing risus, libero condimentum venenatis sit nisl nisi ultricies sed, fames aliquet consectetur consequat nostra molestie neque nullam scelerisque neque commodo turpis quisque etiam egestas vulputate massa, curabitur tellus massa venenatis congue dolor enim integer luctus, nisi suscipit gravida fames quis vulputate nisi viverra luctus id leo dictum lorem, inceptos nibh orci.</p>--}}
-										{{--</div>--}}
-									{{--</div>--}}
-								{{--</div>--}}
-								{{--<div class="panel panel-default">--}}
-									{{--<div class="panel-heading">--}}
-										{{--<h3 class="panel-title">--}}
-											{{--<a class="accordion-toggle" data-toggle="collapse" data-parent="#faq2" href="#faq2_q2">Does your App support mobile devices?</a>--}}
-										{{--</h3>--}}
-									{{--</div>--}}
-									{{--<div id="faq2_q2" class="panel-collapse collapse">--}}
-										{{--<div class="panel-body">--}}
-											{{--<p>Potenti elit lectus augue eget iaculis vitae etiam, ullamcorper etiam bibendum ad feugiat magna accumsan dolor, nibh molestie cras hac ac ad massa, fusce ante convallis ante urna molestie vulputate bibendum tempus ante justo arcu erat accumsan adipiscing risus, libero condimentum venenatis sit nisl nisi ultricies sed, fames aliquet consectetur consequat nostra molestie neque nullam scelerisque neque commodo turpis quisque etiam egestas vulputate massa, curabitur tellus massa venenatis congue dolor enim integer luctus, nisi suscipit gravida fames quis vulputate nisi viverra luctus id leo dictum lorem, inceptos nibh orci.</p>--}}
-											{{--<p>Potenti elit lectus augue eget iaculis vitae etiam, ullamcorper etiam bibendum ad feugiat magna accumsan dolor, nibh molestie cras hac ac ad massa, fusce ante convallis ante urna molestie vulputate bibendum tempus ante justo arcu erat accumsan adipiscing risus, libero condimentum venenatis sit nisl nisi ultricies sed, fames aliquet consectetur consequat nostra molestie neque nullam scelerisque neque commodo turpis quisque etiam egestas vulputate massa, curabitur tellus massa venenatis congue dolor enim integer luctus, nisi suscipit gravida fames quis vulputate nisi viverra luctus id leo dictum lorem, inceptos nibh orci.</p>--}}
-										{{--</div>--}}
-									{{--</div>--}}
-								{{--</div>--}}
-								{{--<div class="panel panel-default">--}}
-									{{--<div class="panel-heading">--}}
-										{{--<h3 class="panel-title">--}}
-											{{--<a class="accordion-toggle" data-toggle="collapse" data-parent="#faq2" href="#faq2_q3">Why should I choose your service?</a>--}}
-										{{--</h3>--}}
-									{{--</div>--}}
-									{{--<div id="faq2_q3" class="panel-collapse collapse">--}}
-										{{--<div class="panel-body">--}}
-											{{--<p>Potenti elit lectus augue eget iaculis vitae etiam, ullamcorper etiam bibendum ad feugiat magna accumsan dolor, nibh molestie cras hac ac ad massa, fusce ante convallis ante urna molestie vulputate bibendum tempus ante justo arcu erat accumsan adipiscing risus, libero condimentum venenatis sit nisl nisi ultricies sed, fames aliquet consectetur consequat nostra molestie neque nullam scelerisque neque commodo turpis quisque etiam egestas vulputate massa, curabitur tellus massa venenatis congue dolor enim integer luctus, nisi suscipit gravida fames quis vulputate nisi viverra luctus id leo dictum lorem, inceptos nibh orci.</p>--}}
-											{{--<p>Potenti elit lectus augue eget iaculis vitae etiam, ullamcorper etiam bibendum ad feugiat magna accumsan dolor, nibh molestie cras hac ac ad massa, fusce ante convallis ante urna molestie vulputate bibendum tempus ante justo arcu erat accumsan adipiscing risus, libero condimentum venenatis sit nisl nisi ultricies sed, fames aliquet consectetur consequat nostra molestie neque nullam scelerisque neque commodo turpis quisque etiam egestas vulputate massa, curabitur tellus massa venenatis congue dolor enim integer luctus, nisi suscipit gravida fames quis vulputate nisi viverra luctus id leo dictum lorem, inceptos nibh orci.</p>--}}
-										{{--</div>--}}
-									{{--</div>--}}
-								{{--</div>--}}
-								{{--<div class="panel panel-default">--}}
-									{{--<div class="panel-heading">--}}
-										{{--<h3 class="panel-title">--}}
-											{{--<a class="accordion-toggle" data-toggle="collapse" data-parent="#faq2" href="#faq2_q4">Is my data secure?</a>--}}
-										{{--</h3>--}}
-									{{--</div>--}}
-									{{--<div id="faq2_q4" class="panel-collapse collapse">--}}
-										{{--<div class="panel-body">--}}
-											{{--<p>Potenti elit lectus augue eget iaculis vitae etiam, ullamcorper etiam bibendum ad feugiat magna accumsan dolor, nibh molestie cras hac ac ad massa, fusce ante convallis ante urna molestie vulputate bibendum tempus ante justo arcu erat accumsan adipiscing risus, libero condimentum venenatis sit nisl nisi ultricies sed, fames aliquet consectetur consequat nostra molestie neque nullam scelerisque neque commodo turpis quisque etiam egestas vulputate massa, curabitur tellus massa venenatis congue dolor enim integer luctus, nisi suscipit gravida fames quis vulputate nisi viverra luctus id leo dictum lorem, inceptos nibh orci.</p>--}}
-											{{--<p>Potenti elit lectus augue eget iaculis vitae etiam, ullamcorper etiam bibendum ad feugiat magna accumsan dolor, nibh molestie cras hac ac ad massa, fusce ante convallis ante urna molestie vulputate bibendum tempus ante justo arcu erat accumsan adipiscing risus, libero condimentum venenatis sit nisl nisi ultricies sed, fames aliquet consectetur consequat nostra molestie neque nullam scelerisque neque commodo turpis quisque etiam egestas vulputate massa, curabitur tellus massa venenatis congue dolor enim integer luctus, nisi suscipit gravida fames quis vulputate nisi viverra luctus id leo dictum lorem, inceptos nibh orci.</p>--}}
-										{{--</div>--}}
-									{{--</div>--}}
-								{{--</div>--}}
-							{{--</div>--}}
-							{{--<!-- END Functionality -->--}}
-
 							<!-- Payments -->
-							<h2 class="h3 font-w600 push-50-t push">Payments</h2>
+							<h2 class="h3 font-w600 push-50-t push">CryptoWave Affiliate</h2>
 							<div id="faq3" class="panel-group">
 								<div class="panel panel-default">
 									<div class="panel-heading">
 										<h3 class="panel-title">
-											<a class="accordion-toggle" data-toggle="collapse" data-parent="#faq3" href="#faq3_q1">How do we get paid?</a>
+											<a class="accordion-toggle" data-toggle="collapse" data-parent="#faq3"
+											   href="#faq3_q1">2-Tier Affiliate Program
+											</a>
 										</h3>
 									</div>
 									<div id="faq3_q1" class="panel-collapse collapse">
 										<div class="panel-body">
-											<p>At the moment, we will be paying out to Monero wallets only.
-											   After receiving your Monero you can go through an exchange to convert your Monero into fiat currencies.</p>
 											<p>
-												We are still exploring on a seamless way to help you guys do a cash out without going through all the processes to cashout personally.
+												At the moment, our 2-tier affiliate privilege is <b>only<b/> for our
+												                                                    initial closed beta
+												                                                    users.
+												                                                    To know if you are
+												                                                    one of our pioneers,
+												                                                    simply check your
+												                                                    referrer on the
+												                                                    front page & make
+												                                                    sure it's
+												                                                    "admin@cryptowave.network".
+											<p>
+												For our CryptoWave pioneers, you can qualify for the 2-tier affiliate program once
+												you've met the following pre-requisites:
+											<ol>
+												<li>Hit more than 50 <b>qualified</b> affiliates!</li>
+												<li>Qualified: the affiliate must contribute up to 50m hashpower by the 7th of each month.</li>
+											</ol>
 											</p>
 										</div>
 									</div>
@@ -307,12 +278,115 @@
 								<div class="panel panel-default">
 									<div class="panel-heading">
 										<h3 class="panel-title">
-											<a class="accordion-toggle" data-toggle="collapse" data-parent="#faq3" href="#faq3_q2">When will you update our stash?</a>
+											<a class="accordion-toggle" data-toggle="collapse" data-parent="#faq3"
+											   href="#faq3_q2">When will you update our stash?
+											</a>
 										</h3>
 									</div>
 									<div id="faq3_q2" class="panel-collapse collapse">
 										<div class="panel-body">
-											<p>The stash will be updated on the 7th of every month, to ensure accuracy after the end of the previous month.</p>
+											<p>The stash will be updated on the 7th of every month, to ensure accuracy
+											   after the end of the previous month.</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- END Payments -->
+
+						{{--<!-- Functionality -->--}}
+						{{--<h2 class="h3 font-w600 push-50-t push">Functionality</h2>--}}
+						{{--<div id="faq2" class="panel-group">--}}
+						{{--<div class="panel panel-default">--}}
+						{{--<div class="panel-heading">--}}
+						{{--<h3 class="panel-title">--}}
+						{{--<a class="accordion-toggle" data-toggle="collapse" data-parent="#faq2" href="#faq2_q1">What are the key features?</a>--}}
+						{{--</h3>--}}
+						{{--</div>--}}
+						{{--<div id="faq2_q1" class="panel-collapse collapse">--}}
+						{{--<div class="panel-body">--}}
+						{{--<p>Potenti elit lectus augue eget iaculis vitae etiam, ullamcorper etiam bibendum ad feugiat magna accumsan dolor, nibh molestie cras hac ac ad massa, fusce ante convallis ante urna molestie vulputate bibendum tempus ante justo arcu erat accumsan adipiscing risus, libero condimentum venenatis sit nisl nisi ultricies sed, fames aliquet consectetur consequat nostra molestie neque nullam scelerisque neque commodo turpis quisque etiam egestas vulputate massa, curabitur tellus massa venenatis congue dolor enim integer luctus, nisi suscipit gravida fames quis vulputate nisi viverra luctus id leo dictum lorem, inceptos nibh orci.</p>--}}
+						{{--<p>Potenti elit lectus augue eget iaculis vitae etiam, ullamcorper etiam bibendum ad feugiat magna accumsan dolor, nibh molestie cras hac ac ad massa, fusce ante convallis ante urna molestie vulputate bibendum tempus ante justo arcu erat accumsan adipiscing risus, libero condimentum venenatis sit nisl nisi ultricies sed, fames aliquet consectetur consequat nostra molestie neque nullam scelerisque neque commodo turpis quisque etiam egestas vulputate massa, curabitur tellus massa venenatis congue dolor enim integer luctus, nisi suscipit gravida fames quis vulputate nisi viverra luctus id leo dictum lorem, inceptos nibh orci.</p>--}}
+						{{--</div>--}}
+						{{--</div>--}}
+						{{--</div>--}}
+						{{--<div class="panel panel-default">--}}
+						{{--<div class="panel-heading">--}}
+						{{--<h3 class="panel-title">--}}
+						{{--<a class="accordion-toggle" data-toggle="collapse" data-parent="#faq2" href="#faq2_q2">Does your App support mobile devices?</a>--}}
+						{{--</h3>--}}
+						{{--</div>--}}
+						{{--<div id="faq2_q2" class="panel-collapse collapse">--}}
+						{{--<div class="panel-body">--}}
+						{{--<p>Potenti elit lectus augue eget iaculis vitae etiam, ullamcorper etiam bibendum ad feugiat magna accumsan dolor, nibh molestie cras hac ac ad massa, fusce ante convallis ante urna molestie vulputate bibendum tempus ante justo arcu erat accumsan adipiscing risus, libero condimentum venenatis sit nisl nisi ultricies sed, fames aliquet consectetur consequat nostra molestie neque nullam scelerisque neque commodo turpis quisque etiam egestas vulputate massa, curabitur tellus massa venenatis congue dolor enim integer luctus, nisi suscipit gravida fames quis vulputate nisi viverra luctus id leo dictum lorem, inceptos nibh orci.</p>--}}
+						{{--<p>Potenti elit lectus augue eget iaculis vitae etiam, ullamcorper etiam bibendum ad feugiat magna accumsan dolor, nibh molestie cras hac ac ad massa, fusce ante convallis ante urna molestie vulputate bibendum tempus ante justo arcu erat accumsan adipiscing risus, libero condimentum venenatis sit nisl nisi ultricies sed, fames aliquet consectetur consequat nostra molestie neque nullam scelerisque neque commodo turpis quisque etiam egestas vulputate massa, curabitur tellus massa venenatis congue dolor enim integer luctus, nisi suscipit gravida fames quis vulputate nisi viverra luctus id leo dictum lorem, inceptos nibh orci.</p>--}}
+						{{--</div>--}}
+						{{--</div>--}}
+						{{--</div>--}}
+						{{--<div class="panel panel-default">--}}
+						{{--<div class="panel-heading">--}}
+						{{--<h3 class="panel-title">--}}
+						{{--<a class="accordion-toggle" data-toggle="collapse" data-parent="#faq2" href="#faq2_q3">Why should I choose your service?</a>--}}
+						{{--</h3>--}}
+						{{--</div>--}}
+						{{--<div id="faq2_q3" class="panel-collapse collapse">--}}
+						{{--<div class="panel-body">--}}
+						{{--<p>Potenti elit lectus augue eget iaculis vitae etiam, ullamcorper etiam bibendum ad feugiat magna accumsan dolor, nibh molestie cras hac ac ad massa, fusce ante convallis ante urna molestie vulputate bibendum tempus ante justo arcu erat accumsan adipiscing risus, libero condimentum venenatis sit nisl nisi ultricies sed, fames aliquet consectetur consequat nostra molestie neque nullam scelerisque neque commodo turpis quisque etiam egestas vulputate massa, curabitur tellus massa venenatis congue dolor enim integer luctus, nisi suscipit gravida fames quis vulputate nisi viverra luctus id leo dictum lorem, inceptos nibh orci.</p>--}}
+						{{--<p>Potenti elit lectus augue eget iaculis vitae etiam, ullamcorper etiam bibendum ad feugiat magna accumsan dolor, nibh molestie cras hac ac ad massa, fusce ante convallis ante urna molestie vulputate bibendum tempus ante justo arcu erat accumsan adipiscing risus, libero condimentum venenatis sit nisl nisi ultricies sed, fames aliquet consectetur consequat nostra molestie neque nullam scelerisque neque commodo turpis quisque etiam egestas vulputate massa, curabitur tellus massa venenatis congue dolor enim integer luctus, nisi suscipit gravida fames quis vulputate nisi viverra luctus id leo dictum lorem, inceptos nibh orci.</p>--}}
+						{{--</div>--}}
+						{{--</div>--}}
+						{{--</div>--}}
+						{{--<div class="panel panel-default">--}}
+						{{--<div class="panel-heading">--}}
+						{{--<h3 class="panel-title">--}}
+						{{--<a class="accordion-toggle" data-toggle="collapse" data-parent="#faq2" href="#faq2_q4">Is my data secure?</a>--}}
+						{{--</h3>--}}
+						{{--</div>--}}
+						{{--<div id="faq2_q4" class="panel-collapse collapse">--}}
+						{{--<div class="panel-body">--}}
+						{{--<p>Potenti elit lectus augue eget iaculis vitae etiam, ullamcorper etiam bibendum ad feugiat magna accumsan dolor, nibh molestie cras hac ac ad massa, fusce ante convallis ante urna molestie vulputate bibendum tempus ante justo arcu erat accumsan adipiscing risus, libero condimentum venenatis sit nisl nisi ultricies sed, fames aliquet consectetur consequat nostra molestie neque nullam scelerisque neque commodo turpis quisque etiam egestas vulputate massa, curabitur tellus massa venenatis congue dolor enim integer luctus, nisi suscipit gravida fames quis vulputate nisi viverra luctus id leo dictum lorem, inceptos nibh orci.</p>--}}
+						{{--<p>Potenti elit lectus augue eget iaculis vitae etiam, ullamcorper etiam bibendum ad feugiat magna accumsan dolor, nibh molestie cras hac ac ad massa, fusce ante convallis ante urna molestie vulputate bibendum tempus ante justo arcu erat accumsan adipiscing risus, libero condimentum venenatis sit nisl nisi ultricies sed, fames aliquet consectetur consequat nostra molestie neque nullam scelerisque neque commodo turpis quisque etiam egestas vulputate massa, curabitur tellus massa venenatis congue dolor enim integer luctus, nisi suscipit gravida fames quis vulputate nisi viverra luctus id leo dictum lorem, inceptos nibh orci.</p>--}}
+						{{--</div>--}}
+						{{--</div>--}}
+						{{--</div>--}}
+						{{--</div>--}}
+						{{--<!-- END Functionality -->--}}
+
+						<!-- Payments -->
+							<h2 class="h3 font-w600 push-50-t push">Payments</h2>
+							<div id="faq3" class="panel-group">
+								<div class="panel panel-default">
+									<div class="panel-heading">
+										<h3 class="panel-title">
+											<a class="accordion-toggle" data-toggle="collapse" data-parent="#faq3"
+											   href="#faq3_q1">How do we get paid?
+											</a>
+										</h3>
+									</div>
+									<div id="faq3_q1" class="panel-collapse collapse">
+										<div class="panel-body">
+											<p>At the moment, we will be paying out to Monero wallets only.
+											   After receiving your Monero you can go through an exchange to convert
+											   your Monero into fiat currencies.</p>
+											<p>
+												We are still exploring on a seamless way to help you guys do a cash out
+												without going through all the processes to cashout personally.
+											</p>
+										</div>
+									</div>
+								</div>
+
+								<div class="panel panel-default">
+									<div class="panel-heading">
+										<h3 class="panel-title">
+											<a class="accordion-toggle" data-toggle="collapse" data-parent="#faq3"
+											   href="#faq3_q2">When will you update our stash?
+											</a>
+										</h3>
+									</div>
+									<div id="faq3_q2" class="panel-collapse collapse">
+										<div class="panel-body">
+											<p>The stash will be updated on the 7th of every month, to ensure accuracy
+											   after the end of the previous month.</p>
 										</div>
 									</div>
 								</div>
