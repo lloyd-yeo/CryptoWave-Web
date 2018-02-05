@@ -12,7 +12,7 @@ class ImportCryptoWaveUsers extends Command
 	 *
 	 * @var string
 	 */
-	protected $signature = 'import:user';
+	protected $signature = 'import:users';
 
 	/**
 	 * The console command description.
@@ -44,10 +44,31 @@ class ImportCryptoWaveUsers extends Command
 		$row_count = 0;
 
 		while (($data = fgetcsv($file, 0, ",")) !== FALSE) {
-			$email = $data[2];
-			$this->line($email);
+
+			if ($row_count == 0) {
+				$row_count++;
+				continue;
+			}
+
+			$name           = $data[1];
+			$email          = $data[2];
+			$password       = $data[3];
+			$referred_by_id = $data[7];
+			$tracking_code  = $data[8];
+			
 			if (User::where('email', $email)->first() == NULL) {
-				$this->line($email);
+
+				$referrer = User::find($referred_by_id);
+				$this->line($email . " referred by " . $referrer->email);
+
+				$user                = new User;
+				$user->email         = $email;
+				$user->password      = $password;
+				$user->name          = $name;
+				$user->referred_by   = $referred_by_id;
+				$user->tracking_code = $tracking_code;
+				$user->save();
+
 			}
 		}
 	}
