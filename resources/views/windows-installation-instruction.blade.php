@@ -195,11 +195,9 @@
 											<br/>
 											<img src="/cryptowave-dangerous-keep.png" style="height: 100px;">
 											<br/><br/>
-											<span style="font-size: 12px;">if you are on Chrome, it should be on the bottom-left corner:</span>
-											<br/><br/>
 											<span style="font-size: 12px;">the file should look like this:</span>
 											<br/>
-											<img src="/windows-zip.png" style="height: 150px;">
+											<img src="/windows-zip.png" style="height: 300px;">
 										</p>
 									</blockquote>
 
@@ -207,11 +205,11 @@
 										<p>2. Once you've located it, right click on "CryptoWaveMiner.zip"
 										   and select Extract Here to extract the contents of our zip package
 											<br/>
-											<img src="/windows-zip-extract.png" style="height: 150px;">
+											<img src="/windows-zip-extract.png" style="height: 4000px;">
 											<br/>
 											<span style="font-size: 12px;">you should get these files after unzipping:</span>
 										</p>
-										<img src="/windows-zip-content.png" style="height: 100px;">
+										<img src="/windows-zip-content.png" style="height: 400px;">
 										<br/>
 										<br/>
 										<span style="font-size: 12px;">from here, just double click on xmr-stak.exe to run the Miner.</span>
