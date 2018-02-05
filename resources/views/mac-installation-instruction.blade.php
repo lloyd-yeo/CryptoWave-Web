@@ -113,11 +113,13 @@
 			<div class="bg-primary-lighter collapse navbar-collapse remove-padding" id="sub-header-nav">
 				<div class="content-mini content-boxed">
 					<ul class="nav nav-pills nav-sub-header push">
+
 						<li>
 							<a href="/home">
 								<i class="fa fa-dashboard push-5-r"></i>Dashboard
 							</a>
 						</li>
+
 						<li>
 							{{--<a href="/download" download>--}}
 							<a href="/download" target="_blank">

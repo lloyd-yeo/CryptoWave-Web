@@ -71,7 +71,7 @@
 						<p class="lead">
 							Almost there!
 							<br/>You are just one step away from using your personal computer to mine!
-							<br/>Just fill out your details below & get access now to UniWave™
+							<br/>Just fill out your details below & get access now to CryptoWave™
 						</p>
 						<div class="bg--secondary boxed boxed--border">
 							<form method="POST" action="{{ route('register') }}">
