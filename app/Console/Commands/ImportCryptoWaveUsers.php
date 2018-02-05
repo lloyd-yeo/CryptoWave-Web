@@ -55,19 +55,21 @@ class ImportCryptoWaveUsers extends Command
 			$password       = $data[3];
 			$referred_by_id = $data[7];
 			$tracking_code  = $data[8];
-			
+
 			if (User::where('email', $email)->first() == NULL) {
 
 				$referrer = User::find($referred_by_id);
-				$this->line($email . " referred by " . $referrer->email);
-
+//				$this->line($email . " is referred by " . $referrer->email);
+				
 				$user                = new User;
 				$user->email         = $email;
 				$user->password      = $password;
 				$user->name          = $name;
 				$user->referred_by   = $referred_by_id;
 				$user->tracking_code = $tracking_code;
-				$user->save();
+				if ($user->save()) {
+					$this->line('Keyed in new user: [' . $user->email . '] to database.');
+				}
 
 			}
 		}
