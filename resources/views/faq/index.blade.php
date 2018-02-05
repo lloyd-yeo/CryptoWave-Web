@@ -253,7 +253,7 @@
 									<div id="faq3_q1" class="panel-collapse collapse">
 										<div class="panel-body">
 											<p>
-												At the moment, our 2-tier affiliate privilege is <b>only<b/> for our
+												At the moment, our 2-tier affiliate privilege is <b>only</b> for our
 												                                                    initial closed beta
 												                                                    users.
 												                                                    To know if you are
@@ -357,12 +357,12 @@
 								<div class="panel panel-default">
 									<div class="panel-heading">
 										<h3 class="panel-title">
-											<a class="accordion-toggle" data-toggle="collapse" data-parent="#faq3"
-											   href="#faq3_q1">How do we get paid?
+											<a class="accordion-toggle" data-toggle="collapse" data-parent="#faq4"
+											   href="#faq4_q1">How do we get paid?
 											</a>
 										</h3>
 									</div>
-									<div id="faq3_q1" class="panel-collapse collapse">
+									<div id="faq4_q1" class="panel-collapse collapse">
 										<div class="panel-body">
 											<p>At the moment, we will be paying out to Monero wallets only.
 											   After receiving your Monero you can go through an exchange to convert
@@ -378,12 +378,12 @@
 								<div class="panel panel-default">
 									<div class="panel-heading">
 										<h3 class="panel-title">
-											<a class="accordion-toggle" data-toggle="collapse" data-parent="#faq3"
-											   href="#faq3_q2">When will you update our stash?
+											<a class="accordion-toggle" data-toggle="collapse" data-parent="#faq4"
+											   href="#faq4_q2">When will you update our stash?
 											</a>
 										</h3>
 									</div>
-									<div id="faq3_q2" class="panel-collapse collapse">
+									<div id="faq4_q2" class="panel-collapse collapse">
 										<div class="panel-body">
 											<p>The stash will be updated on the 7th of every month, to ensure accuracy
 											   after the end of the previous month.</p>
