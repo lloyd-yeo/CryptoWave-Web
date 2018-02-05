@@ -187,7 +187,7 @@
 								<h3 class="block-title">Step by step</h3>
 							</div>
 							<div class="block-content block-content-full bg-gray-lighter text-center">
-								<div style="height: 2000px; overflow-x: auto;">
+								<div style="height: 2500px; overflow-x: auto;">
 									<blockquote style="text-align:left;">
 										<p>1. Locate the file you've downloaded, it's called "CryptoWave-Mac.zip".
 											<br/>
