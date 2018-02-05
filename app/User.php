@@ -8,41 +8,44 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 
 class User extends Authenticatable
 {
-    use HasApiTokens, Notifiable;
+	use HasApiTokens, Notifiable;
 
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var array
-     */
-    protected $fillable = [
-        'name', 'email', 'password', 'referred_by', 'tracking_code',
-    ];
+	/**
+	 * The attributes that are mass assignable.
+	 *
+	 * @var array
+	 */
+	protected $fillable = [
+		'name', 'email', 'password', 'referred_by', 'tracking_code',
+	];
 
-    /**
-     * The attributes that should be hidden for arrays.
-     *
-     * @var array
-     */
-    protected $hidden = [
-        'password', 'remember_token',
-    ];
+	/**
+	 * The attributes that should be hidden for arrays.
+	 *
+	 * @var array
+	 */
+	protected $hidden = [
+		'password', 'remember_token',
+	];
 
-    public function referrals() {
-    	return User::where('referred_by', $this->id)->get();
-    }
+	public function referrals()
+	{
+		return User::where('referred_by', $this->id)->get();
+	}
 
-    public function wallets() {
-    	return $this->hasMany('App\UserWallet');
-    }
+	public function wallets()
+	{
+		return $this->hasMany('App\UserWallet');
+	}
 
-    public function lifetimeHashpower(){
-    	$hashpower = UserHashpowerRecord::where('email', $this->email)->first();
-    	if ($hashpower == NULL) {
-    		return 0;
-	    } else {
-		    return $hashpower->hash_12;
-	    }
-    }
-    
+	public function lifetimeHashpower()
+	{
+		$hashpower_record = UserHashpowerRecord::where('email', $this->email)->first();
+		if ($hashpower_record == NULL) {
+			return 0;
+		} else {
+			return $hashpower_record->hash_12;
+		}
+	}
+
 }

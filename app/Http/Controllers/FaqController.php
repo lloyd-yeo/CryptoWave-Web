@@ -6,5 +6,7 @@ use Illuminate\Http\Request;
 
 class FaqController extends Controller
 {
-    //
+    public function index(Request $request) {
+
+    }
 }

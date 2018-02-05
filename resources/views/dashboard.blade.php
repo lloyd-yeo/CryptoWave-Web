@@ -218,6 +218,19 @@
 
 				<div class="row">
 					<div class="col-xs-12">
+						<div class="alert alert-warning">
+							<p><i class="fa fa-warning"></i> Take note that you will need at least a minimum of 0.1 XMR
+							                                 to
+							                                 make any withdrawal.
+							                                 This is due to transaction fees from transferring between
+							                                 wallets.
+							</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-xs-12">
 						<div class="alert alert-success">
 							<p><i class="fa fa-check"></i> Refer a friend now with the referral link
 								<a>http://cryptowave.network/register?ref={{ Auth::user()->tracking_code }}</a>
