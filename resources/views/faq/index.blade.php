@@ -262,7 +262,7 @@
 												                                                    referrer on the
 												                                                    front page & make
 												                                                    sure it's
-												                                                    "admin@cryptowave.network".
+												"admin@cryptowave.network".</p>
 											<p>
 												For our CryptoWave pioneers, you can qualify for the 2-tier affiliate program once
 												you've met the following pre-requisites:
@@ -271,6 +271,27 @@
 												<li>Qualified: the affiliate must contribute up to 50m hashpower by the 7th of each month.</li>
 											</ol>
 											</p>
+										</div>
+									</div>
+								</div>
+
+								<div class="panel panel-default">
+									<div class="panel-heading">
+										<h3 class="panel-title">
+											<a class="accordion-toggle" data-toggle="collapse" data-parent="#faq3"
+											   href="#faq3_q1">2-Tier Affiliate Program
+											</a>
+										</h3>
+									</div>
+									<div id="faq3_q1" class="panel-collapse collapse">
+										<div class="panel-body">
+											<object width="1000" height="600">
+												<param name="movie" value="http://www.youtube.com/v/PacclWDgwnI&hl=en&fs=1"></param>
+												<param name="allowFullScreen" value="true"></param>
+												<embed src="http://www.youtube.com/v/PacclWDgwnI&hl=en&fs=1"
+												       type="application/x-shockwave-flash" allowfullscreen="true"
+												       width="425" height="344"></embed>
+											</object>
 										</div>
 									</div>
 								</div>
