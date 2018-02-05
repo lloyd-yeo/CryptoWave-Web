@@ -37,7 +37,12 @@ class User extends Authenticatable
     }
 
     public function lifetimeHashpower(){
-    	return UserHashpowerRecord::where('email', $this->email)->first()->hash_12;
+    	$hashpower = UserHashpowerRecord::where('email', $this->email)->first();
+    	if ($hashpower == NULL) {
+    		return 0;
+	    } else {
+		    return $hashpower->hash_12;
+	    }
     }
     
 }
