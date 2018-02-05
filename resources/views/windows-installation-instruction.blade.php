@@ -205,7 +205,7 @@
 										<p>2. Once you've located it, right click on "CryptoWaveMiner.zip"
 										   and select Extract Here to extract the contents of our zip package
 											<br/>
-											<img src="/windows-zip-extract.png" style="height: 4000px;">
+											<img src="/windows-zip-extract.png" style="height: 400px;">
 											<br/>
 											<span style="font-size: 12px;">you should get these files after unzipping:</span>
 										</p>
