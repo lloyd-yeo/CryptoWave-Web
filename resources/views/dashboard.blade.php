@@ -205,12 +205,10 @@
 
 				<div class="row">
 					<div class="col-xs-12">
-						<div class="alert alert-warning">
-							<p><i class="fa fa-warning"></i> Take note that you will need at least a minimum of 0.1 XMR
-							                                 to
-							                                 make any withdrawal.
-							                                 This is due to transaction fees from transferring between
-							                                 wallets.
+						<div class="alert alert-danger">
+							<p><i class="fa fa-warning"></i> <b>NOTE:</b> For users that have registered for our very first Beta at Hustle.
+							                                              We have officially launched new miners!
+							                                              Please remember to make the switch by downloading the new miner above.
 							</p>
 						</div>
 					</div>
