@@ -110,11 +110,13 @@ class HomeController extends Controller
 		$updated_at       = \Carbon\Carbon::parse($hashpower_record->updated_at);
 		$stats_chart      = [];
 
+		$updated_at->subMinute(120);
+
 		$stats_chart[] = [
 			"hour" => "\"" . $updated_at->format('g:i A') . "\"",
 			"hash" => ($hashpower_record->hash_2 - $hashpower_record->hash),
 		];
-		$updated_at->subMinute(120);
+
 		$updated_at->addMinute(10);
 
 		$stats_chart[] = [
