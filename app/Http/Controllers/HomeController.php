@@ -112,77 +112,77 @@ class HomeController extends Controller
 
 		$stats_chart[] = [
 			"hour" => "\"" . $updated_at->format('g:i A') . "\"",
-			"hash" => ($hashpower_record->hash_2 - $hashpower_record->hash) + $hashpower_record->xmr_pool_hashrecord,
+			"hash" => ($hashpower_record->hash_2 - $hashpower_record->hash),
 		];
-
-		$updated_at->subMinute(10);
+		$updated_at->subMinute(120);
+		$updated_at->addMinute(10);
 
 		$stats_chart[] = [
 			"hour" => "\"" . $updated_at->format('g:i A') . "\"",
-			"hash" => ($hashpower_record->hash_3 - $hashpower_record->hash_2) + $hashpower_record->xmr_pool_hashrecord,
+			"hash" => ($hashpower_record->hash_3 - $hashpower_record->hash_2),
 		];
 
-		$updated_at->subMinute(10);
+		$updated_at->addMinute(10);
 
 		$stats_chart[] = [
 			"hour" => "\"" . $updated_at->format('g:i A') . "\"",
-			"hash" => ($hashpower_record->hash_4 - $hashpower_record->hash_3) + $hashpower_record->xmr_pool_hashrecord,
+			"hash" => ($hashpower_record->hash_4 - $hashpower_record->hash_3),
 		];
 
-		$updated_at->subMinute(10);
+		$updated_at->addMinute(10);
 
 		$stats_chart[] = [
 			"hour" => "\"" . $updated_at->format('g:i A') . "\"",
-			"hash" => ($hashpower_record->hash_5 - $hashpower_record->hash_4) + $hashpower_record->xmr_pool_hashrecord,
+			"hash" => ($hashpower_record->hash_5 - $hashpower_record->hash_4),
 		];
 
-		$updated_at->subMinute(10);
+		$updated_at->addMinute(10);
 
 		$stats_chart[] = [
 			"hour" => "\"" . $updated_at->format('g:i A') . "\"",
-			"hash" => ($hashpower_record->hash_6 - $hashpower_record->hash_5) + $hashpower_record->xmr_pool_hashrecord,
+			"hash" => ($hashpower_record->hash_6 - $hashpower_record->hash_5),
 		];
 
-		$updated_at->subMinute(10);
+		$updated_at->addMinute(10);
 
 		$stats_chart[] = [
 			"hour" => "\"" . $updated_at->format('g:i A') . "\"",
-			"hash" => ($hashpower_record->hash_7 - $hashpower_record->hash_6) + $hashpower_record->xmr_pool_hashrecord,
+			"hash" => ($hashpower_record->hash_7 - $hashpower_record->hash_6),
 		];
 
-		$updated_at->subMinute(10);
+		$updated_at->addMinute(10);
 
 		$stats_chart[] = [
 			"hour" => "\"" . $updated_at->format('g:i A') . "\"",
-			"hash" => ($hashpower_record->hash_8 - $hashpower_record->hash_7) + $hashpower_record->xmr_pool_hashrecord,
+			"hash" => ($hashpower_record->hash_8 - $hashpower_record->hash_7),
 		];
 
-		$updated_at->subMinute(10);
+		$updated_at->addMinute(10);
 
 		$stats_chart[] = [
 			"hour" => "\"" . $updated_at->format('g:i A') . "\"",
-			"hash" => ($hashpower_record->hash_9 - $hashpower_record->hash_8) + $hashpower_record->xmr_pool_hashrecord,
+			"hash" => ($hashpower_record->hash_9 - $hashpower_record->hash_8),
 		];
 
-		$updated_at->subMinute(10);
+		$updated_at->addMinute(10);
 
 		$stats_chart[] = [
 			"hour" => "\"" . $updated_at->format('g:i A') . "\"",
-			"hash" => ($hashpower_record->hash_10 - $hashpower_record->hash_9) + $hashpower_record->xmr_pool_hashrecord,
+			"hash" => ($hashpower_record->hash_10 - $hashpower_record->hash_9),
 		];
 
-		$updated_at->subMinute(10);
+		$updated_at->addMinute(10);
 
 		$stats_chart[] = [
 			"hour" => "\"" . $updated_at->format('g:i A') . "\"",
-			"hash" => ($hashpower_record->hash_11 - $hashpower_record->hash_10) + $hashpower_record->xmr_pool_hashrecord,
+			"hash" => ($hashpower_record->hash_11 - $hashpower_record->hash_10),
 		];
 
-		$updated_at->subMinute(10);
+		$updated_at->addMinute(10);
 
 		$stats_chart[] = [
 			"hour" => "\"" . $updated_at->format('g:i A') . "\"",
-			"hash" => ($hashpower_record->hash_12 - $hashpower_record->hash_11) + $hashpower_record->xmr_pool_hashrecord,
+			"hash" => ($hashpower_record->hash_12 - $hashpower_record->hash_11),
 		];
 
 //		$updated_at_hours = $updated_at_hours - 1;
