@@ -16,6 +16,8 @@ class Kernel extends ConsoleKernel
         Commands\TestOAuthTokenRequest::class,
         Commands\TestConnectToEthereumNode::class,
         Commands\ImportCryptoWaveUsers::class,
+        Commands\ImportXMRPoolStats::class,
+        Commands\ModifyHashRateIndividualSnapshot::class,
     ];
 
     /**
