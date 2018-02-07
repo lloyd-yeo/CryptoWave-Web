@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\HourlySnapshot;
 use Illuminate\Http\Request;
 use Auth;
 use App\User;
@@ -107,8 +108,8 @@ class HomeController extends Controller
 
 		$hashpower_record = UserHashpowerRecord::where('email', Auth::user()->email)->first();
 
-		$updated_at       = \Carbon\Carbon::parse($hashpower_record->updated_at);
-		$stats_chart      = [];
+		$updated_at  = \Carbon\Carbon::parse($hashpower_record->updated_at);
+		$stats_chart = [];
 
 		$updated_at->subMinute(120);
 
@@ -187,26 +188,26 @@ class HomeController extends Controller
 			"hash" => ($hashpower_record->hash_12 - $hashpower_record->hash_11),
 		];
 
-//		$updated_at_hours = $updated_at_hours - 1;
-//
-//		$stats_chart[] = [
-//			"hour" => "\"" . $updated_at->format('g:i A') . "\"",
-//			"hash" => $hashpower_record->hash_10,
-//		];
-//
-//		$updated_at_hours = $updated_at_hours - 1;
-//
-//		$stats_chart[] = [
-//			"hour" => "\"" . $updated_at->format('g:i A') . "\"",
-//			"hash" => $hashpower_record->hash_11,
-//		];
-//
-//		$updated_at_hours = $updated_at_hours - 1;
-//
-//		$stats_chart[] = [
-//			"hour" => "\"" . $updated_at->format('g:i A') . "\"",
-//			"hash" => $hashpower_record->hash_12,
-//		];
+		//		$updated_at_hours = $updated_at_hours - 1;
+		//
+		//		$stats_chart[] = [
+		//			"hour" => "\"" . $updated_at->format('g:i A') . "\"",
+		//			"hash" => $hashpower_record->hash_10,
+		//		];
+		//
+		//		$updated_at_hours = $updated_at_hours - 1;
+		//
+		//		$stats_chart[] = [
+		//			"hour" => "\"" . $updated_at->format('g:i A') . "\"",
+		//			"hash" => $hashpower_record->hash_11,
+		//		];
+		//
+		//		$updated_at_hours = $updated_at_hours - 1;
+		//
+		//		$stats_chart[] = [
+		//			"hour" => "\"" . $updated_at->format('g:i A') . "\"",
+		//			"hash" => $hashpower_record->hash_12,
+		//		];
 
 		$self_hashpower      = $hashpower_record->hash_12;
 		$affiliate_hashpower = 0;
@@ -217,10 +218,26 @@ class HomeController extends Controller
 				$affiliate_hashpower_record = UserHashpowerRecord::where('email', $referral->email)->first();
 				if ($affiliate_hashpower_record != NULL) {
 					if ($affiliate_hashpower_record->hash_12 != NULL) {
-						$affiliate_hashpower        = $affiliate_hashpower + $affiliate_hashpower_record->hash_12;
+						$affiliate_hashpower = $affiliate_hashpower + $affiliate_hashpower_record->hash_12;
 					}
 				}
 			}
+		}
+
+		$hashpower_gain          = 0;
+		$last_2_hourly_snapshots = HourlySnapshot::where('user_id', Auth::user()->id)->orderBY('id', 'desc')->take(2)->get();
+		if ($last_2_hourly_snapshots->count() == 0) {
+			$hashpower_gain_            = Auth::user()->lifetimeHashpower();
+			$hourly_snapshot            = new HourlySnapshot;
+			$hourly_snapshot->user_id   = Auth::user()->id;
+			$hourly_snapshot->hashpower = $hashpower_gain_;
+			$hourly_snapshot->save();
+			$hashpower_gain = $hashpower_gain_;
+		} else if ($last_2_hourly_snapshots->count() == 1) {
+			$hourly_snapshot = $last_2_hourly_snapshots->first();
+			$hashpower_gain = $hourly_snapshot->hashpower;
+		} else {
+			$hashpower_gain = $last_2_hourly_snapshots->first()->hashpower - $last_2_hourly_snapshots->last()->hashpower();
 		}
 
 		$total_hashpower = $total_hashpower + $affiliate_hashpower;
@@ -241,6 +258,7 @@ class HomeController extends Controller
 		                           'monero_wallet'         => $monero_wallet,
 		                           'total_hashpower'       => $total_hashpower,
 		                           'affiliate_hashpower'   => $affiliate_hashpower,
+		                           'hashpower_gain' => $hashpower_gain,
 		]);
 	}
 }

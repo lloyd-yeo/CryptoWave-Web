@@ -188,22 +188,34 @@
 							</div>
 						</div>
 					</div>
-					@if (!empty($referrer))
-						<div class="col-xs-12 col-sm-6">
-							<div class="block block-rounded">
-								<div class="block-content block-content-full">
-									<div class="text-muted">
-										<small><i class="si si-calendar"></i> Referrer</small>
-									</div>
-									<div class="font-s12 font-w700">You were referred by</div>
-									<a class="h2 font-w300 text-primary"
-									   href="#">
-										{{ $referrer->name }}, {{ $referrer->email }}
-									</a>
+					<div class="col-xs-6 col-sm-3">
+						<div class="block block-rounded">
+							<div class="block-content block-content-full">
+								<div class="text-muted">
+									<small><i class="si si-graph"></i> Hashpower</small>
 								</div>
+								<div class="font-s12 font-w700">LIFETIME CONTRIBUTION</div>
+								<a class="h2 font-w300 text-primary"
+								   href="#">
+									{{ Auth::user()->lifetimeHashpower() }}
+								</a>
 							</div>
 						</div>
-					@endif
+					</div>
+					<div class="col-xs-6 col-sm-3">
+						<div class="block block-rounded">
+							<div class="block-content block-content-full">
+								<div class="text-muted">
+									<small><i class="si si-graph"></i> Hashpower Gain</small>
+								</div>
+								<div class="font-s12 font-w700">PAST HOUR</div>
+								<a class="h2 font-w300 text-primary"
+								   href="#">
+									{{ Auth::user()->lifetimeHashpower() }}
+								</a>
+							</div>
+						</div>
+					</div>
 				</div>
 				<!-- END Stats -->
 
