@@ -558,6 +558,7 @@
 
         setInterval(
             function () {
+                console.log($dashChartEarnings);
                 var jqxhr = $.get("/poll/hashspeed",
                     {}
                     , function (data) {
