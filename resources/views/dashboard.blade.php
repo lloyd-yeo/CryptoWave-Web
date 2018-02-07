@@ -197,7 +197,7 @@
 								<div class="font-s12 font-w700">LIFETIME CONTRIBUTION</div>
 								<a class="h2 font-w300 text-primary"
 								   href="#">
-									{{ Auth::user()->lifetimeHashpower() }}
+									{{ Auth::user()->lifetimeHashpower() }} hash
 								</a>
 							</div>
 						</div>
@@ -262,7 +262,7 @@
 
 				<!-- Charts -->
 				<div class="row">
-					<div class="col-md-8 col-sm-12 ">
+					<div class="col-md-12 col-sm-12 ">
 						<div class="block block-rounded block-opt-refresh-icon8">
 							<div class="block-header">
 								<ul class="block-options">
@@ -292,7 +292,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-md-4 col-sm-12">
+					<div class="col-md-12 col-sm-6">
 						@include('ranking')
 					</div>
 					<div class="col-md-12 col-sm-12">

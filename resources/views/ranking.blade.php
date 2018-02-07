@@ -11,7 +11,7 @@
             <div class="pull-t pull-r-l">
                 <!-- Block Tabs Justified Alternative Style -->
                 <div class="block">
-                    <div class="block-content tab-content">
+                    <div class="block-content tab-content" style="padding-top: 0;">
                         <div class="tab-pane active" id="btabs-alt-static-justified-weekly">
                             <table class="table table-borderless remove-margin-b remove-margin-t font-s13">
                                 <thead>
