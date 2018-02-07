@@ -488,9 +488,9 @@
                     datasets: [
                         {
                             label: 'This Week',
-                            fillColor: 'rgba(68, 180, 166, .25)',
+                            fillColor: '#25ADC3',
                             strokeColor: 'rgba(68, 180, 166, .55)',
-                            pointColor: 'rgba(68, 180, 166, .55)',
+                            pointColor: '#0B5B9C',
                             pointStrokeColor: '#fff',
                             pointHighlightFill: '#fff',
                             pointHighlightStroke: 'rgba(68, 180, 166, 1)',
