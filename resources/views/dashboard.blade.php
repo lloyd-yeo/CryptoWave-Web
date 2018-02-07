@@ -274,7 +274,7 @@
 								<h3 class="block-title">Recent Hashpower Gains</h3>
 							</div>
 							<div class="block-content block-content-full bg-gray-lighter text-center">
-								<div style="max-height: 400px; position: relative;">
+								<div style="max-height: 700px; position: relative;">
 									<canvas class="js-dash-chartjs-earnings" id="hashpower-gain-chart"></canvas>
 								</div>
 							</div>
@@ -574,7 +574,7 @@
 
         var myLiveChart = new Chart(ctx,{
             type: 'line',
-            
+
             options: {
                 maintainAspectRatio: false,
                 scaleFontFamily: "'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif",
