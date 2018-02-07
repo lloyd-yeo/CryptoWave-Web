@@ -468,6 +468,9 @@
 	<script src="{{ asset('oneui/assets/js/pages/base_tables_datatables.js') }}"></script>
 
 	<script>
+
+        var $dashChartEarnings;
+
         var BasePagesDashboardv2 = function () {
             // Chart.js Chart, for more examples you can check out http://www.chartjs.org/docs
             var initDashv2ChartJS = function () {
@@ -508,7 +511,7 @@
                 };
 
                 // Init Earnings Chart
-                var $dashChartEarnings = new Chart($dashChartEarningsCon).Line($dashChartEarningsData, {
+                $dashChartEarnings = new Chart($dashChartEarningsCon).Line($dashChartEarningsData, {
                     scaleFontFamily: "'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif",
                     scaleFontColor: '#999',
                     scaleFontStyle: '600',
@@ -541,7 +544,33 @@
             App.initHelpers('appear-countTo');
 
             console.log('This user commands a total of ' + {{ $total_hashpower }} +' hash over the lifetime.');
+
+
         });
+
+        function addData(chart, label, data) {
+            chart.data.labels.push(label);
+            chart.data.datasets.forEach((dataset) = > {
+                dataset.data.push(data);
+        });
+            chart.update();
+        }
+
+        setInterval(
+            function () {
+                var jqxhr = $.post("/poll/hashspeed",
+                    {}
+                    , function (data) {
+                        console.log(data);
+                        if (data.success) {
+                            addData($dashChartEarnings, data.date, data.hash_speed);
+                        } else {
+                            console.log("FAILED")
+                        }
+                    }, "json");
+            }, 30000
+        );
+
 	</script>
 	</body>
 </html>

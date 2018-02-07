@@ -21,6 +21,7 @@ Route::post('/validate/referral', 'SignUpController@validateReferral')->name('va
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/signup', 'SignUpController@signup')->name('signup');
+Route::post('/poll/hashspeed', 'HomeController@pollHashspeed')->name('pollHashSpeed');
 
 Route::get('/stats', 'StatsController@getStats');
 

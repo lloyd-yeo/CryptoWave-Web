@@ -2,14 +2,15 @@
 
 namespace App\Http\Controllers;
 
+use App\HalfMinuteSnapshot;
 use App\HourlySnapshot;
-use Illuminate\Http\Request;
-use Auth;
-use App\User;
-use App\UserWallet;
 use App\SystemParameter;
+use App\User;
 use App\UserHashpowerRecord;
+use App\UserWallet;
+use Auth;
 use Carbon\Carbon;
+use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
@@ -262,5 +263,32 @@ class HomeController extends Controller
 		                           'affiliate_hashpower'   => $affiliate_hashpower,
 		                           'hashpower_gain' => $hashpower_gain,
 		]);
+	}
+
+	public function pollHashspeed(Request $request) {
+		$client = new \GuzzleHttp\Client();
+		$response = $client->get("http://159.89.197.169:8001/miner/48WCGXaoL7gUY8fwSxUPgR4VYx4iVTJYEF4jP7Uq4jG26Hz9Gc6QjgU1m7Hht5pBPJbccCyR4khkZD88wSwErkRt2FkmpNH/stats/allWorkers", []);
+		$stats = json_decode($response->getBody(), true);
+		$user = User::find(Auth::user()->id);
+
+		foreach ($stats as $email => $stat) {
+
+			if ($email == $user->email) {
+				$half_minute_snapshot = new HalfMinuteSnapshot;
+				$half_minute_snapshot->user_id = $user->id;
+				$half_minute_snapshot->hash_speed = $stat["hash"];
+				$half_minute_snapshot->hashpower = $stat["totalHash"];
+				$half_minute_snapshot->save();
+
+				return response()->json([
+					'success' => TRUE,
+					'hash_speed' => $stat["hash"],
+					'date' => Carbon::now()->format('g:i A'),
+				]);
+
+			}
+		}
+
+
 	}
 }
