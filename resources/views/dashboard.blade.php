@@ -618,7 +618,7 @@
                             console.log("FAILED");
                         }
                     }, "json");
-            }, 20000
+            }, 10000
         );
 
 	</script>
