@@ -137,7 +137,7 @@ class HomeController extends Controller
 		}
 
 		$hashpower_gain          = 0;
-		$last_2_hourly_snapshots = HourlySnapshot::where('user_id', Auth::user()->id)->orderBY('id', 'desc')->take(2)->get();
+		$last_2_hourly_snapshots = HourlySnapshot::where('user_id', Auth::user()->id)->orderBy('id', 'desc')->take(2)->get();
 		if ($last_2_hourly_snapshots->count() == 0) {
 			$hashpower_gain_            = Auth::user()->lifetimeHashpower();
 			$hourly_snapshot            = new HourlySnapshot;
