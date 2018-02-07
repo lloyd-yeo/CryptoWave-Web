@@ -367,7 +367,7 @@
 							</div>
 							<div class="block-content bg-white-op text-center">
 
-							<!-- Chart.js') }} Charts (initialized in js/pages/base_pages_dashboard_v2.js') }}), for more examples you can check out http://www.chartjs.org/docs/ -->
+								<!-- Chart.js') }} Charts (initialized in js/pages/base_pages_dashboard_v2.js') }}), for more examples you can check out http://www.chartjs.org/docs/ -->
 								<div>
 									<table class="table table-bordered table-striped js-dataTable-full">
 										<thead>
@@ -488,7 +488,7 @@
                     datasets: [
                         {
                             label: 'This Week',
-                            fillColor: '#25ADC3',
+                            fillColor: 'rgba(48,173,194, .55)',
                             strokeColor: 'rgba(68, 180, 166, .55)',
                             pointColor: '#0B5B9C',
                             pointStrokeColor: '#fff',
