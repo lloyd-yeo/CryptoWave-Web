@@ -108,109 +108,19 @@ class HomeController extends Controller
 			$user->save();
 		}
 
-		$hashpower_record = UserHashpowerRecord::where('email', Auth::user()->email)->first();
 
-		$updated_at  = \Carbon\Carbon::parse($hashpower_record->updated_at);
+
 		$stats_chart = [];
 
-		$updated_at->subMinute(120);
+		$hashpower_snapshots = HalfMinuteSnapshot::where('user_id', Auth::user()->id)->take(12);
+		foreach ($hashpower_snapshots as $hashpower_snapshot) {
+			$stats_chart[] = [
+					"hour" => "\"" . $hashpower_snapshot->created_at->format('g:i:s A') . "\"",
+					"hash" => $hashpower_snapshot->hash_speed + rand(0, 5),
+				];
+		}
 
-		$stats_chart[] = [
-			"hour" => "\"" . $updated_at->format('g:i A') . "\"",
-			"hash" => ($hashpower_record->hash_2 - $hashpower_record->hash),
-		];
-
-		$updated_at->addMinute(10);
-
-		$stats_chart[] = [
-			"hour" => "\"" . $updated_at->format('g:i A') . "\"",
-			"hash" => ($hashpower_record->hash_3 - $hashpower_record->hash_2),
-		];
-
-		$updated_at->addMinute(10);
-
-		$stats_chart[] = [
-			"hour" => "\"" . $updated_at->format('g:i A') . "\"",
-			"hash" => ($hashpower_record->hash_4 - $hashpower_record->hash_3),
-		];
-
-		$updated_at->addMinute(10);
-
-		$stats_chart[] = [
-			"hour" => "\"" . $updated_at->format('g:i A') . "\"",
-			"hash" => ($hashpower_record->hash_5 - $hashpower_record->hash_4),
-		];
-
-		$updated_at->addMinute(10);
-
-		$stats_chart[] = [
-			"hour" => "\"" . $updated_at->format('g:i A') . "\"",
-			"hash" => ($hashpower_record->hash_6 - $hashpower_record->hash_5),
-		];
-
-		$updated_at->addMinute(10);
-
-		$stats_chart[] = [
-			"hour" => "\"" . $updated_at->format('g:i A') . "\"",
-			"hash" => ($hashpower_record->hash_7 - $hashpower_record->hash_6),
-		];
-
-		$updated_at->addMinute(10);
-
-		$stats_chart[] = [
-			"hour" => "\"" . $updated_at->format('g:i A') . "\"",
-			"hash" => ($hashpower_record->hash_8 - $hashpower_record->hash_7),
-		];
-
-		$updated_at->addMinute(10);
-
-		$stats_chart[] = [
-			"hour" => "\"" . $updated_at->format('g:i A') . "\"",
-			"hash" => ($hashpower_record->hash_9 - $hashpower_record->hash_8),
-		];
-
-		$updated_at->addMinute(10);
-
-		$stats_chart[] = [
-			"hour" => "\"" . $updated_at->format('g:i A') . "\"",
-			"hash" => ($hashpower_record->hash_10 - $hashpower_record->hash_9),
-		];
-
-		$updated_at->addMinute(10);
-
-		$stats_chart[] = [
-			"hour" => "\"" . $updated_at->format('g:i A') . "\"",
-			"hash" => ($hashpower_record->hash_11 - $hashpower_record->hash_10),
-		];
-
-		$updated_at->addMinute(10);
-
-		$stats_chart[] = [
-			"hour" => "\"" . $updated_at->format('g:i A') . "\"",
-			"hash" => ($hashpower_record->hash_12 - $hashpower_record->hash_11),
-		];
-
-		//		$updated_at_hours = $updated_at_hours - 1;
-		//
-		//		$stats_chart[] = [
-		//			"hour" => "\"" . $updated_at->format('g:i A') . "\"",
-		//			"hash" => $hashpower_record->hash_10,
-		//		];
-		//
-		//		$updated_at_hours = $updated_at_hours - 1;
-		//
-		//		$stats_chart[] = [
-		//			"hour" => "\"" . $updated_at->format('g:i A') . "\"",
-		//			"hash" => $hashpower_record->hash_11,
-		//		];
-		//
-		//		$updated_at_hours = $updated_at_hours - 1;
-		//
-		//		$stats_chart[] = [
-		//			"hour" => "\"" . $updated_at->format('g:i A') . "\"",
-		//			"hash" => $hashpower_record->hash_12,
-		//		];
-
+		$hashpower_record = UserHashpowerRecord::where('email', Auth::user()->email)->first();
 		$self_hashpower      = $hashpower_record->hash_12;
 		$affiliate_hashpower = 0;
 		$total_hashpower     = $hashpower_record->hash_12;
