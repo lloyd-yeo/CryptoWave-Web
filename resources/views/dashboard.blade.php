@@ -491,7 +491,7 @@
                     ],
                     datasets: [
                         {
-                            label: 'This Week',
+                            label: 'Hash Speed',
                             fillColor: 'rgba(48,173,194, .55)',
                             strokeColor: 'rgba(68, 180, 166, .55)',
                             pointColor: '#0B5B9C',
