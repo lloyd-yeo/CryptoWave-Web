@@ -293,7 +293,7 @@
 						</div>
 					</div>
 
-					<div class="col-md-12 col-sm-12" style="height: 630px;">
+					<div class="col-md-12 col-sm-12" style="height: 615px;">
 						@include('ranking')
 					</div>
 
@@ -335,6 +335,26 @@
 						</div>
 					</div>
 					<div class="col-md-12">
+
+						@if (!empty($referrer))
+							<div>
+								<div class="col-xs-12 col-sm-12">
+									<div class="block block-rounded">
+										<div class="block-content block-content-full">
+											<div class="text-muted">
+												<small><i class="si si-calendar"></i> Referrer</small>
+											</div>
+											<div class="font-s12 font-w700">You were referred by</div>
+											<a class="h2 font-w300 text-primary"
+											   href="#">
+												{{ $referrer->name }}, {{ $referrer->email }}
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						@endif
+
 						<div class="block block-rounded block-opt-refresh-icon8">
 							<div class="block-header">
 								<ul class="block-options">
@@ -346,27 +366,6 @@
 								<h3 class="block-title">Recent Referrals</h3>
 							</div>
 							<div class="block-content bg-white-op text-center">
-
-
-								@if (!empty($referrer))
-									<div>
-										<div class="col-xs-12 col-sm-12">
-											<div class="block block-rounded">
-												<div class="block-content block-content-full">
-													<div class="text-muted">
-														<small><i class="si si-calendar"></i> Referrer</small>
-													</div>
-													<div class="font-s12 font-w700">You were referred by</div>
-													<a class="h2 font-w300 text-primary"
-													   href="#">
-														{{ $referrer->name }}, {{ $referrer->email }}
-													</a>
-												</div>
-											</div>
-										</div>
-									</div>
-							@endif
-
 
 							<!-- Chart.js') }} Charts (initialized in js/pages/base_pages_dashboard_v2.js') }}), for more examples you can check out http://www.chartjs.org/docs/ -->
 								<div>
