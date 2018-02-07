@@ -469,7 +469,7 @@
 
 	<script>
 
-        var $dashChartEarnings;
+		var $dashChartEarnings;
 
         var BasePagesDashboardv2 = function () {
             // Chart.js Chart, for more examples you can check out http://www.chartjs.org/docs
@@ -565,13 +565,24 @@
                     , function (data) {
                         console.log(data);
                         if (data.success) {
+
+                            var indexToUpdate = $dashChartEarnings.data.datasets[0].data.length;
+                            console.log(indexToUpdate);
+
+                            // Update one of the points in the second dataset
+                            $dashChartEarnings.data.datasets[0].data[indexToUpdate] = data.hash_speed;
+                            $dashChartEarnings.data.labels[indexToUpdate] = data.date;
+                            $dashChartEarnings.update();
+
+//                            $dashChartEarnings.addData([Math.random() * 100, Math.random() * 100], ++latestLabel);
+
                             console.log($dashChartEarnings);
-                            addData($dashChartEarnings, data.date, data.hash_speed);
+//                            addData($dashChartEarnings, data.date, data.hash_speed);
                         } else {
                             console.log("FAILED")
                         }
                     }, "json");
-            }, 30000
+            }, 10000
         );
 
 	</script>
