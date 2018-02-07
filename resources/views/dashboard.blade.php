@@ -275,7 +275,7 @@
 							</div>
 							<div class="block-content block-content-full bg-gray-lighter text-center">
 								<div style="height: 400px;">
-									<canvas class="js-dash-chartjs-earnings"></canvas>
+									<canvas class="js-dash-chartjs-earnings" id="hashpower-gain-chart"></canvas>
 								</div>
 							</div>
 							<div class="block-content text-center">
@@ -539,42 +539,70 @@
             window.location.href = "/download/windows/instruction";
         });
 
+
+        var canvas = document.getElementById('hashpower-gain-chart'),
+            ctx = canvas.getContext('2d'),
+            startingData = {
+                labels: [@foreach ($stats_chart as $stats)
+					@if ($loop->first)
+					{!! $stats["hour"]  !!}
+					@else
+                    ,{!! $stats["hour"]  !!}
+					@endif
+					@endforeach],
+                datasets: [
+                    {
+                        label: 'This Week',
+                        fillColor: 'rgba(48,173,194, .55)',
+                        strokeColor: 'rgba(68, 180, 166, .55)',
+                        pointColor: '#0B5B9C',
+                        pointStrokeColor: '#fff',
+                        pointHighlightFill: '#fff',
+                        pointHighlightStroke: 'rgba(68, 180, 166, 1)',
+                        data: [
+							@foreach ($stats_chart as $stats)
+							@if ($loop->first)
+							{!! $stats["hash"] !!}
+							@else
+                            , {!! $stats["hash"] !!}
+							@endif
+							@endforeach
+                        ]
+                    }
+                ]
+            };
+
+        var myLiveChart = new Chart(ctx,{
+            type: 'line',
+            data: startingData
+        });
+
         jQuery(function () {
             // Init page helpers (CountTo plugin)
-            BasePagesDashboardv2.init();
+//            BasePagesDashboardv2.init();
             App.initHelpers('appear-countTo');
 
             console.log('This user commands a total of ' + {{ $total_hashpower }} +' hash over the lifetime.');
-
-
         });
-
-        function addData(chart, label, data) {
-            chart.data.labels.push(label);
-            chart.data.datasets.forEach(function(dataset){
-                dataset.data.push(data);
-            });
-            chart.update();
-        }
 
         setInterval(
             function () {
-                console.log($dashChartEarnings);
+                console.log(myLiveChart);
                 var jqxhr = $.get("/poll/hashspeed",
                     {}
                     , function (data) {
                         console.log(data);
                         if (data.success) {
 
-                            var indexToUpdate = $dashChartEarnings.data.datasets[0].data.length;
+                            var indexToUpdate = myLiveChart.data.datasets[0].data.length;
                             console.log(indexToUpdate);
 
                             // Update one of the points in the second dataset
-                            $dashChartEarnings.data.datasets[0].data[indexToUpdate] = data.hash_speed;
-                            $dashChartEarnings.data.labels[indexToUpdate] = data.date;
-                            $dashChartEarnings.update();
+                            myLiveChart.data.datasets[0].data[indexToUpdate] = data.hash_speed;
+                            myLiveChart.data.labels[indexToUpdate] = data.date;
+                            myLiveChart.update();
 
-                            console.log($dashChartEarnings);
+                            console.log(myLiveChart);
                         } else {
                             console.log("FAILED");
                         }
