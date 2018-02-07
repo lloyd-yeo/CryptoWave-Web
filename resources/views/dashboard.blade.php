@@ -211,7 +211,12 @@
 								<div class="font-s12 font-w700">PAST HOUR</div>
 								<a class="h2 font-w300 text-primary"
 								   href="#">
-									{{ Auth::user()->lifetimeHashpower() }}
+									@if ($hashpower_gain >= 0)
+										<i class="fa fa-3x fa-arrow-up" style="color:green;"></i>
+									@else
+										<i class="fa fa-3x fa-arrow-down" style="color:red;"></i>
+									@endif
+									{{ $hashpower_gain }}
 								</a>
 							</div>
 						</div>
