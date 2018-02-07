@@ -557,6 +557,7 @@
         }
 
         setInterval(
+
             function () {
                 console.log($dashChartEarnings);
                 var jqxhr = $.get("/poll/hashspeed",
@@ -564,6 +565,7 @@
                     , function (data) {
                         console.log(data);
                         if (data.success) {
+                            console.log($dashChartEarnings);
                             addData($dashChartEarnings, data.date, data.hash_speed);
                         } else {
                             console.log("FAILED")
