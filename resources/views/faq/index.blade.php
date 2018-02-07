@@ -207,7 +207,7 @@
 									<div class="panel-heading">
 										<h3 class="panel-title">
 											<a class="accordion-toggle" data-toggle="collapse" data-parent="#faq1"
-											   href="#faq1_q2">I do not see the miner .exe in the folder!
+											   href="#faq1_q2">I do not see the miner xmr-stak.exe in the folder!
 											</a>
 										</h3>
 									</div>
@@ -216,6 +216,7 @@
 											<p>This is due to the Anti-Virus that you have on your computer & the miner
 											   has been flagged as a false positive. To solve that, simply disable
 											   it.</p>
+											<p>If you have disabled your Anti-Virus but the </p>
 										</div>
 									</div>
 								</div>
