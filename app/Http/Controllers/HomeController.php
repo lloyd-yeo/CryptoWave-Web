@@ -242,7 +242,8 @@ class HomeController extends Controller
 
 		$total_hashpower = $total_hashpower + $affiliate_hashpower;
 
-		$leaderboard_top_users = UserHashpowerRecord::orderBy('hash_speed', 'DESC')->take(10)->get();
+		$leaderboard_top_hashspeed = UserHashpowerRecord::orderBy('hash_speed', 'DESC')->take(10)->get();
+		$leaderboard_top_hashpower = UserHashpowerRecord::orderBy('hash_12', 'DESC')->take(10)->get();
 		$monero_wallet         = UserWallet::where('coin_type', 'Monero')->where('user_id', Auth::user()->id)->first();
 
 		return view('dashboard', [ 'referral_link'         => $referral_link,
@@ -254,7 +255,8 @@ class HomeController extends Controller
 		                           'binary_download_link'  => $system_param->binary_download_link,
 		                           'stats_chart'           => $stats_chart,
 		                           'first_login'           => $first_login,
-		                           'leaderboard_top_users' => $leaderboard_top_users,
+		                           'leaderboard_top_hashspeed' => $leaderboard_top_hashspeed,
+		                           'leaderboard_top_hashpower' => $leaderboard_top_hashpower,
 		                           'monero_wallet'         => $monero_wallet,
 		                           'total_hashpower'       => $total_hashpower,
 		                           'affiliate_hashpower'   => $affiliate_hashpower,

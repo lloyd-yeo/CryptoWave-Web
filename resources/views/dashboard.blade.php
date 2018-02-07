@@ -292,7 +292,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-md-12 col-sm-6">
+					<div class="col-md-12 col-sm-12">
 						@include('ranking')
 					</div>
 					<div class="col-md-12 col-sm-12">
