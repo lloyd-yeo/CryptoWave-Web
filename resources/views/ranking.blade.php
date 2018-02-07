@@ -23,7 +23,7 @@
                                 <tbody>
                                 @foreach ($leaderboard_top_hashspeed as $user)
                                     <tr>
-                                        <td class="font-w600" style="width: 100%">
+                                        <td class="font-w600" style="width: 70%">
                                             <span class='text-primary'>#{{ $loop->iteration }} {{ $user->user()->name }}</span>
                                         </td>
                                         <td class="font-w600">
@@ -68,7 +68,7 @@
                                 <tbody>
                                 @foreach ($leaderboard_top_hashpower as $user)
                                     <tr>
-                                        <td class="font-w600" style="width: 100%">
+                                        <td class="font-w600" style="width: 70%">
                                             <span class='text-primary'>#{{ $loop->iteration }} {{ $user->user()->name }}</span>
                                         </td>
                                         <td class="font-w600">
