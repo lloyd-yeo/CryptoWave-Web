@@ -237,7 +237,7 @@ class HomeController extends Controller
 			$hourly_snapshot = $last_2_hourly_snapshots->first();
 			$hashpower_gain = $hourly_snapshot->hashpower;
 		} else {
-			$hashpower_gain = $last_2_hourly_snapshots->first()->hashpower - $last_2_hourly_snapshots->last()->hashpower();
+			$hashpower_gain = $last_2_hourly_snapshots->first()->hashpower - $last_2_hourly_snapshots->last()->hashpower;
 		}
 
 		$total_hashpower = $total_hashpower + $affiliate_hashpower;
