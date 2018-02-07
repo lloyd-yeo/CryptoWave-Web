@@ -456,7 +456,8 @@
 	<script src="{{ asset('oneui/assets/js/app.js') }}"></script>
 
 	<!-- Page Plugins -->
-	<script src="{{ asset('oneui/assets/js/plugins/chartjs/Chart.min.js') }}"></script>
+	{{--<script src="{{ asset('oneui/assets/js/plugins/chartjs/Chart.min.js') }}"></script>--}}
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.2.0-rc.2/Chart.js"></script>
 
 	<!-- Page JS Code -->
 	{{--<script src="{{ asset('oneui/assets/js/pages/base_pages_dashboard_v2.js') }}"></script>--}}
@@ -557,7 +558,6 @@
         }
 
         setInterval(
-
             function () {
                 console.log($dashChartEarnings);
                 var jqxhr = $.get("/poll/hashspeed",
@@ -574,12 +574,9 @@
                             $dashChartEarnings.data.labels[indexToUpdate] = data.date;
                             $dashChartEarnings.update();
 
-//                            $dashChartEarnings.addData([Math.random() * 100, Math.random() * 100], ++latestLabel);
-
                             console.log($dashChartEarnings);
-//                            addData($dashChartEarnings, data.date, data.hash_speed);
                         } else {
-                            console.log("FAILED")
+                            console.log("FAILED");
                         }
                     }, "json");
             }, 10000
