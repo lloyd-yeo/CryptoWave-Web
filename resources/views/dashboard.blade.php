@@ -293,7 +293,7 @@
 						</div>
 					</div>
 
-					<div class="col-md-12 col-sm-12" style="height: 600px;">
+					<div class="col-md-12 col-sm-12" style="max-height: 600px;">
 						@include('ranking')
 					</div>
 
@@ -614,7 +614,7 @@
                             console.log("FAILED");
                         }
                     }, "json");
-            }, 10000
+            }, 20000
         );
 
 	</script>
