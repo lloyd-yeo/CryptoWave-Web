@@ -274,7 +274,7 @@
 								<h3 class="block-title">Recent Hashpower Gains</h3>
 							</div>
 							<div class="block-content block-content-full bg-gray-lighter text-center">
-								<div style="max-height: 700px; position: relative;">
+								<div style="height: 400px; position: relative;">
 									<canvas class="js-dash-chartjs-earnings" id="hashpower-gain-chart"></canvas>
 								</div>
 							</div>
