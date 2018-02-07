@@ -62,7 +62,7 @@
                                 <thead>
                                 <tr>
                                     <th class="text-center" style="width: 50%; text-align: left;">Name</th>
-                                    <th class="hidden-xs" style="width: 50%; text-align: left;">Speed</th>
+                                    <th class="hidden-xs" style="width: 50%; text-align: left;">Lifetime Hash</th>
                                 </tr>
                                 </thead>
                                 <tbody>
