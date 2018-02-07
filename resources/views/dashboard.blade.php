@@ -574,6 +574,13 @@
 
         var myLiveChart = new Chart(ctx,{
             type: 'line',
+            scaleFontFamily: "'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif",
+            scaleFontColor: '#999',
+            scaleFontStyle: '600',
+            tooltipTitleFontFamily: "'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif",
+            tooltipCornerRadius: 3,
+            maintainAspectRatio: false,
+            responsive: true,
             data: startingData
         });
 
