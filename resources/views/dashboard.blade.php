@@ -558,7 +558,7 @@
 
         setInterval(
             function () {
-                var jqxhr = $.post("/poll/hashspeed",
+                var jqxhr = $.get("/poll/hashspeed",
                     {}
                     , function (data) {
                         console.log(data);
