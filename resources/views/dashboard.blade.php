@@ -271,7 +271,7 @@
 										        data-action-mode="demo"><i class="si si-refresh"></i></button>
 									</li>
 								</ul>
-								<h3 class="block-title">Recent Hashpower Gains</h3>
+								<h3 class="block-title">Recent Hashspeed</h3>
 							</div>
 							<div class="block-content block-content-full bg-gray-lighter text-center">
 								<div style="height: 400px; position: relative;">
