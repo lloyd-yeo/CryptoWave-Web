@@ -216,7 +216,7 @@
 									@else
 										<i class="fa fa-arrow-down" style="color:red;"></i>
 									@endif
-									{{ $hashpower_gain }}
+									{{ $hashpower_gain }} hash
 								</a>
 							</div>
 						</div>
@@ -293,7 +293,7 @@
 						</div>
 					</div>
 
-					<div class="col-md-12 col-sm-12" style="height: 615px;">
+					<div class="col-md-12 col-sm-12" style="height: 600px;">
 						@include('ranking')
 					</div>
 
