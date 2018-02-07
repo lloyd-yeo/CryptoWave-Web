@@ -292,9 +292,11 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-md-12 col-sm-12">
+
+					<div class="col-md-12 col-sm-12" style="height: 630px;">
 						@include('ranking')
 					</div>
+
 					<div class="col-md-12 col-sm-12">
 						<div class="row text-uppercase">
 							<div class="col-xs-6 col-sm-4">
