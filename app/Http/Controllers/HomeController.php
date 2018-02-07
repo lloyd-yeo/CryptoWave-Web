@@ -196,7 +196,7 @@ class HomeController extends Controller
 				return response()->json([
 					'success' => TRUE,
 					'hash_speed' => $stat["hash"],
-					'date' => Carbon::now()->format('g:i A'),
+					'date' => Carbon::now()->format('g:i:s A'),
 				]);
 
 			}
