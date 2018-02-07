@@ -212,7 +212,7 @@
 								<a class="h2 font-w300 text-primary"
 								   href="#">
 									@if ($hashpower_gain >= 0)
-										<i class="fa fa-arrow-up" style="color:green;"></i>
+										<i class="fa fa-arrow-up" style="color:#4BB543;"></i>
 									@else
 										<i class="fa fa-arrow-down" style="color:red;"></i>
 									@endif
