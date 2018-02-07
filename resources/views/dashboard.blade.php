@@ -210,9 +210,11 @@
 				<div class="row">
 					<div class="col-xs-12">
 						<div class="alert alert-danger">
-							<p><i class="fa fa-warning"></i> <b>NOTE:</b> For users that have registered for our very first Beta at Hustle.
+							<p><i class="fa fa-warning"></i> <b>NOTE:</b> For users that have registered for our very
+							                                              first Beta at Hustle.
 							                                              We have officially launched new miners!
-							                                              Please remember to make the switch by downloading the new miner above.
+							                                              Please remember to make the switch by
+							                                              downloading the new miner above.
 							</p>
 						</div>
 					</div>
@@ -325,7 +327,29 @@
 								<h3 class="block-title">Recent Referrals</h3>
 							</div>
 							<div class="block-content bg-white-op text-center">
-								<!-- Chart.js') }} Charts (initialized in js/pages/base_pages_dashboard_v2.js') }}), for more examples you can check out http://www.chartjs.org/docs/ -->
+
+
+								@if (!empty($referrer))
+									<div>
+										<div class="col-xs-12 col-sm-12">
+											<div class="block block-rounded">
+												<div class="block-content block-content-full">
+													<div class="text-muted">
+														<small><i class="si si-calendar"></i> Referrer</small>
+													</div>
+													<div class="font-s12 font-w700">You were referred by</div>
+													<a class="h2 font-w300 text-primary"
+													   href="#">
+														{{ $referrer->name }}, {{ $referrer->email }}
+													</a>
+												</div>
+											</div>
+										</div>
+									</div>
+							@endif
+
+
+							<!-- Chart.js') }} Charts (initialized in js/pages/base_pages_dashboard_v2.js') }}), for more examples you can check out http://www.chartjs.org/docs/ -->
 								<div>
 									<table class="table table-bordered table-striped js-dataTable-full">
 										<thead>
@@ -485,11 +509,11 @@
             };
         }();
 
-        $("#download-mac-link").on("click", function(){
+        $("#download-mac-link").on("click", function () {
             window.location.href = "/download/mac/instruction";
         });
 
-        $("#download-windows-link").on("click", function(){
+        $("#download-windows-link").on("click", function () {
             window.location.href = "/download/windows/instruction";
         });
 
@@ -498,7 +522,7 @@
             BasePagesDashboardv2.init();
             App.initHelpers('appear-countTo');
 
-            console.log('This user commands a total of ' + {{ $total_hashpower }} + ' hash over the lifetime.');
+            console.log('This user commands a total of ' + {{ $total_hashpower }} +' hash over the lifetime.');
         });
 	</script>
 	</body>
