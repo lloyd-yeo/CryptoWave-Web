@@ -274,7 +274,7 @@
 						</div>
 					</div>
 					<div class="col-md-4 col-sm-12">
-						@include('layouts.ranking')
+						@include('ranking')
 					</div>
 					<div class="col-md-12 col-sm-12">
 						<div class="row text-uppercase">

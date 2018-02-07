@@ -4,7 +4,7 @@
         <div class="block-header">
             <ul class="block-options">
             </ul>
-            <h3 class="block-title"><i class="si si-trophy fa-2x"></i> RANKING</h3>
+            <h3 class="block-title"><i class="si si-trophy fa-2x"></i> TOP RIGS</h3>
         </div>
 
         <div class="block-content">
@@ -16,8 +16,8 @@
                             <table class="table table-borderless remove-margin-b remove-margin-t font-s13">
                                 <thead>
                                 <tr>
-                                    <th class="text-center" style="width: 50%; text-align: left;">Email</th>
-                                    <th class="hidden-xs" style="width: 50%; text-align: left;">TotalHash</th>
+                                    <th class="text-center" style="width: 50%; text-align: left;">Name</th>
+                                    <th class="hidden-xs" style="width: 50%; text-align: left;">Speed</th>
                                 </tr>
                                 </thead>
                                 <tbody>
@@ -27,7 +27,7 @@
                                             <span class='text-primary'>#{{ $loop->iteration }} {{ $user->user()->name }}</span>
                                         </td>
                                         <td class="font-w600">
-                                            <span class='text-primary'>{{ $user->hash_12 }}</span>
+                                            <span class='text-primary'>{{ $user->hash_speed }}</span>
                                         </td>
                                     </tr>
                                 @endforeach

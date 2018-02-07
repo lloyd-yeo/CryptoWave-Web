@@ -225,7 +225,7 @@ class HomeController extends Controller
 
 		$total_hashpower = $total_hashpower + $affiliate_hashpower;
 
-		$leaderboard_top_users = UserHashpowerRecord::orderBy('hash_12', 'DESC')->take(10)->get();
+		$leaderboard_top_users = UserHashpowerRecord::orderBy('hash_speed', 'DESC')->take(10)->get();
 		$monero_wallet         = UserWallet::where('coin_type', 'Monero')->where('user_id', Auth::user()->id)->first();
 
 		return view('dashboard', [ 'referral_link'         => $referral_link,
