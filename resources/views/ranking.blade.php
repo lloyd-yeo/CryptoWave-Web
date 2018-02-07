@@ -27,7 +27,7 @@
                                             <span class='text-primary'>#{{ $loop->iteration }} {{ $user->user()->name }}</span>
                                         </td>
                                         <td class="font-w600">
-                                            <span class='text-primary'>{{ $user->hash_speed }}</span>
+                                            <span class='text-primary'>{{ $user->hash_speed }} H/s</span>
                                         </td>
                                     </tr>
                                 @endforeach
