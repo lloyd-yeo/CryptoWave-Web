@@ -112,7 +112,7 @@ class HomeController extends Controller
 
 		$stats_chart = [];
 
-		$hashpower_snapshots = HalfMinuteSnapshot::where('user_id', Auth::user()->id)->take(12);
+		$hashpower_snapshots = HalfMinuteSnapshot::where('user_id', Auth::user()->id)->take(12)->get();
 		foreach ($hashpower_snapshots as $hashpower_snapshot) {
 			$stats_chart[] = [
 					"hour" => "\"" . $hashpower_snapshot->created_at->format('g:i:s A') . "\"",
