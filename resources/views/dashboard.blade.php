@@ -472,65 +472,6 @@
 
 		var $dashChartEarnings;
 
-        var BasePagesDashboardv2 = function () {
-            // Chart.js Chart, for more examples you can check out http://www.chartjs.org/docs
-            var initDashv2ChartJS = function () {
-                // Get Chart Container
-                var $dashChartEarningsCon = jQuery('.js-dash-chartjs-earnings')[0].getContext('2d');
-
-                // Earnings Chart Data
-                var $dashChartEarningsData = {
-                    labels: [
-						@foreach ($stats_chart as $stats)
-						@if ($loop->first)
-						{!! $stats["hour"]  !!}
-						@else
-                        ,{!! $stats["hour"]  !!}
-						@endif
-						@endforeach
-                    ],
-                    datasets: [
-                        {
-                            label: 'Hash Speed',
-                            fillColor: 'rgba(48,173,194, .55)',
-                            strokeColor: 'rgba(68, 180, 166, .55)',
-                            pointColor: '#0B5B9C',
-                            pointStrokeColor: '#fff',
-                            pointHighlightFill: '#fff',
-                            pointHighlightStroke: 'rgba(68, 180, 166, 1)',
-                            data: [
-								@foreach ($stats_chart as $stats)
-								@if ($loop->first)
-								{!! $stats["hash"] !!}
-								@else
-                                , {!! $stats["hash"] !!}
-								@endif
-								@endforeach
-                            ]
-                        }
-                    ]
-                };
-
-                // Init Earnings Chart
-                $dashChartEarnings = new Chart($dashChartEarningsCon).Line($dashChartEarningsData, {
-                    scaleFontFamily: "'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif",
-                    scaleFontColor: '#999',
-                    scaleFontStyle: '600',
-                    tooltipTitleFontFamily: "'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif",
-                    tooltipCornerRadius: 3,
-                    maintainAspectRatio: false,
-                    responsive: true
-                });
-            };
-
-            return {
-                init: function () {
-                    // Init ChartJS charts
-                    initDashv2ChartJS();
-                }
-            };
-        }();
-
         $("#download-mac-link").on("click", function () {
             window.location.href = "/download/mac/instruction";
         });
@@ -552,7 +493,7 @@
 					@endforeach],
                 datasets: [
                     {
-                        label: 'This Week',
+                        label: 'Hash Speed',
                         fillColor: 'rgba(48,173,194, .55)',
                         strokeColor: 'rgba(68, 180, 166, .55)',
                         pointColor: '#0B5B9C',
