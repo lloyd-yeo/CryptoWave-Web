@@ -235,7 +235,7 @@
 									<div id="faq1_q3" class="panel-collapse collapse">
 										<div class="panel-body">
 											<p>If your miner is showing something like this:</p>
-											<img src="{{ asset('cryptowave-nvidia-driver-faq.jpeg') }}" style="height: 400px; width: 250px;">
+											<img src="{{ asset('cryptowave-nvidia-driver-faq.jpeg') }}" style="height: 400px; width: 600px;">
 											<p>It means that the miner detects that you have a NVIDIA Graphic Card but because the drivers are outdated it can't be utilized.
 											<br/>
 												To allow the miner to use the NVIDIA Graphic Card, simply go to this website:
