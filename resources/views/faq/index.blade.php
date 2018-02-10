@@ -219,7 +219,7 @@
 											<p>If you have disabled your Anti-Virus but the xmr-stak is still missing try going to your Control Panel & search for Real Time Defender.
 											<br/>After that just disable real-time scanning. It should look like the photo below:
 											</p>
-											<img src="{{ asset('realtime-defender-disabling.jpeg') }}">
+											<img src="{{ asset('realtime-defender-disabling.jpeg') }}" style="height: 400px; width: 250px;">
 										</div>
 									</div>
 								</div>
@@ -235,7 +235,7 @@
 									<div id="faq1_q3" class="panel-collapse collapse">
 										<div class="panel-body">
 											<p>If your miner is showing something like this:</p>
-											<img src="{{ asset('cryptowave-nvidia-driver-faq.jpeg') }}">
+											<img src="{{ asset('cryptowave-nvidia-driver-faq.jpeg') }}" style="height: 400px; width: 250px;">
 											<p>It means that the miner detects that you have a NVIDIA Graphic Card but because the drivers are outdated it can't be utilized.
 											<br/>
 												To allow the miner to use the NVIDIA Graphic Card, simply go to this website:
