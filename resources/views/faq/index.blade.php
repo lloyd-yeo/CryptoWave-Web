@@ -264,45 +264,34 @@
 							</div>
 							<!-- END Systems Compatibility -->
 
+							<!--Monero-->
+							<h2 class="h3 font-w600 push-30-t push">Monero (XMR)</h2>
+							<div id="faq5" class="panel-group">
+								<div class="panel panel-default">
+									<div class="panel-heading">
+										<h3 class="panel-title">
+											<a class="accordion-toggle" data-toggle="collapse" data-parent="#faq5"
+											   href="#faq5_q1">What is Monero (XMR)?
+											</a>
+										</h3>
+									</div>
+									<div id="faq5_q1" class="panel-collapse collapse">
+										<div class="panel-body">
+											<p>
+												Monero is a cryptocurrency that promises untraceability and privacy. It accomplishes this by obfuscating and encrypting transactions beyond recognition, while allowing you to discreetly view and manage your assets. You can also prove your transactions to a third party if necessary.
+											</p>
+
+											<p>
+												The reason CryptoWave mines for Monero is due to it's underlying algorithm which is friendly for CPU mining, making it easy for anyone without specialized mining rigs to mine for Monero.
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+
 							<!-- Payments -->
 							<h2 class="h3 font-w600 push-50-t push">CryptoWave Affiliate</h2>
 							<div id="faq3" class="panel-group">
-								{{--<div class="panel panel-default">--}}
-									{{--<div class="panel-heading">--}}
-										{{--<h3 class="panel-title">--}}
-											{{--<a class="accordion-toggle" data-toggle="collapse" data-parent="#faq3"--}}
-											   {{--href="#faq3_q1">2-Tier Affiliate Program--}}
-											{{--</a>--}}
-										{{--</h3>--}}
-									{{--</div>--}}
-									{{--<div id="faq3_q1" class="panel-collapse collapse">--}}
-										{{--<div class="panel-body">--}}
-											{{--<p>--}}
-												{{--At the moment, our 2-tier affiliate privilege is <b>only</b> for our--}}
-												{{--initial closed beta--}}
-												{{--users.--}}
-												{{--To know if you are--}}
-												{{--one of our pioneers,--}}
-												{{--simply check your--}}
-												{{--referrer on the--}}
-												{{--front page & make--}}
-												{{--sure it's--}}
-												{{--"admin@cryptowave.network".</p>--}}
-											{{--<p>--}}
-												{{--For our CryptoWave pioneers, you can qualify for the 2-tier affiliate--}}
-												{{--program once--}}
-												{{--you've met the following pre-requisites:--}}
-											{{--<ol>--}}
-												{{--<li>Hit more than 50 <b>qualified</b> affiliates!</li>--}}
-												{{--<li>Qualified: the affiliate must contribute up to 50m hashpower by the--}}
-												    {{--7th of each month.--}}
-												{{--</li>--}}
-											{{--</ol>--}}
-											{{--</p>--}}
-										{{--</div>--}}
-									{{--</div>--}}
-								{{--</div>--}}
-
 								<div class="panel panel-default">
 									<div class="panel-heading">
 										<h3 class="panel-title">
