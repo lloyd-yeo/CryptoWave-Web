@@ -100,15 +100,12 @@ class HomeController extends Controller
 			}
 		}
 
-
 		$user        = User::find(Auth::user()->id);
 		$first_login = $user->first_login;
 		if ($user->first_login == 0) {
 			$user->first_login = 1;
 			$user->save();
 		}
-
-
 
 		$stats_chart = [];
 
@@ -123,7 +120,7 @@ class HomeController extends Controller
 		$hashpower_record = UserHashpowerRecord::where('email', Auth::user()->email)->first();
 		$self_hashpower      = $hashpower_record->hash_12;
 		$affiliate_hashpower = 0;
-		$total_hashpower     = $hashpower_record->hash_12;
+		$total_hashpower     = $hashpower_record->hash_12 + $hashpower_record->cryptowave_pool_hashrecord;
 
 		if ($referrals->count() > 0) {
 			foreach ($referrals as $referral) {

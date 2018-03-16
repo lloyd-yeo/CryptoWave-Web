@@ -247,6 +247,7 @@ EOT;
             file_put_contents($file, $current);
 
             $this->line("Changed config.txt to use email: " . $email);
+
             if ($this->confirm('Have you excuted cryptowave executable?')) {
                 continue;
             } else {
