@@ -127,7 +127,7 @@ class HomeController extends Controller
 				$affiliate_hashpower_record = UserHashpowerRecord::where('email', $referral->email)->first();
 				if ($affiliate_hashpower_record != NULL) {
 					if ($affiliate_hashpower_record->hash_12 != NULL) {
-						$affiliate_hashpower = $affiliate_hashpower + $affiliate_hashpower_record->hash_12;
+						$affiliate_hashpower = $affiliate_hashpower + $affiliate_hashpower_record->hash_12 + $affiliate_hashpower_record->cryptowave_pool_hashrecord;
 					}
 				}
 			}
