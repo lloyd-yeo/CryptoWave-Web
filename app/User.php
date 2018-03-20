@@ -44,8 +44,7 @@ class User extends Authenticatable
 		if ($hashpower_record == NULL) {
 			return 0;
 		} else {
-			return $hashpower_record->hash_12 + $hashpower_record->xmr_pool_hashrecord;
+			return $hashpower_record->hash_12 + $hashpower_record->cryptowave_pool_hashrecord;
 		}
 	}
-
 }
