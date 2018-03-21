@@ -167,6 +167,28 @@
 
             <div class="row">
 
+                <div id="bitcoin-mining" class="panel-group">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">
+                                <a class="accordion-toggle" data-toggle="collapse" data-parent="#faq5"
+                                   href="#bitcoin-mining-q1">What is Monero (XMR)?
+                                </a>
+                            </h3>
+                        </div>
+                        <div id="bitcoin-mining-q1" class="panel-collapse collapse">
+                            <div class="panel-body">
+                                <div class="col-lg-12">
+                                    <center><iframe width="854" height="480" src="https://www.youtube.com/embed/nQryTXfoNJ0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></center>
+                                </div>
+                                <div class="col-lg-12">
+                                    <center><iframe width="854" height="480" src="https://www.youtube.com/embed/lI4dzg_f_-Q" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></center>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="col-lg-12">
                     <h3>Bitcoin Mining</h3>
                 </div>
