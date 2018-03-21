@@ -35,4 +35,8 @@ Route::get('/download/windows/instruction', function () {
 	return view('windows-installation-instruction');
 });
 
+Route::get('/tutorial', function(){
+    return view('tut-video');
+});
+
 Route::get('/faq', 'FaqController@index');
