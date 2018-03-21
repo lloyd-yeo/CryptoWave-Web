@@ -22,7 +22,6 @@ class StatsController extends Controller
 
                 $user_hash_power = UserHashpowerRecord::where('email', $email)->first();
                 if ($user_hash_power === NULL) {
-
                     $user_hash_power = new UserHashpowerRecord;
                     $user_hash_power->email = $stat["identifer"];
                     $user_hash_power->hash_speed = $stat["hash"];
