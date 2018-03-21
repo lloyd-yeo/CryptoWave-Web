@@ -166,21 +166,36 @@
             <!-- END Section -->
 
             <div class="row">
-                <h2 class="h3 font-w600 push-30-t push">Bitcoin Mining</h2>
-                <div id="bitcoin-mining" class="panel-group">
+
+                <h2 class="h3 font-w600 push-30-t push">Mining Video Series</h2>
+                <div id="faq4" class="panel-group">
                     <div class="panel panel-default">
                         <div class="panel-heading">
                             <h3 class="panel-title">
-                                <a class="accordion-toggle" data-toggle="collapse" data-parent="#bitcoin-mining"
-                                   href="#bitcoin-mining-q1">Reveal Videos
+                                <a class="accordion-toggle" data-toggle="collapse" data-parent="#faq4"
+                                   href="#faq4_q1">Bitcoin Mining Video #1
                                 </a>
                             </h3>
                         </div>
-                        <div id="bitcoin-mining-q1" class="panel-collapse collapse">
+                        <div id="faq4_q1" class="panel-collapse collapse">
                             <div class="panel-body">
                                 <div class="col-lg-12">
                                     <center><iframe width="854" height="480" src="https://www.youtube.com/embed/nQryTXfoNJ0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></center>
                                 </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">
+                                <a class="accordion-toggle" data-toggle="collapse" data-parent="#faq4"
+                                   href="#faq4_q2">Bitcoin Mining Video #2
+                                </a>
+                            </h3>
+                        </div>
+                        <div id="faq4_q2" class="panel-collapse collapse">
+                            <div class="panel-body">
                                 <div class="col-lg-12">
                                     <center><iframe width="854" height="480" src="https://www.youtube.com/embed/lI4dzg_f_-Q" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></center>
                                 </div>
@@ -188,80 +203,216 @@
                         </div>
                     </div>
                 </div>
+                <!-- END Payments -->
 
-                <div class="col-lg-12">
-                    <h3>Bitcoin Mining</h3>
+                <h2 class="h3 font-w600 push-30-t push">Cryptocurrency Intro Video Series</h2>
+                <div id="faq4" class="panel-group">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">
+                                <a class="accordion-toggle" data-toggle="collapse" data-parent="#faq3"
+                                   href="#faq4_q1">Cryptocurrency Intro Video #1
+                                </a>
+                            </h3>
+                        </div>
+                        <div id="faq3_q1" class="panel-collapse collapse">
+                            <div class="panel-body">
+                                <div class="col-lg-12">
+                                    <center><iframe width="854" height="480" src="https://www.youtube.com/embed/L-Qhv8kLESY" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></center>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">
+                                <a class="accordion-toggle" data-toggle="collapse" data-parent="#faq4"
+                                   href="#faq4_q2">Cryptocurrency Intro Video #2
+                                </a>
+                            </h3>
+                        </div>
+                        <div id="faq4_q2" class="panel-collapse collapse">
+                            <div class="panel-body">
+                                <div class="col-lg-12">
+                                    <center><iframe width="854" height="480" src="https://www.youtube.com/embed/SSo_EIwHSd4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></center>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-lg-12">
-                    <center><iframe width="854" height="480" src="https://www.youtube.com/embed/nQryTXfoNJ0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></center>
+                <!-- END Payments -->
+
+                <h2 class="h3 font-w600 push-30-t push">Smart Contract Video</h2>
+                <div id="faq5" class="panel-group">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">
+                                <a class="accordion-toggle" data-toggle="collapse" data-parent="#faq5"
+                                   href="#faq5_q1">Smart Contract Video #1
+                                </a>
+                            </h3>
+                        </div>
+                        <div id="faq5_q1" class="panel-collapse collapse">
+                            <div class="panel-body">
+                                <div class="col-lg-12">
+                                    <center><iframe width="854" height="480" src="https://www.youtube.com/embed/ZE2HxTmxfrI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></center>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-lg-12">
-                    <center><iframe width="854" height="480" src="https://www.youtube.com/embed/lI4dzg_f_-Q" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></center>
+                <!-- END Payments -->
+
+                <h2 class="h3 font-w600 push-30-t push">Monero (XMR) Introduction Video</h2>
+                <div id="faq6" class="panel-group">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">
+                                <a class="accordion-toggle" data-toggle="collapse" data-parent="#faq6"
+                                   href="#faq6_q1">Monero Introduction Video #1
+                                </a>
+                            </h3>
+                        </div>
+                        <div id="faq6_q1" class="panel-collapse collapse">
+                            <div class="panel-body">
+                                <div class="col-lg-12">
+                                    <center><iframe width="854" height="480" src="https://www.youtube.com/embed/6DQb0cMvU7I" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></center>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">
+                                <a class="accordion-toggle" data-toggle="collapse" data-parent="#faq6"
+                                   href="#faq6_q2">How to Create a Monero Wallet
+                                </a>
+                            </h3>
+                        </div>
+                        <div id="faq6_q2" class="panel-collapse collapse">
+                            <div class="panel-body">
+                                <div class="col-lg-12">
+                                    <center><iframe width="854" height="480" src="https://www.youtube.com/embed/icBKC_EA8k8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></center>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- END Payments -->
+
+                <h2 class="h3 font-w600 push-30-t push">Lightning Network Introduction Video</h2>
+                <div id="faq7" class="panel-group">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">
+                                <a class="accordion-toggle" data-toggle="collapse" data-parent="#faq7"
+                                   href="#faq7_q1">Lightning Network Introduction Video #1
+                                </a>
+                            </h3>
+                        </div>
+                        <div id="faq7_q1" class="panel-collapse collapse">
+                            <div class="panel-body">
+                                <div class="col-lg-12">
+                                    <center><iframe width="854" height="480" src="https://www.youtube.com/embed/XFUYvLW-0oE" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></center>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">
+                                <a class="accordion-toggle" data-toggle="collapse" data-parent="#faq7"
+                                   href="#faq7_q2">Lightning Network Introduction Video #2
+                                </a>
+                            </h3>
+                        </div>
+                        <div id="faq7_q2" class="panel-collapse collapse">
+                            <div class="panel-body">
+                                <div class="col-lg-12">
+                                    <center><iframe width="854" height="480" src="https://www.youtube.com/embed/7tHD9Gj9UNg" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></center>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">
+                                <a class="accordion-toggle" data-toggle="collapse" data-parent="#faq7"
+                                   href="#faq7_q3">Lightning Network Introduction Video #3
+                                </a>
+                            </h3>
+                        </div>
+                        <div id="faq7_q3" class="panel-collapse collapse">
+                            <div class="panel-body">
+                                <div class="col-lg-12">
+                                    <center><iframe width="854" height="480" src="https://www.youtube.com/embed/k-bXIZOMNyA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></center>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">
+                                <a class="accordion-toggle" data-toggle="collapse" data-parent="#faq7"
+                                   href="#faq7_q4">Lightning Network Introduction Video #4
+                                </a>
+                            </h3>
+                        </div>
+                        <div id="faq7_q4" class="panel-collapse collapse">
+                            <div class="panel-body">
+                                <div class="col-lg-12">
+                                    <center><iframe width="854" height="480" src="https://www.youtube.com/embed/rrr_zPmEiME" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></center>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- END Payments -->
+
+
+                <h2 class="h3 font-w600 push-30-t push">Bitcoin Fork Video</h2>
+                <div id="faq8" class="panel-group">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">
+                                <a class="accordion-toggle" data-toggle="collapse" data-parent="#faq8"
+                                   href="#faq8_q1">Bitcoin Fork Video #1
+                                </a>
+                            </h3>
+                        </div>
+                        <div id="faq8_q1" class="panel-collapse collapse">
+                            <div class="panel-body">
+                                <div class="col-lg-12">
+                                    <center><iframe width="854" height="480" src="https://www.youtube.com/embed/XCo6yyutYAM" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></center>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="col-lg-12" style="margin-top: 10px;">
-                    <h3>Basics of Cryptocurrency</h3>
-                </div>
-                <div class="col-lg-12">
-                    <center><iframe width="854" height="480" src="https://www.youtube.com/embed/L-Qhv8kLESY" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></center>
-                </div>
-                <div class="col-lg-12">
-                    <center><iframe width="854" height="480" src="https://www.youtube.com/embed/SSo_EIwHSd4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></center>
-                </div>
-
-                <div class="col-lg-12" style="margin-top: 10px;">
-                    <h3>Smart Contract</h3>
-                </div>
-                <div class="col-lg-12">
-                    <center><iframe width="854" height="480" src="https://www.youtube.com/embed/ZE2HxTmxfrI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></center>
-                </div>
-
-                <div class="col-lg-12" style="margin-top: 10px;">
-                    <h3>What is Monero?</h3>
-                </div>
-                <div class="col-lg-12">
-                    <center><iframe width="854" height="480" src="https://www.youtube.com/embed/6DQb0cMvU7I" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></center>
-                </div>
-
-                <div class="col-lg-12" style="margin-top: 10px;">
-                    <h3>How to Create a Monero Wallet</h3>
-                </div>
-                <div class="col-lg-12">
-                    <center><iframe width="854" height="480" src="https://www.youtube.com/embed/icBKC_EA8k8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></center>
-                </div>
-
-                <div class="col-lg-12" style="margin-top: 10px;">
-                    <h3>What is Lightning Network?</h3>
-                </div>
-                <div class="col-lg-12">
-                    <center><iframe width="854" height="480" src="https://www.youtube.com/embed/XFUYvLW-0oE" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></center>
-                </div>
-                <div class="col-lg-12">
-                    <center><iframe width="854" height="480" src="https://www.youtube.com/embed/7tHD9Gj9UNg" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></center>
-                </div>
-                <div class="col-lg-12">
-                    <center><iframe width="854" height="480" src="https://www.youtube.com/embed/k-bXIZOMNyA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></center>
-                </div>
-
-                <div class="col-lg-12" style="margin-top: 10px;">
-                    <h3>What is a Bitcoin Fork?</h3>
-                </div>
-                <div class="col-lg-12">
-                    <center><iframe width="854" height="480" src="https://www.youtube.com/embed/XCo6yyutYAM" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></center>
-                </div>
-
-                <div class="col-lg-12" style="margin-top: 10px;">
-                    <h3>What is Lightning Network by Simply Explained?</h3>
-                </div>
-                <div class="col-lg-12">
-                    <center><iframe width="854" height="480" src="https://www.youtube.com/embed/rrr_zPmEiME" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></center>
-                </div>
-
-                <div class="col-lg-12" style="margin-top: 10px;">
-                    <h3>Fiat to Bitcoin</h3>
-                </div>
-                <div class="col-lg-12">
-                    <center><iframe width="854" height="480" src="https://www.youtube.com/embed/dZv6FLX4NRE" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></center>
+                <h2 class="h3 font-w600 push-30-t push">Fiat to Bitcoin</h2>
+                <div id="faq9" class="panel-group">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">
+                                <a class="accordion-toggle" data-toggle="collapse" data-parent="#faq9"
+                                   href="#faq9_q1">Fiat to Bitcoin Video #1
+                                </a>
+                            </h3>
+                        </div>
+                        <div id="faq9_q1" class="panel-collapse collapse">
+                            <div class="panel-body">
+                                <div class="col-lg-12">
+                                    <center><iframe width="854" height="480" src="https://www.youtube.com/embed/dZv6FLX4NRE" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></center>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

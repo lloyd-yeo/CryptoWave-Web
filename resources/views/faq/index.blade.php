@@ -319,6 +319,7 @@
 							<!-- Payments -->
 							<h2 class="h3 font-w600 push-50-t push">Payments</h2>
 							<div id="faq3" class="panel-group">
+
 								<div class="panel panel-default">
 									<div class="panel-heading">
 										<h3 class="panel-title">
