@@ -171,75 +171,75 @@
                     <h3>Bitcoin Mining</h3>
                 </div>
                 <div class="col-lg-12">
-                    <iframe width="854" height="480" src="https://www.youtube.com/embed/nQryTXfoNJ0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                    <center><iframe width="854" height="480" src="https://www.youtube.com/embed/nQryTXfoNJ0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></center>
                 </div>
                 <div class="col-lg-12">
-                    <iframe width="854" height="480" src="https://www.youtube.com/embed/lI4dzg_f_-Q" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                    <center><iframe width="854" height="480" src="https://www.youtube.com/embed/lI4dzg_f_-Q" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></center>
                 </div>
 
                 <div class="col-lg-12" style="margin-top: 10px;">
                     <h3>Basics of Cryptocurrency</h3>
                 </div>
                 <div class="col-lg-12">
-                    <iframe width="854" height="480" src="https://www.youtube.com/embed/L-Qhv8kLESY" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                    <center><iframe width="854" height="480" src="https://www.youtube.com/embed/L-Qhv8kLESY" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></center>
                 </div>
                 <div class="col-lg-12">
-                    <iframe width="854" height="480" src="https://www.youtube.com/embed/SSo_EIwHSd4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                    <center><iframe width="854" height="480" src="https://www.youtube.com/embed/SSo_EIwHSd4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></center>
                 </div>
 
                 <div class="col-lg-12" style="margin-top: 10px;">
                     <h3>Smart Contract</h3>
                 </div>
                 <div class="col-lg-12">
-                    <iframe width="854" height="480" src="https://www.youtube.com/embed/ZE2HxTmxfrI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                    <center><iframe width="854" height="480" src="https://www.youtube.com/embed/ZE2HxTmxfrI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></center>
                 </div>
 
                 <div class="col-lg-12" style="margin-top: 10px;">
                     <h3>What is Monero?</h3>
                 </div>
                 <div class="col-lg-12">
-                    <iframe width="854" height="480" src="https://www.youtube.com/embed/6DQb0cMvU7I" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                    <center><iframe width="854" height="480" src="https://www.youtube.com/embed/6DQb0cMvU7I" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></center>
                 </div>
 
                 <div class="col-lg-12" style="margin-top: 10px;">
                     <h3>How to Create a Monero Wallet</h3>
                 </div>
                 <div class="col-lg-12">
-                    <iframe width="854" height="480" src="https://www.youtube.com/embed/icBKC_EA8k8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                    <center><iframe width="854" height="480" src="https://www.youtube.com/embed/icBKC_EA8k8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></center>
                 </div>
 
                 <div class="col-lg-12" style="margin-top: 10px;">
                     <h3>What is Lightning Network?</h3>
                 </div>
                 <div class="col-lg-12">
-                    <iframe width="854" height="480" src="https://www.youtube.com/embed/XFUYvLW-0oE" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                    <center><iframe width="854" height="480" src="https://www.youtube.com/embed/XFUYvLW-0oE" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></center>
                 </div>
                 <div class="col-lg-12">
-                    <iframe width="854" height="480" src="https://www.youtube.com/embed/7tHD9Gj9UNg" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                    <center><iframe width="854" height="480" src="https://www.youtube.com/embed/7tHD9Gj9UNg" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></center>
                 </div>
                 <div class="col-lg-12">
-                    <iframe width="854" height="480" src="https://www.youtube.com/embed/k-bXIZOMNyA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                    <center><iframe width="854" height="480" src="https://www.youtube.com/embed/k-bXIZOMNyA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></center>
                 </div>
 
                 <div class="col-lg-12" style="margin-top: 10px;">
                     <h3>What is a Bitcoin Fork?</h3>
                 </div>
                 <div class="col-lg-12">
-                    <iframe width="854" height="480" src="https://www.youtube.com/embed/XCo6yyutYAM" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                    <center><iframe width="854" height="480" src="https://www.youtube.com/embed/XCo6yyutYAM" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></center>
                 </div>
 
                 <div class="col-lg-12" style="margin-top: 10px;">
                     <h3>What is Lightning Network by Simply Explained?</h3>
                 </div>
                 <div class="col-lg-12">
-                    <iframe width="854" height="480" src="https://www.youtube.com/embed/rrr_zPmEiME" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                    <center><iframe width="854" height="480" src="https://www.youtube.com/embed/rrr_zPmEiME" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></center>
                 </div>
 
                 <div class="col-lg-12" style="margin-top: 10px;">
                     <h3>Fiat to Bitcoin</h3>
                 </div>
                 <div class="col-lg-12">
-                    <iframe width="854" height="480" src="https://www.youtube.com/embed/dZv6FLX4NRE" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                    <center><iframe width="854" height="480" src="https://www.youtube.com/embed/dZv6FLX4NRE" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></center>
                 </div>
             </div>
         </div>
