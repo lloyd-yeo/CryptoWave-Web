@@ -166,13 +166,13 @@
             <!-- END Section -->
 
             <div class="row">
-
+                <h2 class="h3 font-w600 push-30-t push">Bitcoin Mining</h2>
                 <div id="bitcoin-mining" class="panel-group">
                     <div class="panel panel-default">
                         <div class="panel-heading">
                             <h3 class="panel-title">
-                                <a class="accordion-toggle" data-toggle="collapse" data-parent="#faq5"
-                                   href="#bitcoin-mining-q1">What is Monero (XMR)?
+                                <a class="accordion-toggle" data-toggle="collapse" data-parent="#bitcoin-mining"
+                                   href="#bitcoin-mining-q1">Reveal Videos
                                 </a>
                             </h3>
                         </div>
