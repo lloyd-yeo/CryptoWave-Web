@@ -178,7 +178,7 @@
 									<small><i class="si si-wallet"></i> Stash</small>
 								</div>
 								<div class="font-s12 font-w700">Current Balance</div>
-								<a class="h2 font-w300 text-primary" href="#!">{{ $monero_wallet->amount }} XMR</a>
+								<a class="h2 font-w300 text-primary" href="#!">{{ $total_stash }} XMR</a>
 							</div>
 						</div>
 					</div>

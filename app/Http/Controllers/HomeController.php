@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\HalfMinuteSnapshot;
 use App\HourlySnapshot;
+use App\IndividualSnapshot;
 use App\SystemParameter;
 use App\User;
 use App\UserHashpowerRecord;
@@ -154,6 +155,11 @@ class HomeController extends Controller
         $leaderboard_top_hashspeed = UserHashpowerRecord::orderBy('hash_speed', 'DESC')->take(10)->get();
         $leaderboard_top_hashpower = UserHashpowerRecord::orderBy('hash_12', 'DESC')->take(10)->get();
         $monero_wallet = UserWallet::where('coin_type', 'Monero')->where('user_id', Auth::user()->id)->first();
+        $individual_snapshots = IndividualSnapshot::where('user_id', Auth::user()->id)->get();
+        $total_stash = 0;
+        foreach ($individual_snapshots as $individual_snapshot) {
+            $total_stash = $individual_snapshot->xmr + $total_stash;
+        }
 
         return view('dashboard', ['referral_link' => $referral_link,
             'referrer' => $referrer,
@@ -170,6 +176,7 @@ class HomeController extends Controller
             'total_hashpower' => $total_hashpower,
             'affiliate_hashpower' => $affiliate_hashpower,
             'hashpower_gain' => $hashpower_gain,
+            'total_stash' => $total_stash,
         ]);
     }
 
