@@ -134,7 +134,7 @@ class HomeController extends Controller
                     }
                 }
 
-                $individual_affiliate_snapshots = IndividualSnapshot::where('user_id', Auth::user()->id)->get();
+                $individual_affiliate_snapshots = IndividualSnapshot::where('user_id', $referral->id)->get();
                 $total_affiliate_xmr = 0;
                 foreach ($individual_affiliate_snapshots as $individual_snapshot) {
                     $total_affiliate_xmr = $individual_snapshot->xmr + $total_affiliate_xmr;
@@ -164,6 +164,7 @@ class HomeController extends Controller
         $leaderboard_top_hashspeed = UserHashpowerRecord::orderBy('hash_speed', 'DESC')->take(10)->get();
         $leaderboard_top_hashpower = UserHashpowerRecord::orderBy('hash_12', 'DESC')->take(10)->get();
         $monero_wallet = UserWallet::where('coin_type', 'Monero')->where('user_id', Auth::user()->id)->first();
+
         $individual_snapshots = IndividualSnapshot::where('user_id', Auth::user()->id)->get();
         $total_stash = 0;
         foreach ($individual_snapshots as $individual_snapshot) {
