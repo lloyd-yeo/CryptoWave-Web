@@ -87,13 +87,16 @@ class HomeController extends Controller
 
         $referrals = Auth::user()->referrals();
         $secondary_referrals = collect();
+
         if ($referrals->count() > 0) {
 //            if (Auth::user()->referred_by == 99) {
                 foreach ($referrals as $referral) {
                     $created_at_carbon = Carbon::parse($referral->created_at);
-                    if ($created_at_carbon->isToday()) {
+
+                    if ($created_at_carbon->isCurrentMonth()) {
                         $new_referral_count++;
                     }
+
                     foreach ($referral->referrals() as $secondary_referral) {
                         $secondary_referrals->push($secondary_referral);
                     }
