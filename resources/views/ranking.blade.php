@@ -72,7 +72,7 @@
                                             <span class='text-primary'>#{{ $loop->iteration }} {{ $user->user()->name }}</span>
                                         </td>
                                         <td class="font-w600">
-                                            <span class='text-primary'>{{ $user->hash_12 }} hash</span>
+                                            <span class='text-primary'>{{ number_format($user->hash_12 + $user->cryptowave_pool_hashrecord) }} hash</span>
                                         </td>
                                     </tr>
                                 @endforeach
