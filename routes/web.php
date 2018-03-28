@@ -40,3 +40,7 @@ Route::get('/tutorial', function(){
 });
 
 Route::get('/faq', 'FaqController@index');
+
+Route::get('/weekly-report', function(){
+    return view('emails.weekly-report');
+});

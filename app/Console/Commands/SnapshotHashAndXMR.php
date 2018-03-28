@@ -59,7 +59,7 @@ class SnapshotHashAndXMR extends Command
 //		$global_snapshot->total_xmr            = 0.59083966 * 0.8;
         $global_snapshot->total_hash = 23855924078;
 //        $global_snapshot->total_xmr = 1.03083966 * 0.8;
-        $global_snapshot->total_xmr = 0.6597373824 * 0.8;
+        $global_snapshot->total_xmr = 0.6597373824 * 0.75;
         $global_snapshot->monthly_xmr = 0;
         $global_snapshot->monthly_hash = 0;
 
