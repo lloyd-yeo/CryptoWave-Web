@@ -169,6 +169,41 @@
 				</div>
 				<!-- END Section -->
 
+				<div class="row text-uppercase">
+					<div class="col-xs-4 col-sm-4">
+						<div class="block block-rounded">
+							<div class="block-content block-content-full">
+								<div class="text-muted">
+									<small><i class="si si-wallet"></i> Personal Stash</small>
+								</div>
+								<div class="font-s12 font-w700">Lifetime</div>
+								<a class="h2 font-w300 text-primary" href="#!">{{ $total_stash }} XMR</a>
+							</div>
+						</div>
+					</div>
+					<div class="col-xs-4 col-sm-4">
+						<div class="block block-rounded">
+							<div class="block-content block-content-full">
+								<div class="text-muted">
+									<small><i class="si si-wallet"></i> Affiliate Stash</small>
+								</div>
+								<div class="font-s12 font-w700">Lifetime</div>
+								<a class="h2 font-w300 text-primary" href="#!">{{ 0.2 * $total_affiliate_xmr }} XMR</a>
+							</div>
+						</div>
+					</div>
+					<div class="col-xs-4 col-sm-4">
+						<div class="block block-rounded">
+							<div class="block-content block-content-full">
+								<div class="text-muted">
+									<small><i class="si si-wallet"></i> Stash</small>
+								</div>
+								<div class="font-s12 font-w700">Lifetime</div>
+								<a class="h2 font-w300 text-primary" href="#!">{{ $total_stash + (0.2 * $total_affiliate_xmr) }} XMR</a>
+							</div>
+						</div>
+					</div>
+				</div>
 				<!-- Stats -->
 				<div class="row text-uppercase">
 					<div class="col-xs-6 col-sm-3">
@@ -194,6 +229,7 @@
 							</div>
 						</div>
 					</div>
+
 					<div class="col-xs-6 col-sm-3">
 						<div class="block block-rounded">
 							<div class="block-content block-content-full">
@@ -208,6 +244,7 @@
 							</div>
 						</div>
 					</div>
+
 					<div class="col-xs-6 col-sm-3">
 						<div class="block block-rounded">
 							<div class="block-content block-content-full">
