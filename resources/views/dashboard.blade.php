@@ -334,7 +334,7 @@
 											<small><i class="si si-wallet"></i> Stash</small>
 										</div>
 										<div class="font-s12 font-w700">Total Earnings</div>
-										<a class="h2 font-w300 text-primary" href="#!">0.00 XMR</a>
+										<a class="h2 font-w300 text-primary" href="#!">{{ 0.2 * $total_stash }} XMR</a>
 									</div>
 								</div>
 							</div>
