@@ -123,6 +123,8 @@ class HomeController extends Controller
         $affiliate_hashpower = 0;
         $total_hashpower = $hashpower_record->hash_12 + $hashpower_record->cryptowave_pool_hashrecord;
 
+        $total_affiliate_xmr = 0;
+
         if ($referrals->count() > 0) {
             foreach ($referrals as $referral) {
                 $affiliate_hashpower_record = UserHashpowerRecord::where('email', $referral->email)->first();
@@ -131,6 +133,13 @@ class HomeController extends Controller
                         $affiliate_hashpower = $affiliate_hashpower + $affiliate_hashpower_record->hash_12 + $affiliate_hashpower_record->cryptowave_pool_hashrecord;
                     }
                 }
+
+                $individual_affiliate_snapshots = IndividualSnapshot::where('user_id', Auth::user()->id)->get();
+                $total_affiliate_xmr = 0;
+                foreach ($individual_affiliate_snapshots as $individual_snapshot) {
+                    $total_affiliate_xmr = $individual_snapshot->xmr + $total_affiliate_xmr;
+                }
+
             }
         }
 
@@ -177,6 +186,7 @@ class HomeController extends Controller
             'affiliate_hashpower' => $affiliate_hashpower,
             'hashpower_gain' => $hashpower_gain,
             'total_stash' => $total_stash,
+            'total_affiliate_xmr' => $total_affiliate_xmr,
         ]);
     }
 

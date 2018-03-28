@@ -312,7 +312,7 @@
 											<small><i class="si si-wallet"></i> Stash</small>
 										</div>
 										<div class="font-s12 font-w700">Tier 1 Earnings</div>
-										<a class="h2 font-w300 text-primary" href="#!">{{ 0.15 * $total_stash }} XMR</a>
+										<a class="h2 font-w300 text-primary" href="#!">{{ 0.15 * $total_affiliate_xmr }} XMR</a>
 									</div>
 								</div>
 							</div>
@@ -323,7 +323,7 @@
 											<small><i class="si si-wallet"></i> Stash</small>
 										</div>
 										<div class="font-s12 font-w700">Tier 2 Earnings</div>
-										<a class="h2 font-w300 text-primary" href="#!">{{ 0.05 * $total_stash }} XMR</a>
+										<a class="h2 font-w300 text-primary" href="#!">{{ 0.05 * $total_affiliate_xmr }} XMR</a>
 									</div>
 								</div>
 							</div>
@@ -334,7 +334,7 @@
 											<small><i class="si si-wallet"></i> Stash</small>
 										</div>
 										<div class="font-s12 font-w700">Total Earnings</div>
-										<a class="h2 font-w300 text-primary" href="#!">{{ 0.2 * $total_stash }} XMR</a>
+										<a class="h2 font-w300 text-primary" href="#!">{{ 0.2 * $total_affiliate_xmr }} XMR</a>
 									</div>
 								</div>
 							</div>
