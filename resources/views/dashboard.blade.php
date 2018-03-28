@@ -234,7 +234,7 @@
 						<div class="block block-rounded">
 							<div class="block-content block-content-full">
 								<div class="text-muted">
-									<small><i class="si si-graph"></i> Hashpower</small>
+									<small><i class="si si-graph"></i> My Hashpower</small>
 								</div>
 								<div class="font-s12 font-w700">LIFETIME CONTRIBUTION</div>
 								<a class="h2 font-w300 text-primary"
@@ -249,7 +249,7 @@
 						<div class="block block-rounded">
 							<div class="block-content block-content-full">
 								<div class="text-muted">
-									<small><i class="si si-graph"></i> Hashpower Gain</small>
+									<small><i class="si si-graph"></i> My Hashpower Gain</small>
 								</div>
 								<div class="font-s12 font-w700">PAST HOUR</div>
 								<a class="h2 font-w300 text-primary"
