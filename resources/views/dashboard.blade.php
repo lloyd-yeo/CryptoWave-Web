@@ -196,7 +196,7 @@
 						<div class="block block-rounded">
 							<div class="block-content block-content-full">
 								<div class="text-muted">
-									<small><i class="si si-wallet"></i> Stash</small>
+									<small><i class="si si-wallet"></i> Total Stash</small>
 								</div>
 								<div class="font-s12 font-w700">Lifetime</div>
 								<a class="h2 font-w300 text-primary" href="#!">{{ $total_stash + (0.2 * $total_affiliate_xmr) }} XMR</a>
@@ -213,7 +213,7 @@
 									<small><i class="si si-wallet"></i> My Stash</small>
 								</div>
 								<div class="font-s12 font-w700">Current Balance (Available)</div>
-								<a class="h2 font-w300 text-primary" href="#!">{{ $total_stash }} XMR</a>
+								<a class="h2 font-w300 text-primary" href="#!">{{ $total_stash + (0.2 * $total_affiliate_xmr) }} XMR</a>
 							</div>
 						</div>
 					</div>
