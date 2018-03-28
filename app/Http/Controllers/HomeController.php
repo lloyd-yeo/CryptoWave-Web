@@ -136,7 +136,6 @@ class HomeController extends Controller
                 }
 
                 $individual_affiliate_snapshots = IndividualSnapshot::where('user_id', $referral->id)->get();
-                $total_affiliate_xmr = 0;
                 foreach ($individual_affiliate_snapshots as $individual_snapshot) {
                     $total_affiliate_xmr = $individual_snapshot->xmr + $total_affiliate_xmr;
                 }
