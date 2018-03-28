@@ -88,7 +88,7 @@ class HomeController extends Controller
         $referrals = Auth::user()->referrals();
         $secondary_referrals = collect();
         if ($referrals->count() > 0) {
-            if (Auth::user()->referred_by == 99) {
+//            if (Auth::user()->referred_by == 99) {
                 foreach ($referrals as $referral) {
                     $created_at_carbon = Carbon::parse($referral->created_at);
                     if ($created_at_carbon->isToday()) {
@@ -98,7 +98,7 @@ class HomeController extends Controller
                         $secondary_referrals->push($secondary_referral);
                     }
                 }
-            }
+//            }
         }
 
         $user = User::find(Auth::user()->id);
@@ -127,6 +127,7 @@ class HomeController extends Controller
 
         if ($referrals->count() > 0) {
             foreach ($referrals as $referral) {
+
                 $affiliate_hashpower_record = UserHashpowerRecord::where('email', $referral->email)->first();
                 if ($affiliate_hashpower_record != NULL) {
                     if ($affiliate_hashpower_record->hash_12 != NULL) {
