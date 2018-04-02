@@ -302,8 +302,6 @@
                             <h3 class="panel-title">
                                 <a class="accordion-toggle" data-toggle="collapse" data-parent="#faq6"
                                    href="#faq6_q2">How to Create a Monero Wallet
-                                    <p>After you have mined some Monero, what now? Here’s a simple guide on how you can store away your Monero in a safe and secure way!
-                                    </p>
                                 </a>
                             </h3>
                         </div>
