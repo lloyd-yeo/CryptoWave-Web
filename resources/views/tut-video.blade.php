@@ -100,7 +100,7 @@
         <div class="bg-primary-lighter collapse navbar-collapse remove-padding" id="sub-header-nav">
             <div class="content-mini content-boxed">
                 <ul class="nav nav-pills nav-sub-header push">
-                    <li class="active">
+                    <li>
                         <a href="/home">
                             <i class="fa fa-dashboard push-5-r"></i>Dashboard
                         </a>
@@ -125,7 +125,7 @@
                         </a>
                     </li>
 
-                    <li>
+                    <li class="active">
                         <a href="/tutorial">
                             <i class="fa fa-video-camera push-5-r"></i>Training Videos
                         </a>
