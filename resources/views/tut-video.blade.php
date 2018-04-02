@@ -252,28 +252,6 @@
                 </div>
                 <!-- END Payments -->
 
-                <h2 class="h3 font-w600 push-30-t push">Smart Contract Video</h2>
-
-                <div id="faq5" class="panel-group">
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            <h3 class="panel-title">
-                                <a class="accordion-toggle" data-toggle="collapse" data-parent="#faq5"
-                                   href="#faq5_q1">Smart Contract Video #1
-                                </a>
-                            </h3>
-                        </div>
-                        <div id="faq5_q1" class="panel-collapse collapse">
-                            <div class="panel-body">
-                                <div class="col-lg-12">
-                                    <center><iframe width="854" height="480" src="https://www.youtube.com/embed/ZE2HxTmxfrI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></center>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- END Payments -->
-
                 <h2 class="h3 font-w600 push-30-t push">Monero (XMR) Introduction Video</h2>
                 <blockquote>
                     <p>Here in Crypto Wave we are using all our hash-power to mine a particular coin called Monero. Monero is the most well-known privacy coin that have maintained its market cap position no lower than rank #15 for the past year, here’s a short clip on what is Monero.
@@ -316,7 +294,36 @@
                 </div>
                 <!-- END Payments -->
 
+                <h2 class="h3 font-w600 push-30-t push">Smart Contract Video</h2>
+                <blockquote>
+                    <p>Smart Contract is probably one of the hottest topic in the Crypto market, here’s a few video that will help you better understand how can smart contract bring block-chain technology to a higher level.
+                    </p>
+                </blockquote>
+                <div id="faq5" class="panel-group">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">
+                                <a class="accordion-toggle" data-toggle="collapse" data-parent="#faq5"
+                                   href="#faq5_q1">Smart Contract Video #1
+                                </a>
+                            </h3>
+                        </div>
+                        <div id="faq5_q1" class="panel-collapse collapse">
+                            <div class="panel-body">
+                                <div class="col-lg-12">
+                                    <center><iframe width="854" height="480" src="https://www.youtube.com/embed/ZE2HxTmxfrI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></center>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- END Payments -->
+
                 <h2 class="h3 font-w600 push-30-t push">Lightning Network Introduction Video</h2>
+                <blockquote>
+                    <p>Cryptocurrency may not be perfect, however after much improvement a new upgrade call lightning network have been implemented on several coins to make transactions between peer to peer faster and cheaper!
+                    </p>
+                </blockquote>
                 <div id="faq7" class="panel-group">
                     <div class="panel panel-default">
                         <div class="panel-heading">
