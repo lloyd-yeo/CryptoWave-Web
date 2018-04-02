@@ -168,9 +168,9 @@
             <div class="row">
 
                 <h2 class="h3 font-w600 push-30-t push">Cryptocurrency Intro Video Series</h2>
-                <h6>
-                    Without the right education, Cryptocurrency can be very difficult to grasp. But here in Crypto Wave, one of our main focus is to educate the general public on what is block-chain, bitcoin and cryptocurrency before you jump into this volatile market!
-                </h6>
+                <blockquote>
+                    <p>Without the right education, Cryptocurrency can be very difficult to grasp. But here in Crypto Wave, one of our main focus is to educate the general public on what is block-chain, bitcoin and cryptocurrency before you jump into this volatile market!</p>
+                </blockquote>
                 <div id="faq4" class="panel-group">
                     <div class="panel panel-default">
                         <div class="panel-heading">
@@ -209,6 +209,12 @@
                 <!-- END Payments -->
 
                 <h2 class="h3 font-w600 push-30-t push">Mining Video Series</h2>
+                <blockquote>
+                    <p>In Cryptocurrency market there is a couple of major segment to it. Trading & Investing, Initial Coin Offering (ICO) and of course mining.
+                    </p>
+                    <p>Mining is one of the key factor to cryptocurrency and it is the only way that new coins are produced through the proof of work method, here are a few videos on what is cryptocurrency mining
+                    </p>
+                </blockquote>
                 <div id="faq4" class="panel-group">
                     <div class="panel panel-default">
                         <div class="panel-heading">
@@ -247,6 +253,7 @@
                 <!-- END Payments -->
 
                 <h2 class="h3 font-w600 push-30-t push">Smart Contract Video</h2>
+
                 <div id="faq5" class="panel-group">
                     <div class="panel panel-default">
                         <div class="panel-heading">
@@ -268,6 +275,10 @@
                 <!-- END Payments -->
 
                 <h2 class="h3 font-w600 push-30-t push">Monero (XMR) Introduction Video</h2>
+                <blockquote>
+                    <p>Here in Crypto Wave we are using all our hash-power to mine a particular coin called Monero. Monero is the most well-known privacy coin that have maintained its market cap position no lower than rank #15 for the past year, here’s a short clip on what is Monero.
+                    </p>
+                </blockquote>
                 <div id="faq6" class="panel-group">
                     <div class="panel panel-default">
                         <div class="panel-heading">
@@ -291,6 +302,8 @@
                             <h3 class="panel-title">
                                 <a class="accordion-toggle" data-toggle="collapse" data-parent="#faq6"
                                    href="#faq6_q2">How to Create a Monero Wallet
+                                    <p>After you have mined some Monero, what now? Here’s a simple guide on how you can store away your Monero in a safe and secure way!
+                                    </p>
                                 </a>
                             </h3>
                         </div>
