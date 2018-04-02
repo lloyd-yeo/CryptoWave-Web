@@ -140,6 +140,12 @@
 						</li>
 
 						<li>
+							<a href="/tutorial">
+								<i class="fa fa-video-camera push-5-r"></i>Training Videos
+							</a>
+						</li>
+
+						<li>
 							<form id="logout-form" action="{{ route('logout') }}" method="POST"
 							      style="display: none;">
 								{{ csrf_field() }}
