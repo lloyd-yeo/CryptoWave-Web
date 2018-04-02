@@ -397,6 +397,9 @@
 
 
                 <h2 class="h3 font-w600 push-30-t push">Bitcoin Fork Video</h2>
+                <blockquote>
+                    <p>You might have heard of Bitcoin Cash (BCH), Bitcoin Gold (BTG) or even Ethereum Classic (ETC) by now, however are they the same as Bitcoin and Ethereum? What difference do they have from the original Bitcoin (BTC) and Ethereum (ETH)? This video will help you better understand what is called “Forking”.</p>
+                </blockquote>
                 <div id="faq8" class="panel-group">
                     <div class="panel panel-default">
                         <div class="panel-heading">
@@ -417,6 +420,10 @@
                 </div>
 
                 <h2 class="h3 font-w600 push-30-t push">Fiat to Bitcoin</h2>
+                <blockquote>
+                    <p>After learning so much about Cryptocurrency are you starting to be interested in buying some for yourself? This video will demonstrate to you step by step on how you go about doing so.
+                    </p>
+                </blockquote>
                 <div id="faq9" class="panel-group">
                     <div class="panel panel-default">
                         <div class="panel-heading">
