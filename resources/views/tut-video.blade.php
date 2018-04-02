@@ -167,6 +167,47 @@
 
             <div class="row">
 
+                <h2 class="h3 font-w600 push-30-t push">Cryptocurrency Intro Video Series</h2>
+                <h6>
+                    Without the right education, Cryptocurrency can be very difficult to grasp. But here in Crypto Wave, one of our main focus is to educate the general public on what is block-chain, bitcoin and cryptocurrency before you jump into this volatile market!
+                </h6>
+                <div id="faq4" class="panel-group">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">
+                                <a class="accordion-toggle" data-toggle="collapse" data-parent="#faq3"
+                                   href="#faq4_q1">Cryptocurrency Intro Video #1
+                                </a>
+                            </h3>
+                        </div>
+                        <div id="faq3_q1" class="panel-collapse collapse">
+                            <div class="panel-body">
+                                <div class="col-lg-12">
+                                    <center><iframe width="854" height="480" src="https://www.youtube.com/embed/L-Qhv8kLESY" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></center>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">
+                                <a class="accordion-toggle" data-toggle="collapse" data-parent="#faq4"
+                                   href="#faq4_q2">Cryptocurrency Intro Video #2
+                                </a>
+                            </h3>
+                        </div>
+                        <div id="faq4_q2" class="panel-collapse collapse">
+                            <div class="panel-body">
+                                <div class="col-lg-12">
+                                    <center><iframe width="854" height="480" src="https://www.youtube.com/embed/SSo_EIwHSd4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></center>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- END Payments -->
+
                 <h2 class="h3 font-w600 push-30-t push">Mining Video Series</h2>
                 <div id="faq4" class="panel-group">
                     <div class="panel panel-default">
@@ -198,44 +239,6 @@
                             <div class="panel-body">
                                 <div class="col-lg-12">
                                     <center><iframe width="854" height="480" src="https://www.youtube.com/embed/lI4dzg_f_-Q" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></center>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- END Payments -->
-
-                <h2 class="h3 font-w600 push-30-t push">Cryptocurrency Intro Video Series</h2>
-                <div id="faq4" class="panel-group">
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            <h3 class="panel-title">
-                                <a class="accordion-toggle" data-toggle="collapse" data-parent="#faq3"
-                                   href="#faq4_q1">Cryptocurrency Intro Video #1
-                                </a>
-                            </h3>
-                        </div>
-                        <div id="faq3_q1" class="panel-collapse collapse">
-                            <div class="panel-body">
-                                <div class="col-lg-12">
-                                    <center><iframe width="854" height="480" src="https://www.youtube.com/embed/L-Qhv8kLESY" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></center>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            <h3 class="panel-title">
-                                <a class="accordion-toggle" data-toggle="collapse" data-parent="#faq4"
-                                   href="#faq4_q2">Cryptocurrency Intro Video #2
-                                </a>
-                            </h3>
-                        </div>
-                        <div id="faq4_q2" class="panel-collapse collapse">
-                            <div class="panel-body">
-                                <div class="col-lg-12">
-                                    <center><iframe width="854" height="480" src="https://www.youtube.com/embed/SSo_EIwHSd4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></center>
                                 </div>
                             </div>
                         </div>
