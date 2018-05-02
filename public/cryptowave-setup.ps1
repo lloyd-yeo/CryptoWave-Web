@@ -8,3 +8,4 @@ If ($os_terminal -eq "Apple_Terminal") {
 
 "$Env:TERM_PROGRAM"
 Get-ChildItem Env:TERM_PROGRAM
+
