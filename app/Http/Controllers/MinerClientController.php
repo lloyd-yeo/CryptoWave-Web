@@ -95,6 +95,6 @@ class MinerClientController extends Controller
 	public function downloadInstallerForMac(Request $request) {
         $config_txt_path = str_replace('storage/', '', storage_path("public/cryptowave-installer"));
         File::put($config_txt_path, $this->craftInstallerContent());
-        return response()->download('/var/www/html/public/cryptowave-installer', 'cryptowave-installer.sh');
+        return response()->download('/var/www/html/public/cryptowave-installer', 'cryptowave-installer');
     }
 }
