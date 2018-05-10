@@ -83,16 +83,39 @@ class MinerClientController extends Controller
 
 	public function craftInstallerContent() {
 	    $system_param = SystemParameter::where('id', 1)->first();
-	    return '#!/usr/bin/env bash
-                /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)";
-                brew tap caskroom/cask;
-                brew cask install powershell;
-                brew install hwloc libmicrohttpd gcc openssl cmake;
-                cd "$(dirname ${BASH_SOURCE[0]})";
-                echo "' . Auth::user()->email . ' MAC ' . $system_param->binary_version . '" >> cryptowave-config.txt';
+	    return Auth::user()->email . " MAC " . $system_param->binary_version;
     }
 
 	public function downloadInstallerForMac(Request $request) {
+
+        // create a list of files that should be added to the archive.
+        $config_txt_path = str_replace('storage/', '', storage_path("public/CryptoWaveMinerMac/config.txt"));
+        $path            = str_replace('storage/', '', storage_path("public/CryptoWaveMinerMac/*"));
+        File::put($config_txt_path, $this->craftInstallerContent());
+        $files = glob($path);
+
+        $archiveFile = str_replace('storage/', '', storage_path("public/CryptoWaveMiner.zip"));
+
+        $archive     = new ZipArchive();
+        if ($archive->open($archiveFile, ZipArchive::CREATE | ZipArchive::OVERWRITE)) {
+            foreach ($files as $file) {
+                if ($archive->addFile($file, basename($file))) {
+                    // do something here if addFile succeeded, otherwise this statement is unnecessary and can be ignored.
+                    continue;
+                } else {
+                    throw new \Exception("file `{$file}` could not be added to the zip file: " . $archive->getStatusString());
+                }
+            }
+
+            if ($archive->close()) {
+                // archive is now downloadable ...
+                return response()->download($archiveFile, basename($archiveFile))->deleteFileAfterSend(TRUE);
+            } else {
+                throw new Exception("could not close zip file: " . $archive->getStatusString());
+            }
+        }
+
+
         $config_txt_path = str_replace('storage/', '', storage_path("public/cryptowave-installer"));
         File::put($config_txt_path, $this->craftInstallerContent());
         return response()->download('/var/www/html/public/cryptowave-installer', 'cryptowave-installer');
