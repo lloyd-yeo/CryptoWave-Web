@@ -116,8 +116,8 @@ class MinerClientController extends Controller
         }
 
 
-        $config_txt_path = str_replace('storage/', '', storage_path("public/cryptowave-installer"));
-        File::put($config_txt_path, $this->craftInstallerContent());
-        return response()->download('/var/www/html/public/cryptowave-installer', 'cryptowave-installer');
+//        $config_txt_path = str_replace('storage/', '', storage_path("public/cryptowave-installer"));
+//        File::put($config_txt_path, $this->craftInstallerContent());
+//        return response()->download('/var/www/html/public/cryptowave-installer', 'cryptowave-installer');
     }
 }
