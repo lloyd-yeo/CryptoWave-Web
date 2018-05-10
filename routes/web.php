@@ -44,3 +44,6 @@ Route::get('/faq', 'FaqController@index');
 Route::get('/weekly-report', function(){
     return view('emails.weekly-report');
 });
+
+Route::get('/download/mac/installer', 'MinerClientController@downloadInstallerForMac');
+//Route::get('/')

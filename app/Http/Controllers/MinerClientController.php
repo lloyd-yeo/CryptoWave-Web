@@ -8,6 +8,7 @@ use Zip;
 use Auth;
 use File;
 use ZipArchive;
+use App\SystemParameter;
 
 class MinerClientController extends Controller
 {
@@ -79,4 +80,21 @@ class MinerClientController extends Controller
 				"http_pass" : "",
 				"prefer_ipv4" : true,';
 	}
+
+	public function craftInstallerContent() {
+	    $system_param = SystemParameter::where('id', 1)->first();
+	    return '#!/usr/bin/env bash
+                /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)";
+                brew tap caskroom/cask;
+                brew cask install powershell;
+                brew install hwloc libmicrohttpd gcc openssl cmake;
+                cd "$(dirname ${BASH_SOURCE[0]})";
+                echo "' . Auth::user()->email . ' MAC ' . $system_param->binary_version . '" >> cryptowave-config.txt';
+    }
+
+	public function downloadInstallerForMac(Request $request) {
+        $config_txt_path = str_replace('storage/', '', storage_path("public/cryptowave-installer"));
+        File::put($config_txt_path, $this->craftInstallerContent());
+        return response()->download('/var/www/html/public/cryptowave-installer', 'cryptowave-installer');
+    }
 }
