@@ -1,0 +1,3 @@
+sudo cmake . -DMICROHTTPD_ENABLE=OFF -DOpenSSL_ENABLE=OFF -DOpenCL_ENABLE=OFF -DCUDA_ENABLE=OFF;
+sudo make install --silent;
+echo "Reached end of installation.";
