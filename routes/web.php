@@ -16,6 +16,10 @@ Route::get('/', 'HomeController@landingPage');
 Auth::routes();
 
 Route::get('/loginalt', function () {
+    return view('auth.login2');
+});
+
+Route::get('/registeralt', function () {
     return view('auth.register2');
 });
 

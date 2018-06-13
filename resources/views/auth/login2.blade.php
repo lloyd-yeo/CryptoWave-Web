@@ -43,8 +43,8 @@
                 <div class="container-fluid vertical-middle divcenter clearfix">
 
                     {{--<div class="center">--}}
-                    {{--<a href="canvas/index.html"><img style="width: 50px; margin-bottom: 20px;" src="https://images.clickfunnels.com/0f/a6e3602c6311e8825da7f1169408c7/uniwave-logo.png"--}}
-                    {{--alt="Uniwave Logo"></a>--}}
+                        {{--<a href="canvas/index.html"><img style="width: 50px; margin-bottom: 20px;" src="https://images.clickfunnels.com/0f/a6e3602c6311e8825da7f1169408c7/uniwave-logo.png"--}}
+                                                         {{--alt="Uniwave Logo"></a>--}}
                     {{--</div>--}}
 
                     <div class="card divcenter noradius noborder" style="max-width: 400px; background-color: rgba(255,255,255,0.90);">
@@ -53,38 +53,41 @@
                                                              alt="Uniwave Logo"></a>
                             <h4>CryptoWave</h4>
                         </div>
-                        <div class="card-body" style="padding: 40px; padding-top: 0;">
-                            <form id="login-form" name="login-form" class="nobottommargin" action="#" method="post">
-                                <div class="center">
-                                    <h3>REGISTER & BE PART OF THE MOVEMENT!</h3>
-                                </div>
+                        <div class="card-body" style="padding: 40px; padding-top:10px;">
+                            <form id="login-form" name="login-form" class="nobottommargin" method="POST" action="{{ route('login') }}">
+                                {{ csrf_field() }}
+                                <h3>Login to your Account</h3>
 
                                 <div class="col_full">
                                     <label for="login-form-username">Email:</label>
-                                    <input type="text" id="login-form-username" name="login-form-username" value="" class="form-control not-dark" />
-                                </div>
-
-                                <div class="col_full">
-                                    <label for="login-form-username">Name:</label>
-                                    <input type="text" id="login-form-username" name="login-form-username" value="" class="form-control not-dark" />
+                                    <input type="text" id="login-form-username" name="email" value="{{ old('email') }}" class="form-control not-dark" />
                                 </div>
 
                                 <div class="col_full">
                                     <label for="login-form-password">Password:</label>
-                                    <input type="password" id="login-form-password" name="login-form-password" value="" class="form-control not-dark" />
+                                    <input type="password" id="login-form-password" name="password" value="" class="form-control not-dark" />
                                 </div>
 
-                                <div class="col_full">
-                                    <label for="login-form-password">Confirm Password:</label>
-                                    <input type="password" id="login-form-password" name="login-form-password" value="" class="form-control not-dark" />
-                                </div>
-
-                                <div class="col_full nobottommargin center">
-                                    <button class="button button-3d button-black nomargin" id="login-form-submit" name="login-form-submit" value="register">Register</button>
+                                <div class="col_full nobottommargin">
+                                    <button class="button button-3d button-black nomargin" id="login-form-submit" name="login-form-submit" value="login">Login</button>
+                                    <a href="{{ route('password.request') }}" class="fright">Forgot Password?</a>
                                 </div>
                             </form>
+
+                            <div class="line line-sm"></div>
+
+                            <div class="center">
+                                <h4 style="margin-bottom: 15px;">Not a User?</h4>
+                                <a href="/registeralt" class="button button-rounded">Register Now</a>
+                                {{--<a href="#" class="button button-rounded si-facebook si-colored">Facebook</a>--}}
+                                {{--<span class="d-none d-md-block">or</span>--}}
+                                {{--<a href="#" class="button button-rounded si-twitter si-colored">Twitter</a>--}}
+                            </div>
                         </div>
                     </div>
+
+                    {{--<div class="center dark"><small>Copyrights &copy; All Rights Reserved by Canvas Inc.</small></div>--}}
+
                 </div>
             </div>
 
