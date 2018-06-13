@@ -54,29 +54,32 @@
                             <h4>CryptoWave</h4>
                         </div>
                         <div class="card-body" style="padding: 40px; padding-top: 0;">
-                            <form id="login-form" name="login-form" class="nobottommargin" action="#" method="post">
+                            <form id="login-form" name="login-form" class="nobottommargin" method="POST" action="{{ route('register') }}">
+                                <input type="hidden" value="{{ Cookie::get('referral') }}" name="referral-cookie"/>
+                                {{ csrf_field() }}
+
                                 <div class="center">
                                     <h3>REGISTER & BE PART OF THE MOVEMENT!</h3>
                                 </div>
 
                                 <div class="col_full">
                                     <label for="login-form-username">Email:</label>
-                                    <input type="text" id="login-form-username" name="login-form-username" value="" class="form-control not-dark" />
+                                    <input id="login-form-username" type="email" name="email" class="form-control not-dark" />
                                 </div>
 
                                 <div class="col_full">
                                     <label for="login-form-username">Name:</label>
-                                    <input type="text" id="login-form-username" name="login-form-username" value="" class="form-control not-dark" />
+                                    <input id="login-form-username" type="text" name="name" value="" class="form-control not-dark" />
                                 </div>
 
                                 <div class="col_full">
                                     <label for="login-form-password">Password:</label>
-                                    <input type="password" id="login-form-password" name="login-form-password" value="" class="form-control not-dark" />
+                                    <input type="password" id="login-form-password" name="password" value="" class="form-control not-dark" />
                                 </div>
 
                                 <div class="col_full">
                                     <label for="login-form-password">Confirm Password:</label>
-                                    <input type="password" id="login-form-password" name="login-form-password" value="" class="form-control not-dark" />
+                                    <input type="password" id="login-form-confirm-password" name="confirm-password" value="" class="form-control not-dark" />
                                 </div>
 
                                 <div class="col_full nobottommargin center">
