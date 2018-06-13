@@ -165,7 +165,6 @@
             <!-- END Section -->
 
             <div class="row">
-
                 <h2 class="h3 font-w600 push-30-t push">Cryptocurrency Intro Video Series</h2>
                 <blockquote>
                     <p>Without the right education, Cryptocurrency can be very difficult to grasp. But here in Crypto Wave, one of our main focus is to educate the general public on what is block-chain, bitcoin and cryptocurrency before you jump into this volatile market!</p>
