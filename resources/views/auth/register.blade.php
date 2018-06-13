@@ -1,141 +1,115 @@
-<!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<title>CryptoWave</title>
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta name="description" content="CryptoWave is the next wave in mining cryptocurrencies for the masses.">
-		<link href="stack/css/bootstrap.css" rel="stylesheet" type="text/css" media="all"/>
-		<link href="stack/css/stack-interface.css" rel="stylesheet" type="text/css" media="all"/>
-		<link href="stack/css/socicon.css" rel="stylesheet" type="text/css" media="all"/>
-		<link href="stack/css/lightbox.min.css" rel="stylesheet" type="text/css" media="all"/>
-		<link href="stack/css/flickity.css" rel="stylesheet" type="text/css" media="all"/>
-		<link href="stack/css/iconsmind.css" rel="stylesheet" type="text/css" media="all"/>
-		<link href="stack/css/jquery.steps.css" rel="stylesheet" type="text/css" media="all"/>
-		<link href="stack/css/theme.css" rel="stylesheet" type="text/css" media="all"/>
-		<link href="stack/css/custom.css" rel="stylesheet" type="text/css" media="all"/>
-		<link href="https://fonts.googleapis.com/css?family=Open+Sans:200,300,400,400i,500,600,700%7CMerriweather:300,300i"
-		      rel="stylesheet">
-		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-	</head>
-	<body class=" ">
-	<a id="start"></a>
-	<div class="nav-container ">
-		<nav class="bar bar-4 bar--transparent bar--absolute" data-fixed-at="200">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-1 col-md-offset-0 col-sm-2 col-sm-offset-0 col-xs-4 col-xs-offset-4">
-						<div class="bar__module">
-							<a href="/">
-								<img class="logo logo-dark" alt="logo" src="stack/img/logo.png"/>
-								<img class="logo logo-light" alt="logo" src="stack/img/logo.png"/>
-							</a>
-						</div>
-						<!--end module-->
-					</div>
-					<div class="col-md-4 col-md-offset-0 col-sm-5 col-sm-offset-0 col-xs-8 col-xs-offset-2">
-						<div class="bar__module">
-						</div>
-						<!--end module-->
-					</div>
-				</div>
-				<!--end of row-->
-			</div>
-			<!--end of container-->
-		</nav>
-		<!--end bar-->
-	</div>
-	<div class="main-container">
-		<section class="imageblock switchable feature-large height-100 ">
-			<div class="imageblock__content col-md-6 col-sm-4 pos-right" data-overlay="1">
-				<div class="background-image-holder">
-					<img alt="image" src="stack/img/inner-9.jpg"/>
-				</div>
-				<div class="modal-instance">
-					<div class="video-play-icon modal-trigger"></div>
-					<div class="modal-container">
-						<div class="modal-content bg-dark" data-width="60%" data-height="60%">
-							<iframe data-src="https://www.youtube.com/embed/GmOzih6I1zs?autoplay=1"
-							        allowfullscreen="allowfullscreen"></iframe>
-						</div>
-						<!--end of modal-content-->
-					</div>
-					<!--end of modal-container-->
-				</div>
-				<!--end of modal instance-->
-			</div>
-			<div class="container pos-vertical-center">
-				<div class="row">
-					<div class="col-md-5 col-sm-7">
-						<h1>CryptoWave™ Registration</h1>
-						<p class="lead">
-							Almost there!
-							<br/>You are just one step away from using your personal computer to mine!
-							<br/>Just fill out your details below & get access now to CryptoWave™
-						</p>
-						<div class="bg--secondary boxed boxed--border">
-							<form method="POST" action="{{ route('register') }}">
-								<input type="hidden" value="{{ Cookie::get('referral') }}" name="referral-cookie"/>
-								{{ csrf_field() }}
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+<head>
 
-								<h6 class="type--uppercase">CryptoWave™ Account Details</h6>
-								<input class="validate-required" type="text" name="name" placeholder="Your Name"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="author" content="SemiColonWeb" />
 
-								@if ($errors->has('name'))
-									<span class="help-block">
-                                        <strong>{{ $errors->first('name') }}</strong>
-                                    </span>
-								@endif
+    <!-- Stylesheets
+    ============================================= -->
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,400i,700|Raleway:300,400,500,600,700|Crete+Round:400i" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="canvas/css/bootstrap.css" type="text/css" />
+    <link rel="stylesheet" href="canvas/style.css" type="text/css" />
+    <link rel="stylesheet" href="canvas/css/dark.css" type="text/css" />
+    <link rel="stylesheet" href="canvas/css/font-icons.css" type="text/css" />
+    <link rel="stylesheet" href="canvas/css/animate.css" type="text/css" />
+    <link rel="stylesheet" href="canvas/css/magnific-popup.css" type="text/css" />
+    <link rel="stylesheet" href="canvas/css/colors.css" type="text/css" />
 
-								<input class="validate-required validate-email" type="email" name="email" placeholder="Email Address"/>
+    <link rel="stylesheet" href="canvas/css/responsive.css" type="text/css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-								@if ($errors->has('email'))
-									<span class="help-block">
-                                        <strong>{{ $errors->first('email') }}</strong>
-                                    </span>
-								@endif
+    <!-- Document Title
+    ============================================= -->
+    <title>Login | CryptoWave</title>
 
-								<input id="password" type="password" class="form-control" name="password" required
-								       placeholder="Password">
+</head>
 
-								@if ($errors->has('password'))
-									<span class="help-block">
-                                        <strong>{{ $errors->first('password') }}</strong>
-                                    </span>
-								@endif
+<body class="stretched">
 
-								<input id="password-confirm" type="password" class="form-control"
-								       name="password_confirmation" required placeholder="Confirm Password">
+<!-- Document Wrapper
+============================================= -->
+<div id="wrapper" class="clearfix">
 
-								<button type="submit" class="btn btn--primary type--uppercase">Register</button>
-							</form>
-						</div>
-					</div>
-				</div>
-				<!--end of row-->
-			</div>
-			<!--end of container-->
-		</section>
-	</div>
-	<!--<div class="loader"></div>-->
-	<a class="back-to-top inner-link" href="#start" data-scroll-class="100vh:active">
-		<i class="stack-interface stack-up-open-big"></i>
-	</a>
-	<script src="stack/js/jquery-3.1.1.min.js"></script>
-	<script src="stack/js/flickity.min.js"></script>
-	<script src="stack/js/easypiechart.min.js"></script>
-	<script src="stack/js/parallax.js"></script>
-	<script src="stack/js/typed.min.js"></script>
-	<script src="stack/js/datepicker.js"></script>
-	<script src="stack/js/isotope.min.js"></script>
-	<script src="stack/js/ytplayer.min.js"></script>
-	<script src="stack/js/lightbox.min.js"></script>
-	<script src="stack/js/granim.min.js"></script>
-	<script src="stack/js/jquery.steps.min.js"></script>
-	<script src="stack/js/countdown.min.js"></script>
-	<script src="stack/js/twitterfetcher.min.js"></script>
-	<script src="stack/js/spectragram.min.js"></script>
-	<script src="stack/js/smooth-scroll.min.js"></script>
-	<script src="stack/js/scripts.js"></script>
-	</body>
+    <!-- Content
+    ============================================= -->
+    <section id="content">
+
+        <div class="content-wrap nopadding">
+
+            {{--<div class="section nopadding nomargin" style="width: 100%; height: 100%; position: absolute; left: 0; top: 0; background: url('canvas/images/parallax/home/1.jpg') center center no-repeat; background-size: cover;"></div>--}}
+            <div class="section nopadding nomargin" style="width: 100%; height: 100%; position: absolute; left: 0; top: 0; background: url('https://images.clickfunnels.com/images/blue-geo.png') center center no-repeat; background-size: cover;"></div>
+
+            <div class="section nobg full-screen nopadding nomargin">
+                <div class="container-fluid vertical-middle divcenter clearfix">
+
+                    {{--<div class="center">--}}
+                    {{--<a href="canvas/index.html"><img style="width: 50px; margin-bottom: 20px;" src="https://images.clickfunnels.com/0f/a6e3602c6311e8825da7f1169408c7/uniwave-logo.png"--}}
+                    {{--alt="Uniwave Logo"></a>--}}
+                    {{--</div>--}}
+
+                    <div class="card divcenter noradius noborder" style="max-width: 400px; background-color: rgba(255,255,255,0.90);">
+                        <div class="center">
+                            <a href="canvas/index.html"><img style="width: 50px; margin-top: 50px; margin-bottom:5px;" src="https://images.clickfunnels.com/0f/a6e3602c6311e8825da7f1169408c7/uniwave-logo.png"
+                                                             alt="Uniwave Logo"></a>
+                            <h4>CryptoWave</h4>
+                        </div>
+                        <div class="card-body" style="padding: 40px; padding-top: 0;">
+                            <form id="login-form" name="login-form" class="nobottommargin" method="POST" action="{{ route('register') }}">
+                                <input type="hidden" value="{{ Cookie::get('referral') }}" name="referral-cookie"/>
+                                {{ csrf_field() }}
+
+                                <div class="center">
+                                    <h3>REGISTER & BE PART OF THE MOVEMENT!</h3>
+                                </div>
+
+                                <div class="col_full">
+                                    <label for="login-form-username">Email:</label>
+                                    <input id="login-form-username" type="email" name="email" class="form-control not-dark" />
+                                </div>
+
+                                <div class="col_full">
+                                    <label for="login-form-username">Name:</label>
+                                    <input id="login-form-username" type="text" name="name" value="" class="form-control not-dark" />
+                                </div>
+
+                                <div class="col_full">
+                                    <label for="login-form-password">Password:</label>
+                                    <input type="password" id="login-form-password" name="password" value="" class="form-control not-dark" />
+                                </div>
+
+                                <div class="col_full">
+                                    <label for="login-form-password">Confirm Password:</label>
+                                    <input type="password" id="login-form-confirm-password" name="confirm-password" value="" class="form-control not-dark" />
+                                </div>
+
+                                <div class="col_full nobottommargin center">
+                                    <button class="button button-3d nomargin" id="login-form-submit" name="login-form-submit" value="register">Register</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </section><!-- #content end -->
+
+</div><!-- #wrapper end -->
+
+<!-- Go To Top
+============================================= -->
+<div id="gotoTop" class="icon-angle-up"></div>
+
+<!-- External JavaScripts
+============================================= -->
+<script src="canvas/js/jquery.js"></script>
+<script src="canvas/js/plugins.js"></script>
+
+<!-- Footer Scripts
+============================================= -->
+<script src="canvas/js/functions.js"></script>
+
+</body>
 </html>
