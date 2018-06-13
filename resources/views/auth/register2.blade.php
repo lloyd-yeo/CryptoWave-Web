@@ -36,16 +36,22 @@
 
         <div class="content-wrap nopadding">
 
-            <div class="section nopadding nomargin" style="width: 100%; height: 100%; position: absolute; left: 0; top: 0; background: url('images/parallax/home/1.jpg') center center no-repeat; background-size: cover;"></div>
+            {{--<div class="section nopadding nomargin" style="width: 100%; height: 100%; position: absolute; left: 0; top: 0; background: url('canvas/images/parallax/home/1.jpg') center center no-repeat; background-size: cover;"></div>--}}
+            <div class="section nopadding nomargin" style="width: 100%; height: 100%; position: absolute; left: 0; top: 0; background: url('https://images.clickfunnels.com/images/blue-geo.png') center center no-repeat; background-size: cover;"></div>
 
             <div class="section nobg full-screen nopadding nomargin">
                 <div class="container-fluid vertical-middle divcenter clearfix">
 
                     {{--<div class="center">--}}
-                        {{--<a href="canvas/index.html"><img src="images/logo-dark.png" alt="Canvas Logo"></a>--}}
+                        {{--<a href="canvas/index.html"><img style="width: 50px; margin-bottom: 20px;" src="https://images.clickfunnels.com/0f/a6e3602c6311e8825da7f1169408c7/uniwave-logo.png"--}}
+                                                         {{--alt="Uniwave Logo"></a>--}}
                     {{--</div>--}}
 
-                    <div class="card divcenter noradius noborder" style="max-width: 400px; background-color: rgba(255,255,255,0.93);">
+                    <div class="card divcenter noradius noborder" style="max-width: 400px; background-color: rgba(255,255,255,0.90);">
+                        <div class="center">
+                            <a href="canvas/index.html"><img style="width: 50px; margin-top: 50px;" src="https://images.clickfunnels.com/0f/a6e3602c6311e8825da7f1169408c7/uniwave-logo.png"
+                                                             alt="Uniwave Logo"></a>
+                        </div>
                         <div class="card-body" style="padding: 40px;">
                             <form id="login-form" name="login-form" class="nobottommargin" action="#" method="post">
                                 <h3>Login to your Account</h3>
@@ -62,22 +68,23 @@
 
                                 <div class="col_full nobottommargin">
                                     <button class="button button-3d button-black nomargin" id="login-form-submit" name="login-form-submit" value="login">Login</button>
-                                    <a href="canvas/#" class="fright">Forgot Password?</a>
+                                    <a href="#" class="fright">Forgot Password?</a>
                                 </div>
                             </form>
 
                             <div class="line line-sm"></div>
 
                             <div class="center">
-                                <h4 style="margin-bottom: 15px;">or Login with:</h4>
-                                <a href="canvas/#" class="button button-rounded si-facebook si-colored">Facebook</a>
-                                <span class="d-none d-md-block">or</span>
-                                <a href="canvas/#" class="button button-rounded si-twitter si-colored">Twitter</a>
+                                <h4 style="margin-bottom: 15px;">Not a User?</h4>
+                                <a href="/register" class="button button-rounded">Register Now</a>
+                                {{--<a href="#" class="button button-rounded si-facebook si-colored">Facebook</a>--}}
+                                {{--<span class="d-none d-md-block">or</span>--}}
+                                {{--<a href="#" class="button button-rounded si-twitter si-colored">Twitter</a>--}}
                             </div>
                         </div>
                     </div>
 
-                    <div class="center dark"><small>Copyrights &copy; All Rights Reserved by Canvas Inc.</small></div>
+                    {{--<div class="center dark"><small>Copyrights &copy; All Rights Reserved by Canvas Inc.</small></div>--}}
 
                 </div>
             </div>
@@ -94,12 +101,12 @@
 
 <!-- External JavaScripts
 ============================================= -->
-<script src="js/jquery.js"></script>
-<script src="js/plugins.js"></script>
+<script src="canvas/js/jquery.js"></script>
+<script src="canvas/js/plugins.js"></script>
 
 <!-- Footer Scripts
 ============================================= -->
-<script src="js/functions.js"></script>
+<script src="canvas/js/functions.js"></script>
 
 </body>
 </html>

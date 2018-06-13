@@ -15,7 +15,7 @@ Route::get('/', 'HomeController@landingPage');
 
 Auth::routes();
 
-Route::get('/registeralt', function () {
+Route::get('/loginalt', function () {
     return view('auth.register2');
 });
 
