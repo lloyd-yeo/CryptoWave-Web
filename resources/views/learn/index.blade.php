@@ -1113,6 +1113,24 @@
             scrollTop: $("#content").offset().top
         }, 2000);
     });
+
+    $("#step-two-link").on("click", function(){
+        console.log("clicked");
+        $("#section-header").html("Step Two");
+        $("#section-desc").html("Step Two Description");
+        $('html,body').animate({
+            scrollTop: $("#content").offset().top
+        }, 2000);
+    });
+
+    $("#step-three-link").on("click", function(){
+        console.log("clicked");
+        $("#section-header").html("Step Three");
+        $("#section-desc").html("Step Three Description");
+        $('html,body').animate({
+            scrollTop: $("#content").offset().top
+        }, 2000);
+    });
 </script>
 
 </body>
