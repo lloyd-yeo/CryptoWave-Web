@@ -1720,7 +1720,7 @@ var SEMICOLON = SEMICOLON || {};
 				var scapSliderHeight = $sliderElement.outerHeight();
 				if( $(this).parents('#slider').prev('#header').hasClass('transparent-header') && ( $body.hasClass('device-xl') || $body.hasClass('device-lg') ) ) {
 					if( $(this).parents('#slider').prev('#header').hasClass('floating-header') ) {
-						$(this).css({ top: ( scapSliderHeight + 160 - scapHeight ) / 2 + 'px' });
+						$(this).css({ top: ( scapSliderHeight - 230 - scapHeight ) / 2 + 'px' });
 					} else {
 						$(this).css({ top: ( scapSliderHeight + 100 - scapHeight ) / 2 + 'px' });
 					}

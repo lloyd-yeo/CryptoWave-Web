@@ -252,7 +252,7 @@
 
                 <h2 class="h3 font-w600 push-30-t push">Monero (XMR) Introduction Video</h2>
                 <blockquote>
-                    <p>Here in Crypto Wave we are using all our hash-power to mine a particular coin called Monero. Monero is the most well-known privacy coin that have maintained its market cap position no lower than rank #15 for the past year, here’s a short clip on what is Monero.
+                    <p>Here in CryptoWave we are using all our hash-power to mine a particular coin called Monero. Monero is the most well-known privacy coin that have maintained its market cap position no lower than rank #15 for the past year, here’s a short clip on what is Monero.
                     </p>
                 </blockquote>
                 <div id="faq6" class="panel-group">

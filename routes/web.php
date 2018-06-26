@@ -54,4 +54,13 @@ Route::get('/weekly-report', function(){
 });
 
 Route::get('/download/mac/installer', 'MinerClientController@downloadInstallerForMac');
+
+Route::get('/dashboard-alt', function(){
+    return view('dashboard-new');
+});
+
+Route::get('/learn', function(){
+    return view('learn.index');
+});
+
 //Route::get('/')
