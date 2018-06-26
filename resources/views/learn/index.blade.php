@@ -828,8 +828,7 @@
                 </div>
 
                 <center>
-                    <i class="icon-lock3"></i>
-                    <a href="#unlock" class="button button-3d button-xlarge button-rounded">Unlock Next Section</a>
+                    <a href="#unlock" class="button button-3d button-xlarge button-rounded"><i class="icon-lock3"></i> Unlock Next Section</a>
                 </center>
 
             </div>
