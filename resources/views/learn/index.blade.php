@@ -718,10 +718,46 @@
                                 <p class="d-none d-sm-block" data-caption-animate="fadeInUp" data-caption-delay="200">
                                     Without the right education, Cryptocurrency can be very difficult to grasp. But here in Crypto Wave, one of our main focus is to educate the general public on what is block-chain, bitcoin and cryptocurrency before you jump into this volatile market!</p>
                                 {{--<div style="width:1px; height: 20px;"></div>--}}
-                                <p class="d-none d-sm-block" data-caption-animate="fadeInUp" data-caption-delay="200">
-                                    Scroll down to find out more!</p>
-                            </div>
+                                {{--<p class="d-none d-sm-block" data-caption-animate="fadeInUp" data-caption-delay="200">--}}
+                                    {{--Scroll down to find out more!</p>--}}
+                                {{--<div style="width:1px; height: 50px;"></div>--}}
+                                <div class="col_one_third">
+                                    <div class="feature-box fbox-center fbox-effect">
+                                        <div class="fbox-icon" style="height: 192px; width: 192px;">
+                                            <a href="#stepone" id="step-one-link">
+                                                <img src="http://via.placeholder.com/192x192">
+                                                {{--<i class="icon-screen i-alt" style="font-size: 84px; line-height: 192px;"></i>--}}
+                                            </a>
+                                        </div>
+                                        <h3 style="font-size: 26px;">Step One</h3>
+                                        <p style="color:white; font-size: 18px;">Step one description</p>
+                                    </div>
+                                </div>
 
+                                <div class="col_one_third">
+                                    <div class="feature-box fbox-center fbox-effect">
+                                        <div class="fbox-icon" style="height: 192px; width: 192px;">
+                                            <a href="#steptwo">
+                                                <img src="http://via.placeholder.com/192x192">
+                                            </a>
+                                        </div>
+                                        <h3 style="font-size: 26px;">Step Two</h3>
+                                        <p style="color:white; font-size: 18px;">Step two description</p>
+                                    </div>
+                                </div>
+
+                                <div class="col_one_third col_last">
+                                    <div class="feature-box fbox-center fbox-effect">
+                                        <div class="fbox-icon" style="height: 192px; width: 192px;">
+                                            <a href="#stepthree">
+                                                <img src="http://via.placeholder.com/192x192">
+                                            </a>
+                                        </div>
+                                        <h3 style="font-size: 26px;">Step Three</h3>
+                                        <p style="color:white; font-size: 18px;">Step three description</p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -736,156 +772,60 @@
             <div class="container clearfix">
 
                 <div class="heading-block topmargin-lg center">
-                    <h2>Essentials</h2>
-                    <span class="divcenter">If you are just diving in. These are the essentials to understanding the world of cryptocurrencies.</span>
+                    <h2 id="section-header"></h2>
+                    <span class="divcenter" id="section-desc"></span>
                 </div>
 
-                <div class="row bottommargin-sm">
+                <div id="posts">
 
-                    <div class="col-lg-4 col-md-6 bottommargin">
-
-                        <div class="feature-box fbox-right topmargin" data-animate="fadeIn">
-                            <div class="fbox-icon">
-                                <a href="#intro-video-modal-1" data-lightbox="inline" >
-                                    <i class="icon-line-layers"></i>
-                                </a>
-                                {{--<a href="#"><i class="icon-line-heart"></i></a>--}}
-                            </div>
-                            <h3>Introduction Video #1</h3>
-                            <p>To guide you through here's a 2 part video series to get you started. Click the icon to get started.</p>
-                        </div>
-
-                        <!-- Modal -->
-                        <div class="modal1 mfp-hide" id="intro-video-modal-1" style="height: 400px;">
-                            <div class="block divcenter" style="background-color: #FFF; max-width: 700px;">
-                                <div class="center clearfix" style="padding: 20px;">
-                                    <h3 class="uppercase">Introduction Video #1</h3>
-                                    <iframe src="https://www.youtube.com/embed/L-Qhv8kLESY" width="500" height="300" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-                                    <p class="lead nobottommargin topmargin-sm">Click on the video to watch</p>
+                    @php for($i = 0; $i < 3; $i++) { @endphp
+                    <div class="entry clearfix">
+                        <div class="entry-image">
+                            <div class="fslider" data-arrows="false" data-lightbox="gallery">
+                                <div class="flexslider">
+                                    <div class="slider-wrap">
+                                        <div class="slide">
+                                            <a href="canvas/images/blog/full/10.jpg"
+                                                              data-lightbox="gallery-item">
+                                                <center>
+                                                    <img class="image_fade" src="canvas/images/blog/full/10.jpg" style="width: 50%;" alt="Standard Post with Gallery">
+                                                </center>
+                                                </a>
+                                        </div>
+                                        <div class="slide"><a href="canvas/images/blog/full/20.jpg"
+                                                              data-lightbox="gallery-item">
+                                                <center>
+                                                    <img class="image_fade" src="canvas/images/blog/full/20.jpg" style="width: 50%;" alt="Standard Post with Gallery">
+                                                </center>
+                                            </a>
+                                        </div>
+                                        <div class="slide"><a href="canvas/images/blog/full/21.jpg"
+                                                              data-lightbox="gallery-item">
+                                                <center>
+                                                    <img class="image_fade" src="canvas/images/blog/full/21.jpg" style="width: 50%;" alt="Standard Post with Gallery">
+                                                </center>
+                                                </a>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-
-                        <div class="feature-box fbox-right topmargin" data-animate="fadeIn" data-delay="200">
-                            <div class="fbox-icon">
-                                <a href="#intro-video-modal-3" data-lightbox="inline" >
-                                    <i class="icon-line-anchor"></i>
-                                </a>
-                                {{--<a href="#"><i class="icon-line-paper"></i></a>--}}
-                            </div>
-                            <h3>Bitcoin Mining Video #1</h3>
-                            <p>Mining is one of the key factor to cryptocurrency and it is the only way that new coins are produced through the proof of work method.</p>
+                        <div class="entry-title">
+                            <h2><a href="blog-single-small.html">Sample Post 1.@php echo $i+1; @endphp</a></h2>
                         </div>
-
-                        <!-- Modal -->
-                        <div class="modal1 mfp-hide" id="intro-video-modal-5" style="height: 400px;">
-                            <div class="block divcenter" style="background-color: #FFF; max-width: 700px;">
-                                <div class="center clearfix" style="padding: 20px;">
-                                    <h3 class="uppercase">Bitcoin Mining Video #1</h3>
-                                    <iframe src="https://www.youtube.com/embed/nQryTXfoNJ0" width="500" height="300" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-                                    <p class="lead nobottommargin topmargin-sm">Click on the video to watch</p>
-                                </div>
-                            </div>
+                        <ul class="entry-meta clearfix">
+                            <li><i class="icon-calendar3"></i> 27th June 2018</li>
+                            <li><a href="#"><i class="icon-user"></i> cryptowave.network</a></li>
+                            <li><i class="icon-folder-open"></i> <a href="#">Step One</a> <a href="#">of Three</a></li>
+                            {{--<li><a href="blog-single-small.html#comments"><i class="icon-comments"></i> 21 Comments</a></li>--}}
+                            {{--<li><a href="#"><i class="icon-picture"></i></a></li>--}}
+                        </ul>
+                        <div class="entry-content">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, voluptatem, dolorem animi nisi autem blanditiis enim culpa reiciendis et explicabo tenetur voluptate rerum molestiae eaque possimus exercitationem eligendi fuga. Maiores, sunt eveniet doloremque porro hic exercitationem distinctio sequi adipisci. Nulla, fuga perferendis voluptatum beatae voluptate architecto laboriosam provident deserunt. Saepe!</p>
+                            <a href="blog-single-small.html"class="more-link">Read More</a>
                         </div>
-
-                        <div class="feature-box fbox-right topmargin" data-animate="fadeIn" data-delay="200">
-                            <div class="fbox-icon">
-                                <a href="#intro-video-modal-5" data-lightbox="inline" >
-                                    <i class="icon-lightbulb"></i>
-                                </a>
-                                {{--<a href="#"><i class="icon-line-paper"></i></a>--}}
-                            </div>
-                            <h3>Monero Intro Video</h3>
-                            <p>In CryptoWave we are using all our hash-power to mine a particular coin called Monero. Here's a intro on it.</p>
-                        </div>
-
-                        <!-- Modal -->
-                        <div class="modal1 mfp-hide" id="intro-video-modal-5" style="height: 400px;">
-                            <div class="block divcenter" style="background-color: #FFF; max-width: 700px;">
-                                <div class="center clearfix" style="padding: 20px;">
-                                    <h3 class="uppercase">Monero Intro Video</h3>
-                                    <iframe src="https://www.youtube.com/embed/6DQb0cMvU7I" width="500" height="300" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-                                    <p class="lead nobottommargin topmargin-sm">Click on the video to watch</p>
-                                </div>
-                            </div>
-                        </div>
-
                     </div>
-
-                    <div class="col-lg-4 d-md-none d-lg-block bottommargin center">
-                        {{--<img src="canvas/images/services/iphone7.png" alt="iphone 2">--}}
-                        <img src="canvas/images/essentials-tut.jpeg" style="height: 450px;" alt="essentials">
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 bottommargin">
-
-                        <div class="feature-box topmargin" data-animate="fadeIn">
-                            <div class="fbox-icon">
-                                <a href="#intro-video-modal-2" data-lightbox="inline" >
-                                    <i class="icon-line-layers"></i>
-                                </a>
-                                {{--<a href="#"><i class="icon-line-paper"></i></a>--}}
-                            </div>
-                            <h3>Introduction Video #2</h3>
-                            <p>Second part of the cryptocurrency introduction video series.</p>
-                        </div>
-
-                        <!-- Modal -->
-                        <div class="modal1 mfp-hide" id="intro-video-modal-2" style="height: 400px;">
-                            <div class="block divcenter" style="background-color: #FFF; max-width: 700px;">
-                                <div class="center clearfix" style="padding: 20px;">
-                                    <h3 class="uppercase">Introduction Video #2</h3>
-                                    <iframe src="https://www.youtube.com/embed/SSo_EIwHSd4" width="500" height="300" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-                                    <p class="lead nobottommargin topmargin-sm">Click on the video to watch</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="feature-box topmargin" data-animate="fadeIn" data-delay="200">
-                            <div class="fbox-icon">
-                                <a href="#intro-video-modal-4" data-lightbox="inline" >
-                                    <i class="icon-line-anchor"></i>
-                                </a>
-                                {{--<a href="#"><i class="icon-line-paper"></i></a>--}}
-                            </div>
-                            <h3>Bitcoin Mining Video #2</h3>
-                            <p>Mining is one of the key factor to cryptocurrency and it is the only way that new coins are produced through the proof of work method.</p>
-                        </div>
-
-                        <!-- Modal -->
-                        <div class="modal1 mfp-hide" id="intro-video-modal-4" style="height: 400px;">
-                            <div class="block divcenter" style="background-color: #FFF; max-width: 700px;">
-                                <div class="center clearfix" style="padding: 20px;">
-                                    <h3 class="uppercase">Bitcoin Mining Video #2</h3>
-                                    <iframe src="https://www.youtube.com/embed/lI4dzg_f_-Q" width="500" height="300" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-                                    <p class="lead nobottommargin topmargin-sm">Click on the video to watch</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="feature-box topmargin" data-animate="fadeIn" data-delay="200">
-                            <div class="fbox-icon">
-                                <a href="#intro-video-modal-6" data-lightbox="inline" >
-                                    <i class="icon-wallet"></i>
-                                </a>
-                                {{--<a href="#"><i class="icon-line-paper"></i></a>--}}
-                            </div>
-                            <h3>How to Create a Monero Wallet</h3>
-                            <p>Follow this video to find out how to create a Monero wallet & start storing your mined XMR.</p>
-                        </div>
-
-                        <!-- Modal -->
-                        <div class="modal1 mfp-hide" id="intro-video-modal-6" style="height: 400px;">
-                            <div class="block divcenter" style="background-color: #FFF; max-width: 700px;">
-                                <div class="center clearfix" style="padding: 20px;">
-                                    <h3 class="uppercase">How to Create a Monero Wallet</h3>
-                                    <iframe src="https://www.youtube.com/embed/icBKC_EA8k8" width="500" height="300" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-                                    <p class="lead nobottommargin topmargin-sm">Click on the video to watch</p>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
+                    @php } @endphp
 
                 </div>
 
@@ -1163,7 +1103,14 @@
 <script src="canvas/js/functions.js"></script>
 
 <script>
-
+    $("#step-one-link").on("click", function(){
+        console.log("clicked");
+        $("#section-header").html("Step One");
+        $("#section-desc").html("Step One Description");
+        $('html,body').animate({
+            scrollTop: $("#content").offset().top
+        }, 2000);
+    });
 </script>
 
 </body>
