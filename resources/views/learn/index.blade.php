@@ -777,7 +777,6 @@
                 </div>
 
                 <div id="posts">
-
                     @php for($i = 0; $i < 3; $i++) { @endphp
                     <div class="entry clearfix">
                         <div class="entry-image">
@@ -826,8 +825,12 @@
                         </div>
                     </div>
                     @php } @endphp
-
                 </div>
+
+                <center>
+                    <i class="icon-lock3"></i>
+                    <a href="#unlock" class="button button-3d button-xlarge button-rounded">Unlock Next Section</a>
+                </center>
 
             </div>
 
