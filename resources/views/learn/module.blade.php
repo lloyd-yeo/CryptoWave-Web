@@ -8,9 +8,9 @@
         <div id="posts">
             @foreach ($module_video as $video)
                 <div class="related-posts clearfix">
-                    <div class="col_full" style="margin-bottom:10px;">
+                    <div class="col_full" style="margin-bottom:10px; overflow-x:auto;">
                         <div class="mpost clearfix" style="height: 235px;">
-                            <div class="entry-image" style="width: 400px;">
+                            <div class="entry-image" style="min-width: 400px;">
                                 <iframe width="400" height="235" src="{{ $video->embed_url }}" frameborder="0" allowfullscreen></iframe>
                                 {{--<a href="#"><img src="canvas/images/blog/small/10.jpg" alt="Blog Single"></a>--}}
                             </div>
