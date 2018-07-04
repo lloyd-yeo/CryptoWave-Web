@@ -110,7 +110,7 @@
                                 <div class="col_one_third col_last">
                                     <div class="feature-box fbox-center fbox-effect">
                                         <div class="fbox-icon" style="height: 192px; width: 192px;">
-                                            <a href="/share"><i class="icon-users i-alt" style="font-size: 84px; line-height: 192px;"></i></a>
+                                            <a href="/dashboard"><i class="icon-users i-alt" style="font-size: 84px; line-height: 192px;"></i></a>
                                         </div>
                                         <h3 style="font-size: 26px;">Share</h3>
                                         <p style="color:white; font-size: 18px;">Spread the word, find friends to mine together with you and grow our community!</p>
