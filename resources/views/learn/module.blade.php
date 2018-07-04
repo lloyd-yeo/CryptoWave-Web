@@ -23,7 +23,12 @@
                                     {{--<li><i class="icon-calendar3"></i> 10th July 2014</li>--}}
                                     <li><span style="font-size:14px;" class="badge badge-pill badge-info">Uncompleted</span></li>
                                 </ul>
-                                <div class="entry-content" style="font-size:18px;" >{{ $video->description }}</div>
+                                <div class="entry-content" style="font-size:18px;" >
+                                    {{ $video->description }}
+                                    <br/>
+                                    <a href="#" class="button button-border button-rounded button-fill button-aqua"><span>Attempt Quiz</span></a>
+                                </div>
+
                             </div>
                         </div>
                     </div>
