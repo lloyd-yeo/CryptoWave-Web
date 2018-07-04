@@ -5,6 +5,21 @@
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <meta name="author" content="SemiColonWeb" />
 
+    <!-- Icons -->
+    <!-- The following icons can be replaced with your own, they are used by desktop and mobile browsers -->
+    <link rel="shortcut icon" href="{{ asset('stack/img/logo.png') }}">
+
+    <link rel="icon" type="image/png" href="{{ asset('stack/img/logo.png') }}"
+          sizes="16x16">
+    <link rel="icon" type="image/png" href="{{ asset('stack/img/logo.png') }}"
+          sizes="32x32">
+    <link rel="icon" type="image/png" href="{{ asset('stack/img/logo.png') }}"
+          sizes="96x96">
+    <link rel="icon" type="image/png" href="{{ asset('stack/img/logo.png') }}"
+          sizes="160x160">
+    <link rel="icon" type="image/png" href="{{ asset('stack/img/logo.png') }}"
+          sizes="192x192">
+
     <!-- Stylesheets
     ============================================= -->
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,400i,700|Raleway:300,400,500,600,700|Crete+Round:400i" rel="stylesheet" type="text/css" />
