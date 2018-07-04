@@ -24,7 +24,8 @@ class LearnController extends Controller
     }
 
     public function index(Request $request) {
-        return view('learn.index');
+        $modules = LearnModule::all();
+        return view('learn.index', ['modules' => $modules]);
     }
 
     public function getQuizModule(Request $request) {

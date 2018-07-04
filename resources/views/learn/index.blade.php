@@ -716,54 +716,35 @@
                                 <h2 data-caption-animate="fadeInUp">LEARN</h2>
                                 <p class="d-none d-sm-block" data-caption-animate="fadeInUp" data-caption-delay="200">
                                     Decrypting the Future!</p>
-                                <div class="col_one_third">
-                                    <div class="feature-box fbox-center fbox-effect">
-                                        <div class="fbox-icon" style="height: 192px; width: 192px;">
-                                            <a href="#stepone" id="step-one-link" class="module-link" data-module="1">
-                                                {{--<img src="http://via.placeholder.com/192x192">--}}
-                                                <img style="width: 192px; height: 192px;"
-                                                     src="http://www.wealthmanagement.com/sites/wealthmanagement.com/files/styles/article_featured_standard/public/blockchain.jpg?itok=CarNZR18">
-                                            </a>
+                                @foreach ($modules as $module)
+                                    @if($loop->last)
+                                        <div class="col_one_third col_last">
+                                            <div class="feature-box fbox-center fbox-effect">
+                                                <div class="fbox-icon" style="height: 192px; width: 192px;">
+                                                    <a href="#module-{{ $module->id }}" class="module-link" data-module="{{ $module->id }}">
+                                                        <img style="width: 192px; height: 192px;"
+                                                             src="{{ $module->cover_img }}">
+                                                    </a>
+                                                </div>
+                                                <h3 style="font-size: 26px;">{{ $module->title }}</h3>
+                                                <p style="color:white; font-size: 15px;">{{ $module->description }}</p>
+                                            </div>
                                         </div>
-                                        <h3 style="font-size: 26px;">Decrypting the Future!</h3>
-                                        <p style="color:white; font-size: 15px;">We have all heard about bitcoin and
-                                            blockchain technology, but what exactly are they and how do they work? In
-                                            this segment we will be sharing with you the beauty of Blockchain
-                                            technology!</p>
-                                    </div>
-                                </div>
-
-                                <div class="col_one_third">
-                                    <div class="feature-box fbox-center fbox-effect">
-                                        <div class="fbox-icon" style="height: 192px; width: 192px;">
-                                            <a href="#steptwo" class="module-link" data-module="2">
-                                                <img style="width: 192px; height: 192px;"
-                                                     src="https://www.crypto-news.net/wp-content/uploads/2017/01/miningpools.jpg">
-                                                {{--<img src="http://via.placeholder.com/192x192">--}}
-                                            </a>
+                                    @else
+                                        <div class="col_one_third">
+                                            <div class="feature-box fbox-center fbox-effect">
+                                                <div class="fbox-icon" style="height: 192px; width: 192px;">
+                                                    <a href="#module-{{ $module->id }}" class="module-link" data-module="{{ $module->id }}">
+                                                        <img style="width: 192px; height: 192px;"
+                                                             src="{{ $module->cover_img }}">
+                                                    </a>
+                                                </div>
+                                                <h3 style="font-size: 26px;">{{ $module->title }}</h3>
+                                                <p style="color:white; font-size: 15px;">{{ $module->description }}</p>
+                                            </div>
                                         </div>
-                                        <h3 style="font-size: 26px;">The Gold Behind Miners</h3>
-                                        <p style="color:white; font-size: 15px;">In this segment, we will be sharing
-                                            with you what is cryptocurrency mining and how do you profit from it?</p>
-                                    </div>
-                                </div>
-
-                                <div class="col_one_third col_last">
-                                    <div class="feature-box fbox-center fbox-effect">
-                                        <div class="fbox-icon" style="height: 192px; width: 192px;">
-                                            <a href="#stepthree" class="module-link" data-module="3">
-                                                <img style="width: 192px; height: 192px;"
-                                                     src="https://trademarketsnews.com/wp-content/uploads/2018/06/altcoins.jpg">
-                                                {{--<img src="http://via.placeholder.com/192x192">--}}
-                                            </a>
-                                        </div>
-                                        <h3 style="font-size: 26px;">Hidden Champions</h3>
-                                        <p style="color:white; font-size: 15px;">There is over 1,600 as of writing, but
-                                            why is there so many different coins and what is the purpose of all these
-                                            different coins? In this segment we will be sharing with you why different
-                                            coin exist!</p>
-                                    </div>
-                                </div>
+                                    @endif
+                                @endforeach
                             </div>
                         </div>
                     </div>
