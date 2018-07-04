@@ -23,8 +23,7 @@
 
     <!-- Document Title
     ============================================= -->
-    <title>Services | Canvas</title>
-
+    <title>Learn | CryptoWave</title>
 </head>
 
 <body class="stretched">
@@ -59,9 +58,9 @@
                 <!-- Primary Navigation
                 ============================================= -->
                 <nav id="primary-menu">
-
                     <ul>
-                        <li><a href="index.html">
+                        <li>
+                            <a href="index.html">
                                 <div>Home</div>
                             </a>
                             {{--<ul>--}}
@@ -716,45 +715,53 @@
                             <div class="slider-caption slider-caption-center">
                                 <h2 data-caption-animate="fadeInUp">LEARN</h2>
                                 <p class="d-none d-sm-block" data-caption-animate="fadeInUp" data-caption-delay="200">
-                                    Without the right education, Cryptocurrency can be very difficult to grasp. But here in Crypto Wave, one of our main focus is to educate the general public on what is block-chain, bitcoin and cryptocurrency before you jump into this volatile market!</p>
-                                {{--<div style="width:1px; height: 20px;"></div>--}}
-                                {{--<p class="d-none d-sm-block" data-caption-animate="fadeInUp" data-caption-delay="200">--}}
-                                    {{--Scroll down to find out more!</p>--}}
-                                {{--<div style="width:1px; height: 50px;"></div>--}}
+                                    Decrypting the Future!</p>
                                 <div class="col_one_third">
                                     <div class="feature-box fbox-center fbox-effect">
                                         <div class="fbox-icon" style="height: 192px; width: 192px;">
-                                            <a href="#stepone" id="step-one-link">
-                                                <img src="http://via.placeholder.com/192x192">
-                                                {{--<i class="icon-screen i-alt" style="font-size: 84px; line-height: 192px;"></i>--}}
+                                            <a href="#stepone" id="step-one-link" class="module-link" data-module="1">
+                                                {{--<img src="http://via.placeholder.com/192x192">--}}
+                                                <img style="width: 192px; height: 192px;"
+                                                     src="http://www.wealthmanagement.com/sites/wealthmanagement.com/files/styles/article_featured_standard/public/blockchain.jpg?itok=CarNZR18">
                                             </a>
                                         </div>
-                                        <h3 style="font-size: 26px;">Step One</h3>
-                                        <p style="color:white; font-size: 18px;">Step one description</p>
+                                        <h3 style="font-size: 26px;">Decrypting the Future!</h3>
+                                        <p style="color:white; font-size: 15px;">We have all heard about bitcoin and
+                                            blockchain technology, but what exactly are they and how do they work? In
+                                            this segment we will be sharing with you the beauty of Blockchain
+                                            technology!</p>
                                     </div>
                                 </div>
 
                                 <div class="col_one_third">
                                     <div class="feature-box fbox-center fbox-effect">
                                         <div class="fbox-icon" style="height: 192px; width: 192px;">
-                                            <a href="#steptwo">
-                                                <img src="http://via.placeholder.com/192x192">
+                                            <a href="#steptwo" class="module-link" data-module="2">
+                                                <img style="width: 192px; height: 192px;"
+                                                     src="https://www.crypto-news.net/wp-content/uploads/2017/01/miningpools.jpg">
+                                                {{--<img src="http://via.placeholder.com/192x192">--}}
                                             </a>
                                         </div>
-                                        <h3 style="font-size: 26px;">Step Two</h3>
-                                        <p style="color:white; font-size: 18px;">Step two description</p>
+                                        <h3 style="font-size: 26px;">The Gold Behind Miners</h3>
+                                        <p style="color:white; font-size: 15px;">In this segment, we will be sharing
+                                            with you what is cryptocurrency mining and how do you profit from it?</p>
                                     </div>
                                 </div>
 
                                 <div class="col_one_third col_last">
                                     <div class="feature-box fbox-center fbox-effect">
                                         <div class="fbox-icon" style="height: 192px; width: 192px;">
-                                            <a href="#stepthree">
-                                                <img src="http://via.placeholder.com/192x192">
+                                            <a href="#stepthree" class="module-link" data-module="3">
+                                                <img style="width: 192px; height: 192px;"
+                                                     src="https://trademarketsnews.com/wp-content/uploads/2018/06/altcoins.jpg">
+                                                {{--<img src="http://via.placeholder.com/192x192">--}}
                                             </a>
                                         </div>
-                                        <h3 style="font-size: 26px;">Step Three</h3>
-                                        <p style="color:white; font-size: 18px;">Step three description</p>
+                                        <h3 style="font-size: 26px;">Hidden Champions</h3>
+                                        <p style="color:white; font-size: 15px;">There is over 1,600 as of writing, but
+                                            why is there so many different coins and what is the purpose of all these
+                                            different coins? In this segment we will be sharing with you why different
+                                            coin exist!</p>
                                     </div>
                                 </div>
                             </div>
@@ -766,74 +773,6 @@
     </section>
 
     <section id="content">
-
-        <div class="content-wrap">
-
-            <div class="container clearfix">
-
-                <div class="heading-block topmargin-lg center">
-                    <h2 id="section-header"></h2>
-                    <span class="divcenter" id="section-desc"></span>
-                </div>
-
-                <div id="posts">
-                    @php for($i = 0; $i < 3; $i++) { @endphp
-                    <div class="entry clearfix">
-                        <div class="entry-image">
-                            <div class="fslider" data-arrows="false" data-lightbox="gallery">
-                                <div class="flexslider">
-                                    <div class="slider-wrap">
-                                        <div class="slide">
-                                            <a href="canvas/images/blog/full/10.jpg"
-                                                              data-lightbox="gallery-item">
-                                                <center>
-                                                    <img class="image_fade" src="canvas/images/blog/full/10.jpg" style="width: 50%;" alt="Standard Post with Gallery">
-                                                </center>
-                                                </a>
-                                        </div>
-                                        <div class="slide"><a href="canvas/images/blog/full/20.jpg"
-                                                              data-lightbox="gallery-item">
-                                                <center>
-                                                    <img class="image_fade" src="canvas/images/blog/full/20.jpg" style="width: 50%;" alt="Standard Post with Gallery">
-                                                </center>
-                                            </a>
-                                        </div>
-                                        <div class="slide"><a href="canvas/images/blog/full/21.jpg"
-                                                              data-lightbox="gallery-item">
-                                                <center>
-                                                    <img class="image_fade" src="canvas/images/blog/full/21.jpg" style="width: 50%;" alt="Standard Post with Gallery">
-                                                </center>
-                                                </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="entry-title">
-                            <h2><a href="blog-single-small.html">Sample Post 1.@php echo $i+1; @endphp</a></h2>
-                        </div>
-                        <ul class="entry-meta clearfix">
-                            <li><i class="icon-calendar3"></i> 27th June 2018</li>
-                            <li><a href="#"><i class="icon-user"></i> cryptowave.network</a></li>
-                            <li><i class="icon-folder-open"></i> <a href="#">Step One</a> <a href="#">of Three</a></li>
-                            {{--<li><a href="blog-single-small.html#comments"><i class="icon-comments"></i> 21 Comments</a></li>--}}
-                            {{--<li><a href="#"><i class="icon-picture"></i></a></li>--}}
-                        </ul>
-                        <div class="entry-content">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, voluptatem, dolorem animi nisi autem blanditiis enim culpa reiciendis et explicabo tenetur voluptate rerum molestiae eaque possimus exercitationem eligendi fuga. Maiores, sunt eveniet doloremque porro hic exercitationem distinctio sequi adipisci. Nulla, fuga perferendis voluptatum beatae voluptate architecto laboriosam provident deserunt. Saepe!</p>
-                            <a href="blog-single-small.html"class="more-link">Read More</a>
-                        </div>
-                    </div>
-                    @php } @endphp
-                </div>
-
-                <center>
-                    <a href="#unlock" class="button button-3d button-xlarge button-rounded"><i class="icon-lock3"></i> Unlock Next Section</a>
-                </center>
-
-            </div>
-
-        </div>
 
     </section>
 
@@ -1102,34 +1041,20 @@
 
 <!-- Footer Scripts
 ============================================= -->
-<script src="canvas/js/functions.js"></script>
+<script src="canvas/js/functions-learn.js"></script>
 
 <script>
-    $("#step-one-link").on("click", function(){
-        console.log("clicked");
-        $("#section-header").html("Step One");
-        $("#section-desc").html("Step One Description");
-        $('html,body').animate({
-            scrollTop: $("#content").offset().top
-        }, 2000);
-    });
-
-    $("#step-two-link").on("click", function(){
-        console.log("clicked");
-        $("#section-header").html("Step Two");
-        $("#section-desc").html("Step Two Description");
-        $('html,body').animate({
-            scrollTop: $("#content").offset().top
-        }, 2000);
-    });
-
-    $("#step-three-link").on("click", function(){
-        console.log("clicked");
-        $("#section-header").html("Step Three");
-        $("#section-desc").html("Step Three Description");
-        $('html,body').animate({
-            scrollTop: $("#content").offset().top
-        }, 2000);
+    $(".module-link").on("click", function(){
+        $module = $(this).data('module');
+        var jqxhr = $.get("/learn/module", {
+            module: $module
+        }, function (data) {
+            $("#content").html(data);
+        }).done(function (data) {
+            $('html,body').animate({
+                scrollTop: $("#content").offset().top
+            }, 2000);
+        });
     });
 </script>
 

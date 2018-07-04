@@ -59,8 +59,5 @@ Route::get('/dashboard-alt', function(){
     return view('dashboard-new');
 });
 
-Route::get('/learn', function(){
-    return view('learn.index');
-});
-
-//Route::get('/')
+Route::get('/learn', 'LearnController@index');
+Route::get('/learn/module', 'LearnController@getQuizModule');
