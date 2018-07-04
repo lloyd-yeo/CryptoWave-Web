@@ -6,7 +6,6 @@
         </div>
 
         <div id="posts">
-
             @foreach ($module_video as $video)
                 <div class="related-posts clearfix">
                     <div class="col_full" style="margin-bottom:10px;">
@@ -25,8 +24,7 @@
                                 </ul>
                                 <div class="entry-content" style="font-size:18px;" >
                                     {{ $video->description }}
-                                    <br/>
-                                    <a href="#" class="button button-border button-rounded button-fill button-aqua"><span>Attempt Quiz</span></a>
+                                    <a href="#" style="margin-top:15px;" class="button button-border button-rounded button-fill button-aqua"><span>Attempt Quiz</span></a>
                                 </div>
 
                             </div>
