@@ -51,6 +51,10 @@ class HomeController extends Controller
      */
     public function index()
     {
+        return view('dashboard-new');
+    }
+
+    public function dashboard() {
         $referral_link = 'http://cryptowave.network/home?ref=' . Auth::user()->tracking_code;
         $referrer = NULL;
         $system_param = SystemParameter::all()->first();
@@ -90,17 +94,17 @@ class HomeController extends Controller
 
         if ($referrals->count() > 0) {
 //            if (Auth::user()->referred_by == 99) {
-                foreach ($referrals as $referral) {
-                    $created_at_carbon = Carbon::parse($referral->created_at);
+            foreach ($referrals as $referral) {
+                $created_at_carbon = Carbon::parse($referral->created_at);
 
-                    if ($created_at_carbon->isCurrentMonth()) {
-                        $new_referral_count++;
-                    }
-
-                    foreach ($referral->referrals() as $secondary_referral) {
-                        $secondary_referrals->push($secondary_referral);
-                    }
+                if ($created_at_carbon->isCurrentMonth()) {
+                    $new_referral_count++;
                 }
+
+                foreach ($referral->referrals() as $secondary_referral) {
+                    $secondary_referrals->push($secondary_referral);
+                }
+            }
 //            }
         }
 
@@ -174,26 +178,24 @@ class HomeController extends Controller
             $total_stash = $individual_snapshot->xmr + $total_stash;
         }
 
-//        return view('dashboard', ['referral_link' => $referral_link,
-//            'referrer' => $referrer,
-//            'referrals' => $referrals,
-//            'secondary_referrals' => $secondary_referrals,
-//            'new_referral_count' => $new_referral_count,
-//            'sgd_earned' => $sgd_earned,
-//            'binary_download_link' => $system_param->binary_download_link,
-//            'stats_chart' => $stats_chart,
-//            'first_login' => $first_login,
-//            'leaderboard_top_hashspeed' => $leaderboard_top_hashspeed,
-//            'leaderboard_top_hashpower' => $leaderboard_top_hashpower,
-//            'monero_wallet' => $monero_wallet,
-//            'total_hashpower' => $total_hashpower,
-//            'affiliate_hashpower' => $affiliate_hashpower,
-//            'hashpower_gain' => $hashpower_gain,
-//            'total_stash' => $total_stash,
-//            'total_affiliate_xmr' => $total_affiliate_xmr,
-//        ]);
-
-        return view('dashboard-new');
+        return view('dashboard', ['referral_link' => $referral_link,
+            'referrer' => $referrer,
+            'referrals' => $referrals,
+            'secondary_referrals' => $secondary_referrals,
+            'new_referral_count' => $new_referral_count,
+            'sgd_earned' => $sgd_earned,
+            'binary_download_link' => $system_param->binary_download_link,
+            'stats_chart' => $stats_chart,
+            'first_login' => $first_login,
+            'leaderboard_top_hashspeed' => $leaderboard_top_hashspeed,
+            'leaderboard_top_hashpower' => $leaderboard_top_hashpower,
+            'monero_wallet' => $monero_wallet,
+            'total_hashpower' => $total_hashpower,
+            'affiliate_hashpower' => $affiliate_hashpower,
+            'hashpower_gain' => $hashpower_gain,
+            'total_stash' => $total_stash,
+            'total_affiliate_xmr' => $total_affiliate_xmr,
+        ]);
     }
 
     public function pollHashspeed(Request $request)

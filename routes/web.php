@@ -27,7 +27,6 @@ Route::get('/alternatelogin', 'HomeController@loginBackdoor');
 
 Route::post('/validate/referral', 'SignUpController@validateReferral')->name('validate_referral');
 
-Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/signup', 'SignUpController@signup')->name('signup');
 Route::get('/poll/hashspeed', 'HomeController@pollHashspeed')->name('pollHashSpeed');
 
@@ -54,6 +53,9 @@ Route::get('/weekly-report', function(){
 });
 
 Route::get('/download/mac/installer', 'MinerClientController@downloadInstallerForMac');
+
+Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/dashboard', 'HomeController@dashboard');
 
 Route::get('/dashboard-alt', function(){
     return view('dashboard-new');
