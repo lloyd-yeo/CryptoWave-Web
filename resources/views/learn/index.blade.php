@@ -1025,8 +1025,10 @@
 <script src="canvas/js/functions-learn.js"></script>
 
 <script>
+    var $current_module = 0;
     $(".module-link").on("click", function(){
         $module = $(this).data('module');
+        $current_module = $module;
         var jqxhr = $.get("/learn/module", {
             module: $module
         }, function (data) {
