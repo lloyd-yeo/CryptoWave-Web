@@ -8,6 +8,7 @@ use App\LearnModuleVideo;
 use App\ModuleState;
 use App\ModuleVideoState;
 use App\Quiz;
+use Auth;
 
 class LearnController extends Controller
 {
