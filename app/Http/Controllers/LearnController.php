@@ -35,11 +35,11 @@ class LearnController extends Controller
         $module_video = LearnModuleVideo::where('learn_module_id', $module->id)->get();
 
         //States where the users is at
-        $module_state = ModuleState::where('user_id', Auth::user()->id)->where('module_id', $module->id)->first();
+        $module_state = ModuleState::where('user_id', Auth::user()->id)->where('learn_module_id', $module->id)->first();
         if ($module_state == NULL) {
             $module_state = new ModuleState;
             $module_state->user_id = Auth::user()->id;
-            $module_state->module_id = $module->id;
+            $module_state->learn_module_id = $module->id;
             $module_state->state = 0;
             $module_state->save();
         }
