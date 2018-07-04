@@ -401,6 +401,15 @@
                             {{--</div>--}}
                         </li>
                         <li class="mega-menu"><a href="#"><div>Share</div></a>
+                        <li class="mega-menu"><form id="logout-form" action="{{ route('logout') }}" method="POST"
+                                                    style="display: none;">
+                                {{ csrf_field() }}
+                            </form>
+                            <a href="{{ route('logout') }}"
+                               onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                Logout
+                            </a>
                             {{--<div class="mega-menu-content style-2 clearfix">--}}
                                 {{--<ul class="mega-menu-column col-5">--}}
                                     {{--<li class="mega-menu-title"><a href="#"><div>Grids</div></a>--}}
@@ -1189,6 +1198,8 @@
 
                     <i class="icon-envelope2"></i> info@canvas.com <span class="middot">&middot;</span> <i class="icon-headphones"></i> +91-11-6541-6369 <span class="middot">&middot;</span> <i class="icon-skype2"></i> CanvasOnSkype
                 </div>
+
+
 
             </div>
 
