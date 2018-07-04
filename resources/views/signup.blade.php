@@ -42,8 +42,8 @@
 				<div class="row">
 					<div class="col-xs-3 col-sm-2">
 						<a href="/">
-							<img class="logo logo-dark" alt="logo" src="stack/img/logo.png" />
-							<img class="logo logo-light" alt="logo" src="stack/img/logo.png" />
+							<img class="logo logo-dark" alt="logo" src="stack/img/logo.png" style="max-height: 5.85714286em;" />
+							<img class="logo logo-light" alt="logo" src="stack/img/logo.png" style="max-height: 5.85714286em;" />
 						</a>
 					</div>
 					<div class="col-xs-9 col-sm-10 text-right">
@@ -63,8 +63,8 @@
 					<div class="col-md-1 col-sm-2 hidden-xs">
 						<div class="bar__module">
 							<a href="/">
-								<img class="logo logo-dark" alt="logo here" src="stack/img/logo.png" />
-								<img class="logo logo-light" alt="logo here" src="stack/img/logo.png" />
+								<img class="logo logo-dark" alt="logo here" src="stack/img/logo.png" style="max-height: 5.85714286em;" />
+								<img class="logo logo-light" alt="logo here" src="stack/img/logo.png" style="max-height: 5.85714286em;" />
 							</a>
 						</div>
 						<!--end module-->
