@@ -21,9 +21,9 @@
                                 </div>
                                 <ul class="entry-meta clearfix">
                                     {{--<li><i class="icon-calendar3"></i> 10th July 2014</li>--}}
-                                    <li><span class="badge badge-pill badge-info">Uncompleted</span></li>
+                                    <li><span style="font-size:12px;" class="badge badge-pill badge-info">Uncompleted</span></li>
                                 </ul>
-                                <div class="entry-content">{{ $video->description }}</div>
+                                <div class="entry-content" style="font-size:16px;" >{{ $video->description }}</div>
                             </div>
                         </div>
                     </div>
