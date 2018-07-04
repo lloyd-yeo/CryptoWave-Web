@@ -24,6 +24,7 @@
                                 </ul>
                                 <div class="entry-content" style="font-size:18px;" >
                                     {{ $video->description }}
+                                    <br/>
                                     <a href="#" style="margin-top:15px;" class="button button-border button-rounded button-fill button-aqua"><span>Attempt Quiz</span></a>
                                 </div>
 
