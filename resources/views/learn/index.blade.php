@@ -99,7 +99,7 @@
                                                              src="{{ $module->cover_img }}">
                                                     </a>
                                                 </div>
-                                                <h3 style="font-size: 26px;">{{ $module->title }}</h3>
+                                                <h3 style="font-size: 26px;">{{ $module->id }}. {{ $module->title }}</h3>
                                                 <p style="color:white; font-size: 15px;">{{ $module->description }}</p>
                                             </div>
                                         </div>
