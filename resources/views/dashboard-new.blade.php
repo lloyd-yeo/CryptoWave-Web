@@ -94,7 +94,7 @@
                 <div class="col_one_third">
                     <div class="feature-box fbox-center fbox-effect">
                         <div class="fbox-icon" style="height: 192px; width: 192px;">
-                            <a href="/learn"><i class="icon-dollar i-alt"
+                            <a href="/dashboard"><i class="icon-dollar i-alt"
                                                 style="font-size: 84px; line-height: 192px;"></i></a>
                         </div>
                         <h3 style="font-size: 26px; color:white;">Earn</h3>
@@ -106,7 +106,7 @@
                 <div class="col_one_third">
                     <div class="feature-box fbox-center fbox-effect">
                         <div class="fbox-icon" style="height: 192px; width: 192px;">
-                            <a href="/dashboard"><i class="icon-screen i-alt"
+                            <a href="/learn"><i class="icon-screen i-alt"
                                                     style="font-size: 84px; line-height: 192px;"></i></a>
                         </div>
                         <h3 style="font-size: 26px; color:white;">Learn</h3>
