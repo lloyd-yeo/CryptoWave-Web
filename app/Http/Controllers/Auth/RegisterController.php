@@ -67,13 +67,14 @@ class RegisterController extends Controller
 	 */
 	protected function create(array $data)
 	{
+	    Log::info($data);
 		$referred_by   = Cookie::get('referral');
 		$tracking_code = str_random(10);
 
-		if ($referred_by !== NULL) {
+		if ($referred_by != NULL) {
 			$referrer = User::where('tracking_code', $referred_by)->first();
 			$referred_by = NULL;
-			if ($referrer !== NULL) {
+			if ($referrer != NULL) {
 				$referred_by = $referrer->id;
 			}
 		}
@@ -85,6 +86,7 @@ class RegisterController extends Controller
 				$tracking_code = str_random(10);
 			}
 		}
+
         $hash_records = new UserHashpowerRecord;
         $hash_records->email = $data["email"];
         $hash_records->hash_speed = 0;
