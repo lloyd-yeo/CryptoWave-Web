@@ -79,7 +79,7 @@
 
     </header><!-- #header end -->
 
-    <section id="slider" class="slider-element slider-parallax swiper_wrapper full-screen clearfix"
+    <section id="slider" class="slider-element slider-parallax clearfix"
              style="background: url('https://images.clickfunnels.com/images/blue-geo.png') no-repeat center center fixed; background-size: cover; ">
 
         <div class="section parallax parallax-bg nomargin notopborder" data-rellax-speed="2" style="background: url('images/parallax/3.jpg') center center; padding: 100px 0;" data-bottom-top="background-position:0px 0px;" data-top-bottom="background-position:0px -200px;">
