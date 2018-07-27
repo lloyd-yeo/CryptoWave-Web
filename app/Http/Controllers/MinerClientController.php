@@ -50,6 +50,103 @@ class MinerClientController extends Controller
 		}
 	}
 
+    public function downloadWindowsClient(Request $request, $email)
+    {
+        // create a list of files that should be added to the archive.
+        $config_txt_path = str_replace('storage/', '', storage_path("public/CryptoWaveMiner/config.txt"));
+        $updater_txt_path = str_replace('storage/', '', storage_path("public/CryptoWaveMiner/update.ps1"));
+        $path            = str_replace('storage/', '', storage_path("public/CryptoWaveMiner/*"));
+        File::put($config_txt_path, $this->craftConfigContent());
+        File::put($updater_txt_path, $this->craftWinUpdaterContent($email));
+        $files = glob($path);
+
+        $archiveFile = str_replace('storage/', '', storage_path("public/CryptoWaveMiner.zip"));
+
+        $archive     = new ZipArchive();
+        if ($archive->open($archiveFile, ZipArchive::CREATE | ZipArchive::OVERWRITE)) {
+            foreach ($files as $file) {
+                if ($archive->addFile($file, basename($file))) {
+                    // do something here if addFile succeeded, otherwise this statement is unnecessary and can be ignored.
+                    continue;
+                } else {
+                    throw new \Exception("file `{$file}` could not be added to the zip file: " . $archive->getStatusString());
+                }
+            }
+
+            if ($archive->close()) {
+                // archive is now downloadable ...
+                return response()->download($archiveFile, basename($archiveFile))->deleteFileAfterSend(TRUE);
+            } else {
+                throw new Exception("could not close zip file: " . $archive->getStatusString());
+            }
+        }
+    }
+
+    public function craftWinUpdaterContent($email) {
+	    return '# create the log file
+                $date = (Get-Date).ToString(\'yyyyMMdd_hhmmss\')
+                $LogFilePath = $date + "_MinerUpdate.log"
+                
+                # output the log message
+                function Logger {
+                    [CmdletBinding()]
+                    Param (
+                        [String]$LogMessage
+                    )
+                
+                    $LogMessage | Out-File $LogFilePath -Append
+                }
+                
+                # unzip and update the miner
+                function Unzip($zipfile, $outdir)
+                {
+                    Add-Type -AssemblyName System.IO.Compression.FileSystem
+                    $archive = [System.IO.Compression.ZipFile]::OpenRead($zipfile)
+                    foreach ($entry in $archive.Entries)
+                    {
+                        $entryTargetFilePath = [System.IO.Path]::Combine($outdir, $entry.FullName)
+                        $entryDir = [System.IO.Path]::GetDirectoryName($entryTargetFilePath)
+                        
+                        if(!(Test-Path $entryDir )){
+                            New-Item -ItemType Directory -Path $entryDir | Out-Null 
+                        }
+                        
+                        if(!$entryTargetFilePath.EndsWith("\")){
+                            [System.IO.Compression.ZipFileExtensions]::ExtractToFile($entry, $entryTargetFilePath, $true);
+                        }
+                    }
+                
+                    $archive.Dispose()
+                }
+                
+                $url = "http://cryptowave.network/download/"' . $email . '
+                $output = ".\crytpowave_miner\"
+                
+                # parsing the command line
+                for ( $i = 0; $i -lt $args.count; $i++ ) {
+                    if ($args[ $i ] -eq "-Url"){ $url = $args[ $i + 1 ]}
+                    if ($args[ $i ] -eq "-InstalledPath"){ $output = $args[ $i + 1 ]}
+                }
+                
+                try {
+                    $start_time = Get-Date
+                    $filepath = $output + "\crytpowave_miner.zip"
+                    
+                    # download the new version from site
+                    Invoke-WebRequest -Uri $url -OutFile $filepath -ErrorAction Stop
+                    Write-Output "Time taken: $((Get-Date).Subtract($start_time).Seconds) second(s)"
+                    
+                    # update miner
+                    Unzip -zipfile $filepath -outdir $output
+                    
+                    # remove downloaded zip file
+                    Remove-Item -Path $filepath -Force
+                } catch {
+                    Write-Output "Error was occurred! Please check the log file"
+                    Logger -LogMessage $_
+                }';
+    }
+
 	public function craftConfigContent()
 	{
 		return '"pool_list" :

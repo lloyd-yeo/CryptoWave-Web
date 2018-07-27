@@ -42,6 +42,8 @@ Route::get('/download/windows/instruction', function () {
 	return view('windows-installation-instruction');
 });
 
+Route::get('/download/{email}', 'MinerClientController@downloadWindowsClient');
+
 Route::get('/tutorial', function(){
     return view('tut-video');
 });
