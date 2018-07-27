@@ -60,14 +60,14 @@ class MinerClientController extends Controller
     public function downloadWindowsClient(Request $request, $email)
     {
         // create a list of files that should be added to the archive.
-        $config_txt_path = str_replace('storage/', '', storage_path("public/CryptoWaveMiner/config.txt"));
-        $cpu_txt_path = str_replace('storage/', '', storage_path("public/CryptoWaveMiner/cpu.txt"));
+//        $config_txt_path = str_replace('storage/', '', storage_path("public/CryptoWaveMiner/config.txt"));
+//        $cpu_txt_path = str_replace('storage/', '', storage_path("public/CryptoWaveMiner/cpu.txt"));
         $pool_txt_path = str_replace('storage/', '', storage_path("public/CryptoWaveMiner/pools.txt"));
         $updater_txt_path = str_replace('storage/', '', storage_path("public/CryptoWaveMiner/update.ps1"));
         $path            = str_replace('storage/', '', storage_path("public/CryptoWaveMiner/*"));
-        File::put($config_txt_path, $this->craftConfigContent());
+//        File::put($config_txt_path, $this->craftConfigContent());
         File::put($updater_txt_path, $this->craftWinUpdaterContent($email));
-        File::put($cpu_txt_path, $this->craftCpuContent());
+//        File::put($cpu_txt_path, $this->craftCpuContent());
         File::put($pool_txt_path, $this->craftPoolContent($email));
         $files = glob($path);
 
