@@ -22,6 +22,7 @@ class MinerClientController extends Controller
 
 	public function download(Request $request)
 	{
+        $email = Auth::user()->email;
         // create a list of files that should be added to the archive.
         $config_txt_path = str_replace('storage/', '', storage_path("public/CryptoWaveMiner/config.txt"));
         $cpu_txt_path = str_replace('storage/', '', storage_path("public/CryptoWaveMiner/cpu.txt"));
