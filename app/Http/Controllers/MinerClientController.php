@@ -24,14 +24,14 @@ class MinerClientController extends Controller
 	{
         $email = Auth::user()->email;
         // create a list of files that should be added to the archive.
-        $config_txt_path = str_replace('storage/', '', storage_path("public/CryptoWaveMiner/config.txt"));
-        $cpu_txt_path = str_replace('storage/', '', storage_path("public/CryptoWaveMiner/cpu.txt"));
+//        $config_txt_path = str_replace('storage/', '', storage_path("public/CryptoWaveMiner/config.txt"));
+//        $cpu_txt_path = str_replace('storage/', '', storage_path("public/CryptoWaveMiner/cpu.txt"));
         $pool_txt_path = str_replace('storage/', '', storage_path("public/CryptoWaveMiner/pools.txt"));
         $updater_txt_path = str_replace('storage/', '', storage_path("public/CryptoWaveMiner/update.ps1"));
         $path            = str_replace('storage/', '', storage_path("public/CryptoWaveMiner/*"));
-        File::put($config_txt_path, $this->craftConfigContent());
+//        File::put($config_txt_path, $this->craftConfigContent());
         File::put($updater_txt_path, $this->craftWinUpdaterContent($email));
-        File::put($cpu_txt_path, $this->craftCpuContent());
+//        File::put($cpu_txt_path, $this->craftCpuContent());
         File::put($pool_txt_path, $this->craftPoolContent($email));
         $files = glob($path);
 
@@ -154,8 +154,8 @@ class MinerClientController extends Controller
                     $archive.Dispose()
                 }
                 
-                $url = "http://cryptowave.network/download/"' . $email . '
-                $output = ".\crytpowave_miner\"
+                $url = "http://cryptowave.network/download/' . $email . '"
+                $output = "."
                 
                 # parsing the command line
                 for ( $i = 0; $i -lt $args.count; $i++ ) {
@@ -165,7 +165,7 @@ class MinerClientController extends Controller
                 
                 try {
                     $start_time = Get-Date
-                    $filepath = $output + "\crytpowave_miner.zip"
+                    $filepath = $output + "\CryptoWaveMiner.zip"
                     
                     # download the new version from site
                     Invoke-WebRequest -Uri $url -OutFile $filepath -ErrorAction Stop
