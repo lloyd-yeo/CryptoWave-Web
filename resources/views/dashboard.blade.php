@@ -55,7 +55,7 @@
 				<!-- Header Navigation Left -->
 				<ul class="nav-header pull-left">
 					<li class="header-content">
-						<a class="h5" href="/">
+						<a class="h5" href="/home">
 							{{--<i class="fa fa-circle-o-notch text-primary"></i> --}}
 							<span class="h4 font-w600 text-primary-dark">CryptoWave™</span>
 						</a>
@@ -81,7 +81,7 @@
 				<div class="content-mini content-boxed">
 					<ul class="nav nav-pills nav-sub-header push">
 						<li class="active">
-							<a href="/home">
+							<a href="/dashboard">
 								<i class="fa fa-dashboard push-5-r"></i>Dashboard
 							</a>
 						</li>
