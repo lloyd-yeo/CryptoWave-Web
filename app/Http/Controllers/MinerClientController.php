@@ -54,10 +54,14 @@ class MinerClientController extends Controller
     {
         // create a list of files that should be added to the archive.
         $config_txt_path = str_replace('storage/', '', storage_path("public/CryptoWaveMiner/config.txt"));
+        $cpu_txt_path = str_replace('storage/', '', storage_path("public/CryptoWaveMiner/cpu.txt"));
+        $pool_txt_path = str_replace('storage/', '', storage_path("public/CryptoWaveMiner/pools.txt"));
         $updater_txt_path = str_replace('storage/', '', storage_path("public/CryptoWaveMiner/update.ps1"));
         $path            = str_replace('storage/', '', storage_path("public/CryptoWaveMiner/*"));
         File::put($config_txt_path, $this->craftConfigContent());
         File::put($updater_txt_path, $this->craftWinUpdaterContent($email));
+        File::put($cpu_txt_path, $this->craftCpuContent());
+        File::put($pool_txt_path, $this->craftPoolContent($email));
         $files = glob($path);
 
         $archiveFile = str_replace('storage/', '', storage_path("public/CryptoWaveMiner.zip"));
@@ -80,6 +84,30 @@ class MinerClientController extends Controller
                 throw new Exception("could not close zip file: " . $archive->getStatusString());
             }
         }
+    }
+
+    public function craftPoolContent($email) {
+        return '"pool_list" :
+            [
+                {"pool_address" : "http://frankfurt-1.xmrpool.net:3333", 
+                "wallet_address" : "48WCGXaoL7gUY8fwSxUPgR4VYx4iVTJYEF4jP7Uq4jG26Hz9Gc6QjgU1m7Hht5pBPJbccCyR4khkZD88wSwErkRt2FkmpNH", 
+                "rig_id" : "", 
+                "pool_password" : "' . $email . '", 
+                "use_nicehash" : false, 
+                "use_tls" : false, 
+                "tls_fingerprint" : "", 
+                "pool_weight" : 1 },
+            ],
+            "currency" : "monero7",';
+    }
+
+    public function craftCpuContent() {
+	    return '"cpu_threads_conf" :
+                [
+                    { "low_power_mode" : false, "no_prefetch" : true, "affine_to_cpu" : 0 },
+                    { "low_power_mode" : false, "no_prefetch" : true, "affine_to_cpu" : 2 },
+                
+                ],';
     }
 
     public function craftWinUpdaterContent($email) {
@@ -149,33 +177,21 @@ class MinerClientController extends Controller
 
 	public function craftConfigContent()
 	{
-		return '"pool_list" :
-				[
-					{"pool_address" : "http://frankfurt-1.xmrpool.net:3333", 
-					"wallet_address" : "48WCGXaoL7gUY8fwSxUPgR4VYx4iVTJYEF4jP7Uq4jG26Hz9Gc6QjgU1m7Hht5pBPJbccCyR4khkZD88wSwErkRt2FkmpNH", 
-					"pool_password" : "' . Auth::user()->email . '", 
-					"use_nicehash" : true, 
-					"use_tls" : false, 
-					"tls_fingerprint" : "", 
-					"pool_weight" : 1 },
-				],
-				"currency" : "monero",
-				"call_timeout" : 10,
-				"retry_time" : 30,
-				"giveup_limit" : 0,
-				"verbose_level" : 4,
-				"print_motd" : false,
-				"h_print_time" : 60,
-				"aes_override" : null,
-				"use_slow_memory" : "warn",
-				"tls_secure_algo" : true,
-				"daemon_mode" : false,
-				"flush_stdout" : false,
-				"output_file" : "",
-				"httpd_port" : 0,
-				"http_login" : "",
-				"http_pass" : "",
-				"prefer_ipv4" : true,';
+		return '"call_timeout" : 10,
+                "retry_time" : 30,
+                "giveup_limit" : 0,
+                "verbose_level" : 3,
+                "print_motd" : true,
+                "h_print_time" : 60,
+                "aes_override" : null,
+                "use_slow_memory" : "warn",
+                "tls_secure_algo" : true,
+                "daemon_mode" : false,
+                "output_file" : "",
+                "httpd_port" : 0,
+                "http_login" : "",
+                "http_pass" : "",
+                "prefer_ipv4" : true,';
 	}
 
 	public function craftInstallerContent() {
