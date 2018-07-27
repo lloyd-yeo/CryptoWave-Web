@@ -38,7 +38,7 @@
 
     <!-- Document Title
     ============================================= -->
-    <title>Services | Canvas</title>
+    <title>Home | CryptoWave</title>
 
 </head>
 
