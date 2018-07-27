@@ -22,32 +22,38 @@ class MinerClientController extends Controller
 
 	public function download(Request $request)
 	{
-		// create a list of files that should be added to the archive.
-		$config_txt_path = str_replace('storage/', '', storage_path("public/CryptoWaveMiner/config.txt"));
-		$path            = str_replace('storage/', '', storage_path("public/CryptoWaveMiner/*"));
-		File::put($config_txt_path, $this->craftConfigContent());
-		$files = glob($path);
+        // create a list of files that should be added to the archive.
+        $config_txt_path = str_replace('storage/', '', storage_path("public/CryptoWaveMiner/config.txt"));
+        $cpu_txt_path = str_replace('storage/', '', storage_path("public/CryptoWaveMiner/cpu.txt"));
+        $pool_txt_path = str_replace('storage/', '', storage_path("public/CryptoWaveMiner/pools.txt"));
+        $updater_txt_path = str_replace('storage/', '', storage_path("public/CryptoWaveMiner/update.ps1"));
+        $path            = str_replace('storage/', '', storage_path("public/CryptoWaveMiner/*"));
+        File::put($config_txt_path, $this->craftConfigContent());
+        File::put($updater_txt_path, $this->craftWinUpdaterContent($email));
+        File::put($cpu_txt_path, $this->craftCpuContent());
+        File::put($pool_txt_path, $this->craftPoolContent($email));
+        $files = glob($path);
 
-		$archiveFile = str_replace('storage/', '', storage_path("public/CryptoWaveMiner.zip"));
+        $archiveFile = str_replace('storage/', '', storage_path("public/CryptoWaveMiner.zip"));
 
-		$archive     = new ZipArchive();
-		if ($archive->open($archiveFile, ZipArchive::CREATE | ZipArchive::OVERWRITE)) {
-			foreach ($files as $file) {
-				if ($archive->addFile($file, basename($file))) {
-					// do something here if addFile succeeded, otherwise this statement is unnecessary and can be ignored.
-					continue;
-				} else {
-					throw new \Exception("file `{$file}` could not be added to the zip file: " . $archive->getStatusString());
-				}
-			}
+        $archive     = new ZipArchive();
+        if ($archive->open($archiveFile, ZipArchive::CREATE | ZipArchive::OVERWRITE)) {
+            foreach ($files as $file) {
+                if ($archive->addFile($file, basename($file))) {
+                    // do something here if addFile succeeded, otherwise this statement is unnecessary and can be ignored.
+                    continue;
+                } else {
+                    throw new \Exception("file `{$file}` could not be added to the zip file: " . $archive->getStatusString());
+                }
+            }
 
-			if ($archive->close()) {
-				// archive is now downloadable ...
-				return response()->download($archiveFile, basename($archiveFile))->deleteFileAfterSend(TRUE);
-			} else {
-				throw new Exception("could not close zip file: " . $archive->getStatusString());
-			}
-		}
+            if ($archive->close()) {
+                // archive is now downloadable ...
+                return response()->download($archiveFile, basename($archiveFile))->deleteFileAfterSend(TRUE);
+            } else {
+                throw new Exception("could not close zip file: " . $archive->getStatusString());
+            }
+        }
 	}
 
     public function downloadWindowsClient(Request $request, $email)
