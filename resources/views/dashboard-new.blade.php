@@ -82,7 +82,8 @@
     <section id="slider" class="slider-element slider-parallax clearfix"
              style="background: url('https://images.clickfunnels.com/images/blue-geo.png') no-repeat center center fixed; background-size: cover; ">
 
-        <div class="section parallax parallax-bg nomargin notopborder" data-rellax-speed="2" style="background: url('images/parallax/3.jpg') center center; padding: 100px 0;" data-bottom-top="background-position:0px 0px;" data-top-bottom="background-position:0px -200px;">
+        <div class="section parallax parallax-bg nomargin notopborder" data-rellax-speed="2" style="background: url('images/parallax/3.jpg') center center; padding: 100px 0;"
+             data-bottom-top="background-position:0px 0px;" data-top-bottom="background-position:0px -200px;">
             <div class="container-fluid center clearfix" style="padding-top: 100px;">
 
                 <div class="heading-block">
@@ -190,6 +191,10 @@
                 </div>
             </div>
         </div>
+    </section>
+
+    <section id="content">
+
     </section>
 
     <!-- Footer
@@ -456,8 +461,9 @@
 
 <!-- Footer Scripts
 ============================================= -->
-<script src="canvas/js/functions.js"></script>
+{{--<script src="canvas/js/functions.js"></script>--}}
 
+<script src="canvas/js/functions-learn.js"></script>
 <script>
 
 </script>

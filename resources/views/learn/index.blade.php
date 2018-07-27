@@ -78,7 +78,54 @@
 
     </header><!-- #header end -->
 
-    <section id="slider" class="slider-element slider-parallax swiper_wrapper full-screen clearfix">
+    <section id="slider" class="slider-element slider-parallax clearfix"
+             style="background: url('https://images.clickfunnels.com/images/blue-geo.png') no-repeat center center fixed; background-size: cover; ">
+
+        <div class="section parallax parallax-bg nomargin notopborder" data-rellax-speed="2" style="background: url('images/parallax/3.jpg') center center; padding: 100px 0;"
+             data-bottom-top="background-position:0px 0px;" data-top-bottom="background-position:0px -200px;">
+            <div class="container-fluid center clearfix" style="padding-top: 100px;">
+
+                <div class="heading-block">
+                    <h2 style="font-size: 64px; color:white; line-height: 70px;">LEARN</h2>
+                    <span style="color:white;">Decrypting the Future!</span>
+                    <div class="clear"></div>
+                </div>
+
+                @foreach ($modules as $module)
+                    @if($loop->last)
+                        <div class="col_one_third col_last">
+                            <div class="feature-box fbox-center fbox-effect">
+                                <div class="fbox-icon" style="height: 192px; width: 192px;">
+                                    <a href="#module-{{ $module->id }}" class="module-link" data-module="{{ $module->id }}">
+                                        <img style="width: 192px; height: 192px;"
+                                             src="{{ $module->cover_img }}">
+                                    </a>
+                                </div>
+                                <h3 style="font-size: 26px; color:white;">{{ $loop->iteration }}. {{ $module->title }}</h3>
+                                <p style="color:white; font-size: 18px;">{{ $module->description }}</p>
+                            </div>
+                        </div>
+                    @else
+                        <div class="col_one_third">
+                            <div class="feature-box fbox-center fbox-effect">
+                                <div class="fbox-icon" style="height: 192px; width: 192px;">
+                                    <a href="#module-{{ $module->id }}" class="module-link" data-module="{{ $module->id }}">
+                                        <img style="width: 192px; height: 192px;"
+                                             src="{{ $module->cover_img }}">
+                                    </a>
+                                </div>
+                                <h3 style="font-size: 26px; color:white;">{{ $loop->iteration }}. {{ $module->title }}</h3>
+                                <p style="color:white; font-size: 18px;">{{ $module->description }}</p>
+                            </div>
+                        </div>
+                    @endif
+                @endforeach
+
+            </div>
+        </div>
+    </section>
+
+    <section id="slider" class="slider-element slider-parallax swiper_wrapper full-screen clearfix" style="display:none;">
         <div class="slider-parallax-inner">
             <div class="swiper-container swiper-parent">
                 <div class="swiper-wrapper">
