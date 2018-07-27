@@ -70,7 +70,7 @@
                             <h4>CryptoWave</h4>
                         </div>
                         <div class="card-body" style="padding: 40px; padding-top: 0;">
-                            <form id="login-form" name="login-form" class="nobottommargin" method="POST" action="{{ route('register') }}">
+                            <form id="login-form" class="nobottommargin" method="POST" action="{{ route('register') }}">
                                 <input type="hidden" value="{{ Cookie::get('referral') }}" name="referral-cookie"/>
                                 {{ csrf_field() }}
 
@@ -95,7 +95,7 @@
 
                                 <div class="col_full">
                                     <label for="login-form-password">Confirm Password:</label>
-                                    <input type="password" id="login-form-confirm-password" name="confirm-password" value="" class="form-control not-dark" />
+                                    <input type="password" id="login-form-confirm-password" name="password_confirmation" value="" class="form-control not-dark" />
                                 </div>
 
                                 <div class="col_full nobottommargin center">
