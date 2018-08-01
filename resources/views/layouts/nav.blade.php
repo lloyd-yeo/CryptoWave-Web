@@ -5,7 +5,7 @@
         <li><a href="/home"><div>Home</div></a></li>
         <li><a href="/dashboard"><div>Earn</div></a></li>
         <li class="mega-menu"><a href="/learn"><div>Learn</div></a></li>
-        <li class="mega-menu"><a href="/dashboard"><div>Share</div></a>
+        <li class="mega-menu"><a href="/affiliate"><div>Share</div></a>
         <li class="mega-menu">
             <form id="logout-form" action="{{ route('logout') }}" method="POST"
                                     style="display: none;">
