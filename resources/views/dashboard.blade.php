@@ -106,8 +106,8 @@
 						</li>
 
 						<li>
-							<a href="/tutorial">
-								<i class="fa fa-video-camera push-5-r"></i>Training Videos
+							<a href="/learn">
+								<i class="fa fa-video-camera push-5-r"></i>Learn
 							</a>
 						</li>
 

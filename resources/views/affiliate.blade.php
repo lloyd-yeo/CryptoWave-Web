@@ -102,6 +102,26 @@
                         <span style="color:white;">Simply share this link to let your friends register!</span>
                         <a href="#" class="button button-xlarge button-rounded">Copy Link</a>
                     </div>
+                    <div class="col_one_fourth nobottommargin center">
+                        <i style="color:white;" class="i-plain i-xlarge divcenter nobottommargin icon-diamond"></i>
+                        <div class="counter counter-large" style="color: #1abc9c;"><span data-from="0" data-to="200" data-refresh-interval="50" data-speed="2000">200</span> XMR</div>
+                        <h5>Clients Served</h5>
+                    </div>
+                    <div class="col_one_fourth nobottommargin center">
+                        <i style="color:white;" class="i-plain i-xlarge divcenter nobottommargin icon-diamond"></i>
+                        <div class="counter counter-large" style="color: #1abc9c;"><span data-from="100" data-to="8465" data-refresh-interval="50" data-speed="2000">8465</span></div>
+                        <h5>Clients Served</h5>
+                    </div>
+                    <div class="col_one_fourth nobottommargin center">
+                        <i style="color:white;" class="i-plain i-xlarge divcenter nobottommargin icon-diamond"></i>
+                        <div class="counter counter-large" style="color: #1abc9c;"><span data-from="100" data-to="8465" data-refresh-interval="50" data-speed="2000">8465</span></div>
+                        <h5>Clients Served</h5>
+                    </div>
+                    <div class="col_one_fourth nobottommargin center col_last">
+                        <i style="color:white;" class="i-plain i-xlarge divcenter nobottommargin icon-diamond"></i>
+                        <div class="counter counter-large" style="color: #1abc9c;"><span data-from="100" data-to="8465" data-refresh-interval="50" data-speed="2000">8465</span></div>
+                        <h5>Clients Served</h5>
+                    </div>
                 </div>
 
             </div>
