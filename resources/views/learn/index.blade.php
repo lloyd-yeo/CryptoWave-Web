@@ -87,7 +87,7 @@
 
                 <div class="heading-block">
                     <h2 style="font-size: 64px; color:white; line-height: 70px;">LEARN</h2>
-                    <span style="color:white;">Decrypting the Future!</span>
+                    <span style="color:white;"></span>
                     <div class="clear"></div>
                 </div>
 
