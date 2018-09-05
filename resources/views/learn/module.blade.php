@@ -24,8 +24,6 @@
                                 </ul>
                                 <div class="entry-content" style="font-size:18px;" >
                                     {{ $video->description }}
-                                    <br/>
-                                    <a href="#" style="margin-top:15px;" class="button button-border button-rounded button-fill button-aqua"><span>Attempt Quiz</span></a>
                                 </div>
 
                             </div>
@@ -34,6 +32,11 @@
                 </div>
             @endforeach
         </div>
+
+        <center>
+            <br/>
+            <a href="#" style="margin-top:15px;" class="button button-border button-rounded button-fill button-aqua"><span>Attempt Quiz</span></a>
+        </center>
 
         <center>
             <a href="#unlock" id="unlock-module-{{ $module->id }}" data-module="{{ $module->id }}" class="button button-3d button-xlarge button-rounded"><i class="icon-lock3"></i> Unlock Next Section</a>
