@@ -64,7 +64,10 @@
                                             <label for="radio-4" class="radio-style-1-label">{{ $answer->answer }}</label>
                                         </div>
                                     @endforeach
-                                    <div class="line"></div>
+                                
+                                    @if(!$loop->last)
+                                        <div class="line"></div>
+                                    @endif
                                 @endforeach
                             </div>
 
