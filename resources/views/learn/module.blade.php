@@ -60,11 +60,12 @@
                                     <h4>{{ $question->question }}</h4>
                                     @foreach ($answers[$question->id] as $answer)
                                         <div>
-                                            <input id="radio-4" class="radio-style" name="radio-group-1" type="radio" checked="">
-                                            <label for="radio-4" class="radio-style-1-label">{{ $answer->answer }}</label>
+                                            <input id="radio-{{ $answer->id }}" class="radio-style question-{{ $question->id }}"
+                                                   name="radio-group-1" type="radio" checked="">
+                                            <label for="radio-{{ $answer->id }}" class="radio-style-1-label">{{ $answer->answer }}</label>
                                         </div>
                                     @endforeach
-                                
+
                                     @if(!$loop->last)
                                         <div class="line"></div>
                                     @endif
@@ -94,7 +95,7 @@
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-primary">Save changes</button>
+                            <button type="button" class="btn btn-primary">Submit Answers!</button>
                         </div>
                     </div>
                 </div>
