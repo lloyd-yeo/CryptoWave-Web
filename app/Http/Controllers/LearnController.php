@@ -57,7 +57,7 @@ class LearnController extends Controller
             }
         }
 
-        $quiz = Quiz::where('module_id', $module->id)->first();
+        $quiz = Quiz::where('learn_module_id', $module->id)->first();
         $questions = Question::where('quiz_id', $quiz->id)->get();
         $answers = array();
         foreach ($questions as $question) {
