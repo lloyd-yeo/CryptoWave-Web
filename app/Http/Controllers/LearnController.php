@@ -61,7 +61,7 @@ class LearnController extends Controller
         $questions = Question::where('quiz_id', $quiz->id)->get();
         $answers = array();
         foreach ($questions as $question) {
-            $answers[$question->id] = Answer::where('quiz_id', $quiz->id)->get();
+            $answers[$question->id] = Answer::where('question_id', $question->id)->get();
         }
 
         return view('learn.module', [
