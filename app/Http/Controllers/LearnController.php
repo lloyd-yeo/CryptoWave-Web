@@ -69,6 +69,7 @@ class LearnController extends Controller
             'module_video' => $module_video,
             'questions' => $questions,
             'answers' => $answers,
+            'quiz' => $quiz,
         ]);
     }
 

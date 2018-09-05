@@ -95,13 +95,11 @@
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-primary">Submit Answers!</button>
+                            <button class="submit-answer-btn" data-quiz="{{ $quiz->id }}" type="button" class="btn btn-primary">Submit Answers!</button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-
     </div>
-
 </div>
