@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Answer;
+use App\Question;
 use Illuminate\Http\Request;
 use App\LearnModule;
 use App\LearnModuleVideo;
@@ -55,9 +57,18 @@ class LearnController extends Controller
             }
         }
 
+        $quiz = Quiz::where('module_id', $module->id)->first();
+        $questions = Question::where('quiz_id', $quiz->id)->get();
+        $answers = array();
+        foreach ($questions as $question) {
+            $answers[$question->id] = Answer::where('quiz_id', $quiz->id)->get();
+        }
+
         return view('learn.module', [
             'module' => $module,
             'module_video' => $module_video,
+            'questions' => $questions,
+            'answers' => $answers,
         ]);
     }
 

@@ -18,6 +18,8 @@ class CreateAnswersTable extends Migration
             $table->timestamps();
             $table->string('answer');
             $table->tinyInteger('correct')->unsigned()->default(0);
+            $table->integer('question_id')->unsigned();
+            $table->foreign('question_id')->references('id')->on('questions');
         });
     }
 

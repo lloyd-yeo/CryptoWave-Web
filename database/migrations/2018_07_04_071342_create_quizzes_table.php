@@ -16,8 +16,8 @@ class CreateQuizzesTable extends Migration
         Schema::create('quizzes', function (Blueprint $table) {
             $table->increments('id');
             $table->timestamps();
-            $table->integer('learn_module_video_id')->unsigned();
-            $table->foreign('learn_module_video_id')->references('id')->on('learn_module_videos');
+            $table->integer('learn_module_id')->unsigned();
+            $table->foreign('learn_module_id')->references('id')->on('learn_modules');
         });
     }
 

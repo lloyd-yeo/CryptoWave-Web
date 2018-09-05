@@ -56,66 +56,16 @@
                         </div>
                         <div class="modal-body">
                             <div class="col-lg-12">
-                                <h4>Radio Buttons</h4>
-                                <div>
-                                    <input id="radio-4" class="radio-style" name="radio-group-1" type="radio" checked="">
-                                    <label for="radio-4" class="radio-style-1-label">First Choice</label>
-                                </div>
-                                <div>
-                                    <input id="radio-5" class="radio-style" name="radio-group-1" type="radio">
-                                    <label for="radio-5" class="radio-style-1-label">Second Choice</label>
-                                </div>
-                                <div>
-                                    <input id="radio-6" class="radio-style" name="radio-group-1" type="radio">
-                                    <label for="radio-6" class="radio-style-1-label">Third Choice</label>
-                                </div>
-
-                                <div class="line"></div>
-
-                                <div>
-                                    <input id="radio-7" class="radio-style" name="radio-group-2" type="radio" checked="">
-                                    <label for="radio-7" class="radio-style-2-label">First Choice</label>
-                                </div>
-                                <div>
-                                    <input id="radio-8" class="radio-style" name="radio-group-2" type="radio">
-                                    <label for="radio-8" class="radio-style-2-label">Second Choice</label>
-                                </div>
-                                <div>
-                                    <input id="radio-9" class="radio-style" name="radio-group-2" type="radio">
-                                    <label for="radio-9" class="radio-style-2-label">Third Choice</label>
-                                </div>
-
-                                <div class="line"></div>
-
-                                <div>
-                                    <input id="radio-10" class="radio-style" name="radio-group-3" type="radio" checked="">
-                                    <label for="radio-10" class="radio-style-3-label">First Choice</label>
-                                </div>
-                                <div>
-                                    <input id="radio-11" class="radio-style" name="radio-group-3" type="radio">
-                                    <label for="radio-11" class="radio-style-3-label">Second Choice</label>
-                                </div>
-                                <div>
-                                    <input id="radio-12" class="radio-style" name="radio-group-3" type="radio">
-                                    <label for="radio-12" class="radio-style-3-label">Third Choice</label>
-                                </div>
-
-                                <div class="line"></div>
-
-                                <h4>Small Size - Radio Buttons</h4>
-
-                                <div>
-                                    <input id="radio-1" class="radio-style" name="radio-group" type="radio" checked="">
-                                    <label for="radio-1" class="radio-style-1-label radio-small">First Choice</label>
-                                </div>
-                                <div>
-                                    <input id="radio-2" class="radio-style" name="radio-group" type="radio">
-                                    <label for="radio-2" class="radio-style-2-label radio-small">Second Choice</label>
-                                </div>
-                                <div>
-                                    <input id="radio-3" class="radio-style" name="radio-group" type="radio">
-                                    <label for="radio-3" class="radio-style-3-label radio-small">Third Choice</label>
-                                </div>
+                                @foreach ($questions as $question)
+                                    <h4>{{ $question->question }}</h4>
+                                    @foreach ($answers as $answer)
+                                        <div>
+                                            <input id="radio-4" class="radio-style" name="radio-group-1" type="radio" checked="">
+                                            <label for="radio-4" class="radio-style-1-label">{{ $answer->answer }}</label>
+                                        </div>
+                                    @endforeach
+                                    <div class="line"></div>
+                                @endforeach
                             </div>
 
                             {{--<h4>Text in a modal</h4>--}}
