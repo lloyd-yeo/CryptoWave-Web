@@ -51,29 +51,93 @@
                 <div class="modal-body">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h4 class="modal-title" id="myModalLabel">Quiz Time</h4>
+                            <h4 class="modal-title" id="myModalLabel">"Decrypting the Future" Quiz Time</h4>
                             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
                         </div>
                         <div class="modal-body">
-                            <h4>Text in a modal</h4>
-                            <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula.</p>
+                            <div class="col-lg-12">
+                                <h4>Radio Buttons</h4>
+                                <div>
+                                    <input id="radio-4" class="radio-style" name="radio-group-1" type="radio" checked="">
+                                    <label for="radio-4" class="radio-style-1-label">First Choice</label>
+                                </div>
+                                <div>
+                                    <input id="radio-5" class="radio-style" name="radio-group-1" type="radio">
+                                    <label for="radio-5" class="radio-style-1-label">Second Choice</label>
+                                </div>
+                                <div>
+                                    <input id="radio-6" class="radio-style" name="radio-group-1" type="radio">
+                                    <label for="radio-6" class="radio-style-1-label">Third Choice</label>
+                                </div>
 
-                            <h4>Popover in a modal</h4>
-                            <p>This <a href="#" role="button" class="btn btn-secondary" data-toggle="popover" title="" data-content="And here's some amazing content. It's very engaging. right?" data-original-title="A Title">button</a> should trigger a popover on click.</p>
+                                <div class="line"></div>
 
-                            <h4>Tooltips in a modal</h4>
-                            <p><a href="#" data-toggle="tooltip" title="" data-original-title="Tooltip">This link</a> and <a href="#" data-toggle="tooltip" title="" data-original-title="Tooltip">that link</a> should have tooltips on hover.</p>
-                            <hr>
-                            <h4>Overflowing text to show scroll behavior</h4>
-                            <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
-                            <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
-                            <p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
-                            <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
-                            <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
-                            <p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
-                            <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
-                            <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
-                            <p class="nobottommargin">Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
+                                <div>
+                                    <input id="radio-7" class="radio-style" name="radio-group-2" type="radio" checked="">
+                                    <label for="radio-7" class="radio-style-2-label">First Choice</label>
+                                </div>
+                                <div>
+                                    <input id="radio-8" class="radio-style" name="radio-group-2" type="radio">
+                                    <label for="radio-8" class="radio-style-2-label">Second Choice</label>
+                                </div>
+                                <div>
+                                    <input id="radio-9" class="radio-style" name="radio-group-2" type="radio">
+                                    <label for="radio-9" class="radio-style-2-label">Third Choice</label>
+                                </div>
+
+                                <div class="line"></div>
+
+                                <div>
+                                    <input id="radio-10" class="radio-style" name="radio-group-3" type="radio" checked="">
+                                    <label for="radio-10" class="radio-style-3-label">First Choice</label>
+                                </div>
+                                <div>
+                                    <input id="radio-11" class="radio-style" name="radio-group-3" type="radio">
+                                    <label for="radio-11" class="radio-style-3-label">Second Choice</label>
+                                </div>
+                                <div>
+                                    <input id="radio-12" class="radio-style" name="radio-group-3" type="radio">
+                                    <label for="radio-12" class="radio-style-3-label">Third Choice</label>
+                                </div>
+
+                                <div class="line"></div>
+
+                                <h4>Small Size - Radio Buttons</h4>
+
+                                <div>
+                                    <input id="radio-1" class="radio-style" name="radio-group" type="radio" checked="">
+                                    <label for="radio-1" class="radio-style-1-label radio-small">First Choice</label>
+                                </div>
+                                <div>
+                                    <input id="radio-2" class="radio-style" name="radio-group" type="radio">
+                                    <label for="radio-2" class="radio-style-2-label radio-small">Second Choice</label>
+                                </div>
+                                <div>
+                                    <input id="radio-3" class="radio-style" name="radio-group" type="radio">
+                                    <label for="radio-3" class="radio-style-3-label radio-small">Third Choice</label>
+                                </div>
+                            </div>
+
+                            {{--<h4>Text in a modal</h4>--}}
+                            {{--<p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula.</p>--}}
+
+                            {{--<h4>Popover in a modal</h4>--}}
+                            {{--<p>This <a href="#" role="button" class="btn btn-secondary" data-toggle="popover" title="" data-content="And here's some amazing content. It's very engaging. right?" data-original-title="A Title">button</a> should trigger a popover on click.</p>--}}
+
+                            {{--<h4>Tooltips in a modal</h4>--}}
+                            {{--<p><a href="#" data-toggle="tooltip" title="" data-original-title="Tooltip">This link</a> and <a href="#" data-toggle="tooltip" title="" data-original-title="Tooltip">that link</a> should have tooltips on hover.</p>--}}
+                            {{--<hr>--}}
+                            {{--<h4>Overflowing text to show scroll behavior</h4>--}}
+                            {{--<p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>--}}
+                            {{--<p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>--}}
+                            {{--<p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>--}}
+                            {{--<p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>--}}
+                            {{--<p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>--}}
+                            {{--<p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>--}}
+                            {{--<p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>--}}
+                            {{--<p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>--}}
+                            {{--<p class="nobottommargin">Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>--}}
+                        {{--</div>--}}
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
