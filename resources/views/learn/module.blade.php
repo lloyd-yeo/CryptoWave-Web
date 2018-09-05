@@ -67,7 +67,7 @@
                                     @endforeach
 
                                     @if(!$loop->last)
-                                        <div class="line" style="margin-top: 25px;"></div>
+                                        <div class="line" style="margin-top: 25px; margin-bottom: 25px;"></div>
                                     @endif
                                 @endforeach
                             </div>
