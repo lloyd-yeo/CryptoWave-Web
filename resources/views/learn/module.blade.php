@@ -61,7 +61,7 @@
                                     @foreach ($answers[$question->id] as $answer)
                                         <div>
                                             <input id="radio-{{ $answer->id }}" class="radio-style question-{{ $question->id }}"
-                                                   name="radio-group-1" type="radio" checked="">
+                                                   name="radio-question-{{ $question->id }}" type="radio" checked="">
                                             <label for="radio-{{ $answer->id }}" class="radio-style-1-label">{{ $answer->answer }}</label>
                                         </div>
                                     @endforeach
