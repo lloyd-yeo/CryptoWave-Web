@@ -15,9 +15,9 @@ use App\Http\Resources\User as UserResource;
 |
 */
 
-Route::get('/user', function (Request $request) {
-	return new UserResource(User::find($request->user()->id));
-})->middleware('auth:api');
+//Route::get('/user', function (Request $request) {
+//	return new UserResource(User::find($request->user()->id));
+//})->middleware('auth:api');
 
 
 #Route::post('/wallet/add', 'WalletController@addAmount')
