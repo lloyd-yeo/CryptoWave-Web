@@ -74,7 +74,21 @@ class LearnController extends Controller
     }
 
     public function vetAnswer(Request $request) {
+        $answers_csv = $request->input('answers');
+        $answer_ids = explode(',', $answers_csv);
+        $wrong_questions = [];
+//        $questions = Question::where('quiz_id', $request->input('quiz'))->get();
+        foreach($answer_ids as $answer_id) {
+            $answer = Answer::find($answer_id);
+            if (!$answer->correct) {
+                $wrong_questions[] = $answer->question_id;
+            }
+        }
 
+        return response()->json([
+           'success' => TRUE,
+           'wrong_questions' =>  $wrong_questions,
+        ]);
     }
 
 }
