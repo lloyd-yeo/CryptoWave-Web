@@ -57,7 +57,7 @@
                         <div class="modal-body">
                             <div class="col-lg-12">
                                 @foreach ($questions as $question)
-                                    <h4>{{ $question->question }}</h4>
+                                    <h4 id="question-{{ $question->id }}">{{ $question->question }}</h4>
                                     @foreach ($answers[$question->id] as $answer)
                                         <div>
                                             <input id="radio-{{ $answer->id }}" class="radio-style question-{{ $question->id }}"
@@ -127,7 +127,17 @@
             quiz: $quiz_id,
             answers: $answers
         }, function (data) {
-            $("#content").html(data);
+            if (data.success) {
+                if (data.correct) {
+                    alert("You got all the questions correct! You can move on now to the next chapter.");
+                } else {
+                    $message = "You got some questions wrong. Scroll back to try the questions highlighted in red.";
+                    alert($message);
+                    $.each(data.wrong_questions, function( index, value ) {
+                        $("#question-" + value).css('color', 'red');
+                    });
+                }
+            }
         }).done(function (data) {
             $('html,body').animate({
                 scrollTop: $("#content").offset().top

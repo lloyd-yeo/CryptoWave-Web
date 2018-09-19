@@ -78,16 +78,19 @@ class LearnController extends Controller
         $answer_ids = explode(',', $answers_csv);
         $wrong_questions = [];
 //        $questions = Question::where('quiz_id', $request->input('quiz'))->get();
+        $all_correct = TRUE;
         foreach($answer_ids as $answer_id) {
             $answer = Answer::find($answer_id);
             if (!$answer->correct) {
                 $wrong_questions[] = $answer->question_id;
+                $all_correct = FALSE;
             }
         }
 
         return response()->json([
            'success' => TRUE,
            'wrong_questions' =>  $wrong_questions,
+           'correct' => $all_correct,
         ]);
     }
 
