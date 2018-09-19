@@ -113,7 +113,7 @@
         @foreach ($questions as $question)
 
         $answers = $answers + ',' + $("input[name='radio-question-{{ $question->id }}']:checked").val();
-        alert($answers);
+//        alert($answers);
         @endforeach
 
         while($answers.charAt(0) === ',')
