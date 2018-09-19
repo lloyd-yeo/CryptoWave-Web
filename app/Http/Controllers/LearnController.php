@@ -22,7 +22,7 @@ class LearnController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth', ['except' => ['landingPage', 'loginBackdoor']]);
+        $this->middleware('auth', ['except' => ['landingPage', 'loginBackdoor', 'vetAnswer']]);
     }
 
     public function index(Request $request) {
