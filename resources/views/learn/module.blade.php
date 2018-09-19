@@ -61,7 +61,7 @@
                                     @foreach ($answers[$question->id] as $answer)
                                         <div>
                                             <input id="radio-{{ $answer->id }}" class="radio-style question-{{ $question->id }}"
-                                                   name="radio-question-{{ $question->id }}" type="radio" checked="">
+                                                   name="radio-question-{{ $question->id }}" type="radio" checked="" value="{{ $answer->id }}">
                                             <label for="radio-{{ $answer->id }}" class="radio-style-1-label">{{ $answer->answer }}</label>
                                         </div>
                                     @endforeach
@@ -115,6 +115,12 @@
         $answers = $answers + ',' + $("input[name='radio-question-{{ $question->id }}']:checked").val();
         alert($answers);
         @endforeach
+
+        while($answers.charAt(0) === ',')
+        {
+            $answers = $answers.substr(1);
+        }
+        alert($answers);
 
         $quiz_id = $(this).data('quiz');
         var jqxhr = $.post("/learn/module/answer", {
