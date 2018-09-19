@@ -65,5 +65,7 @@ Route::get('/dashboard-alt', function(){
 
 Route::get('/learn', 'LearnController@index');
 Route::get('/learn/module', 'LearnController@getQuizModule');
+Route::post('/learn/module/answer', 'LearnController@vetAnswer');
 
 Route::get('/affiliate', 'AffiliateController@index');
+

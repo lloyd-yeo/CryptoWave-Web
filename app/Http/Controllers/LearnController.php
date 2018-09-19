@@ -73,4 +73,8 @@ class LearnController extends Controller
         ]);
     }
 
+    public function vetAnswer(Request $request) {
+
+    }
+
 }

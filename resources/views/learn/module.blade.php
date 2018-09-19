@@ -69,6 +69,7 @@
                                     @if(!$loop->last)
                                         <div class="line" style="margin-top: 25px; margin-bottom: 25px;"></div>
                                     @endif
+
                                 @endforeach
                             </div>
 
@@ -103,3 +104,30 @@
         </div>
     </div>
 </div>
+<script>
+
+    $("body").on("click", '.submit-answer-btn', {}, function(){
+
+        var $answers;
+
+        @foreach ($questions as $question)
+
+        $answers = $answers + ',' + $("input[name='radio-question-{{ $question->id }}']:checked").val();
+
+        @endforeach
+
+        $quiz_id = $(this).data('quiz');
+        var jqxhr = $.post("/learn/module/answer", {
+            quiz: $quiz_id,
+            answers: $answers
+        }, function (data) {
+            $("#content").html(data);
+        }).done(function (data) {
+            $('html,body').animate({
+                scrollTop: $("#content").offset().top
+            }, 2000);
+        });
+    });
+
+//    $("input[name='radioName']:checked").val()
+</script>
