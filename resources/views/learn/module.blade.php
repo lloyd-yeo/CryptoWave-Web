@@ -108,7 +108,7 @@
 
     $("body").on("click", '.submit-answer-btn', {}, function(){
 
-        var $answers;
+        var $answers = "";
 
         @foreach ($questions as $question)
 
