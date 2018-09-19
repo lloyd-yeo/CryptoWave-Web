@@ -94,7 +94,7 @@
 
                             <div class="center">
                                 <h4 style="margin-bottom: 15px;">Not a User?</h4>
-                                <a href="/registeralt" class="button button-rounded">Register Now</a>
+                                <a href="/register" class="button button-rounded">Register Now</a>
                                 {{--<a href="#" class="button button-rounded si-facebook si-colored">Facebook</a>--}}
                                 {{--<span class="d-none d-md-block">or</span>--}}
                                 {{--<a href="#" class="button button-rounded si-twitter si-colored">Twitter</a>--}}
