@@ -120,7 +120,7 @@
         {
             $answers = $answers.substr(1);
         }
-        alert($answers);
+//        alert($answers);
 
         $quiz_id = $(this).data('quiz');
         var jqxhr = $.post("/learn/module/answer", {
