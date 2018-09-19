@@ -113,7 +113,7 @@
         @foreach ($questions as $question)
 
         $answers = $answers + ',' + $("input[name='radio-question-{{ $question->id }}']:checked").val();
-
+        alert($answers);
         @endforeach
 
         $quiz_id = $(this).data('quiz');
